@@ -147,6 +147,7 @@ export function PuzzleTrainer() {
     const id = current?.kind === "puzzle" ? current.selection.puzzle.id : current?.kind === "lesson" ? current.card.refId : undefined;
     setRound((r) => r + 1);
     pickNext(id);
+    document.getElementById("main")?.scrollIntoView({ block: "start" });
   };
 
   if (loading) return <PageSkeleton />;
@@ -188,6 +189,7 @@ export function PuzzleTrainer() {
     <PageHeader
       eyebrow="Tactics trainer"
       title="Puzzles"
+      compactOnMobile
       description={`${PUZZLES.length} verified positions from real games. Solve, learn the pattern, and the trainer adapts to you.`}
     />
   );

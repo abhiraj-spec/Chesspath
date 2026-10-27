@@ -70,9 +70,10 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
   const boardOrientation = orientation ?? userColor ?? "w";
 
   const evalsByPly = useMemo(() => new Map((analysis?.moveEvaluations ?? []).map((e) => [e.ply, e])), [analysis]);
-  const classes = useMemo(() => new Map<number, MoveClass>([...evalsByPly.values()].map((e) => [e.ply, e.classification])), [evalsByPly]);
+  // Classifications are only shown once the analysis (including verification of mistakes) is complete.
+  const classes = useMemo(() => (analysis?.complete ? new Map<number, MoveClass>([...evalsByPly.values()].map((e) => [e.ply, e.classification])) : new Map<number, MoveClass>()), [evalsByPly, analysis]);
   const report = useMemo(
-    () => (analysis && analysis.moveEvaluations.length ? buildReport({ evals: analysis.moveEvaluations, result: game?.result ?? "*", userColor, opening: analysis.opening }) : null),
+    () => (analysis && analysis.complete && analysis.moveEvaluations.length ? buildReport({ evals: analysis.moveEvaluations, result: game?.result ?? "*", userColor, opening: analysis.opening }) : null),
     [analysis, game, userColor],
   );
 
@@ -126,7 +127,7 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
   const nextEval = !variation ? evalsByPly.get(mainCursor + 1) : undefined; // the move about to be played from this position
   const currentEval = !variation ? (mainCursor === 0 ? evalsByPly.get(1)?.before : evalsByPly.get(mainCursor)?.after) : undefined;
   const arrows: BoardArrow[] = [];
-  if (showBest && nextEval && !variation) {
+  if (showBest && nextEval && !variation && analysis?.complete) {
     if (nextEval.bestMove && nextEval.bestMove !== nextEval.uci) arrows.push({ from: nextEval.bestMove.slice(0, 2) as Square, to: nextEval.bestMove.slice(2, 4) as Square, kind: "main" });
     if (["inaccuracy", "mistake", "blunder"].includes(nextEval.classification)) arrows.push({ from: nextEval.uci.slice(0, 2) as Square, to: nextEval.uci.slice(2, 4) as Square, kind: "bad" });
   }
@@ -223,7 +224,7 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
             ) : (
               <MoveList line={line} cursor={mainCursor} onSelect={select} classes={classes} />
             )}
-            {nextEval && !variation && <MoveDetail e={nextEval} />}
+            {nextEval && !variation && analysis?.complete && <MoveDetail e={nextEval} />}
           </PanelCard>
 
           {/* Analysis controls */}
@@ -238,7 +239,12 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
                   <Select label="Depth" value={depth} onChange={setDepth} options={DEPTHS} />
                 </div>
               )}
-              {running && progress && (
+              {running && progress && progress.done >= progress.total && (
+                <p className="t-small mt-3 text-muted" aria-live="polite">
+                  Double-checking possible mistakes at a greater depth before reporting them…
+                </p>
+              )}
+              {running && progress && progress.done < progress.total && (
                 <div className="mt-3" aria-live="polite">
                   <ProgressBar value={progress.done} max={progress.total} label="Analysis progress" />
                   <p className="t-small mt-1 text-muted tabular">

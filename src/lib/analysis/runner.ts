@@ -7,7 +7,7 @@ import { buildReport } from "./report";
 import { identifyOpening, loadOpeningIndex } from "./openingIndex";
 
 /** Mistakes and blunders are only reported after confirmation at this depth (or deeper). */
-export const VERIFY_MIN_DEPTH = 16;
+export const VERIFY_MIN_DEPTH = 18;
 
 export interface RunOptions {
   game: ChessGameRecord;
@@ -82,7 +82,8 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
       const best = r.lines[0];
       evals.push({ fen, score: best?.score ?? { cp: 0 }, bestMove: r.bestMove, pv: best?.pv ?? [], depth: r.depth });
     }
-    const partial = assemble(evals.length === fens.length);
+    // Not "complete" until the verification pass below has run.
+    const partial = assemble(false);
     o.onProgress?.(evals.length, fens.length, partial);
     // Save every few positions (and at the end) to limit database writes.
     if (evals.length === fens.length || evals.length % 4 === 0) await o.save(partial);
@@ -102,13 +103,15 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
       if (!toCheck.size) break;
       for (const i of [...toCheck].sort((a, b) => a - b)) {
         if (o.isCancelled()) break;
+        // Fresh hash table so earlier shallow searches cannot bias the verification.
+        o.engine.newGame();
         const r = await o.engine.analyse({ fen: fens[i], depth: verifyDepth, multipv: 1 });
         if (o.isCancelled()) break;
         evals[i] = { fen: fens[i], score: r.lines[0]?.score ?? evals[i].score, bestMove: r.bestMove, pv: r.lines[0]?.pv ?? [], depth: r.depth };
       }
     }
   }
-  const result = assemble(evals.length === fens.length);
+  const result = assemble(evals.length === fens.length && !o.isCancelled());
   await o.save(result);
   return result;
 }

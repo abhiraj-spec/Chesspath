@@ -37,7 +37,13 @@ export function useActivityTimer(type: ActivityEntry["type"], refId?: string, ac
       tick();
       lastInteraction.current = Date.now();
     };
-    const onVis = () => tick();
+    const onVis = () => {
+      tick();
+      // Save as soon as the page is hidden (tab switch, app switch, closing the tab).
+      if (document.visibilityState === "hidden") void flush();
+    };
+    const onHide = () => void flush();
+    window.addEventListener("pagehide", onHide);
     const interval = setInterval(() => void flush(), 2 * 60 * 1000);
     window.addEventListener("pointerdown", onInteract);
     window.addEventListener("keydown", onInteract);
@@ -47,6 +53,7 @@ export function useActivityTimer(type: ActivityEntry["type"], refId?: string, ac
       window.removeEventListener("pointerdown", onInteract);
       window.removeEventListener("keydown", onInteract);
       document.removeEventListener("visibilitychange", onVis);
+      window.removeEventListener("pagehide", onHide);
       void flush();
     };
   }, [type, refId, active]);

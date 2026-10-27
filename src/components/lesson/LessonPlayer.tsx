@@ -116,6 +116,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     }
     setStepIndex(nextIndex);
     stepStart.current = Date.now();
+    window.scrollTo({ top: 0 });
     void updateLessonStep(lesson.id, { currentStep: nextIndex, completedStep: stepIndex, hintsUsed: r?.hintsUsed ?? 0, mistakes: r?.mistakes ?? 0, timeSpentMs: elapsed }).catch(() => {});
   };
 
@@ -123,6 +124,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     if (stepIndex === 0) return;
     setStepIndex((i) => i - 1);
     stepStart.current = Date.now();
+    window.scrollTo({ top: 0 });
   };
 
   const terms = useMemo(() => (lesson.terms ?? []).map((t) => GLOSSARY.find((g) => g.term.toLowerCase() === t.toLowerCase())).filter(Boolean), [lesson]);

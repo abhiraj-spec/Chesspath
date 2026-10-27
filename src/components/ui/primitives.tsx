@@ -368,13 +368,13 @@ export function Dialog({
 
 // ---------- Page header ----------
 
-export function PageHeader({ title, description, actions, eyebrow }: { title: ReactNode; description?: ReactNode; actions?: ReactNode; eyebrow?: ReactNode }) {
+export function PageHeader({ title, description, actions, eyebrow, compactOnMobile }: { title: ReactNode; description?: ReactNode; actions?: ReactNode; eyebrow?: ReactNode; compactOnMobile?: boolean }) {
   return (
-    <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <header className={cn("flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between", compactOnMobile ? "mb-4 sm:mb-6" : "mb-6")}>
       <div className="min-w-0">
         {eyebrow && <div className="t-label mb-1.5 text-accent">{eyebrow}</div>}
         <h1 className="t-page text-fg">{title}</h1>
-        {description && <p className="t-body mt-1.5 max-w-2xl text-muted">{description}</p>}
+        {description && <p className={cn("t-body mt-1.5 max-w-2xl text-muted", compactOnMobile && "hidden sm:block")}>{description}</p>}
       </div>
       {actions && <div className="flex shrink-0 flex-wrap gap-2">{actions}</div>}
     </header>

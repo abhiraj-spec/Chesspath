@@ -223,7 +223,7 @@ export function Dashboard() {
         ) : (
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
             <Stat label="Lessons completed" value={`${completedLessons}`} sub={`of ${ALL_LESSONS.length}`} />
-            <Stat label="Puzzle accuracy" value={acc.count >= 5 ? `${Math.round(acc.accuracy * 100)}%` : "–"} sub={acc.count >= 5 ? `last ${acc.count} puzzles` : `${acc.count} solved so far; need 5`} />
+            <Stat label="Puzzle accuracy" value={acc.count >= 5 ? `${Math.round(acc.accuracy * 100)}%` : "–"} sub={acc.count >= 5 ? `last ${acc.count} puzzles` : `${acc.count} attempted; shown after 5`} />
             <Stat label="Training this week" value={formatDuration(weekMs)} sub={streak > 1 ? `${streak}-day streak` : "active time"} icon={streak > 1 ? <Flame className="h-4 w-4 text-warning" aria-hidden /> : undefined} />
             <Stat label="Review queue" value={`${due}`} sub={due === 1 ? "exercise due" : "exercises due"} href={due ? "/puzzles/?mode=review" : undefined} />
           </div>

@@ -14,7 +14,7 @@
   --border-strong: #cfc8ba;
   --text: #1d2420;
   --text-muted: #59625c;
-  --text-subtle: #747c76;
+  --text-subtle: #5f6762;
   --accent: #1d6a4d;
   --accent-hover: #175a41;
   --accent-contrast: #ffffff;
@@ -36,8 +36,8 @@
   /* Board */
   --sq-light: #ebe5d6;
   --sq-dark: #7f9b7a;
-  --sq-coord-light: #6c8768;
-  --sq-coord-dark: #eee8da;
+  --sq-coord-light: #3f573c;
+  --sq-coord-dark: #16211a;
   --sq-last: rgb(214 196 82 / 0.5);
   --sq-selected: rgb(29 106 77 / 0.45);
   --sq-hint: rgb(40 94 142 / 0.45);
@@ -84,9 +84,9 @@
   --chart: #36a372;
   --chart-grid: #2b322d;
   --sq-light: #cfc9b9;
-  --sq-dark: #6a8566;
-  --sq-coord-light: #556f52;
-  --sq-coord-dark: #e0dacb;
+  --sq-dark: #728e6e;
+  --sq-coord-light: #2f442c;
+  --sq-coord-dark: #101a0f;
   --sq-last: rgb(214 196 82 / 0.45);
   --sq-selected: rgb(79 180 137 / 0.55);
   --sq-dot: rgb(10 16 12 / 0.35);
@@ -269,20 +269,24 @@ dialog::backdrop {
 :root[data-board="brown"] {
   --sq-light: #f0d9b5;
   --sq-dark: #b58863;
-  --sq-coord-light: #a37a56;
-  --sq-coord-dark: #f3e1c4;
+  --sq-coord-light: #5c3d22;
+  --sq-coord-dark: #2a1a0c;
 }
 :root[data-board="blue"] {
   --sq-light: #dee3e6;
   --sq-dark: #8ca2ad;
-  --sq-coord-light: #6f8793;
-  --sq-coord-dark: #eef1f3;
+  --sq-coord-light: #3e5560;
+  --sq-coord-dark: #14222a;
 }
 :root[data-theme="dark"][data-board="brown"] {
   --sq-light: #d4bf9c;
-  --sq-dark: #9c7553;
+  --sq-dark: #a67e5b;
+  --sq-coord-light: #4a3220;
+  --sq-coord-dark: #20140a;
 }
 :root[data-theme="dark"][data-board="blue"] {
   --sq-light: #c3cacd;
   --sq-dark: #748b96;
+  --sq-coord-light: #33444c;
+  --sq-coord-dark: #0f1c22;
 }

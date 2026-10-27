@@ -193,6 +193,11 @@ export function PuzzleSolver({
 
   return (
     <TrainerLayout
+      above={
+        <p className="t-small mb-2 font-medium text-fg md:hidden" aria-hidden>
+          {done ? (status === "solved" ? "Solved!" : "Solution shown") : `Find the best move for ${sideName}`}
+        </p>
+      }
       board={
         <>
           <Chessboard fen={fen} orientation={orientation} movable={done || locked ? "none" : puzzle.sideToMove} onMove={onMove} lastMove={lastMove} highlights={highlights} label="Puzzle board" testId="puzzle-board" />
@@ -206,6 +211,7 @@ export function PuzzleSolver({
       }
       panel={
         <PanelCard>
+          <div data-testid="puzzle-panel" data-puzzle-id={puzzle.id} hidden />
           {header}
           <div className="flex flex-wrap items-center gap-2">
             <DifficultyBadge level={puzzle.difficulty} label={`${DIFFICULTY_LABELS[puzzle.difficulty].name}: ${DIFFICULTY_LABELS[puzzle.difficulty].description}`} />

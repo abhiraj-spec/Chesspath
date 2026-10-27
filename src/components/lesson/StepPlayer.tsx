@@ -72,6 +72,16 @@ function SideToMove({ fen, passTurn }: { fen: string; passTurn?: boolean }) {
   );
 }
 
+/** Compact instruction shown above the board on small screens (the full panel is below the board). */
+export function MobilePrompt({ text, fen }: { text: string; fen?: string }) {
+  return (
+    <p className="t-small mb-2 font-medium text-fg md:hidden" aria-hidden>
+      {fen ? `${colorName(turnOf(fen))} to move · ` : ""}
+      {text.replace(/\*\*/g, "")}
+    </p>
+  );
+}
+
 function FeedbackView({ feedback }: { feedback: Feedback }) {
   if (!feedback) return null;
   const icon =
@@ -369,6 +379,7 @@ function PlayPlayer({ step, onComplete, header, footer, onContinue, continueLabe
 
   return (
     <TrainerLayout
+      above={<MobilePrompt text={step.prompt} fen={fen} />}
       board={
         <>
           <Chessboard
@@ -510,6 +521,7 @@ function SquaresPlayer({ step, onComplete, header, footer, onContinue, continueL
 
   return (
     <TrainerLayout
+      above={<MobilePrompt text={step.prompt} />}
       board={
         <>
           <Chessboard fen={step.fen} orientation={orientation} onSquareSelect={toggle} selectedSquares={done ? [] : selected} highlights={highlights} label="Square selection board" testId="exercise-board" />

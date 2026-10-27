@@ -96,3 +96,25 @@ describe("supporting content", () => {
     expect(diagnose(missBasics).lessonId).toBe("the-rook");
   });
 });
+
+import { evaluateGoal } from "@/lib/lessons/goal";
+
+describe("goal (play-out) evaluation uses the real outcome", () => {
+  it("checkmate goal succeeds only on mate, fails on stalemate or running out of moves", () => {
+    expect(evaluateGoal("checkmate", new Chess("7k/6Q1/5K2/8/8/8/8/8 b - - 0 1"), { color: "w", to: "g7" }, "w", 3, 10).status).toBe("won");
+    expect(evaluateGoal("checkmate", new Chess("7k/8/8/5K2/8/8/2Q5/8 b - - 0 1"), { color: "w", to: "c2" }, "w", 3, 10).status).toBe("playing");
+    expect(evaluateGoal("checkmate", new Chess("7k/5K2/6Q1/8/8/8/8/8 b - - 0 1"), { color: "w", to: "g6" }, "w", 3, 10).status).toBe("failed"); // stalemate
+    expect(evaluateGoal("checkmate", new Chess("7k/8/8/5K2/8/8/2Q5/8 b - - 0 1"), { color: "w", to: "c2" }, "w", 10, 10).status).toBe("failed");
+  });
+  it("promote goal requires a safe new piece", () => {
+    const safe = new Chess("4Q3/8/4K3/8/8/8/8/k7 b - - 0 1");
+    expect(evaluateGoal("promote", safe, { color: "w", promotion: "q", to: "e8" }, "w", 5, 10).status).toBe("won");
+    const hanging = new Chess("3kQ3/8/8/8/8/8/8/K7 b - - 0 1");
+    expect(evaluateGoal("promote", hanging, { color: "w", promotion: "q", to: "e8" }, "w", 5, 10).status).toBe("failed");
+  });
+  it("hold-draw succeeds on a draw or surviving the move limit, fails if the opponent promotes", () => {
+    expect(evaluateGoal("hold-draw", new Chess("8/8/8/8/8/8/8/K6k b - - 0 1"), { color: "w", to: "a1" }, "w", 3, 8).status).toBe("won");
+    expect(evaluateGoal("hold-draw", new Chess("7k/8/8/8/8/8/1p6/K7 b - - 0 1"), { color: "w", to: "a1" }, "w", 8, 8).status).toBe("won");
+    expect(evaluateGoal("hold-draw", new Chess("7k/8/8/8/8/8/8/Kq6 w - - 0 1"), { color: "b", promotion: "q", to: "b1" }, "w", 3, 8).status).toBe("failed");
+  });
+});
