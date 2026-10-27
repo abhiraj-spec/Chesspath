@@ -52,6 +52,10 @@ npm start            # serves out/ on http://localhost:3000 (set PORT to change)
 
 `out/` can be hosted on any static host. The engine files need the `application/wasm` MIME type, which most hosts set automatically. No special headers are needed: the single-threaded engine does not require cross-origin isolation.
 
+**Host it at the root of a domain** (for example `https://your-site.netlify.app/`). Every asset path starts with `/` (scripts, `/engine/…`, `/sw.js`, the manifest), so serving it from a sub-folder such as a GitHub Pages *project* site (`username.github.io/chesspath/`) loads the page but not its scripts. `netlify.toml` configures Netlify; on Cloudflare Pages use build command `npm run build` and output directory `out`.
+
+New to all this on Windows? See [WINDOWS_SETUP.md](WINDOWS_SETUP.md).
+
 ## Quality commands
 
 ```bash
@@ -62,7 +66,7 @@ npm run validate:content   # every lesson answer and drill goal checked with Sto
 npm run build && npm run test:e2e   # Playwright journeys on desktop and mobile viewports
 ```
 
-The Playwright tests run against the production build served by `scripts/serve.mjs` on port 3100. They use the Chromium build that ships with Playwright; set `PLAYWRIGHT_BROWSERS_PATH` if your browsers live elsewhere.
+The Playwright tests run against the production build served by `scripts/serve.mjs` on port 3100. They use the Chromium build that ships with Playwright: on a new machine run `npx playwright install chromium` once first.
 
 ## How data is stored
 
