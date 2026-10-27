@@ -3,8 +3,13 @@
 import { useSearchParams } from "next/navigation";
 import { GameAnalysisView } from "./GameAnalysisView";
 import { LibraryView } from "./LibraryView";
+import { PositionExplorer } from "./PositionExplorer";
 
 export function AnalysisRouter() {
-  const id = useSearchParams().get("game");
-  return id ? <GameAnalysisView key={id} gameId={id} /> : <LibraryView />;
+  const params = useSearchParams();
+  const id = params.get("game");
+  const fen = params.get("fen");
+  if (id) return <GameAnalysisView key={id} gameId={id} />;
+  if (fen !== null) return <PositionExplorer fen={fen.trim()} />;
+  return <LibraryView />;
 }

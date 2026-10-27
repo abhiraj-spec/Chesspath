@@ -135,7 +135,7 @@ export function buildDailyPlan(input: PlanInput): { blocks: PlanBlock[]; minutes
   }
   if (a.puzzles > 0) {
     const count = Math.max(3, Math.round(a.puzzles * PUZZLES_PER_MINUTE));
-    const done = todayAttempts.filter((x) => x.kind === "puzzle" && !x.wasReview).length;
+    const done = todayAttempts.filter((x) => x.kind === "puzzle" && !x.wasReview && !x.skipped).length;
     const weak = weaknesses[0];
     const theme = weak && skillInfo(weak.skill).puzzleTheme;
     blocks.push({

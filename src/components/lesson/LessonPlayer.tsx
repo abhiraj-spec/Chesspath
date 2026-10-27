@@ -23,6 +23,14 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
   const [phase, setPhase] = useState<Phase>("intro");
   const [stepIndex, setStepIndex] = useState(0);
   const [results, setResults] = useState<Record<string, StepResult>>({});
+  const recorded = useRef<Set<string>>(new Set());
+  // Move keyboard/screen-reader focus to the new step, since the Continue button that had it is gone.
+  const shownStep = useRef<number | null>(null);
+  useEffect(() => {
+    if (phase !== "steps") return;
+    if (shownStep.current !== null && shownStep.current !== stepIndex) document.getElementById("lesson-step-start")?.focus({ preventScroll: true });
+    shownStep.current = stepIndex;
+  }, [phase, stepIndex]);
   const [finalScore, setFinalScore] = useState<number | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const stepStart = useRef(0);
@@ -59,6 +67,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
       setStepIndex(0);
     }
     setResults(restored);
+    recorded.current = new Set(Object.keys(restored));
     stepStart.current = Date.now();
     setPhase("steps");
   };
@@ -67,6 +76,9 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
 
   const onComplete = useCallback(
     (r: StepResult) => {
+      // A step revisited with "Previous step" can be solved again; only the first result counts.
+      if (recorded.current.has(r.stepId)) return;
+      recorded.current.add(r.stepId);
       setResults((prev) => {
         if (prev[r.stepId]) return prev;
         const next = { ...prev, [r.stepId]: r };
@@ -247,7 +259,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
 
   // ---------- Steps ----------
   const header = (
-    <div className="mb-4">
+    <div id="lesson-step-start" tabIndex={-1} className="mb-4 outline-none">
       <div className="mb-2 flex items-center justify-between gap-2">
         <p className="t-label truncate text-muted">{lesson.title}</p>
         <span className="t-small shrink-0 text-muted tabular">

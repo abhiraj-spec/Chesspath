@@ -13,6 +13,7 @@ import { EvalGraph } from "./EvalGraph";
 import { PanelCard } from "@/components/board/TrainerLayout";
 import { Badge, Callout, EmptyState, PageSkeleton, ProgressBar, Segmented, Select } from "@/components/ui/primitives";
 import { Button, ButtonLink, IconButton } from "@/components/ui/Button";
+import { CopyFenButton } from "@/components/board/CopyFenButton";
 import { useEngine } from "@/hooks/useEngine";
 import { useActivityTimer } from "@/hooks/useActivityTimer";
 import { runAnalysis } from "@/lib/analysis/runner";
@@ -200,6 +201,7 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
               <IconButton label="Flip board" size="sm" onClick={() => setOrientation(boardOrientation === "w" ? "b" : "w")}>
                 <FlipVertical2 className="h-4 w-4" aria-hidden />
               </IconButton>
+              <CopyFenButton fen={boardFen} />
             </div>
           </div>
           {analysis && analysis.moveEvaluations.length > 0 && (
@@ -321,6 +323,11 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
   );
 }
 
+/** "Missed opportunity": the engine's move won material or forced mate, and the played move let it slip. */
+function isMissedOpportunity(e: MoveEvaluation): boolean {
+  return e.tags.includes("missed-win") || e.tags.includes("missed-mate");
+}
+
 function MoveDetail({ e }: { e: MoveEvaluation }) {
   const style = CLASS_STYLE[e.classification];
   return (
@@ -328,6 +335,11 @@ function MoveDetail({ e }: { e: MoveEvaluation }) {
       <p className="t-small text-muted">
         Next move: <span className="t-notation font-semibold text-fg">{e.san}</span>{" "}
         <Badge tone={e.classification === "blunder" ? "danger" : e.classification === "mistake" ? "warning" : e.classification === "inaccuracy" ? "warning" : e.classification === "book" ? "neutral" : "success"}>{style.label}</Badge>
+        {isMissedOpportunity(e) && (
+          <Badge tone="info" className="ml-1">
+            Missed opportunity
+          </Badge>
+        )}
       </p>
       {e.bestSan && e.bestSan !== e.san && e.classification !== "book" && (
         <p className="t-small mt-1 text-muted">
@@ -432,6 +444,8 @@ function KeyMoments({ moments, onGo }: { moments: MoveEvaluation[]; onGo: (ply: 
               {Number(m.fenBefore.split(" ")[5])}
               {m.color === "w" ? "." : "..."} {m.san}
               <span className={cn("ml-1", CLASS_STYLE[m.classification].className)}>{CLASS_STYLE[m.classification].symbol}</span>
+              <span className={cn("t-small ml-2 font-sans font-medium", CLASS_STYLE[m.classification].className)}>{CLASS_STYLE[m.classification].label}</span>
+              {isMissedOpportunity(m) && <span className="t-small ml-1 font-sans text-muted">· missed opportunity</span>}
             </span>
             <Button size="sm" variant="secondary" onClick={() => onGo(m.ply)}>
               Show on board

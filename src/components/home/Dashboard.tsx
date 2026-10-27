@@ -117,11 +117,11 @@ export function Dashboard() {
   const isNewUser = attempts!.length === 0 && completedLessons === 0;
 
   // Primary action: the most relevant thing to do now.
-  let primary: { label: string; href: string; detail: string };
-  if (inProgressGame) primary = { label: "Resume your game", href: "/play/", detail: `Game against the computer started ${formatRelative(inProgressGame.createdAt)}.` };
-  else if (nextProgress?.status === "in-progress" && next) primary = { label: `Continue: ${next.title}`, href: `/learn/${next.id}/`, detail: `You stopped at step ${nextProgress.currentStep + 1} of ${next.steps.length}.` };
+  let primary: { label: string; href: string; detail: string; cta?: string };
+  if (inProgressGame) primary = { label: "Resume your game", cta: "Resume", href: "/play/", detail: `Game against the computer started ${formatRelative(inProgressGame.createdAt)}.` };
+  else if (nextProgress?.status === "in-progress" && next) primary = { label: `Continue: ${next.title}`, cta: "Continue", href: `/learn/${next.id}/`, detail: `You stopped at step ${nextProgress.currentStep + 1} of ${next.steps.length}.` };
   else if (isNewUser && next) primary = { label: `Start your first lesson: ${next.title}`, href: `/learn/${next.id}/`, detail: next.objective };
-  else if (firstOpen) primary = { label: plan.minutesToday > 0 ? "Resume today's training" : "Start today's training", href: firstOpen.href, detail: `${firstOpen.title} · about ${firstOpen.minutes} min` };
+  else if (firstOpen) primary = { label: plan.minutesToday > 0 ? "Resume today's training" : "Start today's training", cta: plan.minutesToday > 0 ? "Resume" : "Start", href: firstOpen.href, detail: `${firstOpen.title} · about ${firstOpen.minutes} min` };
   else if (next) primary = { label: `Continue learning: ${next.title}`, href: `/learn/${next.id}/`, detail: next.objective };
   else primary = { label: "Solve puzzles", href: "/puzzles/", detail: "You've completed the curriculum. Keep your skills sharp." };
 
@@ -144,12 +144,12 @@ export function Dashboard() {
             <p className="t-small mt-1 text-muted">{primary.detail}</p>
           </div>
           <ButtonLink href={primary.href} size="lg" className="shrink-0" icon={<ArrowRight className="h-5 w-5" aria-hidden />}>
-            {inProgressGame ? "Resume" : "Start"}
+            {primary.cta ?? "Start"}
           </ButtonLink>
         </div>
       </Card>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
         {/* Today's plan */}
         <Card className="p-5">
           <div className="flex items-start justify-between gap-4">
@@ -279,7 +279,7 @@ function PlanRow({ block, onHide }: { block: PlanBlock; onHide: () => void }) {
       <Icon className="hidden h-5 w-5 shrink-0 text-muted sm:block" aria-hidden />
       <div className="min-w-0 flex-1">
         <p className={cn("t-body font-medium", block.done ? "text-muted" : "text-fg")}>{block.title}</p>
-        <p className="t-small truncate text-muted" title={block.reason}>
+        <p className="t-small text-muted">
           <Clock className="mr-1 inline h-3.5 w-3.5 align-[-2px]" aria-hidden />≈ {block.minutes} min{block.progressText ? ` · ${block.progressText}` : ""} · {block.reason}
         </p>
       </div>

@@ -11,6 +11,8 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { Chess } from "chess.js";
 import { createEngine } from "../../scripts/lib/engine-node.mjs";
 import { ALL_LESSONS } from "@/content/lessons";
+import { DIAGNOSTIC } from "@/content/diagnostic";
+import type { LessonStep } from "@/content/types";
 import { matchingMoves, wrongFor } from "@/lib/lessons/engine";
 
 type Score = { cp?: number; mate?: number };
@@ -49,7 +51,8 @@ describe("lesson exercises agree with Stockfish", () => {
     if (report.length) console.log("\n" + report.join("\n"));
   });
 
-  for (const lesson of ALL_LESSONS) {
+  const sources: { id: string; steps: LessonStep[] }[] = [...ALL_LESSONS, { id: "placement-check", steps: DIAGNOSTIC.map((d) => d.step) }];
+  for (const lesson of sources) {
     for (const step of lesson.steps) {
       if (step.kind !== "play" || step.passTurn || step.rulesOnly) continue;
       it(`${lesson.id}/${step.id}`, async () => {

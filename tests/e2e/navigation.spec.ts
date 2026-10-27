@@ -26,6 +26,18 @@ for (const s of SECTIONS) {
   });
 }
 
+test("the dashboard of an onboarded user fits the viewport", async ({ page }) => {
+  await page.goto("/onboarding/");
+  await page.getByRole("button", { name: /Personalise my training/ }).click();
+  await page.getByText("Intermediate", { exact: true }).click();
+  for (let i = 0; i < 3; i++) await page.getByRole("button", { name: "Continue" }).click();
+  await page.getByRole("button", { name: "Take the check" }).click();
+  await page.getByRole("button", { name: "Stop the check" }).click();
+  await page.getByRole("button", { name: "Go to my dashboard" }).click();
+  await expect(page.getByRole("heading", { name: "Today's training plan" })).toBeVisible();
+  await expectNoHorizontalOverflow(page);
+});
+
 test("primary navigation works on this viewport", async ({ page, isMobile }) => {
   await page.goto("/");
   if (isMobile) {
@@ -72,4 +84,25 @@ test("works offline after the first visit", async ({ page, context, isMobile }) 
   await page.goto("/puzzles/");
   await expect(page.getByRole("heading", { name: /Find the best move/ })).toBeVisible();
   await context.setOffline(false);
+});
+
+test("on touch screens the page scrolls when swiping across empty board squares, but not when dragging a piece", async ({ page, context, isMobile }) => {
+  test.skip(!isMobile, "touch-only behaviour");
+  await page.goto("/play/");
+  await page.getByRole("button", { name: /Start game/ }).click();
+  const board = page.locator("[role=application]").first();
+  await expect(board).toHaveAttribute("data-fen", /^rnbqkbnr/);
+  const box = (await board.boundingBox())!;
+  const cdp = await context.newCDPSession(page);
+  const swipe = async (x: number, y: number) => {
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await cdp.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ x, y }] });
+    for (let i = 1; i <= 10; i++) await cdp.send("Input.dispatchTouchEvent", { type: "touchMove", touchPoints: [{ x, y: y - i * 20 }] });
+    await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+    await page.waitForTimeout(300);
+    return page.evaluate(() => window.scrollY);
+  };
+  // e4/e5 are empty at the start; e1 holds White's king (the user's piece).
+  expect(await swipe(box.x + box.width * (4.5 / 8), box.y + box.height * 0.5)).toBeGreaterThan(0);
+  expect(await swipe(box.x + box.width * (4.5 / 8), box.y + box.height * (7.5 / 8))).toBe(0);
 });

@@ -56,7 +56,12 @@ export function ContinueBar({ done, onContinue, label }: { done: boolean; onCont
   }, [done]);
   if (!done || !onContinue) return null;
   return (
-    <Button ref={ref} size="lg" className="mt-4 w-full" onClick={onContinue} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
+    <Button
+      ref={ref}
+      size="lg"
+      // Below lg the panel sits under the board, so keep Continue reachable above the bottom navigation.
+      className="mt-4 w-full max-lg:sticky max-lg:bottom-[calc(4.5rem+env(safe-area-inset-bottom))] max-lg:z-20 max-lg:shadow-[var(--shadow-overlay)]"
+      onClick={onContinue} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
       {label ?? "Continue"}
     </Button>
   );

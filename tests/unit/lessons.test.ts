@@ -84,6 +84,37 @@ describe("supporting content", () => {
     expect(validateLesson(asLesson("drills", DRILLS.map((d, i) => ({ ...d.step, id: `drill-${i}` }))))).toEqual([]);
     for (const d of DIAGNOSTIC) expect(getLesson(d.lessonIfMissed), d.id).toBeDefined();
   });
+  it("the placement check uses positions that do not appear in any lesson", () => {
+    const key = (f: string) => f.split(" ").slice(0, 2).join(" ");
+    const lessonFens = new Set(ALL_LESSONS.flatMap((l) => l.steps.filter((s) => "fen" in s && s.fen).map((s) => key((s as { fen: string }).fen))));
+    for (const d of DIAGNOSTIC) if ("fen" in d.step && d.step.fen) expect(lessonFens.has(key(d.step.fen)), d.id).toBe(false);
+  });
+  it("placement-check answers are factually right", () => {
+    const stale = DIAGNOSTIC.find((d) => d.id === "mate-or-stalemate")!.step as { fen: string };
+    expect(new Chess(stale.fen).isStalemate()).toBe(true);
+    const threat = DIAGNOSTIC.find((d) => d.id === "threat")!.step as { fen: string };
+    const asWhite = new Chess(threat.fen.replace(" b ", " w "));
+    asWhite.move("Qxh7+");
+    expect(asWhite.isCheckmate()).toBe(true);
+    // The explanation's claims about defences: ...g6 and ...f5 stop it, ...h6 does not.
+    for (const [def, stops] of [["g6", true], ["f5", true], ["h6", false]] as const) {
+      const c = new Chess(threat.fen);
+      c.move(def);
+      let mates = false;
+      try {
+        c.move("Qh7#");
+        mates = c.isCheckmate();
+      } catch {
+        try {
+          c.move("Qxh7#");
+          mates = c.isCheckmate();
+        } catch {
+          mates = false;
+        }
+      }
+      expect(mates, def).toBe(!stops);
+    }
+  });
   it("diagnostic recommendations are grounded in the answers", () => {
     const all = DIAGNOSTIC.map((d) => ({ id: d.id, skill: d.skill, correct: true }));
     expect(diagnose(all).lessonId).toBe("discovered-attacks");

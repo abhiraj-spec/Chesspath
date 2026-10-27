@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { Chess } from "chess.js";
-import { PUZZLES, puzzleThemes } from "@/content/puzzles";
+import { PUZZLES, puzzleThemes, puzzlesForSkill } from "@/content/puzzles";
+import { SKILLS } from "@/content/skills";
 import { checkPuzzleMove, validatePuzzle } from "@/lib/puzzles/solve";
 
 describe("puzzle collection", () => {
@@ -10,6 +11,9 @@ describe("puzzle collection", () => {
     expect(new Set(PUZZLES.map((p) => p.startFen)).size).toBe(PUZZLES.length);
     for (const lv of [1, 2, 3, 4, 5]) expect(PUZZLES.some((p) => p.difficulty === lv)).toBe(true);
     expect(puzzleThemes().length).toBeGreaterThan(10);
+  });
+  it("every skill that links to a puzzle theme has puzzles to practise", () => {
+    for (const s of SKILLS) if (s.puzzleTheme) expect(puzzlesForSkill(s.puzzleTheme).length, s.id).toBeGreaterThan(0);
   });
   it("every puzzle replays legally and has metadata", () => {
     for (const p of PUZZLES) {

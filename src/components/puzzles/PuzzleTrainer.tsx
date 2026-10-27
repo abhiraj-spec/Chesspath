@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Repeat, Sparkles, Shapes, Layers, Puzzle as PuzzleIcon, CheckCircle2 } from "lucide-react";
-import { PUZZLES, DIFFICULTY_LABELS, getPuzzle, puzzleThemes } from "@/content/puzzles";
+import { PUZZLES, DIFFICULTY_LABELS, getPuzzle, puzzlesForSkill, puzzleThemes } from "@/content/puzzles";
 import { useAnalyses, useAttempts, useGames, useProfile, useReviews } from "@/hooks/data";
 import { selectPuzzle, type PuzzleMode, type Selection } from "@/lib/learning/puzzleSelect";
 import { computeSkillStats, findWeaknesses } from "@/lib/learning/mastery";
@@ -153,6 +153,9 @@ export function PuzzleTrainer() {
   if (loading) return <PageSkeleton />;
 
   const themes = puzzleThemes();
+  // Counts include puzzles where the theme is a secondary skill, matching how puzzles are selected.
+  // A skill linked from elsewhere (e.g. Progress) may only appear as a secondary tag: list it too.
+  const themeOptions = [...(themes.some((t) => t.theme === theme) ? [] : [{ theme, name: skillInfo(theme).name }]), ...themes].map((t) => ({ value: t.theme, label: `${t.name} (${puzzlesForSkill(t.theme).length})` }));
   const modeBar = (
     <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
       <Segmented
@@ -168,7 +171,7 @@ export function PuzzleTrainer() {
       />
       {mode === "theme" && (
         <div className="sm:w-64">
-          <Select label="Theme" hideLabel value={theme} onChange={setTheme} options={themes.map((t) => ({ value: t.theme, label: `${t.name} (${t.count})` }))} />
+          <Select label="Theme" hideLabel value={theme} onChange={setTheme} options={themeOptions} />
         </div>
       )}
       {mode === "level" && (

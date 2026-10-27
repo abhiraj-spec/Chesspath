@@ -374,7 +374,12 @@ export function Chessboard({
           key={sq}
           data-square={sq}
           className="relative"
-          style={{ background: light ? "var(--sq-light)" : "var(--sq-dark)" }}
+          style={{
+            background: light ? "var(--sq-light)" : "var(--sq-dark)",
+            // Only squares holding a draggable piece block touch scrolling, so the page can still be
+            // scrolled by swiping across the rest of the board.
+            touchAction: dragEnabled && piece && canMoveColor(piece.color) ? "none" : undefined,
+          }}
         >
           {isLast && <div className="absolute inset-0" style={{ background: "var(--sq-last)" }} />}
           {isSel && <div className="absolute inset-0" style={{ background: "var(--sq-selected)" }} />}
@@ -458,7 +463,7 @@ export function Chessboard({
         onFocus={onFocus}
         onBlur={() => setKeyboardActive(false)}
         className="relative grid aspect-square w-full grid-cols-8 grid-rows-8 overflow-hidden rounded-[var(--radius-md)] shadow-[var(--shadow-raised)] outline-offset-4"
-        style={{ touchAction: dragEnabled && !onSquareSelect ? "none" : "manipulation", cursor: drag?.active ? "grabbing" : "default" }}
+        style={{ touchAction: drag ? "none" : "manipulation", cursor: drag?.active ? "grabbing" : "default" }}
         data-fen={fen}
         data-orientation={orientation}
       >

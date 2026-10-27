@@ -39,7 +39,7 @@ export const DIAGNOSTIC: DiagnosticItem[] = [
     step: {
       id: "d-stalemate",
       kind: "choice",
-      fen: setup({ white: "Kb6 Qc7", black: "Ka8", turn: "b" }),
+      fen: setup({ white: "Kc6 Qb6", black: "Ka8", turn: "b" }),
       question: "Black to move. What is the result?",
       options: [
         { text: "Draw by stalemate", correct: true, feedback: "Correct: Black is not in check and has no legal move." },
@@ -57,11 +57,11 @@ export const DIAGNOSTIC: DiagnosticItem[] = [
     step: {
       id: "d-hanging",
       kind: "play",
-      fen: setup({ white: "Kg1 Qd1", black: "Kg8 Ra4 Nd6 Pe7" }),
+      fen: setup({ white: "Kg1 Qb3 Pf2 Pg2 Ph2", black: "Kh8 Rf8 Nb4 Pa7 Pb7 Pg7 Ph7" }),
       prompt: "White to move. Win material.",
-      moves: [{ accept: { san: ["Qxa4"] } }],
+      moves: [{ accept: { san: ["Qxb4"] } }],
       hints: ["Is any black piece undefended?"],
-      explanation: "The rook on a4 was undefended. The knight was protected by the e7 pawn.",
+      explanation: "The knight on b4 had no defender, so Qxb4 wins a whole piece. Qxb7 would only win a pawn.",
     },
   },
   {
@@ -87,28 +87,29 @@ export const DIAGNOSTIC: DiagnosticItem[] = [
     step: {
       id: "d-fork",
       kind: "play",
-      fen: setup({ white: "Kg1 Nd5 Pf2 Pg2 Ph2", black: "Kg8 Qc8 Pf7 Pg7 Ph7" }),
-      prompt: "White to move. Win the black queen.",
-      moves: [{ accept: { san: ["Ne7+"] } }],
+      fen: setup({ white: "Kg1 Nb5 Pf2 Pg2 Ph2", black: "Ke8 Ra8 Pe6 Pf7 Pg7 Ph7" }),
+      prompt: "White to move. Win material with the knight.",
+      moves: [{ accept: { san: ["Nc7+"] } }],
       hints: ["Look for a knight check that also attacks another piece."],
-      explanation: "Ne7+ forks king and queen.",
+      explanation: "Nc7+ forks the king and the rook on a8: after the king moves, Nxa8 wins the rook.",
     },
   },
   {
     id: "threat",
     skill: "threat-awareness",
     missText: "your opponent's threat",
-    lessonIfMissed: "back-rank",
+    lessonIfMissed: "mating-patterns",
     step: {
       id: "d-threat",
       kind: "choice",
-      fen: setup({ white: "Kg1 Qd1 Pa2 Pb2 Pf2 Pg2 Ph2", black: "Kg8 Re8 Bd7 Pa7 Pb7 Pf7 Pg7 Ph7" }),
-      question: "White to move. Is it a good idea to capture the bishop with Qxd7?",
+      fen: setup({ white: "Kg1 Qd3 Bb1 Pa2 Pb2 Pf2 Pg2 Ph2", black: "Kg8 Qe7 Rf8 Pa7 Pb7 Pf7 Pg7 Ph7", turn: "b" }),
+      question: "Black to move. What is White threatening?",
       options: [
-        { text: "No: after Qxd7, ...Re1 is checkmate", correct: true, feedback: "Exactly: the queen must keep guarding the back rank." },
-        { text: "Yes: it wins a free bishop", feedback: "It looks free, but ...Re1 would be checkmate because your king has no escape square." },
+        { text: "Qxh7 checkmate", correct: true, feedback: "Right: the queen takes on h7 with the bishop behind it, so the king cannot recapture and has no escape." },
+        { text: "To trade queens", feedback: "No queen trade is on offer here. Look at the diagonal from b1 to h7." },
+        { text: "Nothing: White has no threat", feedback: "Look at the diagonal from b1 to h7: queen and bishop are lined up against h7." },
       ],
-      explanation: "Always check what your opponent can do after your move: here, a back-rank mate.",
+      explanation: "Before every move, ask what your opponent wants to do. Here White threatens Qxh7#, so Black must defend by blocking the diagonal with ...g6 or ...f5. (...h6 would not help: Qh7 is still mate.)",
     },
   },
 ];

@@ -185,3 +185,23 @@ describe("curriculum recommendations and daily plan", () => {
     expect(buildRecommendations({ weaknesses: [], progress: new Map(), reviews: [] })).toEqual([]);
   });
 });
+
+describe("skipped exercises are neutral", () => {
+  it("do not lower mastery", () => {
+    const solvedOnly = [attempt({ createdAt: T0 }), attempt({ createdAt: T0 + 1 })];
+    const withSkips = [...solvedOnly, attempt({ createdAt: T0 + 2, solved: false, clean: false, skipped: true }), attempt({ createdAt: T0 + 3, solved: false, clean: false, skipped: true })];
+    expect(computeSkillStats(withSkips).get("fork")!.recentScore).toBe(computeSkillStats(solvedOnly).get("fork")!.recentScore);
+    expect(computeSkillStats(withSkips).get("fork")!.attempts).toBe(2);
+  });
+  it("do not move the adaptive level down", () => {
+    const skips = Array.from({ length: 6 }, (_, i) => attempt({ createdAt: T0 + i, difficulty: 3, solved: false, clean: false, skipped: true }));
+    expect(targetLevel(skips, "intermediate").level).toBe(targetLevel([], "intermediate").level);
+  });
+  it("do not count as puzzles done in the daily plan", () => {
+    const now = T0 + 1000;
+    const skips = Array.from({ length: 3 }, (_, i) => attempt({ createdAt: T0 + i, solved: false, clean: false, skipped: true }));
+    const plan = buildDailyPlan({ profile: defaultProfile(), progress: new Map(), attempts: skips, reviews: [], sessions: [], weaknesses: [], openingDue: 0, now });
+    const block = plan.blocks.find((b) => b.kind === "puzzles")!;
+    expect(block.progressText ?? "").toMatch(/^0\//);
+  });
+});

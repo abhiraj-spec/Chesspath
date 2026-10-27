@@ -25,7 +25,7 @@ export const START_LEVEL: Record<SkillLevel, number> = {
 export function targetLevel(puzzleAttempts: Attempt[], skill: SkillLevel = "beginner"): { level: number; why: string } {
   let level = START_LEVEL[skill];
   let why = `Starting at level ${level} based on your profile.`;
-  const sorted = [...puzzleAttempts].filter((a) => a.kind === "puzzle" && !a.wasReview).sort((a, b) => a.createdAt - b.createdAt);
+  const sorted = [...puzzleAttempts].filter((a) => a.kind === "puzzle" && !a.wasReview && !a.skipped).sort((a, b) => a.createdAt - b.createdAt);
   // Replay the history so the level evolves the same way every time it is computed.
   let window: Attempt[] = [];
   for (const a of sorted) {
@@ -34,7 +34,7 @@ export function targetLevel(puzzleAttempts: Attempt[], skill: SkillLevel = "begi
     if (window.length > 6) window = window.slice(-6);
     if (window.length === 6) {
       const clean = window.filter((x) => x.clean).length;
-      const failed = window.filter((x) => !x.solved || x.revealed || x.skipped).length;
+      const failed = window.filter((x) => !x.solved || x.revealed).length;
       if (clean >= 5 && level < 5) {
         level++;
         why = `Moved up to level ${level}: you solved 5 of your last 6 puzzles cleanly.`;

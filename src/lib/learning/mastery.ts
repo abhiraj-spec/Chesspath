@@ -8,7 +8,7 @@ import { skillInfo } from "@/content/skills";
  *
  * Every graded attempt (puzzle, lesson check, drill, opening recall) is evidence for its skills.
  * Credit per attempt: 1 = solved first time without hints, 0.5 = solved after a mistake or hint,
- * 0 = failed, revealed or skipped.
+ * 0 = failed or revealed. Skipped attempts are excluded entirely.
  *
  * Levels (all thresholds use the last 10 attempts for that skill):
  *  - New:         no attempts yet
@@ -55,7 +55,8 @@ export function credit(a: Attempt): number {
 
 export function computeSkillStats(attempts: Attempt[]): Map<string, SkillStats> {
   const bySkill = new Map<string, Attempt[]>();
-  for (const a of attempts) for (const s of a.skills) (bySkill.get(s) ?? bySkill.set(s, []).get(s)!).push(a);
+  // Skipped exercises are neither successes nor failures: the learner chose not to attempt them.
+  for (const a of attempts) if (!a.skipped) for (const s of a.skills) (bySkill.get(s) ?? bySkill.set(s, []).get(s)!).push(a);
   const out = new Map<string, SkillStats>();
   for (const [skill, list] of bySkill) {
     list.sort((a, b) => a.createdAt - b.createdAt);

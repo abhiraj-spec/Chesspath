@@ -281,7 +281,7 @@ export function PuzzleSolver({
           </div>
           {!done && <p className="t-small mt-2 text-subtle">Skipping doesn&apos;t count as a miss; showing the solution adds the puzzle to your reviews.</p>}
           {done && (
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2 max-lg:sticky max-lg:bottom-[calc(4.5rem+env(safe-area-inset-bottom))] max-lg:z-20 max-lg:-mx-2 max-lg:rounded-[var(--radius-md)] max-lg:bg-surface max-lg:p-2 max-lg:shadow-[var(--shadow-overlay)]">
               <Button size="lg" className="flex-1" onClick={onNext} icon={<ChevronRight className="h-5 w-5" aria-hidden />} autoFocus>
                 Next puzzle
               </Button>

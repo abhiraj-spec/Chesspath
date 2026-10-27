@@ -12,6 +12,7 @@ import { Button, ButtonLink, IconButton } from "@/components/ui/Button";
 import { useToast } from "@/components/ui/Toast";
 import { downloadText, formatDate, uid } from "@/lib/util";
 import { describeResult } from "@/lib/chess/status";
+import { fenError, START_FEN } from "@/lib/chess/core";
 import { useRouter } from "next/navigation";
 
 const SAMPLE = `[Event "Example"]
@@ -31,6 +32,19 @@ export function LibraryView() {
   const [busy, setBusy] = useState(false);
   const [toDelete, setToDelete] = useState<ChessGameRecord | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const [fenText, setFenText] = useState("");
+  const [fenErr, setFenErr] = useState<string | null>(null);
+
+  const openFen = () => {
+    const f = fenText.trim();
+    if (!f) return;
+    const err = fenError(f);
+    if (err) {
+      setFenErr(err);
+      return;
+    }
+    router.push(`/analysis/?fen=${encodeURIComponent(f)}`);
+  };
 
   const importText = async (raw: string) => {
     setErrors([]);
@@ -134,7 +148,44 @@ export function LibraryView() {
           </div>
         </Card>
 
-        <Card className="p-5">
+        <Card className="p-5 lg:col-start-1">
+          <h2 className="t-card">Analyse a position (FEN)</h2>
+          <label htmlFor="fen-input" className="t-small mt-1 block text-muted">
+            Paste a FEN to set up any position, then explore it with Stockfish.
+          </label>
+          <input
+            id="fen-input"
+            value={fenText}
+            onChange={(e) => {
+              setFenText(e.target.value);
+              setFenErr(null);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") openFen();
+            }}
+            spellCheck={false}
+            autoComplete="off"
+            placeholder="rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1"
+            aria-invalid={Boolean(fenErr)}
+            aria-describedby={fenErr ? "fen-error" : undefined}
+            className="t-notation mt-2 w-full rounded-[var(--radius-md)] border border-border-strong bg-surface px-3 py-2 text-fg"
+          />
+          {fenErr && (
+            <p id="fen-error" role="alert" className="t-small mt-2 rounded-[var(--radius-md)] bg-danger-soft p-3 text-danger">
+              {fenErr}
+            </p>
+          )}
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Button variant="secondary" onClick={openFen} disabled={!fenText.trim()} icon={<Microscope className="h-4 w-4" aria-hidden />}>
+              Analyse position
+            </Button>
+            <Button variant="ghost" onClick={() => router.push(`/analysis/?fen=${encodeURIComponent(START_FEN)}`)}>
+              Start from the initial position
+            </Button>
+          </div>
+        </Card>
+
+        <Card className="p-5 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
           <h2 className="t-card">Saved games</h2>
           {games === undefined ? (
             <div className="mt-3 space-y-2">

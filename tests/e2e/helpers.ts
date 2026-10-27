@@ -27,6 +27,10 @@ export async function boardFen(board: Locator): Promise<string> {
 }
 
 export async function expectNoHorizontalOverflow(page: Page) {
-  const [sw, iw] = await page.evaluate(() => [document.documentElement.scrollWidth, window.innerWidth]);
-  expect(sw, "page should not scroll horizontally").toBeLessThanOrEqual(iw);
+  // Compare with the configured viewport, not window.innerWidth: with mobile
+  // emulation the layout viewport widens to fit overflowing content, so
+  // innerWidth would hide the problem.
+  const vw = page.viewportSize()?.width ?? 0;
+  const sw = await page.evaluate(() => document.documentElement.scrollWidth);
+  expect(sw, "page should not scroll horizontally").toBeLessThanOrEqual(vw);
 }

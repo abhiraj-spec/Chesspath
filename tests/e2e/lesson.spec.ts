@@ -80,3 +80,39 @@ test("wrong moves get explained, hints help, and correct moves are confirmed", a
   await expect(page.getByText("Correct!")).toBeVisible();
   await expect(page.getByText(/had no defender/)).toBeVisible();
 });
+
+test("re-solving a step after going back does not record a second attempt; focus follows the new step", async ({ page }) => {
+  await page.goto("/learn/board-coordinates/");
+  await page.getByRole("button", { name: "Start lesson" }).click();
+  const board = page.getByTestId("exercise-board");
+  await cont(page);
+  await clickSquare(page, board, "e4");
+  await cont(page);
+  // Keyboard focus moves to the new step rather than being lost when Continue disappears.
+  await expect(page.locator("#lesson-step-start")).toBeFocused();
+  for (const r of "12345678") await clickSquare(page, board, `d${r}`);
+  await page.getByRole("button", { name: "Check answer" }).click();
+  await cont(page);
+  for (const s of ["d4", "d5", "e4", "e5"]) await clickSquare(page, board, s);
+  await page.getByRole("button", { name: "Check answer" }).click();
+  await cont(page);
+  await page.getByRole("button", { name: "c6", exact: true }).click();
+  await cont(page);
+  await clickSquare(page, board, "g7"); // scored check
+  await cont(page);
+  await page.getByRole("button", { name: "Previous step" }).click();
+  await clickSquare(page, board, "g7"); // solved again
+  await cont(page);
+  const count = await page.evaluate(
+    () =>
+      new Promise<number>((resolve, reject) => {
+        const req = indexedDB.open("chesspath");
+        req.onerror = () => reject(req.error);
+        req.onsuccess = () => {
+          const all = req.result.transaction("attempts").objectStore("attempts").getAll();
+          all.onsuccess = () => resolve((all.result as { refId: string }[]).filter((a) => a.refId === "board-coordinates#find-g7").length);
+        };
+      }),
+  );
+  expect(count).toBe(1);
+});

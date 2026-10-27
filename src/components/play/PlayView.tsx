@@ -15,6 +15,7 @@ import { useActivityTimer } from "@/hooks/useActivityTimer";
 import { LEVELS, chooseMove, levelConfig } from "@/lib/engine/strength";
 import { EngineError } from "@/lib/engine/client";
 import { buildLine, fenAt, type Line } from "@/lib/chess/line";
+import { CopyFenButton } from "@/components/board/CopyFenButton";
 import { describeResult, lineStatus, type GameResult, type TerminalReason } from "@/lib/chess/status";
 import { toPgn } from "@/lib/chess/pgn";
 import { colorName, moveToUci, START_FEN } from "@/lib/chess/core";
@@ -445,6 +446,7 @@ export function PlayView() {
               <IconButton label="Copy PGN" size="sm" variant="secondary" onClick={copyPgn}>
                 <Copy className="h-4 w-4" aria-hidden />
               </IconButton>
+              <CopyFenButton fen={shownFen} variant="secondary" />
             </div>
             {game.takebacks > 0 && <p className="t-small mt-2 text-subtle">Takebacks used: {game.takebacks}</p>}
           </PanelCard>
