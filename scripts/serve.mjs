@@ -32,8 +32,9 @@ createServer((req, res) => {
   }
   const type = TYPES[extname(file)] ?? "application/octet-stream";
   const headers = { "Content-Type": type };
-  if (path.startsWith("/_next/static/")) headers["Cache-Control"] = "public, max-age=31536000, immutable";
-  else if (path === "/sw.js") headers["Cache-Control"] = "no-cache";
+  // Use the URL path (always "/"-separated), not the file path (which uses "\\" on Windows).
+  if (url.pathname.startsWith("/_next/static/")) headers["Cache-Control"] = "public, max-age=31536000, immutable";
+  else if (url.pathname === "/sw.js") headers["Cache-Control"] = "no-cache";
   res.writeHead(res.statusCode || 200, headers);
   createReadStream(file).pipe(res);
 }).listen(port, () => console.log(`ChessPath running at http://localhost:${port}`));

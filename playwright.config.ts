@@ -16,5 +16,5 @@ export default defineConfig({
     { name: "mobile", use: { ...devices["Pixel 7"] }, testMatch: /navigation|lesson|puzzle/ },
   ],
   // Tests run against the production static export (build first: npm run build).
-  webServer: { command: `PORT=${PORT} node scripts/serve.mjs`, url: `http://localhost:${PORT}`, reuseExistingServer: true, timeout: 30_000 },
+  webServer: { command: "node scripts/serve.mjs", env: { PORT: String(PORT) }, url: `http://localhost:${PORT}`, reuseExistingServer: true, timeout: 30_000 },
 });
