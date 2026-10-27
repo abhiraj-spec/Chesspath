@@ -1,0 +1,23 @@
+import type { ReactNode } from "react";
+import { cn } from "@/lib/util";
+
+/**
+ * Shared layout for every board screen: the board stays dominant.
+ * Desktop: board left, panel right. Mobile: board on top, panel below.
+ * The board is capped by viewport height so it never forces scrolling on laptops.
+ */
+export function TrainerLayout({ board, panel, above, className }: { board: ReactNode; panel: ReactNode; above?: ReactNode; className?: string }) {
+  return (
+    <div className={cn("grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)] lg:items-start", className)}>
+      <div className="min-w-0">
+        {above}
+        <div className="mx-auto w-full max-w-[min(100%,calc(100dvh-10rem))] lg:max-w-[min(100%,calc(100dvh-7rem))]">{board}</div>
+      </div>
+      <aside className="min-w-0 lg:sticky lg:top-6">{panel}</aside>
+    </div>
+  );
+}
+
+export function PanelCard({ children, className }: { children: ReactNode; className?: string }) {
+  return <div className={cn("rounded-[var(--radius-lg)] border border-border bg-surface p-4 shadow-[var(--shadow-card)] sm:p-5", className)}>{children}</div>;
+}

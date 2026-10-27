@@ -1,0 +1,5970 @@
+[
+ {
+  "id": "lichess-0Pqjj",
+  "fen": "Q4b1r/p1p3pp/6k1/8/8/5R2/PPqP1PPP/R1B3K1 w - - 3 20",
+  "setupMove": "f3f8",
+  "startFen": "Q4R1r/p1p3pp/6k1/8/8/8/PPqP1PPP/R1B3K1 b - - 0 20",
+  "solution": [
+   "c2d1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 959,
+  "solverMoves": 1,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qd1#. It delivers checkmate. The line ends in checkmate.",
+  "line": "20... Qd1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "c2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0Pqjj (CC0), from https://lichess.org/k2rbnpMC#39",
+  "url": "https://lichess.org/training/0Pqjj"
+ },
+ {
+  "id": "lichess-3xU8T",
+  "fen": "r1b2r1k/5ppp/p2Rpb2/1p5q/8/1B2B1Q1/PPP2PPP/3R2K1 w - - 5 20",
+  "setupMove": "e3d4",
+  "startFen": "r1b2r1k/5ppp/p2Rpb2/1p5q/3B4/1B4Q1/PPP2PPP/3R2K1 b - - 6 20",
+  "solution": [
+   "h5d1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "hanging-piece",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 729,
+  "solverMoves": 1,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qxd1#. It captures the rook on d1, and delivers checkmate. The line ends in checkmate.",
+  "line": "20... Qxd1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "h5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3xU8T (CC0), from https://lichess.org/5ZJdS45P#39",
+  "url": "https://lichess.org/training/3xU8T"
+ },
+ {
+  "id": "lichess-2fJxw",
+  "fen": "r4rk1/pp3pp1/3p1q1p/1B5n/3QPPn1/8/PPP2RNP/6RK w - - 1 21",
+  "setupMove": "d4f6",
+  "startFen": "r4rk1/pp3pp1/3p1Q1p/1B5n/4PPn1/8/PPP2RNP/6RK b - - 0 21",
+  "solution": [
+   "g4f2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "hangingPiece",
+   "kingsideAttack",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "smotheredMate"
+  ],
+  "difficulty": 1,
+  "rating": 971,
+  "solverMoves": 1,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Nxf2#. It captures the rook on f2, and delivers checkmate. The line ends in checkmate.",
+  "line": "21... Nxf2#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "g4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2fJxw (CC0), from https://lichess.org/5iRuQPje#41",
+  "url": "https://lichess.org/training/2fJxw"
+ },
+ {
+  "id": "lichess-13D8s",
+  "fen": "rn1qkbnr/1p1b1ppp/8/pBp5/3NN3/8/PPP1QPPP/R1B1K2R b KQkq - 3 8",
+  "setupMove": "c5d4",
+  "startFen": "rn1qkbnr/1p1b1ppp/8/pB6/3pN3/8/PPP1QPPP/R1B1K2R w KQkq - 0 9",
+  "solution": [
+   "e4d6"
+  ],
+  "alternatives": [
+   "e4f6"
+  ],
+  "sideToMove": "w",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "double-check",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "discoveredCheck",
+   "doubleCheck",
+   "epauletteMate",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "opening"
+  ],
+  "difficulty": 1,
+  "rating": 843,
+  "solverMoves": 1,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Nd6#. It delivers checkmate. The line ends in checkmate.",
+  "line": "9. Nd6#",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 13D8s (CC0), from https://lichess.org/MsBaQbNx/black#16",
+  "url": "https://lichess.org/training/13D8s"
+ },
+ {
+  "id": "lichess-1a6xZ",
+  "fen": "5r1k/5rp1/8/1pq2P1N/p7/P3nK1R/1P5P/3R4 b - - 1 39",
+  "setupMove": "e3d1",
+  "startFen": "5r1k/5rp1/8/1pq2P1N/p7/P4K1R/1P5P/3n4 w - - 0 40",
+  "solution": [
+   "h5f6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "discoveredAttack",
+   "discoveredCheck",
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1144,
+  "solverMoves": 1,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Nf6#. It delivers checkmate. The line ends in checkmate.",
+  "line": "40. Nf6#",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "h5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1a6xZ (CC0), from https://lichess.org/spdMjxMu/black#78",
+  "url": "https://lichess.org/training/1a6xZ"
+ },
+ {
+  "id": "lichess-4vpvx",
+  "fen": "1r3rk1/5pbp/p5p1/2pPpPB1/1pp1P1BP/q1N1Q3/2P5/1K1R3R w - - 0 22",
+  "setupMove": "h4h5",
+  "startFen": "1r3rk1/5pbp/p5p1/2pPpPBP/1pp1P1B1/q1N1Q3/2P5/1K1R3R b - - 0 22",
+  "solution": [
+   "b4c3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "discoveredAttack",
+   "discoveredCheck",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "queensideAttack"
+  ],
+  "difficulty": 1,
+  "rating": 1017,
+  "solverMoves": 1,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is bxc3#. It captures the knight on c3, and delivers checkmate. The line ends in checkmate.",
+  "line": "22... bxc3#",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "b4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4vpvx (CC0), from https://lichess.org/ZARuSkww#43",
+  "url": "https://lichess.org/training/4vpvx"
+ },
+ {
+  "id": "lichess-4K1f1",
+  "fen": "rn2k2r/ppB1bp2/5n2/6p1/2Pq2B1/2N5/PP2Q2P/3RKR2 b kq - 3 15",
+  "setupMove": "d4g4",
+  "startFen": "rn2k2r/ppB1bp2/5n2/6p1/2P3q1/2N5/PP2Q2P/3RKR2 w kq - 0 16",
+  "solution": [
+   "d1d8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "mate-in-1",
+   "pin"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "operaMate",
+   "pin"
+  ],
+  "difficulty": 1,
+  "rating": 1053,
+  "solverMoves": 1,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Rd8#. It delivers checkmate. The line ends in checkmate.",
+  "line": "16. Rd8#",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4K1f1 (CC0), from https://lichess.org/1DahlQkR/black#30",
+  "url": "https://lichess.org/training/4K1f1"
+ },
+ {
+  "id": "lichess-1qGS7",
+  "fen": "6r1/R5pk/5R1p/8/6P1/p2pB1KP/r4P2/5b2 b - - 0 48",
+  "setupMove": "d3d2",
+  "startFen": "6r1/R5pk/5R1p/8/6P1/p3B1KP/r2p1P2/5b2 w - - 0 49",
+  "solution": [
+   "f6h6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "mate-in-1",
+   "pin",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "operaMate",
+   "pin"
+  ],
+  "difficulty": 1,
+  "rating": 1122,
+  "solverMoves": 1,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Rxh6#. It captures the pawn on h6, and delivers checkmate. The line ends in checkmate.",
+  "line": "49. Rxh6#",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1qGS7 (CC0), from https://lichess.org/kkcciyQl/black#96",
+  "url": "https://lichess.org/training/1qGS7"
+ },
+ {
+  "id": "lichess-4HDuP",
+  "fen": "1rQk1b1r/pP1Bpppp/3p1n2/2pP4/4P3/8/PP3P1P/RNB1K2b b Q - 4 14",
+  "setupMove": "b8c8",
+  "startFen": "2rk1b1r/pP1Bpppp/3p1n2/2pP4/4P3/8/PP3P1P/RNB1K2b w Q - 0 15",
+  "solution": [
+   "b7c8q"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "promotion"
+  ],
+  "difficulty": 1,
+  "rating": 1131,
+  "solverMoves": 1,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is bxc8=Q#. It captures the rook on c8, and delivers checkmate, and promotes to a queen. The line ends in checkmate.",
+  "line": "15. bxc8=Q#",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "b7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4HDuP (CC0), from https://lichess.org/xAw6cONQ/black#28",
+  "url": "https://lichess.org/training/4HDuP"
+ },
+ {
+  "id": "lichess-0u4sr",
+  "fen": "2r3k1/Q3qppp/p7/1p1Np3/4b3/4P3/PP4PP/2R2RK1 b - - 2 24",
+  "setupMove": "e7a7",
+  "startFen": "2r3k1/q4ppp/p7/1p1Np3/4b3/4P3/PP4PP/2R2RK1 w - - 0 25",
+  "solution": [
+   "c1c8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 963,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Rxc8#. It captures the rook on c8, and delivers checkmate. The line ends in checkmate.",
+  "line": "25. Rxc8#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0u4sr (CC0), from https://lichess.org/pN4eH95n/black#48",
+  "url": "https://lichess.org/training/0u4sr"
+ },
+ {
+  "id": "lichess-0NY8a",
+  "fen": "r1r5/k4p1p/6pP/6P1/1Q1PPP2/1p2K3/qPp5/R3R3 b - - 13 41",
+  "setupMove": "a2a1",
+  "startFen": "r1r5/k4p1p/6pP/6P1/1Q1PPP2/1p2K3/1Pp5/q3R3 w - - 0 42",
+  "solution": [
+   "e1a1"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 945,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Rxa1#. It captures the queen on a1, and delivers checkmate. The line ends in checkmate.",
+  "line": "42. Rxa1#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0NY8a (CC0), from https://lichess.org/jHIwVofI/black#82",
+  "url": "https://lichess.org/training/0NY8a"
+ },
+ {
+  "id": "lichess-2HaRI",
+  "fen": "r1b1k2r/pp1p1ppp/4p3/6q1/1bPQn3/2N5/PP2PPPP/2R1KB1R w Kkq - 0 11",
+  "setupMove": "d4e4",
+  "startFen": "r1b1k2r/pp1p1ppp/4p3/6q1/1bP1Q3/2N5/PP2PPPP/2R1KB1R b Kkq - 0 11",
+  "solution": [
+   "g5c1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 814,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxc1#. It captures the rook on c1, and delivers checkmate. The line ends in checkmate.",
+  "line": "11... Qxc1#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "g5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2HaRI (CC0), from https://lichess.org/lEzmLXoB#21",
+  "url": "https://lichess.org/training/2HaRI"
+ },
+ {
+  "id": "lichess-0nQpV",
+  "fen": "r2q1rk1/pbp4p/1p1ppP1Q/7p/3P4/2NB1P2/PPP5/R3K1N1 b Q - 0 17",
+  "setupMove": "d8f6",
+  "startFen": "r4rk1/pbp4p/1p1ppq1Q/7p/3P4/2NB1P2/PPP5/R3K1N1 w Q - 0 18",
+  "solution": [
+   "h6h7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "kingsideAttack",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 906,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Qxh7#. It captures the pawn on h7, and delivers checkmate. The line ends in checkmate.",
+  "line": "18. Qxh7#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "h6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0nQpV (CC0), from https://lichess.org/4BLSB2t7/black#34",
+  "url": "https://lichess.org/training/0nQpV"
+ },
+ {
+  "id": "lichess-3BtyC",
+  "fen": "5k2/8/6PK/2r5/8/2p5/8/3R4 w - - 3 58",
+  "setupMove": "h6h7",
+  "startFen": "5k2/7K/6P1/2r5/8/2p5/8/3R4 b - - 4 58",
+  "solution": [
+   "c5h5"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "rookEndgame"
+  ],
+  "difficulty": 1,
+  "rating": 1097,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Rh5#. It delivers checkmate. The line ends in checkmate.",
+  "line": "58... Rh5#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3BtyC (CC0), from https://lichess.org/ceFm03jW#115",
+  "url": "https://lichess.org/training/3BtyC"
+ },
+ {
+  "id": "lichess-4DpZh",
+  "fen": "r4k2/2pq1p1p/3p2p1/1P1P1p2/1P1Q4/8/5PPP/4R1K1 b - - 0 27",
+  "setupMove": "d7b5",
+  "startFen": "r4k2/2p2p1p/3p2p1/1q1P1p2/1P1Q4/8/5PPP/4R1K1 w - - 0 28",
+  "solution": [
+   "d4h8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 895,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Qh8#. It delivers checkmate. The line ends in checkmate.",
+  "line": "28. Qh8#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4DpZh (CC0), from https://lichess.org/FNueewWW/black#54",
+  "url": "https://lichess.org/training/4DpZh"
+ },
+ {
+  "id": "lichess-0dm3n",
+  "fen": "8/3Qbpk1/6p1/4q2n/1PN2p2/5P2/6PP/3r1B1K w - - 0 43",
+  "setupMove": "c4e5",
+  "startFen": "8/3Qbpk1/6p1/4N2n/1P3p2/5P2/6PP/3r1B1K b - - 0 43",
+  "solution": [
+   "d1f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "hangingPiece",
+   "master",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 920,
+  "solverMoves": 1,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Rxf1#. It captures the bishop on f1, and delivers checkmate. The line ends in checkmate.",
+  "line": "43... Rxf1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0dm3n (CC0), from https://lichess.org/bx4oL3QY#85",
+  "url": "https://lichess.org/training/0dm3n"
+ },
+ {
+  "id": "lichess-0ZoP2",
+  "fen": "rn4k1/pQ5p/6p1/4q3/1P6/3p4/P4PPP/R5K1 w - - 0 20",
+  "setupMove": "b7a8",
+  "startFen": "Qn4k1/p6p/6p1/4q3/1P6/3p4/P4PPP/R5K1 b - - 0 20",
+  "solution": [
+   "e5a1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 823,
+  "solverMoves": 1,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qxa1#. It captures the rook on a1, and delivers checkmate. The line ends in checkmate.",
+  "line": "20... Qxa1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0ZoP2 (CC0), from https://lichess.org/cbEU7us8#39",
+  "url": "https://lichess.org/training/0ZoP2"
+ },
+ {
+  "id": "lichess-1ooiQ",
+  "fen": "r1bq1rnk/ppp2pbn/4p2p/3pN1p1/3P4/1QPBP2P/PP1N1PPB/2R2RK1 b - - 3 14",
+  "setupMove": "f7f6",
+  "startFen": "r1bq1rnk/ppp3bn/4pp1p/3pN1p1/3P4/1QPBP2P/PP1N1PPB/2R2RK1 w - - 0 15",
+  "solution": [
+   "e5g6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "mate-in-1",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "smotheredMate"
+  ],
+  "difficulty": 1,
+  "rating": 1067,
+  "solverMoves": 1,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Ng6#. It delivers checkmate. The line ends in checkmate.",
+  "line": "15. Ng6#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "e5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1ooiQ (CC0), from https://lichess.org/L96ax3Yj/black#28",
+  "url": "https://lichess.org/training/1ooiQ"
+ },
+ {
+  "id": "lichess-0EKJl",
+  "fen": "1rbqkbnr/pp2p3/3p1p2/1NpPnNBp/Q1P1P1p1/3B4/PP3PPP/R4RK1 b k - 1 14",
+  "setupMove": "a7a6",
+  "startFen": "1rbqkbnr/1p2p3/p2p1p2/1NpPnNBp/Q1P1P1p1/3B4/PP3PPP/R4RK1 w k - 0 15",
+  "solution": [
+   "b5d6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "double-check",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "discoveredCheck",
+   "doubleCheck",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1125,
+  "solverMoves": 1,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Nbxd6#. It captures the pawn on d6, and delivers checkmate. The line ends in checkmate.",
+  "line": "15. Nbxd6#",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "b5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0EKJl (CC0), from https://lichess.org/aQmDzIgf/black#28",
+  "url": "https://lichess.org/training/0EKJl"
+ },
+ {
+  "id": "lichess-2ejqK",
+  "fen": "r4rk1/pp4p1/2n4p/3P2q1/5pb1/P1BB1Q2/2P2P1P/R4RK1 w - - 0 20",
+  "setupMove": "f3e4",
+  "startFen": "r4rk1/pp4p1/2n4p/3P2q1/4Qpb1/P1BB4/2P2P1P/R4RK1 b - - 1 20",
+  "solution": [
+   "g4f3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "discoveredAttack",
+   "discoveredCheck",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1081,
+  "solverMoves": 1,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Bf3#. It delivers checkmate. The line ends in checkmate.",
+  "line": "20... Bf3#",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "g4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2ejqK (CC0), from https://lichess.org/dtFwi0yW#39",
+  "url": "https://lichess.org/training/2ejqK"
+ },
+ {
+  "id": "lichess-3iPpu",
+  "fen": "6rk/6p1/4R2p/p3B3/P1r5/6P1/5PK1/8 b - - 0 37",
+  "setupMove": "c4a4",
+  "startFen": "6rk/6p1/4R2p/p3B3/r7/6P1/5PK1/8 w - - 0 38",
+  "solution": [
+   "e6h6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "mate-in-1",
+   "pin",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "pin"
+  ],
+  "difficulty": 1,
+  "rating": 1104,
+  "solverMoves": 1,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Rxh6#. It captures the pawn on h6, and delivers checkmate. The line ends in checkmate.",
+  "line": "38. Rxh6#",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3iPpu (CC0), from https://lichess.org/deRmgLbx/black#74",
+  "url": "https://lichess.org/training/3iPpu"
+ },
+ {
+  "id": "lichess-13uEu",
+  "fen": "r1b1k2r/pp3ppp/2p5/2bnN2n/7q/3P1P2/PPP1B1PP/RNBQ1R1K w kq - 4 11",
+  "setupMove": "f3f4",
+  "startFen": "r1b1k2r/pp3ppp/2p5/2bnN2n/5P1q/3P4/PPP1B1PP/RNBQ1R1K b kq - 0 11",
+  "solution": [
+   "h5g3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "mate-in-1",
+   "pin"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "opening",
+   "pin"
+  ],
+  "difficulty": 1,
+  "rating": 1062,
+  "solverMoves": 1,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Ng3#. It delivers checkmate. The line ends in checkmate.",
+  "line": "11... Ng3#",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "h5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 13uEu (CC0), from https://lichess.org/LdOpbn5l#21",
+  "url": "https://lichess.org/training/13uEu"
+ },
+ {
+  "id": "lichess-2bNV8",
+  "fen": "6R1/pp3P1k/5p1p/8/P3pP2/7P/BpP4K/2q2Q2 b - - 0 35",
+  "setupMove": "c1f1",
+  "startFen": "6R1/pp3P1k/5p1p/8/P3pP2/7P/BpP4K/5q2 w - - 0 36",
+  "solution": [
+   "f7f8n"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "promotion",
+   "underPromotion"
+  ],
+  "difficulty": 1,
+  "rating": 840,
+  "solverMoves": 1,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is f8=N#. It delivers checkmate, and promotes to a knight. The line ends in checkmate.",
+  "line": "36. f8=N#",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "f7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2bNV8 (CC0), from https://lichess.org/AtVBlzwv/black#70",
+  "url": "https://lichess.org/training/2bNV8"
+ },
+ {
+  "id": "lichess-4BCsS",
+  "fen": "5rk1/6np/3Q2p1/p2P2q1/2P1b3/8/PP5P/4RR1K w - - 1 27",
+  "setupMove": "e1e4",
+  "startFen": "5rk1/6np/3Q2p1/p2P2q1/2P1R3/8/PP5P/5R1K b - - 0 27",
+  "solution": [
+   "f8f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 789,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Rxf1#. It captures the rook on f1, and delivers checkmate. The line ends in checkmate.",
+  "line": "27... Rxf1#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4BCsS (CC0), from https://lichess.org/V8CPqHfU#53",
+  "url": "https://lichess.org/training/4BCsS"
+ },
+ {
+  "id": "lichess-4yHsC",
+  "fen": "r3r3/p1pk1pp1/7p/1Q6/4B3/8/P1P1KPPP/7q b - - 4 21",
+  "setupMove": "d7c8",
+  "startFen": "r1k1r3/p1p2pp1/7p/1Q6/4B3/8/P1P1KPPP/7q w - - 5 22",
+  "solution": [
+   "b5e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1109,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxe8#. It captures the rook on e8, and delivers checkmate. The line ends in checkmate.",
+  "line": "22. Qxe8#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "b5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4yHsC (CC0), from https://lichess.org/XcAXwkKL/black#42",
+  "url": "https://lichess.org/training/4yHsC"
+ },
+ {
+  "id": "lichess-1SYR7",
+  "fen": "3r1r2/2p2pkp/p4Np1/2b1P3/P7/2P3Bq/Q6P/3R1R1K w - - 8 31",
+  "setupMove": "d1d8",
+  "startFen": "3R1r2/2p2pkp/p4Np1/2b1P3/P7/2P3Bq/Q6P/5R1K b - - 0 31",
+  "solution": [
+   "h3f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1130,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxf1#. It captures the rook on f1, and delivers checkmate. The line ends in checkmate.",
+  "line": "31... Qxf1#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "h3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1SYR7 (CC0), from https://lichess.org/Wahzy0D1#61",
+  "url": "https://lichess.org/training/1SYR7"
+ },
+ {
+  "id": "lichess-0VRSJ",
+  "fen": "8/p1b1k1p1/1pB1p1bp/1P2p3/8/6P1/PB2PPKP/8 b - - 0 33",
+  "setupMove": "e7d6",
+  "startFen": "8/p1b3p1/1pBkp1bp/1P2p3/8/6P1/PB2PPKP/8 w - - 1 34",
+  "solution": [
+   "b2a3"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "bishopEndgame",
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1133,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Ba3#. It delivers checkmate. The line ends in checkmate.",
+  "line": "34. Ba3#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "b2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0VRSJ (CC0), from https://lichess.org/RWBUwewS/black#66",
+  "url": "https://lichess.org/training/0VRSJ"
+ },
+ {
+  "id": "lichess-3ANAw",
+  "fen": "7k/pKR3Rp/8/1r6/2r5/8/1P3P1P/8 w - - 8 35",
+  "setupMove": "b7a7",
+  "startFen": "7k/K1R3Rp/8/1r6/2r5/8/1P3P1P/8 b - - 0 35",
+  "solution": [
+   "c4a4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "rookEndgame"
+  ],
+  "difficulty": 1,
+  "rating": 1121,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Ra4#. It delivers checkmate. The line ends in checkmate.",
+  "line": "35... Ra4#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3ANAw (CC0), from https://lichess.org/PcYdxeaW#69",
+  "url": "https://lichess.org/training/3ANAw"
+ },
+ {
+  "id": "lichess-1jPCG",
+  "fen": "r1bq1rk1/2pp1pp1/1p3n1p/p3p3/2PnP1P1/P2PN2P/1P2NP2/R2QKB1R w KQ - 1 12",
+  "setupMove": "e3f5",
+  "startFen": "r1bq1rk1/2pp1pp1/1p3n1p/p3pN2/2PnP1P1/P2P3P/1P2NP2/R2QKB1R b KQ - 2 12",
+  "solution": [
+   "d4f3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 953,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Nf3#. It delivers checkmate. The line ends in checkmate.",
+  "line": "12... Nf3#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1jPCG (CC0), from https://lichess.org/9uC7Hi1K#23",
+  "url": "https://lichess.org/training/1jPCG"
+ },
+ {
+  "id": "lichess-2ZrKF",
+  "fen": "4rrk1/ppp3pp/2q5/n7/8/3NpQ2/PPP3PP/RN3R1K w - - 0 19",
+  "setupMove": "f3c6",
+  "startFen": "4rrk1/ppp3pp/2Q5/n7/8/3Np3/PPP3PP/RN3R1K b - - 0 19",
+  "solution": [
+   "f8f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "hanging-piece",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "hangingPiece",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1133,
+  "solverMoves": 1,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Rxf1#. It captures the rook on f1, and delivers checkmate. The line ends in checkmate.",
+  "line": "19... Rxf1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2ZrKF (CC0), from https://lichess.org/tQd1McBF#37",
+  "url": "https://lichess.org/training/2ZrKF"
+ },
+ {
+  "id": "lichess-0aMIF",
+  "fen": "5k2/pppbrp2/3p3Q/3P4/8/P2B2R1/1q4P1/6K1 b - - 1 38",
+  "setupMove": "f8e8",
+  "startFen": "4k3/pppbrp2/3p3Q/3P4/8/P2B2R1/1q4P1/6K1 w - - 2 39",
+  "solution": [
+   "g3g8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1128,
+  "solverMoves": 1,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Rg8#. It delivers checkmate. The line ends in checkmate.",
+  "line": "39. Rg8#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "g3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0aMIF (CC0), from https://lichess.org/41CwUtRp/black#76",
+  "url": "https://lichess.org/training/0aMIF"
+ },
+ {
+  "id": "lichess-4Aeio",
+  "fen": "r2qkb1r/pb1pnppp/1p6/2pNp3/2PnP3/P5P1/1P1P1P1P/R1BQKBNR w KQkq - 1 8",
+  "setupMove": "g1e2",
+  "startFen": "r2qkb1r/pb1pnppp/1p6/2pNp3/2PnP3/P5P1/1P1PNP1P/R1BQKB1R b KQkq - 2 8",
+  "solution": [
+   "d4f3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "mate-in-1",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "opening",
+   "smotheredMate"
+  ],
+  "difficulty": 1,
+  "rating": 908,
+  "solverMoves": 1,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Nf3#. It delivers checkmate. The line ends in checkmate.",
+  "line": "8... Nf3#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4Aeio (CC0), from https://lichess.org/CU1BXV2a#15",
+  "url": "https://lichess.org/training/4Aeio"
+ },
+ {
+  "id": "lichess-4ZgMv",
+  "fen": "rnbk1b1r/1q2pBpp/1p3n2/1pP1N3/8/8/PPPB1PPP/R2Q1RK1 b - - 0 13",
+  "setupMove": "b6c5",
+  "startFen": "rnbk1b1r/1q2pBpp/5n2/1pp1N3/8/8/PPPB1PPP/R2Q1RK1 w - - 0 14",
+  "solution": [
+   "d2a5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "double-check",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "discoveredCheck",
+   "doubleCheck",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "opening"
+  ],
+  "difficulty": 1,
+  "rating": 1048,
+  "solverMoves": 1,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Ba5#. It delivers checkmate. The line ends in checkmate.",
+  "line": "14. Ba5#",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "d2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4ZgMv (CC0), from https://lichess.org/Mv1P5EDg/black#26",
+  "url": "https://lichess.org/training/4ZgMv"
+ },
+ {
+  "id": "lichess-0KG2p",
+  "fen": "r3r1k1/p4ppp/1qp2n2/3p4/6b1/PBNP4/1PPQ1bPP/R1B1R1K1 w - - 0 14",
+  "setupMove": "d2f2",
+  "startFen": "r3r1k1/p4ppp/1qp2n2/3p4/6b1/PBNP4/1PP2QPP/R1B1R1K1 b - - 0 14",
+  "solution": [
+   "e8e1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "mate-in-1",
+   "pin"
+  ],
+  "lichessThemes": [
+   "kingsideAttack",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "pin"
+  ],
+  "difficulty": 1,
+  "rating": 1073,
+  "solverMoves": 1,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Rxe1#. It captures the rook on e1, and delivers checkmate. The line ends in checkmate.",
+  "line": "14... Rxe1#",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0KG2p (CC0), from https://lichess.org/U5a08xHt#27",
+  "url": "https://lichess.org/training/0KG2p"
+ },
+ {
+  "id": "lichess-3t0MP",
+  "fen": "6rk/4R1p1/1R5p/3P3K/2r1p3/8/6P1/8 b - - 1 40",
+  "setupMove": "h8h7",
+  "startFen": "6r1/4R1pk/1R5p/3P3K/2r1p3/8/6P1/8 w - - 2 41",
+  "solution": [
+   "b6h6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "mate-in-1",
+   "pin",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "pin",
+   "rookEndgame"
+  ],
+  "difficulty": 1,
+  "rating": 971,
+  "solverMoves": 1,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Rxh6#. It captures the pawn on h6, and delivers checkmate. The line ends in checkmate.",
+  "line": "41. Rxh6#",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "b6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3t0MP (CC0), from https://lichess.org/aDueGtLh/black#80",
+  "url": "https://lichess.org/training/3t0MP"
+ },
+ {
+  "id": "lichess-1kqbq",
+  "fen": "5k2/pp1P3p/4P1pP/2p2rB1/2P5/1P3p2/P4K2/8 b - - 0 44",
+  "setupMove": "f5g5",
+  "startFen": "5k2/pp1P3p/4P1pP/2p3r1/2P5/1P3p2/P4K2/8 w - - 0 45",
+  "solution": [
+   "d7d8q"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "endgame",
+   "master",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "promotion"
+  ],
+  "difficulty": 1,
+  "rating": 854,
+  "solverMoves": 1,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is d8=Q#. It delivers checkmate, and promotes to a queen. The line ends in checkmate.",
+  "line": "45. d8=Q#",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "d7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1kqbq (CC0), from https://lichess.org/9UqUBlAu/black#88",
+  "url": "https://lichess.org/training/1kqbq"
+ },
+ {
+  "id": "lichess-2MhmV",
+  "fen": "r1b2rk1/pp4pp/7N/2npb3/6Q1/P1NqB3/1P4PP/R4R1K b - - 1 22",
+  "setupMove": "g8h8",
+  "startFen": "r1b2r1k/pp4pp/7N/2npb3/6Q1/P1NqB3/1P4PP/R4R1K w - - 2 23",
+  "solution": [
+   "f1f8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "hangingPiece",
+   "kingsideAttack",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1111,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Rxf8#. It captures the rook on f8, and delivers checkmate. The line ends in checkmate.",
+  "line": "23. Rxf8#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2MhmV (CC0), from https://lichess.org/SDqgslQH/black#44",
+  "url": "https://lichess.org/training/2MhmV"
+ },
+ {
+  "id": "lichess-41GDT",
+  "fen": "r7/3Q3k/6rp/1PP1B3/3pp3/1q5P/5P2/R6K b - - 1 44",
+  "setupMove": "h7g8",
+  "startFen": "r5k1/3Q4/6rp/1PP1B3/3pp3/1q5P/5P2/R6K w - - 2 45",
+  "solution": [
+   "a1a8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "master",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1128,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Rxa8#. It captures the rook on a8, and delivers checkmate. The line ends in checkmate.",
+  "line": "45. Rxa8#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "a1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 41GDT (CC0), from https://lichess.org/HGu3H9zb/black#88",
+  "url": "https://lichess.org/training/41GDT"
+ },
+ {
+  "id": "lichess-3FCbh",
+  "fen": "1k1r2r1/pp1n1p1p/2pqpp2/Q7/2PP4/P4B1P/1P3PP1/1K1R3R b - - 0 17",
+  "setupMove": "g8g5",
+  "startFen": "1k1r4/pp1n1p1p/2pqpp2/Q5r1/2PP4/P4B1P/1P3PP1/1K1R3R w - - 1 18",
+  "solution": [
+   "a5d8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "hangingPiece",
+   "master",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove",
+   "queensideAttack"
+  ],
+  "difficulty": 1,
+  "rating": 993,
+  "solverMoves": 1,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxd8#. It captures the rook on d8, and delivers checkmate. The line ends in checkmate.",
+  "line": "18. Qxd8#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "a5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3FCbh (CC0), from https://lichess.org/FbfUQnT9/black#34",
+  "url": "https://lichess.org/training/3FCbh"
+ },
+ {
+  "id": "lichess-0BWCC",
+  "fen": "2r1k2r/npqbb1p1/4ppp1/p2pP1N1/3P4/P1N1BQ2/1P3PPP/1R3RK1 w k - 0 17",
+  "setupMove": "e5f6",
+  "startFen": "2r1k2r/npqbb1p1/4pPp1/p2p2N1/3P4/P1N1BQ2/1P3PPP/1R3RK1 b k - 0 17",
+  "solution": [
+   "c7h2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "kingsideAttack",
+   "mate",
+   "mateIn1",
+   "middlegame",
+   "oneMove"
+  ],
+  "difficulty": 1,
+  "rating": 1086,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Qxh2#. It captures the pawn on h2, and delivers checkmate. The line ends in checkmate.",
+  "line": "17... Qxh2#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "c7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0BWCC (CC0), from https://lichess.org/9Wa3Yzzt#33",
+  "url": "https://lichess.org/training/0BWCC"
+ },
+ {
+  "id": "lichess-3LzDz",
+  "fen": "2r3k1/pQpb1ppp/1p1p4/3P4/8/P1q4P/6B1/4R2K b - - 3 29",
+  "setupMove": "a7a5",
+  "startFen": "2r3k1/1Qpb1ppp/1p1p4/p2P4/8/P1q4P/6B1/4R2K w - - 0 30",
+  "solution": [
+   "b7c8",
+   "d7c8",
+   "e1e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "mate-in-2",
+   "sacrifice",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "mate",
+   "mateIn2",
+   "sacrifice",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1310,
+  "solverMoves": 2,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qxc8+. It captures the rook on c8, and gives check, which limits your opponent's replies, and attacks the king and the bishop on d7 (undefended) at the same time. The line ends in checkmate.",
+  "line": "30. Qxc8+ Bxc8 31. Re8#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "b7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3LzDz (CC0), from https://lichess.org/t4W8DYvm/black#58",
+  "url": "https://lichess.org/training/3LzDz"
+ },
+ {
+  "id": "lichess-2jDTS",
+  "fen": "5Qk1/p4ppp/2p2b2/2Nb4/8/8/q4PPP/3RR1K1 b - - 0 24",
+  "setupMove": "g8f8",
+  "startFen": "5k2/p4ppp/2p2b2/2Nb4/8/8/q4PPP/3RR1K1 w - - 0 25",
+  "solution": [
+   "c5d7",
+   "f8g8",
+   "e1e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "mate",
+   "mateIn2",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 939,
+  "solverMoves": 2,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Nd7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "25. Nd7+ Kg8 26. Re8#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "c5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2jDTS (CC0), from https://lichess.org/G4WanxwR/black#48",
+  "url": "https://lichess.org/training/2jDTS"
+ },
+ {
+  "id": "lichess-0EIBd",
+  "fen": "r1bqrbk1/pp3ppp/2p2pn1/5N1P/3P2Q1/3B4/PPP2PP1/R1B2RK1 b - - 0 13",
+  "setupMove": "g6h8",
+  "startFen": "r1bqrbkn/pp3ppp/2p2p2/5N1P/3P2Q1/3B4/PPP2PP1/R1B2RK1 w - - 1 14",
+  "solution": [
+   "f5h6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "mate-in-1",
+   "pin",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "opening",
+   "pin",
+   "smotheredMate"
+  ],
+  "difficulty": 2,
+  "rating": 1484,
+  "solverMoves": 1,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Nh6#. It delivers checkmate. The line ends in checkmate.",
+  "line": "14. Nh6#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "f5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0EIBd (CC0), from https://lichess.org/Fq2IUie2/black#26",
+  "url": "https://lichess.org/training/0EIBd"
+ },
+ {
+  "id": "lichess-2X20i",
+  "fen": "8/p6k/5p1p/1b1B1Nb1/1P2P1P1/5P2/P1r1n1K1/3R3R w - - 2 36",
+  "setupMove": "d5b3",
+  "startFen": "8/p6k/5p1p/1b3Nb1/1P2P1P1/1B3P2/P1r1n1K1/3R3R b - - 3 36",
+  "solution": [
+   "e2f4",
+   "g2g3",
+   "c2g2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "double-check",
+   "mate-in-2"
+  ],
+  "lichessThemes": [
+   "discoveredCheck",
+   "doubleCheck",
+   "mate",
+   "mateIn2",
+   "middlegame",
+   "pillsburysMate",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1182,
+  "solverMoves": 2,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Nf4+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "36... Nf4+ 37. Kg3 Rg2#",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "e2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2X20i (CC0), from https://lichess.org/CmdgdtcU#71",
+  "url": "https://lichess.org/training/2X20i"
+ },
+ {
+  "id": "lichess-3BpJo",
+  "fen": "3Q4/1p2pbkp/5pp1/4P3/3N1P2/3q3P/5K2/8 b - - 4 40",
+  "setupMove": "f6e5",
+  "startFen": "3Q4/1p2pbkp/6p1/4p3/3N1P2/3q3P/5K2/8 w - - 0 41",
+  "solution": [
+   "d4e6",
+   "f7e6",
+   "d8d3"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "discoveredAttack",
+   "endgame",
+   "master",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1438,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Ne6+. It gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "41. Ne6+ Bxe6 42. Qxd3",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3BpJo (CC0), from https://lichess.org/3B11xgEj/black#80",
+  "url": "https://lichess.org/training/3BpJo"
+ },
+ {
+  "id": "lichess-3iEF1",
+  "fen": "r2k3r/1b2np2/p3p2p/bpp1n1p1/8/1BP2N2/PP1N1PPP/R1BR2K1 b - - 1 15",
+  "setupMove": "b7f3",
+  "startFen": "r2k3r/4np2/p3p2p/bpp1n1p1/8/1BP2b2/PP1N1PPP/R1BR2K1 w - - 0 16",
+  "solution": [
+   "d2f3",
+   "d8e8",
+   "f3e5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "discoveredAttack",
+   "discoveredCheck",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 940,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Nxf3+. It captures the bishop on f3, and gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "16. Nxf3+ Ke8 17. Nxe5",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "d2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3iEF1 (CC0), from https://lichess.org/uNMkbx7I/black#30",
+  "url": "https://lichess.org/training/3iEF1"
+ },
+ {
+  "id": "lichess-4S6eg",
+  "fen": "r1bq2k1/pppp2pQ/1b2p3/4n1r1/6P1/2PB4/PP3P1P/RNB2RK1 b - - 0 14",
+  "setupMove": "g8f8",
+  "startFen": "r1bq1k2/pppp2pQ/1b2p3/4n1r1/6P1/2PB4/PP3P1P/RNB2RK1 w - - 1 15",
+  "solution": [
+   "h7h8",
+   "f8f7",
+   "h8d8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "skewer"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "middlegame",
+   "short",
+   "skewer"
+  ],
+  "difficulty": 2,
+  "rating": 944,
+  "solverMoves": 2,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Qh8+. It gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+  "line": "15. Qh8+ Kf7 16. Qxd8",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "h7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4S6eg (CC0), from https://lichess.org/qOrNVJ2q/black#28",
+  "url": "https://lichess.org/training/4S6eg"
+ },
+ {
+  "id": "lichess-22X9U",
+  "fen": "2r1k2r/2q1bppp/2p1pn2/8/3Q4/2N1P2P/PP1B1PP1/R3K2R w KQk - 3 16",
+  "setupMove": "e1g1",
+  "startFen": "2r1k2r/2q1bppp/2p1pn2/8/3Q4/2N1P2P/PP1B1PP1/R4RK1 b k - 4 16",
+  "solution": [
+   "c8d8",
+   "d4c4",
+   "d8d2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "skewer"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "middlegame",
+   "short",
+   "skewer"
+  ],
+  "difficulty": 2,
+  "rating": 1496,
+  "solverMoves": 2,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Rd8. It attacks the queen on d4. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "16... Rd8 17. Qc4 Rxd2",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 22X9U (CC0), from https://lichess.org/IP7vQRJD#31",
+  "url": "https://lichess.org/training/22X9U"
+ },
+ {
+  "id": "lichess-0P4lb",
+  "fen": "6r1/pp1R1prk/2p1p2p/7Q/P3qp2/2P1b1P1/BP5P/3R1K2 b - - 1 32",
+  "setupMove": "e4c2",
+  "startFen": "6r1/pp1R1prk/2p1p2p/7Q/P4p2/2P1b1P1/BPq4P/3R1K2 w - - 2 33",
+  "solution": [
+   "a2b1",
+   "c2b1",
+   "d1b1"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "pin"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "middlegame",
+   "pin",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1439,
+  "solverMoves": 2,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Bb1. It attacks the queen on c2 (undefended). By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "33. Bb1 Qxb1 34. Rxb1",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "a2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0P4lb (CC0), from https://lichess.org/iAeml1CM/black#64",
+  "url": "https://lichess.org/training/0P4lb"
+ },
+ {
+  "id": "lichess-02SNn",
+  "fen": "4r3/7k/6pp/2P2b2/1p1Q4/1P3p1P/P5P1/4rBK1 w - - 0 37",
+  "setupMove": "g2f3",
+  "startFen": "4r3/7k/6pp/2P2b2/1p1Q4/1P3P1P/P7/4rBK1 b - - 0 37",
+  "solution": [
+   "f5h3",
+   "g1h2",
+   "h3f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "pin",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "endgame",
+   "pin",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1477,
+  "solverMoves": 2,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Bxh3. It captures the pawn on h3. By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "37... Bxh3 38. Kh2 Bxf1",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "f5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 02SNn (CC0), from https://lichess.org/jVajhVF7#73",
+  "url": "https://lichess.org/training/02SNn"
+ },
+ {
+  "id": "lichess-4Vu8d",
+  "fen": "8/p4N1p/2k5/8/1r6/1b1N2PP/6PK/8 b - - 3 35",
+  "setupMove": "b4b7",
+  "startFen": "8/pr3N1p/2k5/8/8/1b1N2PP/6PK/8 w - - 4 36",
+  "solution": [
+   "f7d8",
+   "c6b6",
+   "d8b7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "endgame",
+   "fork",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1431,
+  "solverMoves": 2,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Nd8+. It gives check, which limits your opponent's replies, and attacks the rook on b7 and the king at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "36. Nd8+ Kb6 37. Nxb7",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "f7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4Vu8d (CC0), from https://lichess.org/njccCUuv/black#70",
+  "url": "https://lichess.org/training/4Vu8d"
+ },
+ {
+  "id": "lichess-12yTE",
+  "fen": "2k1r3/1p3ppp/2p5/8/1P2nqP1/P1r1B2P/5P2/3RQRK1 b - - 4 24",
+  "setupMove": "f4e5",
+  "startFen": "2k1r3/1p3ppp/2p5/4q3/1P2n1P1/P1r1B2P/5P2/3RQRK1 w - - 5 25",
+  "solution": [
+   "e3d4",
+   "e5f4",
+   "d4c3"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "fork",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1295,
+  "solverMoves": 2,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Bd4. It attacks the queen on e5 and the rook on c3 at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "25. Bd4 Qf4 26. Bxc3",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "e3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 12yTE (CC0), from https://lichess.org/6tOBhA94/black#48",
+  "url": "https://lichess.org/training/12yTE"
+ },
+ {
+  "id": "lichess-1Gm3s",
+  "fen": "6k1/1p4pp/p1p1r1r1/3p4/3PpP2/1P2P1RP/P4P1K/6R1 b - - 7 28",
+  "setupMove": "g8f7",
+  "startFen": "8/1p3kpp/p1p1r1r1/3p4/3PpP2/1P2P1RP/P4P1K/6R1 w - - 8 29",
+  "solution": [
+   "f4f5",
+   "e6d6",
+   "f5g6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "fork",
+   "rookEndgame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1133,
+  "solverMoves": 2,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is f5. It attacks the rook on e6 and the rook on g6 at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "29. f5 Rd6 30. fxg6+",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "f4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1Gm3s (CC0), from https://lichess.org/oeNZf5OP/black#56",
+  "url": "https://lichess.org/training/1Gm3s"
+ },
+ {
+  "id": "lichess-1s0QI",
+  "fen": "8/pk6/2p1P3/1p1p1r2/1qnP1Q2/6P1/PPP5/2KN4 w - - 0 35",
+  "setupMove": "f4f5",
+  "startFen": "8/pk6/2p1P3/1p1p1Q2/1qnP4/6P1/PPP5/2KN4 b - - 0 35",
+  "solution": [
+   "b4d2",
+   "c1b1",
+   "d2d1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "deflection",
+  "themeName": "Deflection",
+  "skills": [
+   "deflection",
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "deflection",
+   "endgame",
+   "mate",
+   "mateIn2",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1289,
+  "solverMoves": 2,
+  "explanation": "Deflection forces a defending piece away from the square or piece it is guarding. The key move is Qd2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "35... Qd2+ 36. Kb1 Qxd1#",
+  "hints": [
+   "Which enemy piece has too many jobs? Can you force it away?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "b4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1s0QI (CC0), from https://lichess.org/AnT3J8WP#69",
+  "url": "https://lichess.org/training/1s0QI"
+ },
+ {
+  "id": "lichess-0SyWW",
+  "fen": "6k1/2p2ppp/p2p4/1p1Pr3/4B2q/1P3P2/P3RbPP/R2Q3K w - - 4 24",
+  "setupMove": "d1f1",
+  "startFen": "6k1/2p2ppp/p2p4/1p1Pr3/4B2q/1P3P2/P3RbPP/R4Q1K b - - 5 24",
+  "solution": [
+   "h4h2",
+   "h1h2",
+   "e5h5"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "decoy",
+  "themeName": "Decoy (attraction)",
+  "skills": [
+   "decoy",
+   "mate-in-2",
+   "sacrifice"
+  ],
+  "lichessThemes": [
+   "attraction",
+   "kingsideAttack",
+   "mate",
+   "mateIn2",
+   "middlegame",
+   "pillsburysMate",
+   "sacrifice",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1437,
+  "solverMoves": 2,
+  "explanation": "A decoy lures an enemy piece, often the king, onto a square where it can be attacked, usually with a sacrifice. The key move is Qxh2+. It captures the pawn on h2, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "24... Qxh2+ 25. Kxh2 Rh5#",
+  "hints": [
+   "Can you force an enemy piece onto a bad square, even if it costs material?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "h4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0SyWW (CC0), from https://lichess.org/DgNBaEF6#47",
+  "url": "https://lichess.org/training/0SyWW"
+ },
+ {
+  "id": "lichess-24vtl",
+  "fen": "r3r1k1/p1pn1ppp/1pNq1n2/4N3/3P4/5QP1/P4P1P/3RR1K1 b - - 10 22",
+  "setupMove": "d6d5",
+  "startFen": "r3r1k1/p1pn1ppp/1pN2n2/3qN3/3P4/5QP1/P4P1P/3RR1K1 w - - 11 23",
+  "solution": [
+   "f3d5",
+   "f6d5",
+   "e5d7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "remove-defender",
+  "themeName": "Removing the defender",
+  "skills": [
+   "remove-defender"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "capturingDefender",
+   "master",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1387,
+  "solverMoves": 2,
+  "explanation": "Capturing or eliminating the piece that guards a target leaves the target undefended. The key move is Qxd5. It captures the queen on d5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "23. Qxd5 Nxd5 24. Nxd7",
+  "hints": [
+   "Find the piece that is holding your opponent's position together, then remove it.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "f3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 24vtl (CC0), from https://lichess.org/CCjdwC7C/black#44",
+  "url": "https://lichess.org/training/24vtl"
+ },
+ {
+  "id": "lichess-0ygVi",
+  "fen": "r4rk1/pppb1ppp/2n5/8/3P1bq1/2P3P1/PP4BP/RN1Q1RK1 w - - 0 18",
+  "setupMove": "d1g4",
+  "startFen": "r4rk1/pppb1ppp/2n5/8/3P1bQ1/2P3P1/PP4BP/RN3RK1 b - - 0 18",
+  "solution": [
+   "f4e3",
+   "g1h1",
+   "d7g4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "intermezzo",
+  "themeName": "Intermediate move (zwischenzug)",
+  "skills": [
+   "intermezzo"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "intermezzo",
+   "kingsideAttack",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1221,
+  "solverMoves": 2,
+  "explanation": "Instead of making the expected recapture, an in-between move creates a bigger threat first. The key move is Be3+. It gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+  "line": "18... Be3+ 19. Kh1 Bxg4",
+  "hints": [
+   "Before recapturing automatically, is there a stronger forcing move available?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "f4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0ygVi (CC0), from https://lichess.org/AkLT2IKh#35",
+  "url": "https://lichess.org/training/0ygVi"
+ },
+ {
+  "id": "lichess-4Kihe",
+  "fen": "Qn2kb1r/p2npppp/3p4/qb6/3P4/2N5/PPP2PPP/R1B1K1NR w KQk - 1 10",
+  "setupMove": "c1d2",
+  "startFen": "Qn2kb1r/p2npppp/3p4/qb6/3P4/2N5/PPPB1PPP/R3K1NR b KQk - 2 10",
+  "solution": [
+   "b5c6",
+   "a8b8",
+   "d7b8"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "trapped-piece",
+  "themeName": "Trapped piece",
+  "skills": [
+   "trapped-piece"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "opening",
+   "short",
+   "trappedPiece"
+  ],
+  "difficulty": 2,
+  "rating": 1253,
+  "solverMoves": 2,
+  "explanation": "A piece with no safe squares can be attacked and won. The key move is Bc6. It attacks the queen on a8 (undefended). By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "10... Bc6 11. Qxb8+ Nxb8",
+  "hints": [
+   "One enemy piece is short of safe squares. How can you attack it?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "b5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4Kihe (CC0), from https://lichess.org/oUcIDTdn#19",
+  "url": "https://lichess.org/training/4Kihe"
+ },
+ {
+  "id": "lichess-4Xxdu",
+  "fen": "3Q4/5ppk/2p4p/7n/p1N1P3/P1P2P2/4pqPP/R6K w - - 0 33",
+  "setupMove": "d8d2",
+  "startFen": "8/5ppk/2p4p/7n/p1N1P3/P1P2P2/3QpqPP/R6K b - - 1 33",
+  "solution": [
+   "f2f1",
+   "a1f1",
+   "e2f1q"
+  ],
+  "alternatives": [
+   "e2f1r"
+  ],
+  "sideToMove": "b",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "endgame",
+   "mate",
+   "mateIn2",
+   "promotion",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1303,
+  "solverMoves": 2,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is Qf1+. It gives check, which limits your opponent's replies, and attacks the rook on a1 (undefended) and the king at the same time. The line ends in checkmate.",
+  "line": "33... Qf1+ 34. Rxf1 exf1=Q#",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "f2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4Xxdu (CC0), from https://lichess.org/aca3fu8u#65",
+  "url": "https://lichess.org/training/4Xxdu"
+ },
+ {
+  "id": "lichess-3fL87",
+  "fen": "6k1/5pp1/4p3/1p4P1/1PpPKB2/8/7r/8 b - - 2 47",
+  "setupMove": "c4c3",
+  "startFen": "6k1/5pp1/4p3/1p4P1/1P1PKB2/2p5/7r/8 w - - 0 48",
+  "solution": [
+   "f4h2",
+   "c3c2",
+   "h2f4"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "defense",
+  "themeName": "Defensive move",
+  "skills": [
+   "defense",
+   "hanging-piece",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "defensiveMove",
+   "endgame",
+   "hangingPiece",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1184,
+  "solverMoves": 2,
+  "explanation": "Sometimes the best move is a precise defence that neutralises your opponent's threats. The key move is Bxh2. It captures the rook on h2. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "48. Bxh2 c2 49. Bf4",
+  "hints": [
+   "First, identify exactly what your opponent is threatening.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "f4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3fL87 (CC0), from https://lichess.org/syNVrvAe/black#94",
+  "url": "https://lichess.org/training/3fL87"
+ },
+ {
+  "id": "lichess-1Rb5u",
+  "fen": "r7/5p1p/pRp1k1p1/P7/2nB4/P1p2P1P/2P3P1/6K1 w - - 0 26",
+  "setupMove": "b6c6",
+  "startFen": "r7/5p1p/p1R1k1p1/P7/2nB4/P1p2P1P/2P3P1/6K1 b - - 0 26",
+  "solution": [
+   "e6d5",
+   "c6c7",
+   "d5d4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "defense",
+  "themeName": "Defensive move",
+  "skills": [
+   "defense",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "defensiveMove",
+   "endgame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1187,
+  "solverMoves": 2,
+  "explanation": "Sometimes the best move is a precise defence that neutralises your opponent's threats. The key move is Kd5. It attacks the rook on c6 (undefended) and the bishop on d4 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "26... Kd5 27. Rc7 Kxd4",
+  "hints": [
+   "First, identify exactly what your opponent is threatening.",
+   "Consider a move with your king."
+  ],
+  "hintSquare": "e6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1Rb5u (CC0), from https://lichess.org/okzNPt9n#51",
+  "url": "https://lichess.org/training/1Rb5u"
+ },
+ {
+  "id": "lichess-3AdpR",
+  "fen": "r1b3k1/pp3p1p/4pBp1/8/2Br4/2N5/PP3PPP/5RK1 b - - 0 16",
+  "setupMove": "d4c4",
+  "startFen": "r1b3k1/pp3p1p/4pBp1/8/2r5/2N5/PP3PPP/5RK1 w - - 0 17",
+  "solution": [
+   "f1d1",
+   "c8d7",
+   "d1d7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "quiet-move",
+  "themeName": "Quiet move",
+  "skills": [
+   "quiet-move",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "endgame",
+   "quietMove",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1290,
+  "solverMoves": 2,
+  "explanation": "A quiet move makes no check or capture, but creates an unstoppable threat or restricts the opponent decisively. The key move is Rd1. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "17. Rd1 Bd7 18. Rxd7",
+  "hints": [
+   "The best move here is not a check or a capture. Look for a quiet move that creates an unstoppable threat.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3AdpR (CC0), from https://lichess.org/SVyl29Vf/black#32",
+  "url": "https://lichess.org/training/3AdpR"
+ },
+ {
+  "id": "lichess-1MvzH",
+  "fen": "rR6/P3bp1k/4q1pp/4p3/8/4BbP1/2Q2P1P/5RK1 w - - 0 29",
+  "setupMove": "c2c8",
+  "startFen": "rRQ5/P3bp1k/4q1pp/4p3/8/4BbP1/5P1P/5RK1 b - - 1 29",
+  "solution": [
+   "e6c8",
+   "b8c8",
+   "a8c8"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "x-ray",
+  "themeName": "X-ray attack",
+  "skills": [
+   "x-ray"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "middlegame",
+   "short",
+   "xRayAttack"
+  ],
+  "difficulty": 2,
+  "rating": 1362,
+  "solverMoves": 2,
+  "explanation": "An x-ray attack works through an enemy piece: when that piece moves or is exchanged, the line opens. The key move is Qxc8. It captures the queen on c8. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "29... Qxc8 30. Rxc8 Rxc8",
+  "hints": [
+   "Look along the lines your pieces control, even through other pieces.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1MvzH (CC0), from https://lichess.org/Rhdrl7b6#57",
+  "url": "https://lichess.org/training/1MvzH"
+ },
+ {
+  "id": "lichess-34QQ2",
+  "fen": "r1b1k2r/pp1n2pp/1qn1p3/2bpP3/3N4/P1PB1N2/1P4PP/R1BQK2R b KQkq - 0 12",
+  "setupMove": "d7e5",
+  "startFen": "r1b1k2r/pp4pp/1qn1p3/2bpn3/3N4/P1PB1N2/1P4PP/R1BQK2R w KQkq - 0 13",
+  "solution": [
+   "f3e5",
+   "c6e5",
+   "d1h5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "clearance",
+  "themeName": "Clearance",
+  "skills": [
+   "clearance"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "clearance",
+   "master",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1327,
+  "solverMoves": 2,
+  "explanation": "A clearance move vacates a square or line so another piece can use it. The key move is Nxe5. It captures the knight on e5. Material is level, but Stockfish rates the result as clearly better for you (about +4.9).",
+  "line": "13. Nxe5 Nxe5 14. Qh5+",
+  "hints": [
+   "One of your pieces is in the way of another. Can it move with tempo?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "f3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 34QQ2 (CC0), from https://lichess.org/9wpRzAzT/black#24",
+  "url": "https://lichess.org/training/34QQ2"
+ },
+ {
+  "id": "lichess-3ZED8",
+  "fen": "r1bq1rk1/pp1pn1pp/4pp2/1Np5/4PQ2/1P1P4/1PP2PPP/R3K1NR w KQ - 0 11",
+  "setupMove": "b5c7",
+  "startFen": "r1bq1rk1/ppNpn1pp/4pp2/2p5/4PQ2/1P1P4/1PP2PPP/R3K1NR b KQ - 1 11",
+  "solution": [
+   "e6e5",
+   "f4d2",
+   "d8c7"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "interference",
+  "themeName": "Interference",
+  "skills": [
+   "interference"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "interference",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1325,
+  "solverMoves": 2,
+  "explanation": "Interference places a piece between an enemy piece and the square it defends. The key move is e5. It attacks the queen on f4 (undefended). By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "11... e5 12. Qd2 Qxc7",
+  "hints": [
+   "Can you cut the connection between a defender and what it protects?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "e6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3ZED8 (CC0), from https://lichess.org/detJTMTQ#21",
+  "url": "https://lichess.org/training/3ZED8"
+ },
+ {
+  "id": "lichess-20o8v",
+  "fen": "8/8/3Np1p1/4P1P1/2pP4/3nK3/1k6/8 b - - 2 54",
+  "setupMove": "d3e5",
+  "startFen": "8/8/3Np1p1/4n1P1/2pP4/4K3/1k6/8 w - - 0 55",
+  "solution": [
+   "d4e5",
+   "c4c3",
+   "d6c4"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "hangingPiece",
+   "knightEndgame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1399,
+  "solverMoves": 2,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is dxe5. It captures the knight on e5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "55. dxe5 c3 56. Nc4+",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 20o8v (CC0), from https://lichess.org/g9ic0wyT/black#108",
+  "url": "https://lichess.org/training/20o8v"
+ },
+ {
+  "id": "lichess-2qoV3",
+  "fen": "5Nk1/2p5/pp5p/1P2R3/2P1n1q1/P3P2r/2Q2P2/3R1K2 w - - 3 41",
+  "setupMove": "c2e4",
+  "startFen": "5Nk1/2p5/pp5p/1P2R3/2P1Q1q1/P3P2r/5P2/3R1K2 b - - 0 41",
+  "solution": [
+   "g4d1",
+   "f1g2",
+   "d1h1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "master",
+   "mate",
+   "mateIn2",
+   "short",
+   "triangleMate"
+  ],
+  "difficulty": 2,
+  "rating": 1437,
+  "solverMoves": 2,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxd1+. It captures the rook on d1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "41... Qxd1+ 42. Kg2 Qh1#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "g4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2qoV3 (CC0), from https://lichess.org/oWeFL1fI#81",
+  "url": "https://lichess.org/training/2qoV3"
+ },
+ {
+  "id": "lichess-3lLyo",
+  "fen": "3q2k1/6pp/p2ppbr1/np3p2/3P1P2/PPrNPQ2/6PP/1RB2RK1 w - - 3 24",
+  "setupMove": "c1d2",
+  "startFen": "3q2k1/6pp/p2ppbr1/np3p2/3P1P2/PPrNPQ2/3B2PP/1R3RK1 b - - 4 24",
+  "solution": [
+   "c3d3",
+   "d2a5",
+   "d8a5"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "hangingPiece",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1116,
+  "solverMoves": 2,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Rxd3. It captures the knight on d3, and attacks the bishop on d2 (undefended). By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "24... Rxd3 25. Bxa5 Qxa5",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3lLyo (CC0), from https://lichess.org/ZHkiYryX#47",
+  "url": "https://lichess.org/training/3lLyo"
+ },
+ {
+  "id": "lichess-0e1Oi",
+  "fen": "r1bq1b1r/pp1p1ppp/3k1n2/8/3QP3/2N5/PPP2PPP/R3KB1R b KQ - 0 10",
+  "setupMove": "d6e7",
+  "startFen": "r1bq1b1r/pp1pkppp/5n2/8/3QP3/2N5/PPP2PPP/R3KB1R w KQ - 1 11",
+  "solution": [
+   "d4e5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1"
+  ],
+  "lichessThemes": [
+   "epauletteMate",
+   "mate",
+   "mateIn1",
+   "oneMove",
+   "opening"
+  ],
+  "difficulty": 2,
+  "rating": 1425,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Qe5#. It delivers checkmate. The line ends in checkmate.",
+  "line": "11. Qe5#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0e1Oi (CC0), from https://lichess.org/G6QJ2Pmb/black#20",
+  "url": "https://lichess.org/training/0e1Oi"
+ },
+ {
+  "id": "lichess-0EI7y",
+  "fen": "6k1/1p3p1p/p1p5/3pQ2N/3P4/4PK2/2q5/8 b - - 5 55",
+  "setupMove": "c2g6",
+  "startFen": "6k1/1p3p1p/p1p3q1/3pQ2N/3P4/4PK2/8/8 w - - 6 56",
+  "solution": [
+   "e5b8"
+  ],
+  "alternatives": [
+   "e5e8"
+  ],
+  "sideToMove": "w",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "master",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 2,
+  "rating": 1153,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Qb8#. It delivers checkmate. The line ends in checkmate.",
+  "line": "56. Qb8#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0EI7y (CC0), from https://lichess.org/u39CAMZx/black#110",
+  "url": "https://lichess.org/training/0EI7y"
+ },
+ {
+  "id": "lichess-0zS6D",
+  "fen": "8/5pk1/r6p/3qPQp1/8/6P1/P1R2P1P/K1B5 w - - 9 43",
+  "setupMove": "c1b2",
+  "startFen": "8/5pk1/r6p/3qPQp1/8/6P1/PBR2P1P/K7 b - - 10 43",
+  "solution": [
+   "d5a2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-1",
+  "themeName": "Mate in one",
+  "skills": [
+   "mate-in-1",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "master",
+   "mate",
+   "mateIn1",
+   "oneMove"
+  ],
+  "difficulty": 2,
+  "rating": 1185,
+  "solverMoves": 1,
+  "explanation": "Checkmate in one move: the king is in check and has no legal way out. The key move is Qxa2#. It captures the pawn on a2, and delivers checkmate. The line ends in checkmate.",
+  "line": "43... Qxa2#",
+  "hints": [
+   "Look at every check you can give. One of them is checkmate.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0zS6D (CC0), from https://lichess.org/YeFtqvAP#85",
+  "url": "https://lichess.org/training/0zS6D"
+ },
+ {
+  "id": "lichess-2YIHR",
+  "fen": "5r2/pp2bPk1/4qRp1/3nP2r/2pPQ3/PpP3R1/7P/2B3K1 b - - 12 29",
+  "setupMove": "d5f6",
+  "startFen": "5r2/pp2bPk1/4qnp1/4P2r/2pPQ3/PpP3R1/7P/2B3K1 w - - 0 30",
+  "solution": [
+   "e4g6",
+   "g7h8",
+   "g6g7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "mate-in-2",
+  "themeName": "Mate in two",
+  "skills": [
+   "mate-in-2"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn2",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1254,
+  "solverMoves": 2,
+  "explanation": "A forced checkmate in two moves. Forcing moves (checks) limit your opponent's options. The key move is Qxg6+. It captures the pawn on g6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "30. Qxg6+ Kh8 31. Qg7#",
+  "hints": [
+   "Start with a forcing move. Checks are the first candidates.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2YIHR (CC0), from https://lichess.org/OcQMuIo6/black#58",
+  "url": "https://lichess.org/training/2YIHR"
+ },
+ {
+  "id": "lichess-370R2",
+  "fen": "r4r2/pp1bq1bk/2pp4/4N1Pp/2B1Pp2/3P3P/PPP1Q1RK/5R2 b - - 0 23",
+  "setupMove": "g7e5",
+  "startFen": "r4r2/pp1bq2k/2pp4/4b1Pp/2B1Pp2/3P3P/PPP1Q1RK/5R2 w - - 0 24",
+  "solution": [
+   "e2h5",
+   "h7g7",
+   "h5h6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "mate-in-2",
+  "themeName": "Mate in two",
+  "skills": [
+   "mate-in-2"
+  ],
+  "lichessThemes": [
+   "mate",
+   "mateIn2",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1453,
+  "solverMoves": 2,
+  "explanation": "A forced checkmate in two moves. Forcing moves (checks) limit your opponent's options. The key move is Qxh5+. It captures the pawn on h5, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "24. Qxh5+ Kg7 25. Qh6#",
+  "hints": [
+   "Start with a forcing move. Checks are the first candidates.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 370R2 (CC0), from https://lichess.org/59mVLUIV/black#46",
+  "url": "https://lichess.org/training/370R2"
+ },
+ {
+  "id": "lichess-2q5XV",
+  "fen": "6k1/2R5/3P1p1p/6pP/4P1P1/3b1P2/6K1/5r2 b - - 0 46",
+  "setupMove": "d3b5",
+  "startFen": "6k1/2R5/3P1p1p/1b4pP/4P1P1/5P2/6K1/5r2 w - - 1 47",
+  "solution": [
+   "d6d7",
+   "f1d1",
+   "c7c8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "promotion",
+  "themeName": "Advanced pawn",
+  "skills": [
+   "promotion",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "endgame",
+   "master",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1390,
+  "solverMoves": 2,
+  "explanation": "A far-advanced pawn ties down the opponent's pieces and can decide the game if it promotes. The key move is d7. Material is level, but Stockfish rates the result as clearly better for you (about +4.2).",
+  "line": "47. d7 Rd1 48. Rc8+",
+  "hints": [
+   "Your advanced pawn is a powerful asset. Can you make use of it?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "d6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2q5XV (CC0), from https://lichess.org/pDiy0TZC/black#92",
+  "url": "https://lichess.org/training/2q5XV"
+ },
+ {
+  "id": "lichess-2sKmg",
+  "fen": "5k1r/1bq1b2p/p2pQ3/2r3P1/1p6/5P2/PPPR3P/1NK3R1 b - - 2 21",
+  "setupMove": "e7g5",
+  "startFen": "5k1r/1bq4p/p2pQ3/2r3b1/1p6/5P2/PPPR3P/1NK3R1 w - - 0 22",
+  "solution": [
+   "g1g5",
+   "c5g5",
+   "e6f6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "sacrifice",
+  "themeName": "Sacrifice",
+  "skills": [
+   "sacrifice"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "middlegame",
+   "sacrifice",
+   "short"
+  ],
+  "difficulty": 2,
+  "rating": 1468,
+  "solverMoves": 2,
+  "explanation": "Giving up material can be correct when it leads to mate or wins more material back. The key move is Rxg5. It captures the bishop on g5. Material is level, but Stockfish rates the result as clearly better for you (about +3.0).",
+  "line": "22. Rxg5 Rxg5 23. Qf6+",
+  "hints": [
+   "Do not be afraid to give up material if it forces your opponent's replies.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "g1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2sKmg (CC0), from https://lichess.org/YJ60CmkV/black#42",
+  "url": "https://lichess.org/training/2sKmg"
+ },
+ {
+  "id": "lichess-1Ctp5",
+  "fen": "5r1k/3B2pp/8/2Q5/1P1p4/P2P2P1/3qrP1P/5RK1 b - - 6 31",
+  "setupMove": "e2f2",
+  "startFen": "5r1k/3B2pp/8/2Q5/1P1p4/P2P2P1/3q1r1P/5RK1 w - - 0 32",
+  "solution": [
+   "c5f8",
+   "f2f8",
+   "f1f8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "mate-in-2",
+   "x-ray",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "mate",
+   "mateIn2",
+   "short",
+   "xRayAttack"
+  ],
+  "difficulty": 2,
+  "rating": 1182,
+  "solverMoves": 2,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qxf8+. It captures the rook on f8, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "32. Qxf8+ Rxf8 33. Rxf8#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "c5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1Ctp5 (CC0), from https://lichess.org/mdUKrKsW/black#62",
+  "url": "https://lichess.org/training/1Ctp5"
+ },
+ {
+  "id": "lichess-3UyKg",
+  "fen": "2kr4/1p3p1p/2p1p3/q4p2/8/1B2Q2P/PPP2PP1/2K1R3 w - - 2 23",
+  "setupMove": "e3e5",
+  "startFen": "2kr4/1p3p1p/2p1p3/q3Qp2/8/1B5P/PPP2PP1/2K1R3 b - - 3 23",
+  "solution": [
+   "a5d2",
+   "c1b1",
+   "d2d1",
+   "e1d1",
+   "d8d1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "mate-in-3",
+   "sacrifice",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "difficulty": 3,
+  "rating": 1568,
+  "solverMoves": 3,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qd2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "23... Qd2+ 24. Kb1 Qd1+ 25. Rxd1 Rxd1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "a5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3UyKg (CC0), from https://lichess.org/jYStLTB3#45",
+  "url": "https://lichess.org/training/3UyKg"
+ },
+ {
+  "id": "lichess-4IlQM",
+  "fen": "3r2k1/p3bppp/8/4P3/1Pp1Q3/2P3B1/3q2PP/2R4K w - - 2 25",
+  "setupMove": "g3f4",
+  "startFen": "3r2k1/p3bppp/8/4P3/1Pp1QB2/2P5/3q2PP/2R4K b - - 3 25",
+  "solution": [
+   "d2c1",
+   "f4c1",
+   "d8d1",
+   "e4e1",
+   "d1e1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "clearance",
+   "fork",
+   "mate-in-3",
+   "sacrifice",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "clearance",
+   "endgame",
+   "fork",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "difficulty": 3,
+  "rating": 1880,
+  "solverMoves": 3,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qxc1+. It captures the rook on c1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "25... Qxc1+ 26. Bxc1 Rd1+ 27. Qe1 Rxe1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4IlQM (CC0), from https://lichess.org/kc0M4HLF#49",
+  "url": "https://lichess.org/training/4IlQM"
+ },
+ {
+  "id": "lichess-058MB",
+  "fen": "1rR3k1/pQ1b2pp/1p3n2/q3N3/3P4/P7/1B3PPP/6K1 b - - 0 27",
+  "setupMove": "d7c8",
+  "startFen": "1rb3k1/pQ4pp/1p3n2/q3N3/3P4/P7/1B3PPP/6K1 w - - 0 28",
+  "solution": [
+   "b7f7",
+   "g8h8",
+   "f7f8",
+   "f6g8",
+   "e5f7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "mate-in-3",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame",
+   "smotheredMate"
+  ],
+  "difficulty": 3,
+  "rating": 1641,
+  "solverMoves": 3,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Qf7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "28. Qf7+ Kh8 29. Qf8+ Ng8 30. Nf7#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "b7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 058MB (CC0), from https://lichess.org/pOAY9AKF/black#54",
+  "url": "https://lichess.org/training/058MB"
+ },
+ {
+  "id": "lichess-0iFvS",
+  "fen": "1k1r3r/p5pp/8/1Pb2p2/3n1P2/3p1BN1/P2B2PP/1R3RK1 w - - 3 24",
+  "setupMove": "f1c1",
+  "startFen": "1k1r3r/p5pp/8/1Pb2p2/3n1P2/3p1BN1/P2B2PP/1RR3K1 b - - 4 24",
+  "solution": [
+   "d4f3",
+   "g1h1",
+   "f3d2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "double-check"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "discoveredCheck",
+   "doubleCheck",
+   "kingsideAttack",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1556,
+  "solverMoves": 2,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Nxf3+. It captures the bishop on f3, and gives check, which limits your opponent's replies, and attacks the bishop on d2 (undefended) and the king at the same time. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "24... Nxf3+ 25. Kh1 Nxd2",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "d4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0iFvS (CC0), from https://lichess.org/OwmfOckg#47",
+  "url": "https://lichess.org/training/0iFvS"
+ },
+ {
+  "id": "lichess-2ZUai",
+  "fen": "r5k1/1pp2pp1/6qp/5n2/4RP2/1BPQ2PP/P4K2/8 b - - 2 33",
+  "setupMove": "f5d6",
+  "startFen": "r5k1/1pp2pp1/3n2qp/8/4RP2/1BPQ2PP/P4K2/8 w - - 3 34",
+  "solution": [
+   "e4e8",
+   "a8e8",
+   "d3g6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "pin",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "discoveredAttack",
+   "endgame",
+   "pin",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1715,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Re8+. It gives check, which limits your opponent's replies, and attacks the rook on a8 (undefended) and the king at the same time. By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "34. Re8+ Rxe8 35. Qxg6",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2ZUai (CC0), from https://lichess.org/2SRFIhgT/black#66",
+  "url": "https://lichess.org/training/2ZUai"
+ },
+ {
+  "id": "lichess-30Vs0",
+  "fen": "6k1/5p1p/R3b1p1/1B6/4P3/4B3/5KPP/3rb3 w - - 3 27",
+  "setupMove": "f2e2",
+  "startFen": "6k1/5p1p/R3b1p1/1B6/4P3/4B3/4K1PP/3rb3 b - - 4 27",
+  "solution": [
+   "e6g4",
+   "e2f1",
+   "e1h4"
+  ],
+  "alternatives": [
+   "e1g3"
+  ],
+  "sideToMove": "b",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "discoveredAttack",
+   "discoveredCheck",
+   "endgame",
+   "mate",
+   "mateIn2",
+   "pillsburysMate",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1681,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Bg4+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "27... Bg4+ 28. Kf1 Bh4#",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "e6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 30Vs0 (CC0), from https://lichess.org/Y1cSkdPV#53",
+  "url": "https://lichess.org/training/30Vs0"
+ },
+ {
+  "id": "lichess-2xpvc",
+  "fen": "r7/p2Q4/8/1knRP3/8/8/P1q1b1PP/7K b - - 2 38",
+  "setupMove": "b5c4",
+  "startFen": "r7/p2Q4/8/2nRP3/2k5/8/P1q1b1PP/7K w - - 3 39",
+  "solution": [
+   "d5c5",
+   "c4c5",
+   "d7c7",
+   "c5b5",
+   "c7c2"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "decoy",
+   "sacrifice",
+   "skewer",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "attraction",
+   "crushing",
+   "endgame",
+   "long",
+   "sacrifice",
+   "skewer"
+  ],
+  "difficulty": 3,
+  "rating": 1786,
+  "solverMoves": 3,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Rxc5+. It captures the knight on c5, and gives check, which limits your opponent's replies. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+  "line": "39. Rxc5+ Kxc5 40. Qc7+ Kb5 41. Qxc2",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2xpvc (CC0), from https://lichess.org/Nst2KLq5/black#76",
+  "url": "https://lichess.org/training/2xpvc"
+ },
+ {
+  "id": "lichess-14Ugl",
+  "fen": "k7/6qp/2P3p1/1p2P3/2n5/2Pr4/R5PP/1R4K1 b - - 1 33",
+  "setupMove": "a8b8",
+  "startFen": "1k6/6qp/2P3p1/1p2P3/2n5/2Pr4/R5PP/1R4K1 w - - 2 34",
+  "solution": [
+   "b1b5",
+   "b8c7",
+   "b5b7",
+   "c7c6",
+   "b7g7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "skewer",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "exposedKing",
+   "long",
+   "skewer"
+  ],
+  "difficulty": 3,
+  "rating": 1880,
+  "solverMoves": 3,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Rxb5+. It captures the pawn on b5, and gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+  "line": "34. Rxb5+ Kc7 35. Rb7+ Kxc6 36. Rxg7",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "b1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 14Ugl (CC0), from https://lichess.org/pEdS70XF/black#66",
+  "url": "https://lichess.org/training/14Ugl"
+ },
+ {
+  "id": "lichess-35Nm4",
+  "fen": "2k2r2/pbpqn1Q1/1p2pr2/3p4/3P4/3B4/PRPN1PPP/5RK1 w - - 2 19",
+  "setupMove": "d2f3",
+  "startFen": "2k2r2/pbpqn1Q1/1p2pr2/3p4/3P4/3B1N2/PRP2PPP/5RK1 b - - 3 19",
+  "solution": [
+   "f6f3",
+   "g2f3",
+   "f8g8"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "pin",
+   "sacrifice"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "master",
+   "middlegame",
+   "pin",
+   "sacrifice",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1529,
+  "solverMoves": 2,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Rxf3. It captures the knight on f3. Material is level, but Stockfish rates the result as clearly better for you (about +5.0).",
+  "line": "19... Rxf3 20. gxf3 Rg8",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 35Nm4 (CC0), from https://lichess.org/42C1rOpn#37",
+  "url": "https://lichess.org/training/35Nm4"
+ },
+ {
+  "id": "lichess-1i52k",
+  "fen": "1r4k1/1Pr2pb1/Rn3ppp/N2p4/8/2P1P3/1P3PPP/R5K1 b - - 7 25",
+  "setupMove": "b6c4",
+  "startFen": "1r4k1/1Pr2pb1/R4ppp/N2p4/2n5/2P1P3/1P3PPP/R5K1 w - - 8 26",
+  "solution": [
+   "a6a8",
+   "c7b7",
+   "a5b7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "pin"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "master",
+   "masterVsMaster",
+   "middlegame",
+   "pin",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1556,
+  "solverMoves": 2,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Ra8. It attacks the rook on b8 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "26. Ra8 Rxb7 27. Nxb7",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "a6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1i52k (CC0), from https://lichess.org/yVG6xwOp/black#50",
+  "url": "https://lichess.org/training/1i52k"
+ },
+ {
+  "id": "lichess-1QxXx",
+  "fen": "5rk1/p2r1ppp/1bp2n2/4pb2/NPB5/P3P3/3B1PPP/R2R2K1 w - - 5 17",
+  "setupMove": "d2c3",
+  "startFen": "5rk1/p2r1ppp/1bp2n2/4pb2/NPB5/P1B1P3/5PPP/R2R2K1 b - - 6 17",
+  "solution": [
+   "d7d1",
+   "a1d1",
+   "f5c2",
+   "a4b2",
+   "c2d1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "decoy",
+   "fork"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "attraction",
+   "fork",
+   "long",
+   "middlegame"
+  ],
+  "difficulty": 3,
+  "rating": 1627,
+  "solverMoves": 3,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Rxd1+. It captures the rook on d1, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "17... Rxd1+ 18. Rxd1 Bc2 19. Nb2 Bxd1",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1QxXx (CC0), from https://lichess.org/aF1Y2y6V#33",
+  "url": "https://lichess.org/training/1QxXx"
+ },
+ {
+  "id": "lichess-3uCzn",
+  "fen": "r1b1kb1r/ppp2ppp/2n2n2/1N1p4/5q2/5N2/PPPPBPPP/R1BQK2R w KQkq - 6 8",
+  "setupMove": "d2d3",
+  "startFen": "r1b1kb1r/ppp2ppp/2n2n2/1N1p4/5q2/3P1N2/PPP1BPPP/R1BQK2R b KQkq - 0 8",
+  "solution": [
+   "f4b4",
+   "b5c3",
+   "d5d4",
+   "e1g1",
+   "d4c3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "fork",
+   "long",
+   "opening"
+  ],
+  "difficulty": 3,
+  "rating": 1474,
+  "solverMoves": 3,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Qb4+. It gives check, which limits your opponent's replies, and attacks the knight on b5 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "8... Qb4+ 9. Nc3 d4 10. O-O dxc3",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "f4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3uCzn (CC0), from https://lichess.org/4Nhd7nsb#15",
+  "url": "https://lichess.org/training/3uCzn"
+ },
+ {
+  "id": "lichess-0SA8k",
+  "fen": "r4rk1/1p4p1/2pRpn2/2P2q1p/4p3/P4P2/1P2Q1PP/2B2RK1 w - - 0 24",
+  "setupMove": "f3e4",
+  "startFen": "r4rk1/1p4p1/2pRpn2/2P2q1p/4P3/P7/1P2Q1PP/2B2RK1 b - - 0 24",
+  "solution": [
+   "f5c5",
+   "e2e3",
+   "c5d6"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "fork",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1548,
+  "solverMoves": 2,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Qxc5+. It captures the pawn on c5, and gives check, which limits your opponent's replies, and attacks the rook on d6 (undefended) and the king at the same time. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "24... Qxc5+ 25. Qe3 Qxd6",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "f5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0SA8k (CC0), from https://lichess.org/AJnZpW21#47",
+  "url": "https://lichess.org/training/0SA8k"
+ },
+ {
+  "id": "lichess-4WN0p",
+  "fen": "8/6pp/3bpk2/2p5/1pP1P3/1P2BKPP/8/8 b - - 4 36",
+  "setupMove": "h7h6",
+  "startFen": "8/6p1/3bpk1p/2p5/1pP1P3/1P2BKPP/8/8 w - - 0 37",
+  "solution": [
+   "e4e5",
+   "d6e5",
+   "e3c5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "deflection",
+  "themeName": "Deflection",
+  "skills": [
+   "deflection",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "bishopEndgame",
+   "crushing",
+   "deflection",
+   "endgame",
+   "master",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1763,
+  "solverMoves": 2,
+  "explanation": "Deflection forces a defending piece away from the square or piece it is guarding. The key move is e5+. It gives check, which limits your opponent's replies, and attacks the bishop on d6 (undefended) and the king at the same time. Material is level, but Stockfish rates the result as clearly better for you (about +2.4).",
+  "line": "37. e5+ Bxe5 38. Bxc5",
+  "hints": [
+   "Which enemy piece has too many jobs? Can you force it away?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4WN0p (CC0), from https://lichess.org/JCgIjnTF/black#72",
+  "url": "https://lichess.org/training/4WN0p"
+ },
+ {
+  "id": "lichess-4zhYA",
+  "fen": "1r1r1k2/5pbQ/3pp1P1/p7/4P3/Pq6/1pR2P2/1K2N2R w - - 2 30",
+  "setupMove": "g6f7",
+  "startFen": "1r1r1k2/5PbQ/3pp3/p7/4P3/Pq6/1pR2P2/1K2N2R b - - 0 30",
+  "solution": [
+   "b3a2",
+   "b1a2",
+   "b2b1q"
+  ],
+  "alternatives": [
+   "b2b1b"
+  ],
+  "sideToMove": "b",
+  "theme": "decoy",
+  "themeName": "Decoy (attraction)",
+  "skills": [
+   "promotion",
+   "decoy",
+   "mate-in-2"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "attraction",
+   "mate",
+   "mateIn2",
+   "middlegame",
+   "promotion",
+   "queensideAttack",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1762,
+  "solverMoves": 2,
+  "explanation": "A decoy lures an enemy piece, often the king, onto a square where it can be attacked, usually with a sacrifice. The key move is Qa2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "30... Qa2+ 31. Kxa2 b1=Q#",
+  "hints": [
+   "Can you force an enemy piece onto a bad square, even if it costs material?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "b3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4zhYA (CC0), from https://lichess.org/1PVI4Z0h#59",
+  "url": "https://lichess.org/training/4zhYA"
+ },
+ {
+  "id": "lichess-3rFRE",
+  "fen": "r2k1r2/pp2p2p/1n1pP3/2p5/2P1Q3/2P5/q2BPPP1/1R2KB2 b - - 0 19",
+  "setupMove": "a2c4",
+  "startFen": "r2k1r2/pp2p2p/1n1pP3/2p5/2q1Q3/2P5/3BPPP1/1R2KB2 w - - 0 20",
+  "solution": [
+   "e4b7",
+   "c4e6",
+   "b1b6",
+   "a7b6",
+   "b7a8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "remove-defender",
+  "themeName": "Removing the defender",
+  "skills": [
+   "remove-defender"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "capturingDefender",
+   "long",
+   "middlegame"
+  ],
+  "difficulty": 3,
+  "rating": 1636,
+  "solverMoves": 3,
+  "explanation": "Capturing or eliminating the piece that guards a target leaves the target undefended. The key move is Qxb7. It captures the pawn on b7. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "20. Qxb7 Qxe6 21. Rxb6 axb6 22. Qxa8+",
+  "hints": [
+   "Find the piece that is holding your opponent's position together, then remove it.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3rFRE (CC0), from https://lichess.org/2U2MraOr/black#38",
+  "url": "https://lichess.org/training/3rFRE"
+ },
+ {
+  "id": "lichess-4KbOM",
+  "fen": "rnb1kb1r/1p3ppp/pq2pn2/2ppN3/3P1B2/P1N1P3/1PP2PPP/R2QKB1R b KQkq - 0 7",
+  "setupMove": "b6b2",
+  "startFen": "rnb1kb1r/1p3ppp/p3pn2/2ppN3/3P1B2/P1N1P3/1qP2PPP/R2QKB1R w KQkq - 0 8",
+  "solution": [
+   "c3a4",
+   "b2a1",
+   "d1a1"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "trapped-piece",
+  "themeName": "Trapped piece",
+  "skills": [
+   "trapped-piece"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "middlegame",
+   "short",
+   "trappedPiece"
+  ],
+  "difficulty": 3,
+  "rating": 1553,
+  "solverMoves": 2,
+  "explanation": "A piece with no safe squares can be attacked and won. The key move is Na4. It attacks the queen on b2 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "8. Na4 Qxa1 9. Qxa1",
+  "hints": [
+   "One enemy piece is short of safe squares. How can you attack it?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "c3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4KbOM (CC0), from https://lichess.org/DCI1t27Z/black#14",
+  "url": "https://lichess.org/training/4KbOM"
+ },
+ {
+  "id": "lichess-0l6Ml",
+  "fen": "8/8/1p3PKb/7P/pk6/8/8/8 b - - 0 46",
+  "setupMove": "h6f8",
+  "startFen": "5b2/8/1p3PK1/7P/pk6/8/8/8 w - - 1 47",
+  "solution": [
+   "h5h6",
+   "a4a3",
+   "h6h7",
+   "a3a2",
+   "h7h8q",
+   "a2a1q",
+   "h8f8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "bishopEndgame",
+   "crushing",
+   "endgame",
+   "promotion",
+   "veryLong"
+  ],
+  "difficulty": 3,
+  "rating": 1501,
+  "solverMoves": 4,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is h6. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "47. h6 a3 48. h7 a2 49. h8=Q a1=Q 50. Qxf8+",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "h5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0l6Ml (CC0), from https://lichess.org/xzq6KAOb/black#92",
+  "url": "https://lichess.org/training/0l6Ml"
+ },
+ {
+  "id": "lichess-2EWg1",
+  "fen": "3n1rk1/pb3r1n/1p1pQ3/2pB1pq1/2P5/P1NP2P1/1P2P2P/R4R1K w - - 1 20",
+  "setupMove": "e6f5",
+  "startFen": "3n1rk1/pb3r1n/1p1p4/2pB1Qq1/2P5/P1NP2P1/1P2P2P/R4R1K b - - 0 20",
+  "solution": [
+   "b7d5",
+   "f5d5",
+   "g5d5",
+   "c4d5",
+   "f7f1",
+   "a1f1",
+   "f8f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "x-ray",
+  "themeName": "X-ray attack",
+  "skills": [
+   "x-ray"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "kingsideAttack",
+   "middlegame",
+   "veryLong",
+   "xRayAttack"
+  ],
+  "difficulty": 3,
+  "rating": 1488,
+  "solverMoves": 4,
+  "explanation": "An x-ray attack works through an enemy piece: when that piece moves or is exchanged, the line opens. The key move is Bxd5+. It captures the bishop on d5, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "20... Bxd5+ 21. Qxd5 Qxd5+ 22. cxd5 Rxf1+ 23. Rxf1 Rxf1+",
+  "hints": [
+   "Look along the lines your pieces control, even through other pieces.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "b7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2EWg1 (CC0), from https://lichess.org/E3FDAxSz#39",
+  "url": "https://lichess.org/training/2EWg1"
+ },
+ {
+  "id": "lichess-1sw1C",
+  "fen": "2q2r1k/8/p2p2pp/4bnB1/4B3/1Q6/PPP2P1P/3R2K1 w - - 0 25",
+  "setupMove": "g5d2",
+  "startFen": "2q2r1k/8/p2p2pp/4bn2/4B3/1Q6/PPPB1P1P/3R2K1 b - - 1 25",
+  "solution": [
+   "f5d4",
+   "b3d3",
+   "c8g4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "clearance",
+  "themeName": "Clearance",
+  "skills": [
+   "clearance"
+  ],
+  "lichessThemes": [
+   "clearance",
+   "crushing",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1716,
+  "solverMoves": 2,
+  "explanation": "A clearance move vacates a square or line so another piece can use it. The key move is Nd4. It attacks the queen on b3. Material is level, but Stockfish rates the result as clearly better for you (about +5.5).",
+  "line": "25... Nd4 26. Qd3 Qg4+",
+  "hints": [
+   "One of your pieces is in the way of another. Can it move with tempo?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "f5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1sw1C (CC0), from https://lichess.org/nuk3aNXL#49",
+  "url": "https://lichess.org/training/1sw1C"
+ },
+ {
+  "id": "lichess-0Mh5F",
+  "fen": "8/8/2k5/6rp/P2K4/1R4P1/8/8 w - - 3 54",
+  "setupMove": "d4c4",
+  "startFen": "8/8/2k5/6rp/P1K5/1R4P1/8/8 b - - 4 54",
+  "solution": [
+   "g5g4",
+   "c4c3",
+   "g4g3",
+   "c3c2",
+   "g3b3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "interference",
+  "themeName": "Interference",
+  "skills": [
+   "interference",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "interference",
+   "long",
+   "rookEndgame"
+  ],
+  "difficulty": 3,
+  "rating": 1565,
+  "solverMoves": 3,
+  "explanation": "Interference places a piece between an enemy piece and the square it defends. The key move is Rg4+. It gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "54... Rg4+ 55. Kc3 Rxg3+ 56. Kc2 Rxb3",
+  "hints": [
+   "Can you cut the connection between a defender and what it protects?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "g5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0Mh5F (CC0), from https://lichess.org/cdQ9OgdQ#107",
+  "url": "https://lichess.org/training/0Mh5F"
+ },
+ {
+  "id": "lichess-36yyK",
+  "fen": "3r2k1/p3Q1p1/4pp2/7R/8/P2rRq2/5P2/5K2 b - - 0 31",
+  "setupMove": "d3e3",
+  "startFen": "3r2k1/p3Q1p1/4pp2/7R/8/P3rq2/5P2/5K2 w - - 0 32",
+  "solution": [
+   "e7d8",
+   "g8f7",
+   "d8d7",
+   "f7g6",
+   "d7e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece",
+   "mate-in-3",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "hangingPiece",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "difficulty": 3,
+  "rating": 1551,
+  "solverMoves": 3,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxd8+. It captures the rook on d8, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "32. Qxd8+ Kf7 33. Qd7+ Kg6 34. Qe8#",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 36yyK (CC0), from https://lichess.org/xs4GP0Yh/black#62",
+  "url": "https://lichess.org/training/36yyK"
+ },
+ {
+  "id": "lichess-1qSnM",
+  "fen": "1rr3k1/p3pp2/q1N1b1pp/8/6P1/2Q5/PP2pP1P/2R1R1K1 b - - 0 26",
+  "setupMove": "c8c7",
+  "startFen": "1r4k1/p1r1pp2/q1N1b1pp/8/6P1/2Q5/PP2pP1P/2R1R1K1 w - - 1 27",
+  "solution": [
+   "c6b8",
+   "c7c3",
+   "b8a6",
+   "c3c1",
+   "e1c1"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "hangingPiece",
+   "long",
+   "middlegame"
+  ],
+  "difficulty": 3,
+  "rating": 1674,
+  "solverMoves": 3,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Nxb8. It captures the rook on b8, and attacks the queen on a6 (undefended). By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "27. Nxb8 Rxc3 28. Nxa6 Rxc1 29. Rxc1",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "c6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1qSnM (CC0), from https://lichess.org/5jPq2C22/black#52",
+  "url": "https://lichess.org/training/1qSnM"
+ },
+ {
+  "id": "lichess-0Gs4M",
+  "fen": "r2q4/pb6/1p4pk/2pN1pR1/7r/2Q5/PPP1BP2/1K1R4 w - - 2 23",
+  "setupMove": "d5f4",
+  "startFen": "r2q4/pb6/1p4pk/2p2pR1/5N1r/2Q5/PPP1BP2/1K1R4 b - - 3 23",
+  "solution": [
+   "d8g5",
+   "f4e6",
+   "g5e7"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "hanging-piece",
+  "themeName": "Hanging piece",
+  "skills": [
+   "hanging-piece"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "hangingPiece",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1798,
+  "solverMoves": 2,
+  "explanation": "An undefended (hanging) piece can be captured for free. Always check what your opponent has left unprotected. The key move is Qxg5. It captures the rook on g5, and attacks the knight on f4 (undefended). By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "23... Qxg5 24. Ne6 Qe7",
+  "hints": [
+   "Is any enemy piece left without protection?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0Gs4M (CC0), from https://lichess.org/KpuJQKGE#45",
+  "url": "https://lichess.org/training/0Gs4M"
+ },
+ {
+  "id": "lichess-1VRq2",
+  "fen": "2k2r2/ppp5/6q1/3Q4/4p3/2N1P2P/PPP2K2/3R1R2 w - - 3 25",
+  "setupMove": "f2e2",
+  "startFen": "2k2r2/ppp5/6q1/3Q4/4p3/2N1P2P/PPP1K3/3R1R2 b - - 4 25",
+  "solution": [
+   "g6g2",
+   "e2e1",
+   "f8f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-2",
+  "themeName": "Mate in two",
+  "skills": [
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn2",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1564,
+  "solverMoves": 2,
+  "explanation": "A forced checkmate in two moves. Forcing moves (checks) limit your opponent's options. The key move is Qg2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "25... Qg2+ 26. Ke1 Rxf1#",
+  "hints": [
+   "Start with a forcing move. Checks are the first candidates.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "g6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1VRq2 (CC0), from https://lichess.org/U8hycfUB#49",
+  "url": "https://lichess.org/training/1VRq2"
+ },
+ {
+  "id": "lichess-288E7",
+  "fen": "8/6k1/p2p2p1/2p1p1np/Pp5q/1B1P1r1P/2PQ2RK/5R2 w - - 0 32",
+  "setupMove": "d2g5",
+  "startFen": "8/6k1/p2p2p1/2p1p1Qp/Pp5q/1B1P1r1P/2P3RK/5R2 b - - 0 32",
+  "solution": [
+   "f3h3",
+   "h2g1",
+   "h3h1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-2",
+  "themeName": "Mate in two",
+  "skills": [
+   "mate-in-2",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn2",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1683,
+  "solverMoves": 2,
+  "explanation": "A forced checkmate in two moves. Forcing moves (checks) limit your opponent's options. The key move is Rxh3+. It captures the pawn on h3, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "32... Rxh3+ 33. Kg1 Rh1#",
+  "hints": [
+   "Start with a forcing move. Checks are the first candidates.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 288E7 (CC0), from https://lichess.org/slZLnV1v#63",
+  "url": "https://lichess.org/training/288E7"
+ },
+ {
+  "id": "lichess-2u0hJ",
+  "fen": "5r2/p3Q2k/1p4p1/n7/3P4/P4q2/1P4RP/4b2K b - - 3 29",
+  "setupMove": "h7h6",
+  "startFen": "5r2/p3Q3/1p4pk/n7/3P4/P4q2/1P4RP/4b2K w - - 4 30",
+  "solution": [
+   "e7g5",
+   "h6h7",
+   "g5g6",
+   "h7h8",
+   "g6h6"
+  ],
+  "alternatives": [
+   "g6g7"
+  ],
+  "sideToMove": "w",
+  "theme": "mate-in-3",
+  "themeName": "Mate in three",
+  "skills": [
+   "mate-in-3",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "difficulty": 3,
+  "rating": 1843,
+  "solverMoves": 3,
+  "explanation": "A forced checkmate in three moves: each move must keep your opponent's replies under control. The key move is Qg5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "30. Qg5+ Kh7 31. Qxg6+ Kh8 32. Qh6#",
+  "hints": [
+   "Use checks to drive the king into a mating net.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2u0hJ (CC0), from https://lichess.org/PN2TVIPv/black#58",
+  "url": "https://lichess.org/training/2u0hJ"
+ },
+ {
+  "id": "lichess-04tpm",
+  "fen": "6r1/1bQ1b2p/4kp2/2P4q/5B2/8/P4RPP/6K1 w - - 0 34",
+  "setupMove": "c7b7",
+  "startFen": "6r1/1Q2b2p/4kp2/2P4q/5B2/8/P4RPP/6K1 b - - 0 34",
+  "solution": [
+   "h5d1",
+   "f2f1",
+   "e7c5",
+   "f4e3",
+   "c5e3",
+   "g1h1",
+   "d1f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "mate-in-3",
+  "themeName": "Mate in four",
+  "skills": [
+   "mate-in-3",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "endgame",
+   "mate",
+   "mateIn4",
+   "veryLong"
+  ],
+  "difficulty": 3,
+  "rating": 1519,
+  "solverMoves": 4,
+  "explanation": "A forced checkmate in four moves, built from checks and threats. The key move is Qd1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "34... Qd1+ 35. Rf1 Bxc5+ 36. Be3 Bxe3+ 37. Kh1 Qxf1#",
+  "hints": [
+   "Use checks to drive the king into a mating net.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "h5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 04tpm (CC0), from https://lichess.org/q33Rch10#67",
+  "url": "https://lichess.org/training/04tpm"
+ },
+ {
+  "id": "lichess-20X22",
+  "fen": "r2q1k1r/p1p2pp1/1pQp4/3Pp3/4P2p/8/PP1PbPB1/R1B2RK1 w - - 2 18",
+  "setupMove": "f1e1",
+  "startFen": "r2q1k1r/p1p2pp1/1pQp4/3Pp3/4P2p/8/PP1PbPB1/R1B1R1K1 b - - 3 18",
+  "solution": [
+   "h4h3",
+   "e1e2",
+   "h3g2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "promotion",
+  "themeName": "Advanced pawn",
+  "skills": [
+   "promotion"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 3,
+  "rating": 1644,
+  "solverMoves": 2,
+  "explanation": "A far-advanced pawn ties down the opponent's pieces and can decide the game if it promotes. The key move is h3. It attacks the bishop on g2. Material is level, but Stockfish rates the result as clearly better for you (about +4.5).",
+  "line": "18... h3 19. Rxe2 hxg2",
+  "hints": [
+   "Your advanced pawn is a powerful asset. Can you make use of it?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "h4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 20X22 (CC0), from https://lichess.org/Gq3wOYmf#35",
+  "url": "https://lichess.org/training/20X22"
+ },
+ {
+  "id": "lichess-0Rf9R",
+  "fen": "8/3b4/p1p5/PpP5/1P2BK2/2P3pk/8/8 b - - 3 47",
+  "setupMove": "g3g2",
+  "startFen": "8/3b4/p1p5/PpP5/1P2BK2/2P4k/6p1/8 w - - 0 48",
+  "solution": [
+   "e4g2",
+   "h3g2",
+   "f4e5",
+   "g2f3",
+   "e5d6",
+   "d7e8",
+   "d6c7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "sacrifice",
+  "themeName": "Sacrifice",
+  "skills": [
+   "sacrifice",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "bishopEndgame",
+   "crushing",
+   "endgame",
+   "sacrifice",
+   "veryLong"
+  ],
+  "difficulty": 3,
+  "rating": 1591,
+  "solverMoves": 4,
+  "explanation": "Giving up material can be correct when it leads to mate or wins more material back. The key move is Bxg2+. It captures the pawn on g2, and gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +1.0).",
+  "line": "48. Bxg2+ Kxg2 49. Ke5 Kf3 50. Kd6 Be8 51. Kc7",
+  "hints": [
+   "Do not be afraid to give up material if it forces your opponent's replies.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0Rf9R (CC0), from https://lichess.org/bINNVVZS/black#94",
+  "url": "https://lichess.org/training/0Rf9R"
+ },
+ {
+  "id": "lichess-41iK8",
+  "fen": "5rk1/p4Qpp/2p5/2q5/4P1b1/PB6/1r4PP/3R1R1K b - - 0 27",
+  "setupMove": "f8f7",
+  "startFen": "6k1/p4rpp/2p5/2q5/4P1b1/PB6/1r4PP/3R1R1K w - - 0 28",
+  "solution": [
+   "d1d8",
+   "c5f8",
+   "b3f7",
+   "g8h8",
+   "d8f8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "intermezzo",
+   "mate-in-3",
+   "pin"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "intermezzo",
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame",
+   "pin"
+  ],
+  "difficulty": 4,
+  "rating": 1988,
+  "solverMoves": 3,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Rd8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "28. Rd8+ Qf8 29. Bxf7+ Kh8 30. Rxf8#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 41iK8 (CC0), from https://lichess.org/hPdpabnX/black#54",
+  "url": "https://lichess.org/training/41iK8"
+ },
+ {
+  "id": "lichess-2Htsm",
+  "fen": "r3r1k1/pp2qpp1/2ppbn2/6N1/6PQ/P3R3/1P3P1P/5K1R b - - 0 21",
+  "setupMove": "d6d5",
+  "startFen": "r3r1k1/pp2qpp1/2p1bn2/3p2N1/6PQ/P3R3/1P3P1P/5K1R w - - 0 22",
+  "solution": [
+   "e3h3",
+   "g8f8",
+   "h4h8",
+   "f6g8",
+   "g5h7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "mate-in-3",
+   "quiet-move",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame",
+   "quietMove",
+   "smotheredMate"
+  ],
+  "difficulty": 4,
+  "rating": 1841,
+  "solverMoves": 3,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Rh3. The line ends in checkmate.",
+  "line": "22. Rh3 Kf8 23. Qh8+ Ng8 24. Nh7#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2Htsm (CC0), from https://lichess.org/LUdXTrjZ/black#42",
+  "url": "https://lichess.org/training/2Htsm"
+ },
+ {
+  "id": "lichess-0VYdU",
+  "fen": "r2qk2r/1bp2p2/p3RP2/3P2B1/nbBQ4/8/P1p2PPP/2KR4 b kq - 0 18",
+  "setupMove": "f7e6",
+  "startFen": "r2qk2r/1bp5/p3pP2/3P2B1/nbBQ4/8/P1p2PPP/2KR4 w kq - 0 19",
+  "solution": [
+   "f6f7",
+   "e8d7",
+   "d5e6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "promotion",
+   "double-check",
+   "intermezzo"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "discoveredCheck",
+   "doubleCheck",
+   "intermezzo",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 2075,
+  "solverMoves": 2,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is f7+. It gives check, which limits your opponent's replies. By the end of the line you have won a pawn.",
+  "line": "19. f7+ Kd7 20. dxe6+",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "f6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0VYdU (CC0), from https://lichess.org/iSNcw9wa/black#36",
+  "url": "https://lichess.org/training/0VYdU"
+ },
+ {
+  "id": "lichess-2mZML",
+  "fen": "5k2/4R3/5pp1/5b1p/5P1K/7P/8/8 w - - 12 60",
+  "setupMove": "e7h7",
+  "startFen": "5k2/7R/5pp1/5b1p/5P1K/7P/8/8 b - - 13 60",
+  "solution": [
+   "g6g5",
+   "f4g5",
+   "f5h7",
+   "h4h5",
+   "f6f5"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "defense",
+   "discovered-attack",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "defensiveMove",
+   "discoveredAttack",
+   "endgame",
+   "long",
+   "master"
+  ],
+  "difficulty": 4,
+  "rating": 1775,
+  "solverMoves": 3,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is g5+. It gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "60... g5+ 61. fxg5 Bxh7 62. Kxh5 f5",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "g6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2mZML (CC0), from https://lichess.org/oyvXd6S9#119",
+  "url": "https://lichess.org/training/2mZML"
+ },
+ {
+  "id": "lichess-1GHld",
+  "fen": "8/2p2B1k/p4Kpp/6BP/1P3P2/8/PP2r2r/8 b - - 0 31",
+  "setupMove": "h6g5",
+  "startFen": "8/2p2B1k/p4Kp1/6pP/1P3P2/8/PP2r2r/8 w - - 0 32",
+  "solution": [
+   "h5g6",
+   "h7h6",
+   "f4g5",
+   "h6h5",
+   "g6g7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "promotion",
+   "discovered-attack",
+   "intermezzo",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "discoveredAttack",
+   "discoveredCheck",
+   "endgame",
+   "intermezzo",
+   "long"
+  ],
+  "difficulty": 4,
+  "rating": 2006,
+  "solverMoves": 3,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is hxg6+. It captures the pawn on g6, and gives check, which limits your opponent's replies. By the end of the line you have won two pawns' worth of material.",
+  "line": "32. hxg6+ Kh6 33. fxg5+ Kh5 34. g7+",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "h5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1GHld (CC0), from https://lichess.org/NeSXUhZK/black#62",
+  "url": "https://lichess.org/training/1GHld"
+ },
+ {
+  "id": "lichess-3mET8",
+  "fen": "8/6k1/1P2p3/3pPn2/2p2P2/2P2Kr1/8/4Q3 w - - 7 73",
+  "setupMove": "f3e2",
+  "startFen": "8/6k1/1P2p3/3pPn2/2p2P2/2P3r1/4K3/4Q3 b - - 8 73",
+  "solution": [
+   "g3e3",
+   "e2d1",
+   "e3e1",
+   "d1e1",
+   "f5e7"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "defense",
+   "skewer",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "defensiveMove",
+   "endgame",
+   "exposedKing",
+   "long",
+   "skewer"
+  ],
+  "difficulty": 4,
+  "rating": 1525,
+  "solverMoves": 3,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Re3+. It gives check, which limits your opponent's replies. By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "73... Re3+ 74. Kd1 Rxe1+ 75. Kxe1 Ne7",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "g3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3mET8 (CC0), from https://lichess.org/spChe0YH#145",
+  "url": "https://lichess.org/training/3mET8"
+ },
+ {
+  "id": "lichess-1sYpM",
+  "fen": "8/8/6k1/2R3P1/5P2/6K1/2p5/2r5 w - - 1 63",
+  "setupMove": "g3f2",
+  "startFen": "8/8/6k1/2R3P1/5P2/8/2p2K2/2r5 b - - 2 63",
+  "solution": [
+   "c1h1",
+   "c5c2",
+   "h1h2",
+   "f2e3",
+   "h2c2"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "quiet-move",
+   "skewer",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "exposedKing",
+   "long",
+   "quietMove",
+   "rookEndgame",
+   "skewer"
+  ],
+  "difficulty": 4,
+  "rating": 1644,
+  "solverMoves": 3,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Rh1. By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "63... Rh1 64. Rxc2 Rh2+ 65. Ke3 Rxc2",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1sYpM (CC0), from https://lichess.org/ma9dp5Gb#125",
+  "url": "https://lichess.org/training/1sYpM"
+ },
+ {
+  "id": "lichess-3dE3h",
+  "fen": "rn2k2r/p4ppp/5b2/1pp5/4P3/5P2/PPP1NP1P/2KR1B1R w kq - 0 13",
+  "setupMove": "e2f4",
+  "startFen": "rn2k2r/p4ppp/5b2/1pp5/4PN2/5P2/PPP2P1P/2KR1B1R b kq - 1 13",
+  "solution": [
+   "f6g5",
+   "c1b1",
+   "g5f4",
+   "f1b5",
+   "e8e7"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "defense",
+   "pin"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "defensiveMove",
+   "long",
+   "middlegame",
+   "pin"
+  ],
+  "difficulty": 4,
+  "rating": 1609,
+  "solverMoves": 3,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Bg5. It attacks the knight on f4 (undefended). By the end of the line you have won two pawns' worth of material.",
+  "line": "13... Bg5 14. Kb1 Bxf4 15. Bxb5+ Ke7",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "f6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3dE3h (CC0), from https://lichess.org/QbefLFf4#25",
+  "url": "https://lichess.org/training/3dE3h"
+ },
+ {
+  "id": "lichess-3c9Ug",
+  "fen": "r1br2k1/pp3ppp/2n1p3/8/4Q3/BBq5/P4PPP/R2R2K1 w - - 0 16",
+  "setupMove": "e4c6",
+  "startFen": "r1br2k1/pp3ppp/2Q1p3/8/8/BBq5/P4PPP/R2R2K1 b - - 0 16",
+  "solution": [
+   "c3a1",
+   "d1a1",
+   "b7c6"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "intermezzo",
+   "pin"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "intermezzo",
+   "middlegame",
+   "pin",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1959,
+  "solverMoves": 2,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Qxa1. It captures the rook on a1. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "16... Qxa1 17. Rxa1 bxc6",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "c3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3c9Ug (CC0), from https://lichess.org/ZhgpcHs3#31",
+  "url": "https://lichess.org/training/3c9Ug"
+ },
+ {
+  "id": "lichess-02fT9",
+  "fen": "r2q1rk1/p1p1n1pp/1pnp4/bN2pP2/P1P5/5NB1/5PPP/1R1Q1RK1 b - - 0 16",
+  "setupMove": "e7f5",
+  "startFen": "r2q1rk1/p1p3pp/1pnp4/bN2pn2/P1P5/5NB1/5PPP/1R1Q1RK1 w - - 0 17",
+  "solution": [
+   "d1d5",
+   "g8h8",
+   "d5c6",
+   "a7a6",
+   "b5a3"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "defense",
+   "fork"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "defensiveMove",
+   "fork",
+   "long",
+   "middlegame"
+  ],
+  "difficulty": 4,
+  "rating": 1861,
+  "solverMoves": 3,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Qd5+. It gives check, which limits your opponent's replies, and attacks the king and the knight on c6 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "17. Qd5+ Kh8 18. Qxc6 a6 19. Na3",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 02fT9 (CC0), from https://lichess.org/mOszGc41/black#32",
+  "url": "https://lichess.org/training/02fT9"
+ },
+ {
+  "id": "lichess-3zOiM",
+  "fen": "8/6p1/3P4/p1P1k3/R2p1p2/P2P1BbP/1r4K1/8 w - - 2 47",
+  "setupMove": "g2f1",
+  "startFen": "8/6p1/3P4/p1P1k3/R2p1p2/P2P1BbP/1r6/5K2 b - - 3 47",
+  "solution": [
+   "b2f2",
+   "f1g1",
+   "f2f3",
+   "d6d7",
+   "g3h4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "defense",
+   "fork",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "defensiveMove",
+   "endgame",
+   "fork",
+   "long"
+  ],
+  "difficulty": 4,
+  "rating": 1531,
+  "solverMoves": 3,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Rf2+. It gives check, which limits your opponent's replies, and attacks the bishop on f3 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "47... Rf2+ 48. Kg1 Rxf3 49. d7 Bh4",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "b2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3zOiM (CC0), from https://lichess.org/M2AS1szA#93",
+  "url": "https://lichess.org/training/3zOiM"
+ },
+ {
+  "id": "lichess-37nFH",
+  "fen": "8/8/2p2R2/3p4/2nPk3/1KP5/8/8 w - - 3 49",
+  "setupMove": "f6c6",
+  "startFen": "8/8/2R5/3p4/2nPk3/1KP5/8/8 b - - 0 49",
+  "solution": [
+   "c4a5",
+   "b3b4",
+   "a5c6",
+   "b4c5",
+   "c6a5"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "defense",
+   "fork",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "defensiveMove",
+   "endgame",
+   "fork",
+   "long"
+  ],
+  "difficulty": 4,
+  "rating": 1809,
+  "solverMoves": 3,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Na5+. It gives check, which limits your opponent's replies, and attacks the rook on c6 (undefended) and the king at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "49... Na5+ 50. Kb4 Nxc6+ 51. Kc5 Na5",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "c4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 37nFH (CC0), from https://lichess.org/Llq8HS6x#97",
+  "url": "https://lichess.org/training/37nFH"
+ },
+ {
+  "id": "lichess-0csKB",
+  "fen": "2r2r1k/pQ6/6pp/6q1/3PN3/5R2/PP3PP1/nBbK4 b - - 9 33",
+  "setupMove": "g5d8",
+  "startFen": "2rq1r1k/pQ6/6pp/8/3PN3/5R2/PP3PP1/nBbK4 w - - 10 34",
+  "solution": [
+   "f3f8",
+   "d8f8",
+   "e4f6",
+   "f8f6",
+   "b7c8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "deflection",
+  "themeName": "Deflection",
+  "skills": [
+   "deflection",
+   "quiet-move"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "deflection",
+   "long",
+   "middlegame",
+   "quietMove"
+  ],
+  "difficulty": 4,
+  "rating": 2098,
+  "solverMoves": 3,
+  "explanation": "Deflection forces a defending piece away from the square or piece it is guarding. The key move is Rxf8+. It captures the rook on f8, and gives check, which limits your opponent's replies, and attacks the queen on d8 and the king at the same time. By the end of the line you have won two pawns' worth of material.",
+  "line": "34. Rxf8+ Qxf8 35. Nf6 Qxf6 36. Qxc8+",
+  "hints": [
+   "Which enemy piece has too many jobs? Can you force it away?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0csKB (CC0), from https://lichess.org/yDYhkXCx/black#66",
+  "url": "https://lichess.org/training/0csKB"
+ },
+ {
+  "id": "lichess-1FkHf",
+  "fen": "4Rrk1/2p3pp/p1p5/3p4/3P3q/2P2r1P/PP3P1P/R3Q1K1 b - - 2 25",
+  "setupMove": "f3f2",
+  "startFen": "4Rrk1/2p3pp/p1p5/3p4/3P3q/2P4P/PP3r1P/R3Q1K1 w - - 0 26",
+  "solution": [
+   "e8f8",
+   "g8f8",
+   "e1f2",
+   "h4f2",
+   "g1f2"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "decoy",
+  "themeName": "Decoy (attraction)",
+  "skills": [
+   "decoy",
+   "intermezzo",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "attraction",
+   "crushing",
+   "endgame",
+   "intermezzo",
+   "long"
+  ],
+  "difficulty": 4,
+  "rating": 1660,
+  "solverMoves": 3,
+  "explanation": "A decoy lures an enemy piece, often the king, onto a square where it can be attacked, usually with a sacrifice. The key move is Rxf8+. It captures the rook on f8, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "26. Rxf8+ Kxf8 27. Qxf2+ Qxf2+ 28. Kxf2",
+  "hints": [
+   "Can you force an enemy piece onto a bad square, even if it costs material?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1FkHf (CC0), from https://lichess.org/FV6O7BDB/black#50",
+  "url": "https://lichess.org/training/1FkHf"
+ },
+ {
+  "id": "lichess-4efGk",
+  "fen": "3r1r1k/pp3p2/7p/3Nqp1B/2Pnpb2/1P5P/P2P4/3QRR1K w - - 0 22",
+  "setupMove": "f1f4",
+  "startFen": "3r1r1k/pp3p2/7p/3Nqp1B/2PnpR2/1P5P/P2P4/3QR2K b - - 0 22",
+  "solution": [
+   "d8d5",
+   "c4d5",
+   "e5f4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "remove-defender",
+  "themeName": "Removing the defender",
+  "skills": [
+   "remove-defender",
+   "intermezzo"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "capturingDefender",
+   "intermezzo",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1364,
+  "solverMoves": 2,
+  "explanation": "Capturing or eliminating the piece that guards a target leaves the target undefended. The key move is Rxd5. It captures the knight on d5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "22... Rxd5 23. cxd5 Qxf4",
+  "hints": [
+   "Find the piece that is holding your opponent's position together, then remove it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4efGk (CC0), from https://lichess.org/vNcmudta#43",
+  "url": "https://lichess.org/training/4efGk"
+ },
+ {
+  "id": "lichess-0c3QQ",
+  "fen": "r2qkb1r/pp1n1ppp/2p2n2/4P3/2B1P1b1/2N2N2/PPP3PP/R1BQK2R b KQkq - 0 8",
+  "setupMove": "d7e5",
+  "startFen": "r2qkb1r/pp3ppp/2p2n2/4n3/2B1P1b1/2N2N2/PPP3PP/R1BQK2R w KQkq - 0 9",
+  "solution": [
+   "d1d8",
+   "a8d8",
+   "f3e5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "intermezzo",
+  "themeName": "Intermediate move (zwischenzug)",
+  "skills": [
+   "intermezzo"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "intermezzo",
+   "opening",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1713,
+  "solverMoves": 2,
+  "explanation": "Instead of making the expected recapture, an in-between move creates a bigger threat first. The key move is Qxd8+. It captures the queen on d8, and gives check, which limits your opponent's replies, and attacks the rook on a8 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "9. Qxd8+ Rxd8 10. Nxe5",
+  "hints": [
+   "Before recapturing automatically, is there a stronger forcing move available?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0c3QQ (CC0), from https://lichess.org/jl0g9nmb/black#16",
+  "url": "https://lichess.org/training/0c3QQ"
+ },
+ {
+  "id": "lichess-27uAa",
+  "fen": "r1bq1r2/pp2bp1k/3p1npp/2p5/4P3/2NB2Q1/PPP2PPP/R1B1R1K1 w - - 0 13",
+  "setupMove": "g3h4",
+  "startFen": "r1bq1r2/pp2bp1k/3p1npp/2p5/4P2Q/2NB4/PPP2PPP/R1B1R1K1 b - - 1 13",
+  "solution": [
+   "f6h5",
+   "h4h5",
+   "g6h5"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "trapped-piece",
+  "themeName": "Trapped piece",
+  "skills": [
+   "quiet-move",
+   "trapped-piece"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "opening",
+   "quietMove",
+   "short",
+   "trappedPiece"
+  ],
+  "difficulty": 4,
+  "rating": 2063,
+  "solverMoves": 2,
+  "explanation": "A piece with no safe squares can be attacked and won. The key move is Nh5. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "13... Nh5 14. Qxh5 gxh5",
+  "hints": [
+   "One enemy piece is short of safe squares. How can you attack it?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "f6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 27uAa (CC0), from https://lichess.org/WVDgwn36#25",
+  "url": "https://lichess.org/training/27uAa"
+ },
+ {
+  "id": "lichess-4uWdz",
+  "fen": "8/8/p7/R7/P6N/6k1/r5p1/6K1 w - - 11 58",
+  "setupMove": "h4f5",
+  "startFen": "8/8/p7/R4N2/P7/6k1/r5p1/6K1 b - - 12 58",
+  "solution": [
+   "g3h3",
+   "f5e3",
+   "a2a1",
+   "g1f2",
+   "g2g1q"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "defense",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "defensiveMove",
+   "endgame",
+   "exposedKing",
+   "long",
+   "master",
+   "promotion"
+  ],
+  "difficulty": 4,
+  "rating": 1855,
+  "solverMoves": 3,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is Kh3. By the end of the line you have won about a queen's worth of material or more.",
+  "line": "58... Kh3 59. Ne3 Ra1+ 60. Kf2 g1=Q+",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your king."
+  ],
+  "hintSquare": "g3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4uWdz (CC0), from https://lichess.org/enKA4P5i#115",
+  "url": "https://lichess.org/training/4uWdz"
+ },
+ {
+  "id": "lichess-4QQAE",
+  "fen": "8/6pk/p7/3pQ3/P2p3K/1P4P1/7P/5q2 b - - 0 38",
+  "setupMove": "f1f6",
+  "startFen": "8/6pk/p4q2/3pQ3/P2p3K/1P4P1/7P/8 w - - 1 39",
+  "solution": [
+   "e5f6",
+   "g7f6",
+   "h4g4"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "defense",
+  "themeName": "Defensive move",
+  "skills": [
+   "defense",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "defensiveMove",
+   "endgame",
+   "master",
+   "queenEndgame",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1613,
+  "solverMoves": 2,
+  "explanation": "Sometimes the best move is a precise defence that neutralises your opponent's threats. The key move is Qxf6. It captures the queen on f6. Material is level, but Stockfish rates the result as clearly better for you (about +4.5).",
+  "line": "39. Qxf6 gxf6 40. Kg4",
+  "hints": [
+   "First, identify exactly what your opponent is threatening.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "e5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4QQAE (CC0), from https://lichess.org/6tJ85xN5/black#76",
+  "url": "https://lichess.org/training/4QQAE"
+ },
+ {
+  "id": "lichess-3vRQn",
+  "fen": "5rk1/7p/3Q2p1/p3B3/2bPp3/2P1P2P/1q4P1/2R3K1 w - - 8 39",
+  "setupMove": "d6d7",
+  "startFen": "5rk1/3Q3p/6p1/p3B3/2bPp3/2P1P2P/1q4P1/2R3K1 b - - 9 39",
+  "solution": [
+   "b2c1",
+   "g1h2",
+   "c4f7"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "defense",
+  "themeName": "Defensive move",
+  "skills": [
+   "defense",
+   "hanging-piece",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "defensiveMove",
+   "endgame",
+   "hangingPiece",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1828,
+  "solverMoves": 2,
+  "explanation": "Sometimes the best move is a precise defence that neutralises your opponent's threats. The key move is Qxc1+. It captures the rook on c1, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "39... Qxc1+ 40. Kh2 Bf7",
+  "hints": [
+   "First, identify exactly what your opponent is threatening.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "b2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3vRQn (CC0), from https://lichess.org/1boJUhvO#77",
+  "url": "https://lichess.org/training/3vRQn"
+ },
+ {
+  "id": "lichess-3Qf2s",
+  "fen": "2r3k1/5ppp/4p1q1/1R2P3/8/4PQP1/5PP1/2rR2K1 w - - 1 31",
+  "setupMove": "b5a5",
+  "startFen": "2r3k1/5ppp/4p1q1/R3P3/8/4PQP1/5PP1/2rR2K1 b - - 2 31",
+  "solution": [
+   "g6b1",
+   "g1h2",
+   "c1d1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "quiet-move",
+  "themeName": "Quiet move",
+  "skills": [
+   "quiet-move",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "master",
+   "quietMove",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 2076,
+  "solverMoves": 2,
+  "explanation": "A quiet move makes no check or capture, but creates an unstoppable threat or restricts the opponent decisively. The key move is Qb1. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "31... Qb1 32. Kh2 Rxd1",
+  "hints": [
+   "The best move here is not a check or a capture. Look for a quiet move that creates an unstoppable threat.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "g6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3Qf2s (CC0), from https://lichess.org/Hu8EWvll#61",
+  "url": "https://lichess.org/training/3Qf2s"
+ },
+ {
+  "id": "lichess-1bYOb",
+  "fen": "5rk1/1p4p1/4p2p/pq2Pp2/1bpP3P/2R1PNP1/1K2Q3/2R5 w - - 2 34",
+  "setupMove": "e2c4",
+  "startFen": "5rk1/1p4p1/4p2p/pq2Pp2/1bQP3P/2R1PNP1/1K6/2R5 b - - 0 34",
+  "solution": [
+   "b4c3",
+   "b2c3",
+   "b5c4",
+   "c3c4",
+   "f8c8",
+   "c4b5",
+   "c8c1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "decoy",
+   "double-check",
+   "intermezzo",
+   "skewer"
+  ],
+  "lichessThemes": [
+   "attraction",
+   "crushing",
+   "discoveredCheck",
+   "doubleCheck",
+   "exposedKing",
+   "intermezzo",
+   "middlegame",
+   "skewer",
+   "veryLong"
+  ],
+  "difficulty": 4,
+  "rating": 1572,
+  "solverMoves": 4,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Bxc3+. It captures the rook on c3, and gives check, which limits your opponent's replies. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+  "line": "34... Bxc3+ 35. Kxc3 Qxc4+ 36. Kxc4 Rc8+ 37. Kb5 Rxc1",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "b4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1bYOb (CC0), from https://lichess.org/wXKEzRuB#67",
+  "url": "https://lichess.org/training/1bYOb"
+ },
+ {
+  "id": "lichess-1SvsH",
+  "fen": "4R3/8/6Kp/8/3k2P1/4p3/3b4/8 w - - 15 59",
+  "setupMove": "g6h6",
+  "startFen": "4R3/8/7K/8/3k2P1/4p3/3b4/8 b - - 0 59",
+  "solution": [
+   "e3e2",
+   "h6g7",
+   "d2e3"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "promotion",
+   "clearance",
+   "defense",
+   "discovered-attack",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "clearance",
+   "crushing",
+   "defensiveMove",
+   "discoveredAttack",
+   "discoveredCheck",
+   "endgame",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1628,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is e2+. It gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +6.2).",
+  "line": "59... e2+ 60. Kg7 Be3",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "e3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1SvsH (CC0), from https://lichess.org/zkFYsYZx#117",
+  "url": "https://lichess.org/training/1SvsH"
+ },
+ {
+  "id": "lichess-2Hjka",
+  "fen": "rnb1k2r/pppp1ppp/5n2/3qP3/8/2B2Q2/P1K2PPP/4R1NR b kq - 2 12",
+  "setupMove": "d5f3",
+  "startFen": "rnb1k2r/pppp1ppp/5n2/4P3/8/2B2q2/P1K2PPP/4R1NR w kq - 0 13",
+  "solution": [
+   "e5f6",
+   "e8d8",
+   "g1f3"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "intermezzo"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "discoveredAttack",
+   "discoveredCheck",
+   "intermezzo",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 4,
+  "rating": 1790,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is exf6+. It captures the knight on f6, and gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+  "line": "13. exf6+ Kd8 14. Nxf3",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "e5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2Hjka (CC0), from https://lichess.org/0TC6V7b7/black#24",
+  "url": "https://lichess.org/training/2Hjka"
+ },
+ {
+  "id": "lichess-3CCMa",
+  "fen": "6k1/1Q3pp1/p6p/8/P7/bPn2N2/2r2qPP/5RK1 w - - 0 29",
+  "setupMove": "f1f2",
+  "startFen": "6k1/1Q3pp1/p6p/8/P7/bPn2N2/2r2RPP/6K1 b - - 0 29",
+  "solution": [
+   "c2c1",
+   "f3e1",
+   "c1e1",
+   "f2f1",
+   "a3c5",
+   "g1h1",
+   "e1f1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "deflection",
+   "mate-in-3",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "deflection",
+   "endgame",
+   "mate",
+   "mateIn4",
+   "veryLong"
+  ],
+  "difficulty": 5,
+  "rating": 1983,
+  "solverMoves": 4,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Rc1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "29... Rc1+ 30. Ne1 Rxe1+ 31. Rf1 Bc5+ 32. Kh1 Rxf1#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 3CCMa (CC0), from https://lichess.org/knLyHwkP#57",
+  "url": "https://lichess.org/training/3CCMa"
+ },
+ {
+  "id": "lichess-25J7w",
+  "fen": "4r2k/p5pp/1pn1B3/q4p2/5Q2/P4N2/1K4PP/2R5 b - - 0 29",
+  "setupMove": "e8e6",
+  "startFen": "7k/p5pp/1pn1r3/q4p2/5Q2/P4N2/1K4PP/2R5 w - - 0 30",
+  "solution": [
+   "f4b8",
+   "c6b8",
+   "c1c8",
+   "e6e8",
+   "c8e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "back-rank",
+  "themeName": "Back-rank mate",
+  "skills": [
+   "back-rank",
+   "fork",
+   "mate-in-3",
+   "sacrifice",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "backRankMate",
+   "endgame",
+   "fork",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "difficulty": 5,
+  "rating": 1931,
+  "solverMoves": 3,
+  "explanation": "The king is trapped on its back rank by its own pawns, so a rook or queen landing on that rank delivers mate. The key move is Qb8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "30. Qb8+ Nxb8 31. Rc8+ Re8 32. Rxe8#",
+  "hints": [
+   "Your opponent's king has no escape squares in front of it. Which heavy piece can reach the back rank?",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "f4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 25J7w (CC0), from https://lichess.org/hT0YMPeM/black#58",
+  "url": "https://lichess.org/training/25J7w"
+ },
+ {
+  "id": "lichess-01oma",
+  "fen": "r4q1k/1p4pp/1n2Q1pN/p3P3/Pbp1P3/3p4/1P2B1PP/5RK1 b - - 5 25",
+  "setupMove": "d3e2",
+  "startFen": "r4q1k/1p4pp/1n2Q1pN/p3P3/Pbp1P3/8/1P2p1PP/5RK1 w - - 0 26",
+  "solution": [
+   "f1f8",
+   "a8f8",
+   "e6g8",
+   "f8g8",
+   "h6f7"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "smothered-mate",
+  "themeName": "Smothered mate",
+  "skills": [
+   "mate-in-3",
+   "sacrifice",
+   "smothered-mate"
+  ],
+  "lichessThemes": [
+   "kingsideAttack",
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame",
+   "sacrifice",
+   "smotheredMate"
+  ],
+  "difficulty": 5,
+  "rating": 1932,
+  "solverMoves": 3,
+  "explanation": "A smothered mate happens when the king is boxed in by its own pieces and a knight delivers check that cannot be blocked. The key move is Rxf8+. It captures the queen on f8, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "26. Rxf8+ Rxf8 27. Qg8+ Rxg8 28. Nf7#",
+  "hints": [
+   "The enemy king is surrounded by its own pieces. A knight check cannot be blocked.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 01oma (CC0), from https://lichess.org/RcWwbY17/black#50",
+  "url": "https://lichess.org/training/01oma"
+ },
+ {
+  "id": "lichess-00vuv",
+  "fen": "r3r3/2q1b1pk/p3P1Np/5Qp1/8/3p4/PPp2P2/2R1R1K1 b - - 1 30",
+  "setupMove": "d3d2",
+  "startFen": "r3r3/2q1b1pk/p3P1Np/5Qp1/8/8/PPpp1P2/2R1R1K1 w - - 0 31",
+  "solution": [
+   "g6f8",
+   "h7g8",
+   "f5h7",
+   "g8f8",
+   "h7h8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "double-check",
+  "themeName": "Double check",
+  "skills": [
+   "double-check",
+   "mate-in-3",
+   "sacrifice"
+  ],
+  "lichessThemes": [
+   "discoveredCheck",
+   "doubleCheck",
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame",
+   "sacrifice"
+  ],
+  "difficulty": 5,
+  "rating": 2103,
+  "solverMoves": 3,
+  "explanation": "In a double check two pieces give check at once. The only legal reply is a king move, because no single move can block or capture both checkers. The key move is Nf8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+  "line": "31. Nf8+ Kg8 32. Qh7+ Kxf8 33. Qh8#",
+  "hints": [
+   "Can you uncover a check while the moving piece also gives check?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "g6",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 00vuv (CC0), from https://lichess.org/SJRbBrel/black#60",
+  "url": "https://lichess.org/training/00vuv"
+ },
+ {
+  "id": "lichess-4JEIx",
+  "fen": "2r2r1k/3n1p1p/p1qp4/2nNp1P1/1Q5P/4BB2/PPP5/2KR3R w - - 1 24",
+  "setupMove": "d5e7",
+  "startFen": "2r2r1k/3nNp1p/p1qp4/2n1p1P1/1Q5P/4BB2/PPP5/2KR3R b - - 2 24",
+  "solution": [
+   "c5d3",
+   "c1b1",
+   "c6c2",
+   "b1a1",
+   "d3b4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack",
+   "pin"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "discoveredAttack",
+   "long",
+   "middlegame",
+   "pin",
+   "queensideAttack"
+  ],
+  "difficulty": 5,
+  "rating": 2069,
+  "solverMoves": 3,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Nd3+. It gives check, which limits your opponent's replies, and attacks the queen on b4 (undefended) and the king at the same time. By the end of the line you have won about a queen's worth of material or more.",
+  "line": "24... Nd3+ 25. Kb1 Qxc2+ 26. Ka1 Nxb4",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "c5",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4JEIx (CC0), from https://lichess.org/NcQVIZS0#47",
+  "url": "https://lichess.org/training/4JEIx"
+ },
+ {
+  "id": "lichess-4e7Uj",
+  "fen": "r1b1qrk1/1p4b1/p1pp4/3P3p/P1PnNB2/4Q3/1P4B1/2KR3R b - - 3 21",
+  "setupMove": "f8f4",
+  "startFen": "r1b1q1k1/1p4b1/p1pp4/3P3p/P1PnNr2/4Q3/1P4B1/2KR3R w - - 0 22",
+  "solution": [
+   "e4f6",
+   "f4f6",
+   "e3e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "discovered-attack",
+  "themeName": "Discovered attack",
+  "skills": [
+   "discovered-attack"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "discoveredAttack",
+   "kingsideAttack",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 5,
+  "rating": 1960,
+  "solverMoves": 2,
+  "explanation": "Moving one piece out of the way unleashes an attack from the piece behind it, so the moving piece is free to create a second threat. The key move is Nf6+. It gives check, which limits your opponent's replies, and attacks the queen on e8 (undefended) and the king at the same time. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "22. Nf6+ Rxf6 23. Qxe8+",
+  "hints": [
+   "One of your pieces is lined up behind another. What happens if the front piece moves with a threat?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4e7Uj (CC0), from https://lichess.org/jJyqBPJR/black#42",
+  "url": "https://lichess.org/training/4e7Uj"
+ },
+ {
+  "id": "lichess-2JNsL",
+  "fen": "5r2/p4PK1/1p6/3k4/8/3p4/PP3R2/8 b - - 2 44",
+  "setupMove": "f8f7",
+  "startFen": "8/p4rK1/1p6/3k4/8/3p4/PP3R2/8 w - - 0 45",
+  "solution": [
+   "f2f7",
+   "d3d2",
+   "f7d7",
+   "d5e4",
+   "d7d2"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "hanging-piece",
+   "skewer",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "endgame",
+   "hangingPiece",
+   "long",
+   "rookEndgame",
+   "skewer"
+  ],
+  "difficulty": 5,
+  "rating": 1932,
+  "solverMoves": 3,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Rxf7. It captures the rook on f7. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "45. Rxf7 d2 46. Rd7+ Ke4 47. Rxd2",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "f2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2JNsL (CC0), from https://lichess.org/FKDfjsv8/black#88",
+  "url": "https://lichess.org/training/2JNsL"
+ },
+ {
+  "id": "lichess-1kI6l",
+  "fen": "1r6/2r1k1p1/2P1pp1p/1pK5/8/8/5PPP/1RR5 w - - 0 34",
+  "setupMove": "b1b5",
+  "startFen": "1r6/2r1k1p1/2P1pp1p/1RK5/8/8/5PPP/2R5 b - - 0 34",
+  "solution": [
+   "c7c6",
+   "c5c6",
+   "b8c8",
+   "c6b6",
+   "c8c1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "skewer",
+  "themeName": "Skewer",
+  "skills": [
+   "decoy",
+   "sacrifice",
+   "skewer",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "attraction",
+   "endgame",
+   "long",
+   "rookEndgame",
+   "sacrifice",
+   "skewer"
+  ],
+  "difficulty": 5,
+  "rating": 1914,
+  "solverMoves": 3,
+  "explanation": "A skewer attacks a valuable piece along a line; when it moves out of the way, the piece behind it can be captured. The key move is Rxc6+. It captures the pawn on c6, and gives check, which limits your opponent's replies. By the end of the line you have won a pawn.",
+  "line": "34... Rxc6+ 35. Kxc6 Rc8+ 36. Kb6 Rxc1",
+  "hints": [
+   "Line up a long-range piece against a valuable target with something else behind it.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "c7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1kI6l (CC0), from https://lichess.org/UGkQXodO#67",
+  "url": "https://lichess.org/training/1kI6l"
+ },
+ {
+  "id": "lichess-4xXXF",
+  "fen": "2r3k1/1p4bp/pQ2bqp1/4p3/P1P1P3/5N1P/1P2BPP1/3N2K1 b - - 0 23",
+  "setupMove": "e6c4",
+  "startFen": "2r3k1/1p4bp/pQ3qp1/4p3/P1b1P3/5N1P/1P2BPP1/3N2K1 w - - 0 24",
+  "solution": [
+   "e2c4",
+   "c8c4",
+   "b6b3",
+   "f6e6",
+   "f3g5"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "pin"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "long",
+   "master",
+   "middlegame",
+   "pin"
+  ],
+  "difficulty": 5,
+  "rating": 2309,
+  "solverMoves": 3,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Bxc4+. It captures the bishop on c4, and gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +4.0).",
+  "line": "24. Bxc4+ Rxc4 25. Qb3 Qe6 26. Ng5",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "e2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4xXXF (CC0), from https://lichess.org/r2xZ5srw/black#46",
+  "url": "https://lichess.org/training/4xXXF"
+ },
+ {
+  "id": "lichess-4UWN7",
+  "fen": "4r1k1/pp3pp1/8/3P2R1/2P4P/3pr3/PP6/1K1R4 w - - 1 28",
+  "setupMove": "c4c5",
+  "startFen": "4r1k1/pp3pp1/8/2PP2R1/7P/3pr3/PP6/1K1R4 b - - 0 28",
+  "solution": [
+   "e3e1",
+   "g5g1",
+   "d3d2",
+   "b1c2",
+   "e1g1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "pin",
+  "themeName": "Pin",
+  "skills": [
+   "promotion",
+   "pin",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "endgame",
+   "long",
+   "pin",
+   "rookEndgame"
+  ],
+  "difficulty": 5,
+  "rating": 2153,
+  "solverMoves": 3,
+  "explanation": "A pinned piece cannot move (or should not move) because a more valuable piece, often the king, stands behind it on the same line. The key move is Re1. It attacks the rook on d1 (undefended). By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "28... Re1 29. Rg1 d2 30. Kc2 Rxg1",
+  "hints": [
+   "Is there an enemy piece that cannot move without exposing something more valuable behind it?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4UWN7 (CC0), from https://lichess.org/U3StRd63#55",
+  "url": "https://lichess.org/training/4UWN7"
+ },
+ {
+  "id": "lichess-0STTy",
+  "fen": "rn1qkb1r/1p3ppp/p3b3/3np3/P1B5/1N3P2/1PP3PP/RNBQK2R w KQkq - 2 10",
+  "setupMove": "b1c3",
+  "startFen": "rn1qkb1r/1p3ppp/p3b3/3np3/P1B5/1NN2P2/1PP3PP/R1BQK2R b KQkq - 3 10",
+  "solution": [
+   "d8h4",
+   "g2g3",
+   "h4c4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "fork",
+   "opening",
+   "short"
+  ],
+  "difficulty": 5,
+  "rating": 1951,
+  "solverMoves": 2,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Qh4+. It gives check, which limits your opponent's replies, and attacks the bishop on c4 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "10... Qh4+ 11. g3 Qxc4",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d8",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0STTy (CC0), from https://lichess.org/Ju1k7jcH#19",
+  "url": "https://lichess.org/training/0STTy"
+ },
+ {
+  "id": "lichess-48S9c",
+  "fen": "r3rbk1/1b1n1ppp/pq3n1B/4p3/1p2P3/1NNB1QR1/PPP3PP/5R1K w - - 0 17",
+  "setupMove": "c3d5",
+  "startFen": "r3rbk1/1b1n1ppp/pq3n1B/3Np3/1p2P3/1N1B1QR1/PPP3PP/5R1K b - - 1 17",
+  "solution": [
+   "b7d5",
+   "e4d5",
+   "e5e4",
+   "d3e4",
+   "e8e4"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "fork",
+   "long",
+   "middlegame"
+  ],
+  "difficulty": 5,
+  "rating": 1990,
+  "solverMoves": 3,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Bxd5. It captures the knight on d5. By the end of the line you have won two pawns' worth of material.",
+  "line": "17... Bxd5 18. exd5 e4 19. Bxe4 Rxe4",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "b7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 48S9c (CC0), from https://lichess.org/zlKcOpSp#33",
+  "url": "https://lichess.org/training/48S9c"
+ },
+ {
+  "id": "lichess-0J7tR",
+  "fen": "5rk1/2p3p1/p5qp/1p1N1n2/3P1P2/2PQ2BP/PPB3PK/4r3 b - - 0 33",
+  "setupMove": "e1e3",
+  "startFen": "5rk1/2p3p1/p5qp/1p1N1n2/3P1P2/2PQr1BP/PPB3PK/8 w - - 1 34",
+  "solution": [
+   "d3e3",
+   "f5e3",
+   "d5e7",
+   "g8f7",
+   "e7g6",
+   "e3c2",
+   "g6f8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "fork",
+  "themeName": "Fork",
+  "skills": [
+   "fork",
+   "sacrifice"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "fork",
+   "middlegame",
+   "sacrifice",
+   "veryLong"
+  ],
+  "difficulty": 5,
+  "rating": 2269,
+  "solverMoves": 4,
+  "explanation": "A fork is a single move that attacks two or more targets at once; your opponent can usually save only one of them. The key move is Qxe3. It captures the rook on e3. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+  "line": "34. Qxe3 Nxe3 35. Ne7+ Kf7 36. Nxg6 Nxc2 37. Nxf8",
+  "hints": [
+   "Look for a move that attacks two targets at the same time.",
+   "Consider a move with your queen."
+  ],
+  "hintSquare": "d3",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 0J7tR (CC0), from https://lichess.org/zph4RyDe/black#66",
+  "url": "https://lichess.org/training/0J7tR"
+ },
+ {
+  "id": "lichess-49b4T",
+  "fen": "1r3k2/3q1pp1/3p2p1/2pP4/2PbR3/5PBP/4Q1PK/8 b - - 0 32",
+  "setupMove": "b8b2",
+  "startFen": "5k2/3q1pp1/3p2p1/2pP4/2PbR3/5PBP/1r2Q1PK/8 w - - 1 33",
+  "solution": [
+   "e4e8",
+   "d7e8",
+   "g3d6",
+   "f8g8",
+   "e2e8"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "deflection",
+  "themeName": "Deflection",
+  "skills": [
+   "deflection",
+   "sacrifice",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "deflection",
+   "endgame",
+   "long",
+   "sacrifice"
+  ],
+  "difficulty": 5,
+  "rating": 2167,
+  "solverMoves": 3,
+  "explanation": "Deflection forces a defending piece away from the square or piece it is guarding. The key move is Re8+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "33. Re8+ Qxe8 34. Bxd6+ Kg8 35. Qxe8+",
+  "hints": [
+   "Which enemy piece has too many jobs? Can you force it away?",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 49b4T (CC0), from https://lichess.org/gtOYV3se/black#64",
+  "url": "https://lichess.org/training/49b4T"
+ },
+ {
+  "id": "lichess-2LhKW",
+  "fen": "8/p7/1p1kb3/4p1p1/4Bp2/P1PK2P1/1P3P2/8 b - - 1 36",
+  "setupMove": "e6d5",
+  "startFen": "8/p7/1p1k4/3bp1p1/4Bp2/P1PK2P1/1P3P2/8 w - - 2 37",
+  "solution": [
+   "e4d5",
+   "d6d5",
+   "c3c4"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "decoy",
+  "themeName": "Decoy (attraction)",
+  "skills": [
+   "decoy",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "attraction",
+   "bishopEndgame",
+   "crushing",
+   "endgame",
+   "short"
+  ],
+  "difficulty": 5,
+  "rating": 2186,
+  "solverMoves": 2,
+  "explanation": "A decoy lures an enemy piece, often the king, onto a square where it can be attacked, usually with a sacrifice. The key move is Bxd5. It captures the bishop on d5. Material is level, but Stockfish rates the result as clearly better for you (about +1.8).",
+  "line": "37. Bxd5 Kxd5 38. c4+",
+  "hints": [
+   "Can you force an enemy piece onto a bad square, even if it costs material?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "e4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2LhKW (CC0), from https://lichess.org/DIbu8qGr/black#72",
+  "url": "https://lichess.org/training/2LhKW"
+ },
+ {
+  "id": "lichess-1QI4u",
+  "fen": "r1q2r2/pp1nRp1k/2p2npp/8/1bBP4/2N3QP/PPP3P1/2KR4 b - - 4 18",
+  "setupMove": "b4c3",
+  "startFen": "r1q2r2/pp1nRp1k/2p2npp/8/2BP4/2b3QP/PPP3P1/2KR4 w - - 0 19",
+  "solution": [
+   "c4f7",
+   "h7h8",
+   "g3g6"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "remove-defender",
+  "themeName": "Removing the defender",
+  "skills": [
+   "remove-defender"
+  ],
+  "lichessThemes": [
+   "capturingDefender",
+   "crushing",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 5,
+  "rating": 1996,
+  "solverMoves": 2,
+  "explanation": "Capturing or eliminating the piece that guards a target leaves the target undefended. The key move is Bxf7. It captures the pawn on f7. By the end of the line you have won two pawns' worth of material.",
+  "line": "19. Bxf7 Kh8 20. Qxg6",
+  "hints": [
+   "Find the piece that is holding your opponent's position together, then remove it.",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "c4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 1QI4u (CC0), from https://lichess.org/RjdZD4Xt/black#36",
+  "url": "https://lichess.org/training/1QI4u"
+ },
+ {
+  "id": "lichess-18Yhy",
+  "fen": "2bq1rk1/2n1p1bp/1p1p2p1/2pP2P1/1p2PPN1/4B3/rPP5/1R1QKB1R b K - 0 18",
+  "setupMove": "g7b2",
+  "startFen": "2bq1rk1/2n1p2p/1p1p2p1/2pP2P1/1p2PPN1/4B3/rbP5/1R1QKB1R w K - 0 19",
+  "solution": [
+   "g4h6",
+   "g8g7",
+   "b1b2"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "intermezzo",
+  "themeName": "Intermediate move (zwischenzug)",
+  "skills": [
+   "intermezzo"
+  ],
+  "lichessThemes": [
+   "advantage",
+   "intermezzo",
+   "master",
+   "middlegame",
+   "short"
+  ],
+  "difficulty": 5,
+  "rating": 2279,
+  "solverMoves": 2,
+  "explanation": "Instead of making the expected recapture, an in-between move creates a bigger threat first. The key move is Nh6+. It gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+  "line": "19. Nh6+ Kg7 20. Rxb2",
+  "hints": [
+   "Before recapturing automatically, is there a stronger forcing move available?",
+   "Consider a move with your knight."
+  ],
+  "hintSquare": "g4",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 18Yhy (CC0), from https://lichess.org/A3XpCLUE/black#36",
+  "url": "https://lichess.org/training/18Yhy"
+ },
+ {
+  "id": "lichess-2ARnV",
+  "fen": "r4rk1/ppp2ppp/6b1/3R4/7q/2PB2NP/PP3bP1/R1BQ3K b - - 0 17",
+  "setupMove": "f2g3",
+  "startFen": "r4rk1/ppp2ppp/6b1/3R4/7q/2PB2bP/PP4P1/R1BQ3K w - - 0 18",
+  "solution": [
+   "c1g5",
+   "h4h5",
+   "d3e2",
+   "h5e2",
+   "d1e2"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "trapped-piece",
+  "themeName": "Trapped piece",
+  "skills": [
+   "trapped-piece"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "long",
+   "master",
+   "middlegame",
+   "trappedPiece"
+  ],
+  "difficulty": 5,
+  "rating": 1952,
+  "solverMoves": 3,
+  "explanation": "A piece with no safe squares can be attacked and won. The key move is Bg5. It attacks the queen on h4. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+  "line": "18. Bg5 Qh5 19. Be2 Qxe2 20. Qxe2",
+  "hints": [
+   "One enemy piece is short of safe squares. How can you attack it?",
+   "Consider a move with your bishop."
+  ],
+  "hintSquare": "c1",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 2ARnV (CC0), from https://lichess.org/3GBNYQTx/black#34",
+  "url": "https://lichess.org/training/2ARnV"
+ },
+ {
+  "id": "lichess-4MEoM",
+  "fen": "6k1/R7/7P/6K1/6P1/8/p7/2r5 w - - 3 64",
+  "setupMove": "g5g6",
+  "startFen": "6k1/R7/6KP/8/6P1/8/p7/2r5 b - - 4 64",
+  "solution": [
+   "a2a1q",
+   "h6h7",
+   "g8h8",
+   "a7a1",
+   "c1a1"
+  ],
+  "alternatives": [],
+  "sideToMove": "b",
+  "theme": "promotion",
+  "themeName": "Promotion",
+  "skills": [
+   "promotion",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "advancedPawn",
+   "crushing",
+   "endgame",
+   "long",
+   "promotion"
+  ],
+  "difficulty": 5,
+  "rating": 1926,
+  "solverMoves": 3,
+  "explanation": "Advancing a passed pawn to the last rank turns it into a new queen (or another piece). The key move is a1=Q. It promotes to a queen, and attacks the rook on a7 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+  "line": "64... a1=Q 65. h7+ Kh8 66. Rxa1 Rxa1",
+  "hints": [
+   "Your pawn is close to promoting. How can you clear its path?",
+   "Consider a move with your pawn."
+  ],
+  "hintSquare": "a2",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 4MEoM (CC0), from https://lichess.org/tINUjO1d#127",
+  "url": "https://lichess.org/training/4MEoM"
+ },
+ {
+  "id": "lichess-49Usi",
+  "fen": "2r2rk1/3R2pp/4p3/1p2P1Q1/2q5/8/6PP/3R2K1 b - - 10 29",
+  "setupMove": "f8f7",
+  "startFen": "2r3k1/3R1rpp/4p3/1p2P1Q1/2q5/8/6PP/3R2K1 w - - 11 30",
+  "solution": [
+   "d7f7",
+   "c4c5",
+   "f7f2"
+  ],
+  "alternatives": [],
+  "sideToMove": "w",
+  "theme": "defense",
+  "themeName": "Defensive move",
+  "skills": [
+   "defense",
+   "endgame-technique"
+  ],
+  "lichessThemes": [
+   "crushing",
+   "defensiveMove",
+   "endgame",
+   "master",
+   "short"
+  ],
+  "difficulty": 5,
+  "rating": 2347,
+  "solverMoves": 2,
+  "explanation": "Sometimes the best move is a precise defence that neutralises your opponent's threats. The key move is Rxf7. It captures the rook on f7. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+  "line": "30. Rxf7 Qc5+ 31. Rf2",
+  "hints": [
+   "First, identify exactly what your opponent is threatening.",
+   "Consider a move with your rook."
+  ],
+  "hintSquare": "d7",
+  "source": "Lichess puzzle database",
+  "attribution": "Lichess puzzle 49Usi (CC0), from https://lichess.org/m8HItJjj/black#58",
+  "url": "https://lichess.org/training/49Usi"
+ }
+]
