@@ -7,6 +7,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { ToastProvider } from "@/components/ui/Toast";
 import { THEME_BOOTSTRAP } from "@/lib/settings";
 import { ServiceWorkerRegistrar } from "@/components/layout/ServiceWorkerRegistrar";
+import { StorageGuard } from "@/components/layout/StorageGuard";
 
 export const metadata: Metadata = {
   title: { default: "ChessPath: learn chess step by step", template: "%s · ChessPath" },
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <AppShell>{children}</AppShell>
         </ToastProvider>
         <ServiceWorkerRegistrar />
+        <StorageGuard />
       </body>
     </html>
   );

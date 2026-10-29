@@ -5,7 +5,19 @@ export interface GlossaryEntry {
   lesson?: string;
 }
 
-export const GLOSSARY: GlossaryEntry[] = [
+const ENTRIES: GlossaryEntry[] = [
+  { term: "Anastasia's mate", definition: "A mate where a knight takes away the king's escape squares while a rook or queen mates along the edge file.", lesson: "more-mating-patterns" },
+  { term: "Arabian mate", definition: "A rook mates next to the cornered king, protected by a knight that also covers the escape square.", lesson: "more-mating-patterns" },
+  { term: "Boden's mate", definition: "Two bishops on crossing diagonals mate a king that is boxed in by its own pieces.", lesson: "more-mating-patterns" },
+  { term: "Breakthrough", definition: "Sacrificing pawns to force one of your pawns through to promotion.", lesson: "pawn-endgames" },
+  { term: "Building a bridge", definition: "The winning method in the Lucena position: the rook goes to the fourth rank so it can later block the enemy rook's checks.", lesson: "lucena-philidor" },
+  { term: "Clearance", definition: "Moving one of your own pieces out of the way, ideally with a threat, so another piece can use the square or line.", lesson: "line-tactics" },
+  { term: "Hook mate", definition: "A rook mates protected by a knight, which is itself protected by a pawn.", lesson: "more-mating-patterns" },
+  { term: "Interference", definition: "Placing a piece between an enemy defender and the piece or square it defends.", lesson: "line-tactics" },
+  { term: "Lucena position", definition: "Rook and pawn against rook with the attacking king in front of its pawn on the seventh rank and the defending king cut off: a win.", lesson: "lucena-philidor" },
+  { term: "Outside passed pawn", definition: "A passed pawn far from the other pawns. It lures the enemy king away while your king wins pawns on the other side.", lesson: "pawn-endgames" },
+  { term: "Philidor position", definition: "Rook and pawn against rook with the defending king in front of the pawn: a draw with the third-rank defence.", lesson: "lucena-philidor" },
+  { term: "Zugzwang", definition: "A position where any move makes things worse, so the player to move would rather pass.", lesson: "zugzwang" },
   { term: "Absolute pin", definition: "A pin against the king: the pinned piece is not allowed to move off the line.", lesson: "pins" },
   { term: "Algebraic notation", definition: "The standard way to write moves: piece letter plus destination square (Nf3); pawn moves are just the square (e4).", lesson: "notation" },
   { term: "Attacked square", definition: "A square an enemy piece could capture on. Your king may never move onto one.", lesson: "the-king" },
@@ -77,3 +89,5 @@ export const GLOSSARY: GlossaryEntry[] = [
   { term: "X-ray", definition: "An attack or defence through another piece along a line.", lesson: "skewers" },
   { term: "Zwischenzug", definition: "German for \"in-between move\": a forcing move played before the expected reply.", lesson: "zwischenzug" },
 ];
+
+export const GLOSSARY: GlossaryEntry[] = [...ENTRIES].sort((a, b) => a.term.localeCompare(b.term));

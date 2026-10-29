@@ -28,9 +28,14 @@ test("data export and confirmed reset", async ({ page }) => {
   await page.goto("/learn/the-rook/");
   await page.getByRole("button", { name: "Start lesson" }).click();
   await page.goto("/settings/");
+  // The data-safety panel says whether the browser keeps the data, and when the last backup was made.
+  const safety = page.getByTestId("data-safety");
+  await expect(safety).toContainText(/keep your progress|may delete your progress|can't confirm/);
+  await expect(safety).toContainText("You haven't exported a backup yet.");
   const download = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export progress (JSON)" }).click();
   expect((await download).suggestedFilename()).toMatch(/chesspath-backup/);
+  await expect(safety).toContainText(/Last backup: /);
   await page.getByRole("button", { name: "Reset all data" }).click();
   const del = page.getByRole("button", { name: "Delete everything" });
   await expect(del).toBeDisabled();

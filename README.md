@@ -10,7 +10,7 @@ ChessPath needs no account, no server and no paid API. Everything runs in the br
 |---|---|
 | **Onboarding** | Level, goal and daily target (10/15/30/60 min). An optional 6-question placement check recommends a starting lesson (not a rating). Fully skippable. |
 | **Dashboard** | "Up next" action, a daily plan built from real data (next lesson, due reviews, weak-spot puzzles, opening recall, a game), curriculum progress, recent stats, and evidence-based recommendations. New users see a welcome state with no invented numbers. |
-| **Curriculum** | 40 lessons in 7 modules (fundamentals, tactics, opening principles, positional play, calculation, endgames, practical improvement). Step types: explanation with demonstrations, play-a-move, select squares, multiple choice, and goal positions played out against Stockfish. Graduated hints, specific feedback for tempting wrong moves, revealable solutions, scored checks, recap and follow-up. Progress resumes mid-lesson. |
+| **Curriculum** | 60 lessons (344 interactive exercises) in 7 modules (fundamentals, tactics, opening principles, positional play, calculation, endgames, practical improvement). Step types: explanation with demonstrations, play-a-move, select squares, multiple choice, and goal positions played out against Stockfish. Graduated hints, specific feedback for tempting wrong moves, revealable solutions, scored checks, recap and follow-up. Progress resumes mid-lesson. |
 | **Endgame drills** | 6 positions (queen mate, rook mate, ladder mate, key squares, catch the pawn, rook-pawn fortress) played against Stockfish. Success is judged by the actual result on the board. |
 | **Puzzles** | 150 positions from the Lichess puzzle database (CC0), each re-verified with Stockfish, across 5 levels and about 20 themes. Modes: adaptive, by theme, by level, review. Graduated hints, solution reveal, skip (doesn't count as a miss), explanations built from the position, and attribution. |
 | **Spaced repetition** | An SM-2 variant for puzzles, lesson checks and opening lines. Cards are created when you struggle (opening lines are always scheduled), each with a stated reason. |
@@ -86,7 +86,7 @@ The Playwright tests run against the production build served by `scripts/serve.m
 
 ```
 src/content/
-  lessons/*.ts        40 lessons (typed data; positions built with setup() or fenAfter())
+  lessons/*.ts        60 lessons (typed data; positions built with setup() or fenAfter(), or taken from the verified real-game pool)
   puzzles/            puzzles.json (150) and lesson-pool.json, generated, do not edit by hand
   openings/           library.ts (11 openings) and eco-index.json (generated)
   drills.ts           endgame drills
@@ -108,7 +108,7 @@ Validation:
 
 ### Adding puzzles
 
-Download the Lichess puzzle CSV (`lichess_db_puzzle.csv.zst`, CC0) and decompress it. A partial download is enough. Then run `npm run build:puzzles -- path/to/lichess_db_puzzle.csv`. The script selects by level and theme, verifies every solver move with Stockfish, and regenerates `puzzles.json` and `lesson-pool.json`.
+Download the Lichess puzzle CSV (`lichess_db_puzzle.csv.zst`, CC0) and decompress it. A partial download is enough. Then run `npm run build:puzzles -- path/to/lichess_db_puzzle.csv`. The script selects by level and theme, verifies every solver move with Stockfish, and regenerates `puzzles.json`. It creates `lesson-pool.json` only if it does not exist. To add lesson positions, run `npm run build:lesson-pool -- path/to/lichess_db_puzzle.csv`: it appends verified positions and never reorders existing ones, because lessons refer to them by index.
 
 ### Adding opening lines
 

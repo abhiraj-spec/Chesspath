@@ -55,6 +55,96 @@
    "keyPiece": "bishop",
    "keyFrom": "e2",
    "attribution": "Lichess puzzle 4X3k2 (CC0)"
+  },
+  {
+   "id": "lichess-1uxnJ",
+   "fen": "1r1q1rk1/6pp/p1np4/3bppb1/1pP1P3/1P1Q1P2/P1N1B1PP/R4RK1 w - - 0 18",
+   "sans": [
+    "Qxd5+",
+    "Kh8",
+    "Qxc6"
+   ],
+   "explanation": "The key move is Qxd5+. It captures the bishop on d5, and gives check, which limits your opponent's replies, and attacks the king and the knight on c6 (undefended) at the same time. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "18. Qxd5+ Kh8 19. Qxc6",
+   "keyPiece": "queen",
+   "keyFrom": "d3",
+   "attribution": "Lichess puzzle 1uxnJ (CC0)",
+   "rating": 945
+  },
+  {
+   "id": "lichess-0rLK2",
+   "fen": "3r4/1p5k/p2r1bpp/4pp1q/P2P4/2N1QPP1/1P1R2KP/3R4 w - - 0 31",
+   "sans": [
+    "dxe5",
+    "Rxd2+",
+    "Rxd2"
+   ],
+   "explanation": "The key move is dxe5. It captures the pawn on e5, and attacks the rook on d6 and the bishop on f6 at the same time. By the end of the line you have won a pawn.",
+   "line": "31. dxe5 Rxd2+ 32. Rxd2",
+   "keyPiece": "pawn",
+   "keyFrom": "d4",
+   "attribution": "Lichess puzzle 0rLK2 (CC0)",
+   "rating": 1127
+  },
+  {
+   "id": "lichess-1KkGw",
+   "fen": "3k4/p1b4R/8/2P1p3/4N1K1/1P6/P7/5r2 b - - 6 47",
+   "sans": [
+    "Rf4+",
+    "Kg5",
+    "Rxe4"
+   ],
+   "explanation": "The key move is Rf4+. It gives check, which limits your opponent's replies, and attacks the knight on e4 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "47... Rf4+ 48. Kg5 Rxe4",
+   "keyPiece": "rook",
+   "keyFrom": "f1",
+   "attribution": "Lichess puzzle 1KkGw (CC0)",
+   "rating": 1143
+  },
+  {
+   "id": "lichess-2Uxc5",
+   "fen": "1r4k1/1q3pb1/3p1n1p/p4NpP/2QPn1P1/1PP5/P1B5/1K2RR2 b - - 3 29",
+   "sans": [
+    "Nd2+",
+    "Kc1",
+    "Nxc4"
+   ],
+   "explanation": "The key move is Nd2+. It gives check, which limits your opponent's replies, and attacks the queen on c4, the king and the rook on f1 at the same time. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "29... Nd2+ 30. Kc1 Nxc4",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 2Uxc5 (CC0)",
+   "rating": 1198
+  },
+  {
+   "id": "lichess-3q206",
+   "fen": "4r3/ppQ3p1/5nkp/3b4/3P2P1/B3P1KP/8/8 b - - 0 29",
+   "sans": [
+    "Rxe3+",
+    "Kh2",
+    "Rxa3"
+   ],
+   "explanation": "The key move is Rxe3+. It captures the pawn on e3, and gives check, which limits your opponent's replies, and attacks the bishop on a3 (undefended) and the king at the same time. By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "29... Rxe3+ 30. Kh2 Rxa3",
+   "keyPiece": "rook",
+   "keyFrom": "e8",
+   "attribution": "Lichess puzzle 3q206 (CC0)",
+   "rating": 1331
+  },
+  {
+   "id": "lichess-30NKk",
+   "fen": "2r2qk1/7p/4p3/4B1p1/2NP3b/2P1n3/1P2B1PP/R1Q3K1 b - - 0 27",
+   "sans": [
+    "Qf2+",
+    "Kh1",
+    "Qxg2#"
+   ],
+   "explanation": "The key move is Qf2+. It gives check, which limits your opponent's replies, and attacks the bishop on e2 (undefended) and the king at the same time. The line ends in checkmate.",
+   "line": "27... Qf2+ 28. Kh1 Qxg2#",
+   "keyPiece": "queen",
+   "keyFrom": "f8",
+   "attribution": "Lichess puzzle 30NKk (CC0)",
+   "rating": 1391
   }
  ],
  "pin": [
@@ -111,6 +201,94 @@
    "keyPiece": "bishop",
    "keyFrom": "g4",
    "attribution": "Lichess puzzle 0QwwK (CC0)"
+  },
+  {
+   "id": "lichess-1Gw02",
+   "fen": "1k4r1/2q2pp1/B3p1p1/2pp4/1P4P1/2B4P/2P2P2/1K2R3 w - - 0 28",
+   "sans": [
+    "Be5",
+    "Qxe5",
+    "Rxe5"
+   ],
+   "explanation": "The key move is Be5. It attacks the queen on c7. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "28. Be5 Qxe5 29. Rxe5",
+   "keyPiece": "bishop",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 1Gw02 (CC0)",
+   "rating": 926
+  },
+  {
+   "id": "lichess-1B3v7",
+   "fen": "2r2rk1/p2n1ppp/3Qbn2/q3p3/8/3P1N2/PP1BPPBP/RN2K2R b KQ - 2 13",
+   "sans": [
+    "Rc1#"
+   ],
+   "explanation": "The key move is Rc1#. It delivers checkmate. The line ends in checkmate.",
+   "line": "13... Rc1#",
+   "keyPiece": "rook",
+   "keyFrom": "c8",
+   "attribution": "Lichess puzzle 1B3v7 (CC0)",
+   "rating": 958
+  },
+  {
+   "id": "lichess-0XXJp",
+   "fen": "r2qk1r1/ppp1bp2/3p3p/7Q/4PR1P/2NB4/PPP2nP1/R5K1 b q - 0 19",
+   "sans": [
+    "Nh3+",
+    "Kh1",
+    "Nxf4"
+   ],
+   "explanation": "The key move is Nh3+. It gives check, which limits your opponent's replies, and attacks the rook on f4 (undefended) and the king at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "19... Nh3+ 20. Kh1 Nxf4",
+   "keyPiece": "knight",
+   "keyFrom": "f2",
+   "attribution": "Lichess puzzle 0XXJp (CC0)",
+   "rating": 1266
+  },
+  {
+   "id": "lichess-1wD5l",
+   "fen": "6Rr/1pk2Bp1/p1b1p2p/2p1P3/3p4/2P1q3/PP1N2P1/R2Q3K b - - 0 22",
+   "sans": [
+    "Qh3+",
+    "Kg1",
+    "Qxg2#"
+   ],
+   "explanation": "The key move is Qh3+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "22... Qh3+ 23. Kg1 Qxg2#",
+   "keyPiece": "queen",
+   "keyFrom": "e3",
+   "attribution": "Lichess puzzle 1wD5l (CC0)",
+   "rating": 1333
+  },
+  {
+   "id": "lichess-2OqsC",
+   "fen": "r1b1k2r/ppp2pp1/1Bnp3p/3n4/2B1q2N/7P/PP3PP1/R2Q1RK1 w kq - 0 14",
+   "sans": [
+    "Re1",
+    "Qxe1+",
+    "Qxe1+"
+   ],
+   "explanation": "The key move is Re1. It attacks the queen on e4 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "14. Re1 Qxe1+ 15. Qxe1+",
+   "keyPiece": "rook",
+   "keyFrom": "f1",
+   "attribution": "Lichess puzzle 2OqsC (CC0)",
+   "rating": 1419
+  },
+  {
+   "id": "lichess-4vbkg",
+   "fen": "r3r1k1/pp3p1p/1q3pb1/n1p1b3/2Pp1P1N/3P3P/PP1QB1P1/2KR1N1R b - - 0 18",
+   "sans": [
+    "Bxf4",
+    "Qxf4",
+    "Rxe2"
+   ],
+   "explanation": "The key move is Bxf4. It captures the pawn on f4, and attacks the queen on d2. By the end of the line you have won a pawn.",
+   "line": "18... Bxf4 19. Qxf4 Rxe2",
+   "keyPiece": "bishop",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 4vbkg (CC0)",
+   "rating": 1474
   }
  ],
  "skewer": [
@@ -169,6 +347,96 @@
    "keyPiece": "rook",
    "keyFrom": "a1",
    "attribution": "Lichess puzzle 34UfP (CC0)"
+  },
+  {
+   "id": "lichess-0W1zc",
+   "fen": "6k1/5pp1/4p2p/Q2pP3/p7/rq4P1/1PR2P1P/2K4R b - - 2 36",
+   "sans": [
+    "Ra1+",
+    "Kd2",
+    "Rxh1"
+   ],
+   "explanation": "The key move is Ra1+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "36... Ra1+ 37. Kd2 Rxh1",
+   "keyPiece": "rook",
+   "keyFrom": "a3",
+   "attribution": "Lichess puzzle 0W1zc (CC0)",
+   "rating": 988
+  },
+  {
+   "id": "lichess-2bt7n",
+   "fen": "4R3/8/7p/8/r2k3P/3p1PK1/8/8 w - - 2 53",
+   "sans": [
+    "Re4+",
+    "Kc3",
+    "Rxa4"
+   ],
+   "explanation": "The key move is Re4+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "53. Re4+ Kc3 54. Rxa4",
+   "keyPiece": "rook",
+   "keyFrom": "e8",
+   "attribution": "Lichess puzzle 2bt7n (CC0)",
+   "rating": 1080
+  },
+  {
+   "id": "lichess-3kK77",
+   "fen": "2r3k1/p1Bn4/p1bPp2p/7N/8/8/PPP1K2P/5R2 b - - 1 29",
+   "sans": [
+    "Bb5+",
+    "Ke1",
+    "Bxf1"
+   ],
+   "explanation": "The key move is Bb5+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "29... Bb5+ 30. Ke1 Bxf1",
+   "keyPiece": "bishop",
+   "keyFrom": "c6",
+   "attribution": "Lichess puzzle 3kK77 (CC0)",
+   "rating": 1087
+  },
+  {
+   "id": "lichess-1Mg5n",
+   "fen": "8/7b/B7/4p3/p3k3/2P5/1P1K4/8 w - - 1 41",
+   "sans": [
+    "Bd3+",
+    "Kd5",
+    "Bxh7"
+   ],
+   "explanation": "The key move is Bd3+. It gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "41. Bd3+ Kd5 42. Bxh7",
+   "keyPiece": "bishop",
+   "keyFrom": "a6",
+   "attribution": "Lichess puzzle 1Mg5n (CC0)",
+   "rating": 1221
+  },
+  {
+   "id": "lichess-0pB00",
+   "fen": "3b1k2/7R/4K3/3NP3/6pp/8/5r2/8 w - - 1 53",
+   "sans": [
+    "Rh8+",
+    "Kg7",
+    "Rxd8"
+   ],
+   "explanation": "The key move is Rh8+. It gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "53. Rh8+ Kg7 54. Rxd8",
+   "keyPiece": "rook",
+   "keyFrom": "h7",
+   "attribution": "Lichess puzzle 0pB00 (CC0)",
+   "rating": 1297
+  },
+  {
+   "id": "lichess-0liwQ",
+   "fen": "r4rk1/1bp1ppb1/p4np1/1p1qB2p/3P3P/2P5/PP1NBPP1/R2Q1RK1 w - - 1 14",
+   "sans": [
+    "Bf3",
+    "Qd7",
+    "Bxb7"
+   ],
+   "explanation": "The key move is Bf3. It attacks the queen on d5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "14. Bf3 Qd7 15. Bxb7",
+   "keyPiece": "bishop",
+   "keyFrom": "e2",
+   "attribution": "Lichess puzzle 0liwQ (CC0)",
+   "rating": 1432
   }
  ],
  "discoveredAttack": [
@@ -227,6 +495,96 @@
    "keyPiece": "pawn",
    "keyFrom": "f3",
    "attribution": "Lichess puzzle 4Bqte (CC0)"
+  },
+  {
+   "id": "lichess-1nw8V",
+   "fen": "4k2r/1r1q1p2/3bpp2/3Q3p/8/1P3N2/P4PPP/2R1R1K1 b k - 0 21",
+   "sans": [
+    "Bxh2+",
+    "Kxh2",
+    "Qxd5"
+   ],
+   "explanation": "The key move is Bxh2+. It captures the pawn on h2, and gives check, which limits your opponent's replies. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+   "line": "21... Bxh2+ 22. Kxh2 Qxd5",
+   "keyPiece": "bishop",
+   "keyFrom": "d6",
+   "attribution": "Lichess puzzle 1nw8V (CC0)",
+   "rating": 929
+  },
+  {
+   "id": "lichess-0lrGu",
+   "fen": "4rk2/p4p2/2R4p/3p2p1/3Pn3/P7/1B3PPP/4RK2 b - - 0 28",
+   "sans": [
+    "Nd2+",
+    "Kg1",
+    "Rxe1#"
+   ],
+   "explanation": "The key move is Nd2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "28... Nd2+ 29. Kg1 Rxe1#",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 0lrGu (CC0)",
+   "rating": 976
+  },
+  {
+   "id": "lichess-4FaZ3",
+   "fen": "3q4/6k1/pprNpr1p/4p1pP/1P6/3Q4/P5P1/3R2K1 w - - 6 32",
+   "sans": [
+    "Nf5+",
+    "exf5",
+    "Qxd8"
+   ],
+   "explanation": "The key move is Nf5+. It gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "32. Nf5+ exf5 33. Qxd8",
+   "keyPiece": "knight",
+   "keyFrom": "d6",
+   "attribution": "Lichess puzzle 4FaZ3 (CC0)",
+   "rating": 1096
+  },
+  {
+   "id": "lichess-3NFph",
+   "fen": "4r1k1/ppb1r2p/2p2p2/2P5/1P2BpP1/PN5P/4R2K/2R5 b - - 0 31",
+   "sans": [
+    "f3+",
+    "Kg1",
+    "fxe2"
+   ],
+   "explanation": "The key move is f3+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "31... f3+ 32. Kg1 fxe2",
+   "keyPiece": "pawn",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 3NFph (CC0)",
+   "rating": 1185
+  },
+  {
+   "id": "lichess-2U7wR",
+   "fen": "3r2k1/1q3pp1/7p/3NPp2/5P2/4P2P/6P1/3Q2K1 w - - 1 32",
+   "sans": [
+    "Nf6+",
+    "gxf6",
+    "Qxd8+"
+   ],
+   "explanation": "The key move is Nf6+. It gives check, which limits your opponent's replies. By the end of the line you have won two pawns' worth of material.",
+   "line": "32. Nf6+ gxf6 33. Qxd8+",
+   "keyPiece": "knight",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 2U7wR (CC0)",
+   "rating": 1209
+  },
+  {
+   "id": "lichess-16wH6",
+   "fen": "6r1/p4rpk/6Rp/3q4/8/4P1QP/5PRK/8 w - - 5 39",
+   "sans": [
+    "Rxh6+",
+    "gxh6",
+    "Qxg8#"
+   ],
+   "explanation": "The key move is Rxh6+. It captures the pawn on h6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "39. Rxh6+ gxh6 40. Qxg8#",
+   "keyPiece": "rook",
+   "keyFrom": "g6",
+   "attribution": "Lichess puzzle 16wH6 (CC0)",
+   "rating": 1374
   }
  ],
  "doubleCheck": [
@@ -281,6 +639,60 @@
    "keyPiece": "bishop",
    "keyFrom": "d2",
    "attribution": "Lichess puzzle 16NOm (CC0)"
+  },
+  {
+   "id": "lichess-1EaXT",
+   "fen": "r3kbr1/ppp2p1p/3p4/8/2BPPn1q/1NP2PRb/PP6/R3B1QK b q - 0 19",
+   "sans": [
+    "Bg2#"
+   ],
+   "explanation": "The key move is Bg2#. It delivers checkmate. The line ends in checkmate.",
+   "line": "19... Bg2#",
+   "keyPiece": "bishop",
+   "keyFrom": "h3",
+   "attribution": "Lichess puzzle 1EaXT (CC0)",
+   "rating": 1068
+  },
+  {
+   "id": "lichess-0aCQH",
+   "fen": "r5k1/pp3pb1/5Pp1/q7/1n1Q4/BP2P3/P4P2/R3K2R b KQ - 0 27",
+   "sans": [
+    "Nc2+",
+    "Kf1",
+    "Nxd4"
+   ],
+   "explanation": "The key move is Nc2+. It gives check, which limits your opponent's replies, and attacks the queen on d4, the bishop on a3 (undefended), the rook on a1 and the king at the same time. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "27... Nc2+ 28. Kf1 Nxd4",
+   "keyPiece": "knight",
+   "keyFrom": "b4",
+   "attribution": "Lichess puzzle 0aCQH (CC0)",
+   "rating": 1085
+  },
+  {
+   "id": "lichess-4Jain",
+   "fen": "rnb1r1k1/ppp2pbp/6p1/4n3/8/B4N2/PPP2PPP/R2NKB1R b KQ - 2 11",
+   "sans": [
+    "Nxf3#"
+   ],
+   "explanation": "The key move is Nxf3#. It captures the knight on f3, and delivers checkmate. The line ends in checkmate.",
+   "line": "11... Nxf3#",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 4Jain (CC0)",
+   "rating": 1126
+  },
+  {
+   "id": "lichess-2ILUh",
+   "fen": "r1bqkb1r/pp3pp1/2n4p/2pp4/4N2P/4QN2/PPP2PP1/R3KB1R w KQkq - 0 12",
+   "sans": [
+    "Nf6#"
+   ],
+   "explanation": "The key move is Nf6#. It delivers checkmate. The line ends in checkmate.",
+   "line": "12. Nf6#",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 2ILUh (CC0)",
+   "rating": 1484
   }
  ],
  "hangingPiece": [
@@ -333,6 +745,92 @@
    "keyPiece": "queen",
    "keyFrom": "h5",
    "attribution": "Lichess puzzle 4YmOa (CC0)"
+  },
+  {
+   "id": "lichess-0IHRR",
+   "fen": "5r1k/p2R3p/6p1/6rq/1Q6/2P3p1/P1P2P2/5RK1 w - - 0 29",
+   "sans": [
+    "Qxf8#"
+   ],
+   "explanation": "The key move is Qxf8#. It captures the rook on f8, and delivers checkmate. The line ends in checkmate.",
+   "line": "29. Qxf8#",
+   "keyPiece": "queen",
+   "keyFrom": "b4",
+   "attribution": "Lichess puzzle 0IHRR (CC0)",
+   "rating": 845
+  },
+  {
+   "id": "lichess-2L58q",
+   "fen": "r4r1k/1b1q1p1p/p2bpn2/3pB3/6Q1/1P1B2P1/P1P2P1P/R3R1K1 w - - 4 20",
+   "sans": [
+    "Bxf6#"
+   ],
+   "explanation": "The key move is Bxf6#. It captures the knight on f6, and delivers checkmate. The line ends in checkmate.",
+   "line": "20. Bxf6#",
+   "keyPiece": "bishop",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 2L58q (CC0)",
+   "rating": 875
+  },
+  {
+   "id": "lichess-2hCPI",
+   "fen": "r3k3/1bq1pprp/p1np1np1/1ppN4/4P3/3P1NPP/PPP2PB1/R3K2R w KQq - 0 14",
+   "sans": [
+    "Nxc7+",
+    "Kd7",
+    "Nxa8"
+   ],
+   "explanation": "The key move is Nxc7+. It captures the queen on c7, and gives check, which limits your opponent's replies, and attacks the rook on a8 and the king at the same time. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "14. Nxc7+ Kd7 15. Nxa8",
+   "keyPiece": "knight",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 2hCPI (CC0)",
+   "rating": 942
+  },
+  {
+   "id": "lichess-3LGLb",
+   "fen": "8/2k3p1/2B4p/K3pP1P/3p4/8/8/8 b - - 0 47",
+   "sans": [
+    "Kxc6",
+    "f6",
+    "gxf6"
+   ],
+   "explanation": "The key move is Kxc6. It captures the bishop on c6. By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "47... Kxc6 48. f6 gxf6",
+   "keyPiece": "king",
+   "keyFrom": "c7",
+   "attribution": "Lichess puzzle 3LGLb (CC0)",
+   "rating": 1003
+  },
+  {
+   "id": "lichess-1nQko",
+   "fen": "r2qk2r/pp1bppb1/2pp1n1p/6N1/3PP3/2PB1PP1/PPQN2P1/2K1R2R b kq - 4 15",
+   "sans": [
+    "hxg5",
+    "Rxh8+",
+    "Bxh8"
+   ],
+   "explanation": "The key move is hxg5. It captures the knight on g5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "15... hxg5 16. Rxh8+ Bxh8",
+   "keyPiece": "pawn",
+   "keyFrom": "h6",
+   "attribution": "Lichess puzzle 1nQko (CC0)",
+   "rating": 1276
+  },
+  {
+   "id": "lichess-3RAy3",
+   "fen": "1r3k2/pp3Rr1/4p3/2P1p1qp/1P4pQ/6P1/P4P1P/3R2K1 b - - 0 33",
+   "sans": [
+    "Kxf7",
+    "Qxg5",
+    "Rxg5"
+   ],
+   "explanation": "The key move is Kxf7. It captures the rook on f7. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "33... Kxf7 34. Qxg5 Rxg5",
+   "keyPiece": "king",
+   "keyFrom": "f8",
+   "attribution": "Lichess puzzle 3RAy3 (CC0)",
+   "rating": 1288
   }
  ],
  "capturingDefender": [
@@ -391,6 +889,66 @@
    "keyPiece": "knight",
    "keyFrom": "e1",
    "attribution": "Lichess puzzle 20ae7 (CC0)"
+  },
+  {
+   "id": "lichess-3SQZK",
+   "fen": "r3rnk1/p3ppb1/1p1p2p1/3P2qp/2PN1Q2/4P1N1/P4P1B/1R3RK1 b - - 3 23",
+   "sans": [
+    "Qxf4",
+    "exf4",
+    "Bxd4"
+   ],
+   "explanation": "The key move is Qxf4. It captures the queen on f4. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "23... Qxf4 24. exf4 Bxd4",
+   "keyPiece": "queen",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 3SQZK (CC0)",
+   "rating": 996
+  },
+  {
+   "id": "lichess-00Bp0",
+   "fen": "1r2kr2/pp3p1p/2b1p3/4N3/2P1n3/1N1B4/P3KP1P/6R1 w - - 5 22",
+   "sans": [
+    "Nxc6",
+    "bxc6",
+    "Bxe4"
+   ],
+   "explanation": "The key move is Nxc6. It captures the bishop on c6, and attacks the rook on b8 (undefended). By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "22. Nxc6 bxc6 23. Bxe4",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 00Bp0 (CC0)",
+   "rating": 1229
+  },
+  {
+   "id": "lichess-4Yw1o",
+   "fen": "3r1rk1/2p1np2/p3p1pp/1p2b1q1/8/1BP2PN1/PP3P1P/R1Q1R2K w - - 3 20",
+   "sans": [
+    "Qxg5",
+    "hxg5",
+    "Rxe5"
+   ],
+   "explanation": "The key move is Qxg5. It captures the queen on g5, and attacks the knight on e7 (undefended) and the bishop on e5 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "20. Qxg5 hxg5 21. Rxe5",
+   "keyPiece": "queen",
+   "keyFrom": "c1",
+   "attribution": "Lichess puzzle 4Yw1o (CC0)",
+   "rating": 1358
+  },
+  {
+   "id": "lichess-1v1IS",
+   "fen": "r7/ppp2kb1/2n2np1/6B1/2pqp1bQ/2N5/PPP2PPP/R4RK1 w - - 4 14",
+   "sans": [
+    "Bxf6",
+    "Qxf6",
+    "Qxg4"
+   ],
+   "explanation": "The key move is Bxf6. It captures the knight on f6, and attacks the queen on d4. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "14. Bxf6 Qxf6 15. Qxg4",
+   "keyPiece": "bishop",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 1v1IS (CC0)",
+   "rating": 1416
   }
  ],
  "deflection": [
@@ -449,6 +1007,96 @@
    "keyPiece": "pawn",
    "keyFrom": "g4",
    "attribution": "Lichess puzzle 3JyJ7 (CC0)"
+  },
+  {
+   "id": "lichess-0ZvqK",
+   "fen": "4rk2/ppp2ppp/2p5/2N5/6n1/5N1q/PPP1Q2P/3R2K1 w - - 3 22",
+   "sans": [
+    "Nd7+",
+    "Kg8",
+    "Qxe8#"
+   ],
+   "explanation": "The key move is Nd7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "22. Nd7+ Kg8 23. Qxe8#",
+   "keyPiece": "knight",
+   "keyFrom": "c5",
+   "attribution": "Lichess puzzle 0ZvqK (CC0)",
+   "rating": 1134
+  },
+  {
+   "id": "lichess-1Os7w",
+   "fen": "r2k1b1N/pp3ppp/7n/2pP4/2P3b1/2N3P1/PP2Q2P/2KR1B1q w - - 5 16",
+   "sans": [
+    "Nxf7+",
+    "Nxf7",
+    "Qxg4"
+   ],
+   "explanation": "The key move is Nxf7+. It captures the pawn on f7, and gives check, which limits your opponent's replies. By the end of the line you have won a pawn.",
+   "line": "16. Nxf7+ Nxf7 17. Qxg4",
+   "keyPiece": "knight",
+   "keyFrom": "h8",
+   "attribution": "Lichess puzzle 1Os7w (CC0)",
+   "rating": 1160
+  },
+  {
+   "id": "lichess-2Qo35",
+   "fen": "6k1/pp1b1pBp/7r/3P4/2P2p2/P2Q1P2/4B3/5KRq b - - 6 40",
+   "sans": [
+    "Bh3+",
+    "Ke1",
+    "Qxg1+"
+   ],
+   "explanation": "The key move is Bh3+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "40... Bh3+ 41. Ke1 Qxg1+",
+   "keyPiece": "bishop",
+   "keyFrom": "d7",
+   "attribution": "Lichess puzzle 2Qo35 (CC0)",
+   "rating": 1380
+  },
+  {
+   "id": "lichess-46bYm",
+   "fen": "6k1/3R4/1p2R3/2p5/3b4/1P4P1/4br1P/7K w - - 2 30",
+   "sans": [
+    "Re8+",
+    "Rf8",
+    "Rxe2"
+   ],
+   "explanation": "The key move is Re8+. It gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "30. Re8+ Rf8 31. Rxe2",
+   "keyPiece": "rook",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 46bYm (CC0)",
+   "rating": 1419
+  },
+  {
+   "id": "lichess-0tvaB",
+   "fen": "2r4k/pr5p/5b1R/7R/4Q3/2P5/PPKB1q2/8 b - - 0 37",
+   "sans": [
+    "Rxb2+",
+    "Kxb2",
+    "Qxd2+"
+   ],
+   "explanation": "The key move is Rxb2+. It captures the pawn on b2, and gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +5.0).",
+   "line": "37... Rxb2+ 38. Kxb2 Qxd2+",
+   "keyPiece": "rook",
+   "keyFrom": "b7",
+   "attribution": "Lichess puzzle 0tvaB (CC0)",
+   "rating": 1430
+  },
+  {
+   "id": "lichess-3nRvU",
+   "fen": "5r1k/p5p1/7p/8/P1PQ4/6P1/1q5P/3R3K b - - 0 33",
+   "sans": [
+    "Rf1+",
+    "Rxf1",
+    "Qxd4"
+   ],
+   "explanation": "The key move is Rf1+. It gives check, which limits your opponent's replies. By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "33... Rf1+ 34. Rxf1 Qxd4",
+   "keyPiece": "rook",
+   "keyFrom": "f8",
+   "attribution": "Lichess puzzle 3nRvU (CC0)",
+   "rating": 1464
   }
  ],
  "attraction": [
@@ -507,6 +1155,102 @@
    "keyPiece": "rook",
    "keyFrom": "e1",
    "attribution": "Lichess puzzle 06fev (CC0)"
+  },
+  {
+   "id": "lichess-3Fwzg",
+   "fen": "5rk1/2N3pp/p5p1/6r1/8/7P/PP5K/5R2 w - - 4 29",
+   "sans": [
+    "Rxf8+",
+    "Kxf8",
+    "Ne6+",
+    "Kg8",
+    "Nxg5"
+   ],
+   "explanation": "The key move is Rxf8+. It captures the rook on f8, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "29. Rxf8+ Kxf8 30. Ne6+ Kg8 31. Nxg5",
+   "keyPiece": "rook",
+   "keyFrom": "f1",
+   "attribution": "Lichess puzzle 3Fwzg (CC0)",
+   "rating": 1192
+  },
+  {
+   "id": "lichess-3Pmvp",
+   "fen": "kr6/pp2R3/2B4p/8/2QP4/2P2n2/PP1q4/KRr5 b - - 0 42",
+   "sans": [
+    "Rxb1+",
+    "Kxb1",
+    "Qd1#"
+   ],
+   "explanation": "The key move is Rxb1+. It captures the rook on b1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "42... Rxb1+ 43. Kxb1 Qd1#",
+   "keyPiece": "rook",
+   "keyFrom": "c1",
+   "attribution": "Lichess puzzle 3Pmvp (CC0)",
+   "rating": 1219
+  },
+  {
+   "id": "lichess-41xtE",
+   "fen": "2r1kr2/pp1b1pQ1/4pB1R/8/8/5N2/1P3qPP/4n2K w - - 0 23",
+   "sans": [
+    "Qxf8+",
+    "Kxf8",
+    "Rh8#"
+   ],
+   "explanation": "The key move is Qxf8+. It captures the rook on f8, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "23. Qxf8+ Kxf8 24. Rh8#",
+   "keyPiece": "queen",
+   "keyFrom": "g7",
+   "attribution": "Lichess puzzle 41xtE (CC0)",
+   "rating": 1366
+  },
+  {
+   "id": "lichess-1UQKA",
+   "fen": "6k1/1p5r/p5p1/3p2N1/3B1r2/2P4b/PP5P/4R1K1 w - - 0 32",
+   "sans": [
+    "Re8+",
+    "Rf8",
+    "Rxf8+",
+    "Kxf8",
+    "Nxh7+"
+   ],
+   "explanation": "The key move is Re8+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "32. Re8+ Rf8 33. Rxf8+ Kxf8 34. Nxh7+",
+   "keyPiece": "rook",
+   "keyFrom": "e1",
+   "attribution": "Lichess puzzle 1UQKA (CC0)",
+   "rating": 1370
+  },
+  {
+   "id": "lichess-3TAan",
+   "fen": "6rk/p1p2pr1/7p/1p1P4/2p3R1/2P2qnQ/P4P2/4R1K1 w - - 0 29",
+   "sans": [
+    "Qxh6+",
+    "Rh7",
+    "Rxg8+",
+    "Kxg8",
+    "Re8#"
+   ],
+   "explanation": "The key move is Qxh6+. It captures the pawn on h6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "29. Qxh6+ Rh7 30. Rxg8+ Kxg8 31. Re8#",
+   "keyPiece": "queen",
+   "keyFrom": "h3",
+   "attribution": "Lichess puzzle 3TAan (CC0)",
+   "rating": 1458
+  },
+  {
+   "id": "lichess-1xRdb",
+   "fen": "5rk1/6pp/pp2P3/3p2Q1/3q4/1P5P/6P1/5R1K w - - 0 33",
+   "sans": [
+    "Rxf8+",
+    "Kxf8",
+    "Qd8#"
+   ],
+   "explanation": "The key move is Rxf8+. It captures the rook on f8, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "33. Rxf8+ Kxf8 34. Qd8#",
+   "keyPiece": "rook",
+   "keyFrom": "f1",
+   "attribution": "Lichess puzzle 1xRdb (CC0)",
+   "rating": 1509
   }
  ],
  "intermezzo": [
@@ -565,6 +1309,66 @@
    "keyPiece": "rook",
    "keyFrom": "e7",
    "attribution": "Lichess puzzle 0OIqm (CC0)"
+  },
+  {
+   "id": "lichess-2jKnO",
+   "fen": "2r3k1/3N1pp1/1p3n1p/p2p4/1q1P4/3Q4/PP1N1PPP/4rRK1 w - - 0 24",
+   "sans": [
+    "Nxf6+",
+    "gxf6",
+    "Rxe1"
+   ],
+   "explanation": "The key move is Nxf6+. It captures the knight on f6, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "24. Nxf6+ gxf6 25. Rxe1",
+   "keyPiece": "knight",
+   "keyFrom": "d7",
+   "attribution": "Lichess puzzle 2jKnO (CC0)",
+   "rating": 1387
+  },
+  {
+   "id": "lichess-12h3z",
+   "fen": "r2q1rk1/1pp2ppp/p1n1Nn2/3p4/3P4/1Bb1P3/PP1B1PPP/R2QK2R b KQ - 0 12",
+   "sans": [
+    "Bxd2+",
+    "Qxd2",
+    "fxe6"
+   ],
+   "explanation": "The key move is Bxd2+. It captures the bishop on d2, and gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "12... Bxd2+ 13. Qxd2 fxe6",
+   "keyPiece": "bishop",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 12h3z (CC0)",
+   "rating": 1584
+  },
+  {
+   "id": "lichess-2Tu28",
+   "fen": "3rr1k1/pp3ppp/8/2p1Q3/2P1P3/1P3PPq/P6P/3R1RK1 b - - 0 21",
+   "sans": [
+    "Qxf1+",
+    "Rxf1",
+    "Rxe5"
+   ],
+   "explanation": "The key move is Qxf1+. It captures the rook on f1, and gives check, which limits your opponent's replies, and attacks the rook on d1 (undefended) and the king at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "21... Qxf1+ 22. Rxf1 Rxe5",
+   "keyPiece": "queen",
+   "keyFrom": "h3",
+   "attribution": "Lichess puzzle 2Tu28 (CC0)",
+   "rating": 1597
+  },
+  {
+   "id": "lichess-1frr6",
+   "fen": "8/3pkp2/2n1pNp1/1r4Pp/2K2P2/1p2P2P/n7/3R4 w - - 0 37",
+   "sans": [
+    "Rxd7+",
+    "Kf8",
+    "Kxb5"
+   ],
+   "explanation": "The key move is Rxd7+. It captures the pawn on d7, and gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "37. Rxd7+ Kf8 38. Kxb5",
+   "keyPiece": "rook",
+   "keyFrom": "d1",
+   "attribution": "Lichess puzzle 1frr6 (CC0)",
+   "rating": 1617
   }
  ],
  "backRankMate": [
@@ -621,6 +1425,96 @@
    "keyPiece": "queen",
    "keyFrom": "f3",
    "attribution": "Lichess puzzle 1Vlyo (CC0)"
+  },
+  {
+   "id": "lichess-13uIW",
+   "fen": "r4k2/2p4p/1p6/pP1P1p2/2Ppq3/6R1/P2Q2PP/7K b - - 5 28",
+   "sans": [
+    "Qb1+",
+    "Qc1",
+    "Qxc1#"
+   ],
+   "explanation": "The key move is Qb1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "28... Qb1+ 29. Qc1 Qxc1#",
+   "keyPiece": "queen",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 13uIW (CC0)",
+   "rating": 957
+  },
+  {
+   "id": "lichess-144YP",
+   "fen": "4r1k1/Q5pp/4P3/3q1P2/1r4P1/1bpp4/3R3P/4R1K1 w - - 0 31",
+   "sans": [
+    "Qf7+",
+    "Kh8",
+    "Qxe8#"
+   ],
+   "explanation": "The key move is Qf7+. It gives check, which limits your opponent's replies, and attacks the rook on e8 (undefended) and the king at the same time. The line ends in checkmate.",
+   "line": "31. Qf7+ Kh8 32. Qxe8#",
+   "keyPiece": "queen",
+   "keyFrom": "a7",
+   "attribution": "Lichess puzzle 144YP (CC0)",
+   "rating": 986
+  },
+  {
+   "id": "lichess-4kaS9",
+   "fen": "4r2k/6p1/3PR1Qp/1p6/p7/1Pq5/P5PP/4R2K b - - 0 37",
+   "sans": [
+    "Qxe1+",
+    "Rxe1",
+    "Rxe1#"
+   ],
+   "explanation": "The key move is Qxe1+. It captures the rook on e1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "37... Qxe1+ 38. Rxe1 Rxe1#",
+   "keyPiece": "queen",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 4kaS9 (CC0)",
+   "rating": 1036
+  },
+  {
+   "id": "lichess-0suc4",
+   "fen": "2Rr3k/6pp/p3Q3/1p4q1/4P3/PP4P1/7P/3n2K1 w - - 2 34",
+   "sans": [
+    "Qe8+",
+    "Rxe8",
+    "Rxe8#"
+   ],
+   "explanation": "The key move is Qe8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "34. Qe8+ Rxe8 35. Rxe8#",
+   "keyPiece": "queen",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 0suc4 (CC0)",
+   "rating": 1176
+  },
+  {
+   "id": "lichess-36U6W",
+   "fen": "5k2/b2B1ppp/4p3/4B3/3p1P2/4q3/6PP/2R4K w - - 0 33",
+   "sans": [
+    "Bd6+",
+    "Kg8",
+    "Rc8#"
+   ],
+   "explanation": "The key move is Bd6+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "33. Bd6+ Kg8 34. Rc8#",
+   "keyPiece": "bishop",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 36U6W (CC0)",
+   "rating": 1274
+  },
+  {
+   "id": "lichess-4VG1f",
+   "fen": "1Rr3k1/5ppb/3Qp2p/3p4/6P1/2r2P1P/4q1B1/5R1K w - - 0 28",
+   "sans": [
+    "Qd8+",
+    "Rxd8",
+    "Rxd8#"
+   ],
+   "explanation": "The key move is Qd8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "28. Qd8+ Rxd8 29. Rxd8#",
+   "keyPiece": "queen",
+   "keyFrom": "d6",
+   "attribution": "Lichess puzzle 4VG1f (CC0)",
+   "rating": 1408
   }
  ],
  "smotheredMate": [
@@ -671,6 +1565,60 @@
    "keyPiece": "knight",
    "keyFrom": "d3",
    "attribution": "Lichess puzzle 0XUNv (CC0)"
+  },
+  {
+   "id": "lichess-08caT",
+   "fen": "r3r1k1/2q2pp1/p2b3p/3Bn3/1p6/3P4/1PPB1PQ1/1NKR3R b - - 2 21",
+   "sans": [
+    "Nxd3#"
+   ],
+   "explanation": "The key move is Nxd3#. It captures the pawn on d3, and delivers checkmate. The line ends in checkmate.",
+   "line": "21... Nxd3#",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 08caT (CC0)",
+   "rating": 901
+  },
+  {
+   "id": "lichess-1Mv7E",
+   "fen": "r2Q1rk1/1p1n1pp1/2p1p3/3pN3/3PnP2/pP1P1P2/P3N1PP/2R3RK b - - 0 20",
+   "sans": [
+    "Nf2#"
+   ],
+   "explanation": "The key move is Nf2#. It delivers checkmate. The line ends in checkmate.",
+   "line": "20... Nf2#",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 1Mv7E (CC0)",
+   "rating": 1024
+  },
+  {
+   "id": "lichess-0JHtW",
+   "fen": "5r1k/pp4bp/1qn1Q3/5pNp/2B5/1P2P1P1/P4P2/6K1 w - - 1 28",
+   "sans": [
+    "Qg8+",
+    "Rxg8",
+    "Nf7#"
+   ],
+   "explanation": "The key move is Qg8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "28. Qg8+ Rxg8 29. Nf7#",
+   "keyPiece": "queen",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 0JHtW (CC0)",
+   "rating": 1331
+  },
+  {
+   "id": "lichess-1hSuN",
+   "fen": "r2qkb1r/1p1npb2/p2p1n1p/2pP2p1/2P1N3/3B4/PP3PPP/RNBQR1K1 w kq - 2 12",
+   "sans": [
+    "Nxd6#"
+   ],
+   "explanation": "The key move is Nxd6#. It captures the pawn on d6, and delivers checkmate. The line ends in checkmate.",
+   "line": "12. Nxd6#",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 1hSuN (CC0)",
+   "rating": 1528
   }
  ],
  "mateIn1": [
@@ -721,6 +1669,84 @@
    "keyPiece": "queen",
    "keyFrom": "b3",
    "attribution": "Lichess puzzle 06IFD (CC0)"
+  },
+  {
+   "id": "lichess-2Aglw",
+   "fen": "r3qr1k/ppp1n2p/3p1p1B/4n3/4P1Q1/2N2R2/PPP3PP/R5K1 w - - 2 18",
+   "sans": [
+    "Qg7#"
+   ],
+   "explanation": "The key move is Qg7#. It delivers checkmate. The line ends in checkmate.",
+   "line": "18. Qg7#",
+   "keyPiece": "queen",
+   "keyFrom": "g4",
+   "attribution": "Lichess puzzle 2Aglw (CC0)",
+   "rating": 796
+  },
+  {
+   "id": "lichess-1vKXI",
+   "fen": "1r4k1/5pp1/3p3p/2p5/5N2/1B2Qb1q/1P3P2/R5K1 b - - 1 25",
+   "sans": [
+    "Qh1#"
+   ],
+   "explanation": "The key move is Qh1#. It delivers checkmate. The line ends in checkmate.",
+   "line": "25... Qh1#",
+   "keyPiece": "queen",
+   "keyFrom": "h3",
+   "attribution": "Lichess puzzle 1vKXI (CC0)",
+   "rating": 1055
+  },
+  {
+   "id": "lichess-0ItDy",
+   "fen": "6k1/5pp1/1p5p/p7/4Q3/P5PP/1P2RP1K/2r2q2 b - - 0 32",
+   "sans": [
+    "Qg1#"
+   ],
+   "explanation": "The key move is Qg1#. It delivers checkmate. The line ends in checkmate.",
+   "line": "32... Qg1#",
+   "keyPiece": "queen",
+   "keyFrom": "f1",
+   "attribution": "Lichess puzzle 0ItDy (CC0)",
+   "rating": 1156
+  },
+  {
+   "id": "lichess-3s3Ot",
+   "fen": "2r4k/7p/p3Q3/2q1p3/1p2P3/8/1PP3R1/2K5 w - - 2 40",
+   "sans": [
+    "Qf6#"
+   ],
+   "explanation": "The key move is Qf6#. It delivers checkmate. The line ends in checkmate.",
+   "line": "40. Qf6#",
+   "keyPiece": "queen",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 3s3Ot (CC0)",
+   "rating": 1162
+  },
+  {
+   "id": "lichess-1xUqK",
+   "fen": "4r3/4rk2/p3R1R1/7p/1p6/1P6/PK3P2/8 w - - 1 45",
+   "sans": [
+    "Ref6#"
+   ],
+   "explanation": "The key move is Ref6#. It delivers checkmate. The line ends in checkmate.",
+   "line": "45. Ref6#",
+   "keyPiece": "rook",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 1xUqK (CC0)",
+   "rating": 1163
+  },
+  {
+   "id": "lichess-2VzPL",
+   "fen": "8/6pk/8/7p/R1R5/p6P/2r4r/3N1K2 b - - 7 44",
+   "sans": [
+    "Rh1#"
+   ],
+   "explanation": "The key move is Rh1#. It delivers checkmate. The line ends in checkmate.",
+   "line": "44... Rh1#",
+   "keyPiece": "rook",
+   "keyFrom": "h2",
+   "attribution": "Lichess puzzle 2VzPL (CC0)",
+   "rating": 1170
   }
  ],
  "mateIn2": [
@@ -779,6 +1805,126 @@
    "keyPiece": "bishop",
    "keyFrom": "b7",
    "attribution": "Lichess puzzle 1RyE7 (CC0)"
+  },
+  {
+   "id": "lichess-2IGLh",
+   "fen": "3r4/R7/3p1k2/p1p4B/4KP2/6r1/PPP5/8 w - - 11 44",
+   "sans": [
+    "Rf7+",
+    "Ke6",
+    "f5#"
+   ],
+   "explanation": "The key move is Rf7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "44. Rf7+ Ke6 45. f5#",
+   "keyPiece": "rook",
+   "keyFrom": "a7",
+   "attribution": "Lichess puzzle 2IGLh (CC0)",
+   "rating": 928
+  },
+  {
+   "id": "lichess-0iaiu",
+   "fen": "8/2R5/p5k1/1b6/4nB2/4P2p/r6P/2R3K1 b - - 1 30",
+   "sans": [
+    "Rg2+",
+    "Kh1",
+    "Nf2#"
+   ],
+   "explanation": "The key move is Rg2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "30... Rg2+ 31. Kh1 Nf2#",
+   "keyPiece": "rook",
+   "keyFrom": "a2",
+   "attribution": "Lichess puzzle 0iaiu (CC0)",
+   "rating": 1136
+  },
+  {
+   "id": "lichess-3cF5h",
+   "fen": "r3k2r/pp3pp1/3pp2p/8/2B3q1/3P4/PPP1nQPK/R1B2R2 b kq - 3 18",
+   "sans": [
+    "Qh5+",
+    "Qh4",
+    "Qxh4#"
+   ],
+   "explanation": "The key move is Qh5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "18... Qh5+ 19. Qh4 Qxh4#",
+   "keyPiece": "queen",
+   "keyFrom": "g4",
+   "attribution": "Lichess puzzle 3cF5h (CC0)",
+   "rating": 1172
+  },
+  {
+   "id": "lichess-4GwpX",
+   "fen": "8/5p1p/R7/3P1Nk1/7N/1r6/5nPK/8 b - - 0 33",
+   "sans": [
+    "Ng4+",
+    "Kg1",
+    "Rb1#"
+   ],
+   "explanation": "The key move is Ng4+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "33... Ng4+ 34. Kg1 Rb1#",
+   "keyPiece": "knight",
+   "keyFrom": "f2",
+   "attribution": "Lichess puzzle 4GwpX (CC0)",
+   "rating": 1174
+  },
+  {
+   "id": "lichess-3FzHv",
+   "fen": "r1b2r1k/1p3pp1/p2p4/3Nn1R1/4P3/1p3P2/PPP2P1P/2KR4 w - - 0 21",
+   "sans": [
+    "Rh5+",
+    "Kg8",
+    "Ne7#"
+   ],
+   "explanation": "The key move is Rh5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "21. Rh5+ Kg8 22. Ne7#",
+   "keyPiece": "rook",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 3FzHv (CC0)",
+   "rating": 1412
+  },
+  {
+   "id": "lichess-4owBd",
+   "fen": "4rr2/pkp3pp/1pN5/1Pb5/R1P2B2/3K2PP/8/8 w - - 3 34",
+   "sans": [
+    "Rxa7+",
+    "Kc8",
+    "Rxc7#"
+   ],
+   "explanation": "The key move is Rxa7+. It captures the pawn on a7, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "34. Rxa7+ Kc8 35. Rxc7#",
+   "keyPiece": "rook",
+   "keyFrom": "a4",
+   "attribution": "Lichess puzzle 4owBd (CC0)",
+   "rating": 1418
+  },
+  {
+   "id": "lichess-1SiBD",
+   "fen": "r3nr2/1pq1bp1k/p3p1p1/2p3R1/4b3/1P1BR3/PBPP1PPP/6K1 w - - 0 20",
+   "sans": [
+    "Rh3+",
+    "Kg8",
+    "Rh8#"
+   ],
+   "explanation": "The key move is Rh3+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "20. Rh3+ Kg8 21. Rh8#",
+   "keyPiece": "rook",
+   "keyFrom": "e3",
+   "attribution": "Lichess puzzle 1SiBD (CC0)",
+   "rating": 1442
+  },
+  {
+   "id": "lichess-1rzvR",
+   "fen": "5qk1/2b3p1/np1Np3/p1p1P2p/2NP2n1/PP4PP/1B4K1/R2Q4 b - - 0 26",
+   "sans": [
+    "Qf2+",
+    "Kh1",
+    "Qh2#"
+   ],
+   "explanation": "The key move is Qf2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "26... Qf2+ 27. Kh1 Qh2#",
+   "keyPiece": "queen",
+   "keyFrom": "f8",
+   "attribution": "Lichess puzzle 1rzvR (CC0)",
+   "rating": 1593
   }
  ],
  "trappedPiece": [
@@ -837,6 +1983,96 @@
    "keyPiece": "pawn",
    "keyFrom": "b6",
    "attribution": "Lichess puzzle 4Q5wS (CC0)"
+  },
+  {
+   "id": "lichess-4NQMw",
+   "fen": "3r4/4b3/p3k3/1pp1P2p/6p1/1P2P1RP/PB2K1P1/8 b - - 0 28",
+   "sans": [
+    "Bh4",
+    "hxg4",
+    "Bxg3"
+   ],
+   "explanation": "The key move is Bh4. It attacks the rook on g3 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "28... Bh4 29. hxg4 Bxg3",
+   "keyPiece": "bishop",
+   "keyFrom": "e7",
+   "attribution": "Lichess puzzle 4NQMw (CC0)",
+   "rating": 1435
+  },
+  {
+   "id": "lichess-3U0R8",
+   "fen": "2krr3/2p3b1/1pb2p1p/p3p1p1/P3P3/2qPB3/Q1P2PPP/RR3K2 w - - 6 26",
+   "sans": [
+    "Rb3",
+    "Qxa1+",
+    "Qxa1"
+   ],
+   "explanation": "The key move is Rb3. It attacks the queen on c3 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "26. Rb3 Qxa1+ 27. Qxa1",
+   "keyPiece": "rook",
+   "keyFrom": "b1",
+   "attribution": "Lichess puzzle 3U0R8 (CC0)",
+   "rating": 1504
+  },
+  {
+   "id": "lichess-3Hq7h",
+   "fen": "1rq1r1k1/p2bppbp/3p2p1/2pN4/2Q1P3/1PB5/P1P2PPP/1R3RK1 b - - 5 18",
+   "sans": [
+    "Bb5",
+    "Qxb5",
+    "Rxb5"
+   ],
+   "explanation": "The key move is Bb5. It attacks the queen on c4. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "18... Bb5 19. Qxb5 Rxb5",
+   "keyPiece": "bishop",
+   "keyFrom": "d7",
+   "attribution": "Lichess puzzle 3Hq7h (CC0)",
+   "rating": 1549
+  },
+  {
+   "id": "lichess-3Nlqy",
+   "fen": "8/1p6/p2p4/3P4/2P5/1Pr1Np1k/P4P2/4K3 w - - 1 51",
+   "sans": [
+    "Kd2",
+    "Rxb3",
+    "axb3"
+   ],
+   "explanation": "The key move is Kd2. It attacks the rook on c3 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "51. Kd2 Rxb3 52. axb3",
+   "keyPiece": "king",
+   "keyFrom": "e1",
+   "attribution": "Lichess puzzle 3Nlqy (CC0)",
+   "rating": 1570
+  },
+  {
+   "id": "lichess-4C72P",
+   "fen": "r4rk1/pppn1ppp/1b1p1qb1/3Pp3/1PB3P1/2PPBN1P/P4P2/R2Q1RK1 w - - 1 14",
+   "sans": [
+    "Bg5",
+    "Qxf3",
+    "Qxf3"
+   ],
+   "explanation": "The key move is Bg5. It attacks the queen on f6. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "14. Bg5 Qxf3 15. Qxf3",
+   "keyPiece": "bishop",
+   "keyFrom": "e3",
+   "attribution": "Lichess puzzle 4C72P (CC0)",
+   "rating": 1580
+  },
+  {
+   "id": "lichess-08chX",
+   "fen": "r2q1rk1/ppp2ppp/2n5/3pP3/3P1B2/2n2P2/P1B2P1P/R2Q1RK1 w - - 1 16",
+   "sans": [
+    "Qd3",
+    "Ne2+",
+    "Qxe2"
+   ],
+   "explanation": "The key move is Qd3. It attacks the knight on c3 (undefended). By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "16. Qd3 Ne2+ 17. Qxe2",
+   "keyPiece": "queen",
+   "keyFrom": "d1",
+   "attribution": "Lichess puzzle 08chX (CC0)",
+   "rating": 1582
   }
  ],
  "defensiveMove": [
@@ -895,6 +2131,2479 @@
    "keyPiece": "king",
    "keyFrom": "f8",
    "attribution": "Lichess puzzle 1DBiI (CC0)"
+  },
+  {
+   "id": "lichess-0qkfH",
+   "fen": "r3kbr1/pp1qpp1p/3p1p2/8/3Q4/2N2P2/PPP2P1P/R1B2R1K b q - 4 12",
+   "sans": [
+    "Qh3",
+    "Qa4+",
+    "Kd8"
+   ],
+   "explanation": "The key move is Qh3. It attacks the rook on f1 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +13.2).",
+   "line": "12... Qh3 13. Qa4+ Kd8",
+   "keyPiece": "queen",
+   "keyFrom": "d7",
+   "attribution": "Lichess puzzle 0qkfH (CC0)",
+   "rating": 1286
+  },
+  {
+   "id": "lichess-253lE",
+   "fen": "r1bq1rk1/p1p3pp/3np3/nB1pNp2/3P4/2P1P3/PPQN1PPP/R3K2R b KQ - 0 12",
+   "sans": [
+    "Nxb5",
+    "Qa4",
+    "c6"
+   ],
+   "explanation": "The key move is Nxb5. It captures the bishop on b5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "12... Nxb5 13. Qa4 c6",
+   "keyPiece": "knight",
+   "keyFrom": "d6",
+   "attribution": "Lichess puzzle 253lE (CC0)",
+   "rating": 1396
+  },
+  {
+   "id": "lichess-15BTp",
+   "fen": "8/2k5/1p3KP1/5B2/8/8/1r6/8 w - - 1 57",
+   "sans": [
+    "g7",
+    "Rg2",
+    "Bg6"
+   ],
+   "explanation": "The key move is g7. Material is level, but Stockfish rates the result as clearly better for you (about +6.0).",
+   "line": "57. g7 Rg2 58. Bg6",
+   "keyPiece": "pawn",
+   "keyFrom": "g6",
+   "attribution": "Lichess puzzle 15BTp (CC0)",
+   "rating": 1400
+  },
+  {
+   "id": "lichess-2Uvpn",
+   "fen": "8/5k2/2p2P2/2Pp1Kp1/1p4P1/1P6/8/8 w - - 3 50",
+   "sans": [
+    "Kxg5",
+    "d4",
+    "Kf4"
+   ],
+   "explanation": "The key move is Kxg5. It captures the pawn on g5. By the end of the line you have won a pawn.",
+   "line": "50. Kxg5 d4 51. Kf4",
+   "keyPiece": "king",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 2Uvpn (CC0)",
+   "rating": 1410
+  },
+  {
+   "id": "lichess-29A0n",
+   "fen": "7k/r5p1/8/p6p/RrR2P2/7P/6P1/7K b - - 3 36",
+   "sans": [
+    "Rxc4",
+    "Rxc4",
+    "a4"
+   ],
+   "explanation": "The key move is Rxc4. It captures the rook on c4, and attacks the rook on a4 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +2.8).",
+   "line": "36... Rxc4 37. Rxc4 a4",
+   "keyPiece": "rook",
+   "keyFrom": "b4",
+   "attribution": "Lichess puzzle 29A0n (CC0)",
+   "rating": 1433
+  },
+  {
+   "id": "lichess-2BCvX",
+   "fen": "8/8/8/2P5/1P3pk1/1R6/2r5/6K1 b - - 0 59",
+   "sans": [
+    "f3",
+    "Kf1",
+    "Kg3"
+   ],
+   "explanation": "The key move is f3. Material is level, but Stockfish rates the result as clearly better for you (about +4.8).",
+   "line": "59... f3 60. Kf1 Kg3",
+   "keyPiece": "pawn",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 2BCvX (CC0)",
+   "rating": 1554
+  }
+ ],
+ "mateIn3": [
+  {
+   "id": "lichess-3WIcf",
+   "fen": "2r3k1/pp4pp/4p2q/4b3/2P5/1P3QP1/P5KP/5R2 w - - 0 32",
+   "sans": [
+    "Qf7+",
+    "Kh8",
+    "Qf8+",
+    "Rxf8",
+    "Rxf8#"
+   ],
+   "explanation": "The key move is Qf7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "32. Qf7+ Kh8 33. Qf8+ Rxf8 34. Rxf8#",
+   "keyPiece": "queen",
+   "keyFrom": "f3",
+   "attribution": "Lichess puzzle 3WIcf (CC0)",
+   "rating": 1043
+  },
+  {
+   "id": "lichess-4Izpq",
+   "fen": "2k1r3/pp4R1/8/8/4pP2/1PP1Q3/2K5/q7 w - - 0 40",
+   "sans": [
+    "Qc5+",
+    "Kb8",
+    "Qc7+",
+    "Ka8",
+    "Qxb7#"
+   ],
+   "explanation": "The key move is Qc5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "40. Qc5+ Kb8 41. Qc7+ Ka8 42. Qxb7#",
+   "keyPiece": "queen",
+   "keyFrom": "e3",
+   "attribution": "Lichess puzzle 4Izpq (CC0)",
+   "rating": 1086
+  },
+  {
+   "id": "lichess-1do69",
+   "fen": "r4rk1/pR5p/2p3p1/3p4/3Pnq2/P1B4Q/3P2PP/1R4K1 b - - 0 29",
+   "sans": [
+    "Qf2+",
+    "Kh1",
+    "Qf1+",
+    "Rxf1",
+    "Rxf1#"
+   ],
+   "explanation": "The key move is Qf2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "29... Qf2+ 30. Kh1 Qf1+ 31. Rxf1 Rxf1#",
+   "keyPiece": "queen",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 1do69 (CC0)",
+   "rating": 1126
+  },
+  {
+   "id": "lichess-4MRnX",
+   "fen": "8/p7/5k2/R7/6PK/1r6/6NP/6b1 b - - 2 43",
+   "sans": [
+    "Bf2+",
+    "Kh5",
+    "Rh3+",
+    "Nh4",
+    "Rxh4#"
+   ],
+   "explanation": "The key move is Bf2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "43... Bf2+ 44. Kh5 Rh3+ 45. Nh4 Rxh4#",
+   "keyPiece": "bishop",
+   "keyFrom": "g1",
+   "attribution": "Lichess puzzle 4MRnX (CC0)",
+   "rating": 1137
+  },
+  {
+   "id": "lichess-4FIdy",
+   "fen": "5rk1/5p2/p1p2Rpp/1p1bPQ2/8/1P1B4/P1P1K1PP/2q5 w - - 0 27",
+   "sans": [
+    "Rxg6+",
+    "fxg6",
+    "Qxg6+",
+    "Kh8",
+    "Qh7#"
+   ],
+   "explanation": "The key move is Rxg6+. It captures the pawn on g6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "27. Rxg6+ fxg6 28. Qxg6+ Kh8 29. Qh7#",
+   "keyPiece": "rook",
+   "keyFrom": "f6",
+   "attribution": "Lichess puzzle 4FIdy (CC0)",
+   "rating": 1177
+  },
+  {
+   "id": "lichess-4dhBi",
+   "fen": "r4r1k/4R1p1/2Q4p/p6B/1p6/8/Pq3PPP/4R1K1 b - - 0 24",
+   "sans": [
+    "Qxf2+",
+    "Kh1",
+    "Qf1+",
+    "Rxf1",
+    "Rxf1#"
+   ],
+   "explanation": "The key move is Qxf2+. It captures the pawn on f2, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "24... Qxf2+ 25. Kh1 Qf1+ 26. Rxf1 Rxf1#",
+   "keyPiece": "queen",
+   "keyFrom": "b2",
+   "attribution": "Lichess puzzle 4dhBi (CC0)",
+   "rating": 1181
+  },
+  {
+   "id": "lichess-1l4h6",
+   "fen": "8/8/6p1/2p1Q3/4p2k/2P5/6PK/1q6 w - - 0 36",
+   "sans": [
+    "g3+",
+    "Kg4",
+    "Qf4+",
+    "Kh5",
+    "Qh4#"
+   ],
+   "explanation": "The key move is g3+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "36. g3+ Kg4 37. Qf4+ Kh5 38. Qh4#",
+   "keyPiece": "pawn",
+   "keyFrom": "g2",
+   "attribution": "Lichess puzzle 1l4h6 (CC0)",
+   "rating": 1630
+  },
+  {
+   "id": "lichess-4PXbg",
+   "fen": "r1bq3r/pppp2pp/2n1kn2/2b1p2Q/4P3/2N2N2/PPPP1PPP/R1B1K2R w KQ - 6 7",
+   "sans": [
+    "Ng5+",
+    "Ke7",
+    "Qf7+",
+    "Kd6",
+    "Nb5#"
+   ],
+   "explanation": "The key move is Ng5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "7. Ng5+ Ke7 8. Qf7+ Kd6 9. Nb5#",
+   "keyPiece": "knight",
+   "keyFrom": "f3",
+   "attribution": "Lichess puzzle 4PXbg (CC0)",
+   "rating": 1657
+  },
+  {
+   "id": "lichess-2Nfu9",
+   "fen": "4k3/1p4pp/p4p2/2Q2P2/1P2P1K1/1P4P1/8/5q2 b - - 4 39",
+   "sans": [
+    "h5+",
+    "Kxh5",
+    "Qh3+",
+    "Kg6",
+    "Qh6#"
+   ],
+   "explanation": "The key move is h5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "39... h5+ 40. Kxh5 Qh3+ 41. Kg6 Qh6#",
+   "keyPiece": "pawn",
+   "keyFrom": "h7",
+   "attribution": "Lichess puzzle 2Nfu9 (CC0)",
+   "rating": 1703
+  },
+  {
+   "id": "lichess-42vzZ",
+   "fen": "1n1R1B2/p5pp/4p1q1/8/4pP2/P3Pk1P/5P2/2Q2K2 b - - 2 32",
+   "sans": [
+    "Qg2+",
+    "Ke1",
+    "Qxf2+",
+    "Kd1",
+    "Qe2#"
+   ],
+   "explanation": "The key move is Qg2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "32... Qg2+ 33. Ke1 Qxf2+ 34. Kd1 Qe2#",
+   "keyPiece": "queen",
+   "keyFrom": "g6",
+   "attribution": "Lichess puzzle 42vzZ (CC0)",
+   "rating": 1715
+  }
+ ],
+ "promotion": [
+  {
+   "id": "lichess-3aMkg",
+   "fen": "2r5/kp6/5p2/8/8/2q1PP2/Pp2Q3/1K1R4 b - - 5 34",
+   "sans": [
+    "Qc1+",
+    "Rxc1",
+    "bxc1=Q#"
+   ],
+   "explanation": "The key move is Qc1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "34... Qc1+ 35. Rxc1 bxc1=Q#",
+   "keyPiece": "queen",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 3aMkg (CC0)",
+   "rating": 1258
+  },
+  {
+   "id": "lichess-4o1eF",
+   "fen": "Q6r/8/4p3/8/3P4/4K3/6kp/R7 b - - 0 49",
+   "sans": [
+    "Rxa8",
+    "Rxa8",
+    "h1=Q"
+   ],
+   "explanation": "The key move is Rxa8. It captures the queen on a8, and attacks the rook on a1 (undefended). By the end of the line you have won about a queen's worth of material or more.",
+   "line": "49... Rxa8 50. Rxa8 h1=Q",
+   "keyPiece": "rook",
+   "keyFrom": "h8",
+   "attribution": "Lichess puzzle 4o1eF (CC0)",
+   "rating": 1263
+  },
+  {
+   "id": "lichess-070Gp",
+   "fen": "4B3/P4p1p/6p1/2pb4/2p5/2K3kP/8/8 w - - 1 43",
+   "sans": [
+    "Bxf7",
+    "Bxf7",
+    "a8=Q"
+   ],
+   "explanation": "The key move is Bxf7. It captures the pawn on f7, and attacks the bishop on d5 (undefended). By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "43. Bxf7 Bxf7 44. a8=Q",
+   "keyPiece": "bishop",
+   "keyFrom": "e8",
+   "attribution": "Lichess puzzle 070Gp (CC0)",
+   "rating": 1302
+  },
+  {
+   "id": "lichess-413U3",
+   "fen": "4r2k/3qPQ1p/6p1/8/8/2b4P/5PP1/2R3K1 w - - 0 35",
+   "sans": [
+    "Qf8+",
+    "Rxf8",
+    "exf8=Q#"
+   ],
+   "explanation": "The key move is Qf8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "35. Qf8+ Rxf8 36. exf8=Q#",
+   "keyPiece": "queen",
+   "keyFrom": "f7",
+   "attribution": "Lichess puzzle 413U3 (CC0)",
+   "rating": 1427
+  },
+  {
+   "id": "lichess-29ifJ",
+   "fen": "6rk/1p3r1P/p3pp2/q6P/8/3P4/PP6/1K4R1 w - - 0 34",
+   "sans": [
+    "hxg8=Q#"
+   ],
+   "explanation": "The key move is hxg8=Q#. It captures the rook on g8, and delivers checkmate, and promotes to a queen. The line ends in checkmate.",
+   "line": "34. hxg8=Q#",
+   "keyPiece": "pawn",
+   "keyFrom": "h7",
+   "attribution": "Lichess puzzle 29ifJ (CC0)",
+   "rating": 1462
+  },
+  {
+   "id": "lichess-3Ab1p",
+   "fen": "8/2R5/6p1/1k6/3nKPP1/8/2p5/8 b - - 3 50",
+   "sans": [
+    "Nc6",
+    "Kd5",
+    "c1=Q"
+   ],
+   "explanation": "The key move is Nc6. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "50... Nc6 51. Kd5 c1=Q",
+   "keyPiece": "knight",
+   "keyFrom": "d4",
+   "attribution": "Lichess puzzle 3Ab1p (CC0)",
+   "rating": 1512
+  },
+  {
+   "id": "lichess-3D1E2",
+   "fen": "8/p2qP1pk/1pp5/5Np1/P7/1B2K1P1/1PP5/8 w - - 1 39",
+   "sans": [
+    "Bf7",
+    "Qxf5",
+    "e8=Q"
+   ],
+   "explanation": "The key move is Bf7. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "39. Bf7 Qxf5 40. e8=Q",
+   "keyPiece": "bishop",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 3D1E2 (CC0)",
+   "rating": 1522
+  },
+  {
+   "id": "lichess-3QUNR",
+   "fen": "8/ppr1P2p/2b2kpb/3p3r/P7/BPR5/5PP1/5RK1 w - - 0 38",
+   "sans": [
+    "Rxc6+",
+    "Rxc6",
+    "e8=Q"
+   ],
+   "explanation": "The key move is Rxc6+. It captures the bishop on c6, and gives check, which limits your opponent's replies, and attacks the rook on c7 (undefended) and the king at the same time. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "38. Rxc6+ Rxc6 39. e8=Q",
+   "keyPiece": "rook",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 3QUNR (CC0)",
+   "rating": 1586
+  }
+ ],
+ "advancedPawn": [
+  {
+   "id": "lichess-1R21N",
+   "fen": "r4rk1/1pq3pp/p7/3P1p2/P2ppb2/6P1/BP3P1P/R4QK1 w - - 0 21",
+   "sans": [
+    "d6+",
+    "Kh8",
+    "dxc7"
+   ],
+   "explanation": "The key move is d6+. It gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "21. d6+ Kh8 22. dxc7",
+   "keyPiece": "pawn",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 1R21N (CC0)",
+   "rating": 1036
+  },
+  {
+   "id": "lichess-4GhfV",
+   "fen": "8/5pk1/7p/6P1/8/pr2P3/R3KP1P/8 b - - 0 40",
+   "sans": [
+    "Rb2+",
+    "Rxb2",
+    "axb2"
+   ],
+   "explanation": "The key move is Rb2+. It gives check, which limits your opponent's replies, and attacks the rook on a2 (undefended) and the king at the same time. Material is level, but Stockfish rates the result as clearly better for you (about +9.0).",
+   "line": "40... Rb2+ 41. Rxb2 axb2",
+   "keyPiece": "rook",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 4GhfV (CC0)",
+   "rating": 1065
+  },
+  {
+   "id": "lichess-0pHiy",
+   "fen": "1q2n1k1/r4p1p/1PQ3p1/2p5/4B3/4P3/5PPP/6K1 w - - 0 30",
+   "sans": [
+    "bxa7",
+    "Qxa7",
+    "Qxe8+"
+   ],
+   "explanation": "The key move is bxa7. It captures the rook on a7, and attacks the queen on b8 (undefended). By the end of the line you have won about 7 points of material (a rook's worth or more).",
+   "line": "30. bxa7 Qxa7 31. Qxe8+",
+   "keyPiece": "pawn",
+   "keyFrom": "b6",
+   "attribution": "Lichess puzzle 0pHiy (CC0)",
+   "rating": 1148
+  },
+  {
+   "id": "lichess-18BJy",
+   "fen": "5K2/8/4k3/2R5/2p5/1p6/8/8 b - - 1 56",
+   "sans": [
+    "b2",
+    "Rb5",
+    "c3"
+   ],
+   "explanation": "The key move is b2. Material is level, but Stockfish rates the result as clearly better for you (about +2.9).",
+   "line": "56... b2 57. Rb5 c3",
+   "keyPiece": "pawn",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 18BJy (CC0)",
+   "rating": 1148
+  },
+  {
+   "id": "lichess-4TWHT",
+   "fen": "r1bk1b1r/1p2pppp/p1P5/1B6/5B2/2P2p2/P4PPP/R2K3R w - - 0 14",
+   "sans": [
+    "c7#"
+   ],
+   "explanation": "The key move is c7#. It delivers checkmate. The line ends in checkmate.",
+   "line": "14. c7#",
+   "keyPiece": "pawn",
+   "keyFrom": "c6",
+   "attribution": "Lichess puzzle 4TWHT (CC0)",
+   "rating": 1160
+  },
+  {
+   "id": "lichess-2p0n3",
+   "fen": "3r2kr/q1p2p2/2B3p1/1R1P3p/3QP2P/4p3/1PP3P1/1K1R4 b - - 0 30",
+   "sans": [
+    "Qxd4",
+    "Rxd4",
+    "e2"
+   ],
+   "explanation": "The key move is Qxd4. It captures the queen on d4, and attacks the rook on d1 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +5.6).",
+   "line": "30... Qxd4 31. Rxd4 e2",
+   "keyPiece": "queen",
+   "keyFrom": "a7",
+   "attribution": "Lichess puzzle 2p0n3 (CC0)",
+   "rating": 1482
+  }
+ ],
+ "quietMove": [
+  {
+   "id": "lichess-4YyJT",
+   "fen": "3k4/1p3p2/p1pP1N1p/P1P3p1/7r/1r6/6P1/5RK1 w - - 0 41",
+   "sans": [
+    "Re1",
+    "Rb1",
+    "Rxb1"
+   ],
+   "explanation": "The key move is Re1. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "41. Re1 Rb1 42. Rxb1",
+   "keyPiece": "rook",
+   "keyFrom": "f1",
+   "attribution": "Lichess puzzle 4YyJT (CC0)",
+   "rating": 1465
+  },
+  {
+   "id": "lichess-2jlem",
+   "fen": "5rk1/5ppp/p7/4r3/1P1NpQ2/P6q/2P1RP2/1R4K1 b - - 3 25",
+   "sans": [
+    "Rh5",
+    "f3",
+    "Qh1+"
+   ],
+   "explanation": "The key move is Rh5. Material is level, but Stockfish rates the result as clearly better for you (about +5.0).",
+   "line": "25... Rh5 26. f3 Qh1+",
+   "keyPiece": "rook",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 2jlem (CC0)",
+   "rating": 1479
+  },
+  {
+   "id": "lichess-08EVQ",
+   "fen": "4rr1k/pp3pR1/4q2p/3p4/3P1B2/6Q1/PP4PP/6K1 w - - 1 26",
+   "sans": [
+    "Be5",
+    "Qxe5",
+    "dxe5"
+   ],
+   "explanation": "The key move is Be5. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "26. Be5 Qxe5 27. dxe5",
+   "keyPiece": "bishop",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 08EVQ (CC0)",
+   "rating": 1518
+  },
+  {
+   "id": "lichess-15RZ9",
+   "fen": "8/8/1p1k2p1/p1pP3p/4KP2/PP4P1/8/8 w - - 0 59",
+   "sans": [
+    "a4",
+    "b5",
+    "axb5"
+   ],
+   "explanation": "The key move is a4. By the end of the line you have won a pawn.",
+   "line": "59. a4 b5 60. axb5",
+   "keyPiece": "pawn",
+   "keyFrom": "a3",
+   "attribution": "Lichess puzzle 15RZ9 (CC0)",
+   "rating": 1656
+  },
+  {
+   "id": "lichess-4o8xs",
+   "fen": "8/5p2/6pp/4P3/1K3k2/1P5P/8/8 w - - 0 42",
+   "sans": [
+    "Kc5",
+    "Kf5",
+    "b4"
+   ],
+   "explanation": "The key move is Kc5. Material is level, but Stockfish rates the result as clearly better for you (about +6.6).",
+   "line": "42. Kc5 Kf5 43. b4",
+   "keyPiece": "king",
+   "keyFrom": "b4",
+   "attribution": "Lichess puzzle 4o8xs (CC0)",
+   "rating": 1663
+  },
+  {
+   "id": "lichess-1H1EF",
+   "fen": "8/8/8/1p2pK1P/3kNb2/1P6/8/8 w - - 1 42",
+   "sans": [
+    "Ng5",
+    "Kd3",
+    "h6"
+   ],
+   "explanation": "The key move is Ng5. Material is level, but Stockfish rates the result as clearly better for you (about +6.1).",
+   "line": "42. Ng5 Kd3 43. h6",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 1H1EF (CC0)",
+   "rating": 1694
+  },
+  {
+   "id": "lichess-1Waj4",
+   "fen": "4b1k1/pp1n2p1/1q5p/2p1N3/Q1Pp1p2/PP1P4/5PPP/5BK1 b - - 6 32",
+   "sans": [
+    "Nf6",
+    "Qxe8+",
+    "Nxe8"
+   ],
+   "explanation": "The key move is Nf6. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "32... Nf6 33. Qxe8+ Nxe8",
+   "keyPiece": "knight",
+   "keyFrom": "d7",
+   "attribution": "Lichess puzzle 1Waj4 (CC0)",
+   "rating": 1764
+  },
+  {
+   "id": "lichess-2OCga",
+   "fen": "8/8/1pp2p2/1P3k1p/2P2P1P/5K2/8/8 b - - 0 34",
+   "sans": [
+    "c5",
+    "Kg3",
+    "Ke4"
+   ],
+   "explanation": "The key move is c5. Material is level, but Stockfish rates the result as clearly better for you (about +6.5).",
+   "line": "34... c5 35. Kg3 Ke4",
+   "keyPiece": "pawn",
+   "keyFrom": "c6",
+   "attribution": "Lichess puzzle 2OCga (CC0)",
+   "rating": 1764
+  }
+ ],
+ "xRayAttack": [
+  {
+   "id": "lichess-49HQv",
+   "fen": "2r2r1k/4Q3/5q2/1p1P4/2p1R3/P2p3P/1P4PK/8 w - - 2 40",
+   "sans": [
+    "Rh4+",
+    "Qxh4",
+    "Qxh4+"
+   ],
+   "explanation": "The key move is Rh4+. It gives check, which limits your opponent's replies. By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "40. Rh4+ Qxh4 41. Qxh4+",
+   "keyPiece": "rook",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 49HQv (CC0)",
+   "rating": 1061
+  },
+  {
+   "id": "lichess-22bTf",
+   "fen": "r1b2rk1/ppp3p1/2n2p2/3p2qQ/8/1B3P2/P5PP/2R2RK1 w - - 0 19",
+   "sans": [
+    "Bxd5+",
+    "Qxd5",
+    "Qxd5+"
+   ],
+   "explanation": "The key move is Bxd5+. It captures the pawn on d5, and gives check, which limits your opponent's replies. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+   "line": "19. Bxd5+ Qxd5 20. Qxd5+",
+   "keyPiece": "bishop",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 22bTf (CC0)",
+   "rating": 1063
+  },
+  {
+   "id": "lichess-2SfHW",
+   "fen": "2Rr3k/b2r2pp/p7/1p4q1/3P4/7P/1P2QPP1/2R3K1 w - - 0 24",
+   "sans": [
+    "Qe8+",
+    "Rxe8",
+    "Rxe8#"
+   ],
+   "explanation": "The key move is Qe8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "24. Qe8+ Rxe8 25. Rxe8#",
+   "keyPiece": "queen",
+   "keyFrom": "e2",
+   "attribution": "Lichess puzzle 2SfHW (CC0)",
+   "rating": 1154
+  },
+  {
+   "id": "lichess-2OoU8",
+   "fen": "6r1/1bp2k2/p5R1/1p3Prp/2P2R2/3B3P/PP5K/8 b - - 2 33",
+   "sans": [
+    "Rg2+",
+    "Rxg2",
+    "Rxg2+"
+   ],
+   "explanation": "The key move is Rg2+. It gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +6.5).",
+   "line": "33... Rg2+ 34. Rxg2 Rxg2+",
+   "keyPiece": "rook",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 2OoU8 (CC0)",
+   "rating": 1162
+  },
+  {
+   "id": "lichess-20f3G",
+   "fen": "3rr1k1/6pp/p1P2p2/1pN1n3/1P1R3Q/P7/2q2PPP/3R2K1 b - - 2 32",
+   "sans": [
+    "Qxd1+",
+    "Rxd1",
+    "Rxd1#"
+   ],
+   "explanation": "The key move is Qxd1+. It captures the rook on d1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "32... Qxd1+ 33. Rxd1 Rxd1#",
+   "keyPiece": "queen",
+   "keyFrom": "c2",
+   "attribution": "Lichess puzzle 20f3G (CC0)",
+   "rating": 1498
+  },
+  {
+   "id": "lichess-2D3S7",
+   "fen": "6rk/6rp/8/6p1/1p1RQp2/7P/2p3P1/1qR4K w - - 4 51",
+   "sans": [
+    "Rxb1",
+    "cxb1=Q+",
+    "Qxb1"
+   ],
+   "explanation": "The key move is Rxb1. It captures the queen on b1. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "51. Rxb1 cxb1=Q+ 52. Qxb1",
+   "keyPiece": "rook",
+   "keyFrom": "c1",
+   "attribution": "Lichess puzzle 2D3S7 (CC0)",
+   "rating": 1555
+  }
+ ],
+ "clearance": [
+  {
+   "id": "lichess-2qaEc",
+   "fen": "7k/2q1r1p1/4BpRp/1pb1pP1P/2P5/r5Q1/6P1/4R2K w - - 8 35",
+   "sans": [
+    "Rxh6+",
+    "gxh6",
+    "Qg8#"
+   ],
+   "explanation": "The key move is Rxh6+. It captures the pawn on h6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "35. Rxh6+ gxh6 36. Qg8#",
+   "keyPiece": "rook",
+   "keyFrom": "g6",
+   "attribution": "Lichess puzzle 2qaEc (CC0)",
+   "rating": 1243
+  },
+  {
+   "id": "lichess-1I0Rx",
+   "fen": "r6r/p2kq2p/n1p1bp2/2pp3Q/8/8/PPPB1PPP/R3R1K1 w - - 6 20",
+   "sans": [
+    "Rxe6",
+    "Qxe6",
+    "Re1"
+   ],
+   "explanation": "The key move is Rxe6. It captures the bishop on e6, and attacks the queen on e7. Material is level, but Stockfish rates the result as clearly better for you (about +3.5).",
+   "line": "20. Rxe6 Qxe6 21. Re1",
+   "keyPiece": "rook",
+   "keyFrom": "e1",
+   "attribution": "Lichess puzzle 1I0Rx (CC0)",
+   "rating": 1392
+  },
+  {
+   "id": "lichess-1rLt7",
+   "fen": "8/p1p3pp/1bN2k2/3B2r1/4P2K/2P3R1/PP3r2/R7 b - - 8 32",
+   "sans": [
+    "Rh2+",
+    "Rh3",
+    "Bf2#"
+   ],
+   "explanation": "The key move is Rh2+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "32... Rh2+ 33. Rh3 Bf2#",
+   "keyPiece": "rook",
+   "keyFrom": "f2",
+   "attribution": "Lichess puzzle 1rLt7 (CC0)",
+   "rating": 1463
+  },
+  {
+   "id": "lichess-51zl1",
+   "fen": "r4rk1/pb3pb1/1p1p1qp1/2pP4/2P3BR/7Q/PP3PP1/2K4R w - - 0 26",
+   "sans": [
+    "Rh8+",
+    "Bxh8",
+    "Qh7#"
+   ],
+   "explanation": "The key move is Rh8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "26. Rh8+ Bxh8 27. Qh7#",
+   "keyPiece": "rook",
+   "keyFrom": "h4",
+   "attribution": "Lichess puzzle 51zl1 (CC0)",
+   "rating": 1507
+  },
+  {
+   "id": "lichess-06kDw",
+   "fen": "r6k/p1pp2R1/1p5P/3PPb2/5q2/8/PP4Q1/4K3 w - - 0 35",
+   "sans": [
+    "Rh7+",
+    "Bxh7",
+    "Qg7#"
+   ],
+   "explanation": "The key move is Rh7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "35. Rh7+ Bxh7 36. Qg7#",
+   "keyPiece": "rook",
+   "keyFrom": "g7",
+   "attribution": "Lichess puzzle 06kDw (CC0)",
+   "rating": 1585
+  },
+  {
+   "id": "lichess-2USlI",
+   "fen": "3r4/pR6/6pk/5pb1/r7/4N1PK/P3RP2/8 w - - 1 36",
+   "sans": [
+    "Nxf5+",
+    "gxf5",
+    "Re6+"
+   ],
+   "explanation": "The key move is Nxf5+. It captures the pawn on f5, and gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +4.1).",
+   "line": "36. Nxf5+ gxf5 37. Re6+",
+   "keyPiece": "knight",
+   "keyFrom": "e3",
+   "attribution": "Lichess puzzle 2USlI (CC0)",
+   "rating": 1596
+  }
+ ],
+ "interference": [
+  {
+   "id": "lichess-4DgjN",
+   "fen": "r4r2/ppqk1p2/2p1p3/5p1p/3PN2P/Q1P3P1/PP4P1/R5K1 w - - 0 21",
+   "sans": [
+    "Nf6+",
+    "Kc8",
+    "Qxf8+"
+   ],
+   "explanation": "The key move is Nf6+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "21. Nf6+ Kc8 22. Qxf8+",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 4DgjN (CC0)",
+   "rating": 1121
+  },
+  {
+   "id": "lichess-2qu0q",
+   "fen": "3rq1k1/1Q4p1/p3b2p/P3Pp2/3P4/5NP1/5P1P/2R3K1 b - - 0 29",
+   "sans": [
+    "Bd5",
+    "Qb1",
+    "Bxf3"
+   ],
+   "explanation": "The key move is Bd5. It attacks the queen on b7 (undefended) and the knight on f3 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "29... Bd5 30. Qb1 Bxf3",
+   "keyPiece": "bishop",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 2qu0q (CC0)",
+   "rating": 1231
+  },
+  {
+   "id": "lichess-4QI2U",
+   "fen": "r4rk1/p3nppp/1p2pn2/3p4/8/q4N2/P1PB1PPP/1R1Q1RK1 w - - 0 18",
+   "sans": [
+    "Bb4",
+    "Qa4",
+    "Bxe7"
+   ],
+   "explanation": "The key move is Bb4. It attacks the knight on e7 (undefended) and the queen on a3 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "18. Bb4 Qa4 19. Bxe7",
+   "keyPiece": "bishop",
+   "keyFrom": "d2",
+   "attribution": "Lichess puzzle 4QI2U (CC0)",
+   "rating": 1495
+  },
+  {
+   "id": "lichess-4nlgy",
+   "fen": "r2q2k1/pbR2pp1/4pb2/Q2pn2p/N7/1P4P1/P3PPBP/2R3K1 b - - 7 21",
+   "sans": [
+    "Nc6",
+    "Qe1",
+    "Qxc7"
+   ],
+   "explanation": "The key move is Nc6. It attacks the queen on a5 (undefended). By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "21... Nc6 22. Qe1 Qxc7",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 4nlgy (CC0)",
+   "rating": 1610
+  },
+  {
+   "id": "lichess-1vRWw",
+   "fen": "6k1/ppp1r1p1/5p1p/q2n4/3P4/P2Q1NP1/5P1P/2R3K1 w - - 0 31",
+   "sans": [
+    "Rc5",
+    "Qa4",
+    "Rxd5"
+   ],
+   "explanation": "The key move is Rc5. It attacks the queen on a5 (undefended) and the knight on d5 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "31. Rc5 Qa4 32. Rxd5",
+   "keyPiece": "rook",
+   "keyFrom": "c1",
+   "attribution": "Lichess puzzle 1vRWw (CC0)",
+   "rating": 1647
+  },
+  {
+   "id": "lichess-4umJC",
+   "fen": "7k/1p4R1/pp1p4/8/3P4/4rr1P/PP5K/6R1 b - - 0 27",
+   "sans": [
+    "Rxh3+",
+    "Kg2",
+    "Kxg7"
+   ],
+   "explanation": "The key move is Rxh3+. It captures the pawn on h3, and gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "27... Rxh3+ 28. Kg2 Kxg7",
+   "keyPiece": "rook",
+   "keyFrom": "f3",
+   "attribution": "Lichess puzzle 4umJC (CC0)",
+   "rating": 1712
+  }
+ ],
+ "sacrifice": [
+  {
+   "id": "lichess-3pWhj",
+   "fen": "r4r1k/p5pp/5q2/3B4/2PP4/4R1Pb/PQ5P/4R1K1 b - - 2 25",
+   "sans": [
+    "Qf1+",
+    "Rxf1",
+    "Rxf1#"
+   ],
+   "explanation": "The key move is Qf1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "25... Qf1+ 26. Rxf1 Rxf1#",
+   "keyPiece": "queen",
+   "keyFrom": "f6",
+   "attribution": "Lichess puzzle 3pWhj (CC0)",
+   "rating": 1225
+  },
+  {
+   "id": "lichess-0hAUJ",
+   "fen": "r1bb1r1k/1q5p/p2p1N2/1p2nP2/3pP2B/P7/1PP3QP/6RK w - - 0 29",
+   "sans": [
+    "Qg8+",
+    "Rxg8",
+    "Rxg8#"
+   ],
+   "explanation": "The key move is Qg8+. It gives check, which limits your opponent's replies, and attacks the rook on f8 (undefended) and the king at the same time. The line ends in checkmate.",
+   "line": "29. Qg8+ Rxg8 30. Rxg8#",
+   "keyPiece": "queen",
+   "keyFrom": "g2",
+   "attribution": "Lichess puzzle 0hAUJ (CC0)",
+   "rating": 1244
+  },
+  {
+   "id": "lichess-3rtvm",
+   "fen": "2r1r1k1/1Q3ppp/8/8/PPq5/6B1/5PPP/5RK1 b - - 0 24",
+   "sans": [
+    "Qxf1+",
+    "Kxf1",
+    "Rc1#"
+   ],
+   "explanation": "The key move is Qxf1+. It captures the rook on f1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "24... Qxf1+ 25. Kxf1 Rc1#",
+   "keyPiece": "queen",
+   "keyFrom": "c4",
+   "attribution": "Lichess puzzle 3rtvm (CC0)",
+   "rating": 1259
+  },
+  {
+   "id": "lichess-4U3qg",
+   "fen": "r2q2k1/1pp2ppp/p2p3r/4P3/1PP5/P3b3/1B2B1PP/R2Q1R1K b - - 0 17",
+   "sans": [
+    "Rxh2+",
+    "Kxh2",
+    "Qh4#"
+   ],
+   "explanation": "The key move is Rxh2+. It captures the pawn on h2, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "17... Rxh2+ 18. Kxh2 Qh4#",
+   "keyPiece": "rook",
+   "keyFrom": "h6",
+   "attribution": "Lichess puzzle 4U3qg (CC0)",
+   "rating": 1305
+  },
+  {
+   "id": "lichess-3jJR4",
+   "fen": "4r3/1p1r3k/2p1q2B/1p3p2/5Q1P/P4P2/bPP3R1/2K3R1 b - - 0 30",
+   "sans": [
+    "Qe1+",
+    "Rxe1",
+    "Rxe1#"
+   ],
+   "explanation": "The key move is Qe1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "30... Qe1+ 31. Rxe1 Rxe1#",
+   "keyPiece": "queen",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 3jJR4 (CC0)",
+   "rating": 1401
+  },
+  {
+   "id": "lichess-3lCPD",
+   "fen": "r4r2/pbp2pkp/1p1qp1p1/7n/3P3R/1BP2N2/PP1Q1KPP/4R3 w - - 2 21",
+   "sans": [
+    "Rxh5",
+    "gxh5",
+    "Qg5+",
+    "Kh8",
+    "Qf6+"
+   ],
+   "explanation": "The key move is Rxh5. It captures the knight on h5. Material is level, but Stockfish rates the result as clearly better for you (about +6.2).",
+   "line": "21. Rxh5 gxh5 22. Qg5+ Kh8 23. Qf6+",
+   "keyPiece": "rook",
+   "keyFrom": "h4",
+   "attribution": "Lichess puzzle 3lCPD (CC0)",
+   "rating": 1445
+  },
+  {
+   "id": "lichess-3gwkF",
+   "fen": "6r1/5k2/p2b3p/1p1b2q1/5p2/4p2P/PPB1Q1P1/3R1N1K w - - 0 36",
+   "sans": [
+    "Rxd5",
+    "Qxd5",
+    "Bb3"
+   ],
+   "explanation": "The key move is Rxd5. It captures the bishop on d5, and attacks the bishop on d6 (undefended) and the queen on g5 at the same time. Material is level, but Stockfish rates the result as clearly better for you (about +4.1).",
+   "line": "36. Rxd5 Qxd5 37. Bb3",
+   "keyPiece": "rook",
+   "keyFrom": "d1",
+   "attribution": "Lichess puzzle 3gwkF (CC0)",
+   "rating": 1471
+  },
+  {
+   "id": "lichess-2xeh0",
+   "fen": "2k5/1p3p2/p1q1p2p/3rP1pQ/b2B4/P1P5/1p1N1PPP/1R4K1 b - - 1 27",
+   "sans": [
+    "Rxd4",
+    "cxd4",
+    "Qc1+",
+    "Rxc1+",
+    "bxc1=Q+"
+   ],
+   "explanation": "The key move is Rxd4. It captures the bishop on d4, and attacks the knight on d2 (undefended). By the end of the line you have won two pawns' worth of material.",
+   "line": "27... Rxd4 28. cxd4 Qc1+ 29. Rxc1+ bxc1=Q+",
+   "keyPiece": "rook",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 2xeh0 (CC0)",
+   "rating": 1518
+  },
+  {
+   "id": "lichess-0jAWA",
+   "fen": "3kr3/p3b3/2pNQ3/1p2p3/4P3/1P1P4/1qP2P2/2RK4 b - - 0 30",
+   "sans": [
+    "Qxc1+",
+    "Kxc1",
+    "Bg5+",
+    "Kd1",
+    "Rxe6"
+   ],
+   "explanation": "The key move is Qxc1+. It captures the rook on c1, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "30... Qxc1+ 31. Kxc1 Bg5+ 32. Kd1 Rxe6",
+   "keyPiece": "queen",
+   "keyFrom": "b2",
+   "attribution": "Lichess puzzle 0jAWA (CC0)",
+   "rating": 1620
+  },
+  {
+   "id": "lichess-0s6Kc",
+   "fen": "8/p5B1/P2k4/1p6/1P4Bp/7P/K1P3r1/8 b - - 1 39",
+   "sans": [
+    "Rxg4",
+    "hxg4",
+    "h3",
+    "Bd4",
+    "h2"
+   ],
+   "explanation": "The key move is Rxg4. It captures the bishop on g4, and attacks the bishop on g7 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +2.8).",
+   "line": "39... Rxg4 40. hxg4 h3 41. Bd4 h2",
+   "keyPiece": "rook",
+   "keyFrom": "g2",
+   "attribution": "Lichess puzzle 0s6Kc (CC0)",
+   "rating": 1638
+  }
+ ],
+ "kingsideAttack": [
+  {
+   "id": "lichess-43J6E",
+   "fen": "r1bq1rk1/pppn1pbp/6p1/4p1B1/2BnP3/2N2N1P/PPP2PP1/R2Q1RK1 b - - 5 11",
+   "sans": [
+    "Nxf3+",
+    "Qxf3",
+    "Qxg5"
+   ],
+   "explanation": "The key move is Nxf3+. It captures the knight on f3, and gives check, which limits your opponent's replies, and attacks the bishop on g5 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "11... Nxf3+ 12. Qxf3 Qxg5",
+   "keyPiece": "knight",
+   "keyFrom": "d4",
+   "attribution": "Lichess puzzle 43J6E (CC0)",
+   "rating": 1006
+  },
+  {
+   "id": "lichess-0mkj9",
+   "fen": "3r1rk1/p2q1pp1/1pn1b2p/4p1Q1/1P1pN3/P2P1B2/2P2PPP/R4RK1 w - - 0 19",
+   "sans": [
+    "Nf6+",
+    "Kh8",
+    "Nxd7",
+    "hxg5",
+    "Nxf8"
+   ],
+   "explanation": "The key move is Nf6+. It gives check, which limits your opponent's replies, and attacks the king and the queen on d7 at the same time. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "19. Nf6+ Kh8 20. Nxd7 hxg5 21. Nxf8",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 0mkj9 (CC0)",
+   "rating": 1125
+  },
+  {
+   "id": "lichess-2u4Qi",
+   "fen": "r3r1k1/1p2qpb1/p1pp3p/5Pp1/2QP4/3p2B1/PP1N1PPP/R3R1K1 b - - 0 18",
+   "sans": [
+    "Qxe1+",
+    "Rxe1",
+    "Rxe1+",
+    "Nf1",
+    "d2"
+   ],
+   "explanation": "The key move is Qxe1+. It captures the rook on e1, and gives check, which limits your opponent's replies, and attacks the knight on d2 (undefended), the rook on a1 (undefended) and the king at the same time. By the end of the line you have won a pawn.",
+   "line": "18... Qxe1+ 19. Rxe1 Rxe1+ 20. Nf1 d2",
+   "keyPiece": "queen",
+   "keyFrom": "e7",
+   "attribution": "Lichess puzzle 2u4Qi (CC0)",
+   "rating": 1183
+  },
+  {
+   "id": "lichess-1jifK",
+   "fen": "r4rk1/1b3pbp/p3p1p1/1p1qN3/8/P1PBB2P/1P3PP1/R2Q1RK1 b - - 0 16",
+   "sans": [
+    "Qxg2#"
+   ],
+   "explanation": "The key move is Qxg2#. It captures the pawn on g2, and delivers checkmate. The line ends in checkmate.",
+   "line": "16... Qxg2#",
+   "keyPiece": "queen",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 1jifK (CC0)",
+   "rating": 1214
+  },
+  {
+   "id": "lichess-3WarT",
+   "fen": "3r2k1/5pqp/1p2b1p1/1B2P1Q1/3p1P2/P7/1Pr3PP/2R4K w - - 0 31",
+   "sans": [
+    "Qxd8+",
+    "Qf8",
+    "Qxf8+",
+    "Kxf8",
+    "Rxc2"
+   ],
+   "explanation": "The key move is Qxd8+. It captures the rook on d8, and gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "31. Qxd8+ Qf8 32. Qxf8+ Kxf8 33. Rxc2",
+   "keyPiece": "queen",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 3WarT (CC0)",
+   "rating": 1310
+  },
+  {
+   "id": "lichess-11Zzq",
+   "fen": "2rq3k/p1p3pp/3b2r1/8/4Q3/1P2P3/PB1R1PPP/R5K1 b - - 6 20",
+   "sans": [
+    "Bxh2+",
+    "Kxh2",
+    "Qxd2"
+   ],
+   "explanation": "The key move is Bxh2+. It captures the pawn on h2, and gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "20... Bxh2+ 21. Kxh2 Qxd2",
+   "keyPiece": "bishop",
+   "keyFrom": "d6",
+   "attribution": "Lichess puzzle 11Zzq (CC0)",
+   "rating": 1342
+  },
+  {
+   "id": "lichess-1Nkb6",
+   "fen": "5rk1/prpp1p1p/1p3p2/6NP/6Q1/1P2P3/P1PPKP2/7q w - - 0 19",
+   "sans": [
+    "Ne6+",
+    "Kh8",
+    "Qg7#"
+   ],
+   "explanation": "The key move is Ne6+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "19. Ne6+ Kh8 20. Qg7#",
+   "keyPiece": "knight",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 1Nkb6 (CC0)",
+   "rating": 1474
+  },
+  {
+   "id": "lichess-4KSvu",
+   "fen": "5rk1/ppq2ppp/4p3/3pN3/3P4/PR2PPnP/1P3QP1/6K1 b - - 2 21",
+   "sans": [
+    "Qc1+",
+    "Kh2",
+    "Nf1+",
+    "Qxf1",
+    "Qxf1"
+   ],
+   "explanation": "The key move is Qc1+. It gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "21... Qc1+ 22. Kh2 Nf1+ 23. Qxf1 Qxf1",
+   "keyPiece": "queen",
+   "keyFrom": "c7",
+   "attribution": "Lichess puzzle 4KSvu (CC0)",
+   "rating": 1501
+  },
+  {
+   "id": "lichess-0hNPL",
+   "fen": "r1b1k2r/1p6/p2pp2q/2p2p2/3nP3/2NP1NP1/PPPQB1P1/R4RK1 b kq - 1 21",
+   "sans": [
+    "Nxf3+",
+    "Bxf3",
+    "Qxd2"
+   ],
+   "explanation": "The key move is Nxf3+. It captures the knight on f3, and gives check, which limits your opponent's replies, and attacks the queen on d2 (undefended) and the king at the same time. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "21... Nxf3+ 22. Bxf3 Qxd2",
+   "keyPiece": "knight",
+   "keyFrom": "d4",
+   "attribution": "Lichess puzzle 0hNPL (CC0)",
+   "rating": 1557
+  },
+  {
+   "id": "lichess-1KDPP",
+   "fen": "4rrk1/pp1q1p1p/2b2bp1/3p4/6Q1/P1PBN1P1/1P3P1P/R3R1K1 b - - 3 23",
+   "sans": [
+    "Rxe3",
+    "Qxd7",
+    "Rxe1+",
+    "Rxe1",
+    "Bxd7"
+   ],
+   "explanation": "The key move is Rxe3. It captures the knight on e3, and attacks the bishop on d3 (undefended). By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "23... Rxe3 24. Qxd7 Rxe1+ 25. Rxe1 Bxd7",
+   "keyPiece": "rook",
+   "keyFrom": "e8",
+   "attribution": "Lichess puzzle 1KDPP (CC0)",
+   "rating": 1574
+  }
+ ],
+ "attackingF2F7": [
+  {
+   "id": "lichess-1MzhP",
+   "fen": "5rk1/3b1ppp/p3p3/7Q/3Bn2b/4P3/PP2BPqP/3RKR2 b - - 2 21",
+   "sans": [
+    "Bxf2+",
+    "Rxf2",
+    "Qxf2#"
+   ],
+   "explanation": "The key move is Bxf2+. It captures the pawn on f2, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "21... Bxf2+ 22. Rxf2 Qxf2#",
+   "keyPiece": "bishop",
+   "keyFrom": "h4",
+   "attribution": "Lichess puzzle 1MzhP (CC0)",
+   "rating": 1149
+  },
+  {
+   "id": "lichess-1ZPYQ",
+   "fen": "rnbBk2r/pppp1ppp/8/2bPp3/4n3/7P/PPP1PPP1/RN1QKBNR b KQkq - 0 5",
+   "sans": [
+    "Bxf2#"
+   ],
+   "explanation": "The key move is Bxf2#. It captures the pawn on f2, and delivers checkmate. The line ends in checkmate.",
+   "line": "5... Bxf2#",
+   "keyPiece": "bishop",
+   "keyFrom": "c5",
+   "attribution": "Lichess puzzle 1ZPYQ (CC0)",
+   "rating": 1158
+  },
+  {
+   "id": "lichess-2I9N1",
+   "fen": "1nbqkbnr/r3pppp/p7/1ppB4/4PP2/8/PPP3PP/RNBQK1NR w KQk - 0 7",
+   "sans": [
+    "Bxf7+",
+    "Kxf7",
+    "Qxd8"
+   ],
+   "explanation": "The key move is Bxf7+. It captures the pawn on f7, and gives check, which limits your opponent's replies. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+   "line": "7. Bxf7+ Kxf7 8. Qxd8",
+   "keyPiece": "bishop",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 2I9N1 (CC0)",
+   "rating": 1301
+  },
+  {
+   "id": "lichess-1CVsr",
+   "fen": "5r2/7p/1p2Bnpk/1P3p2/3B1b2/2QP3P/r7/2NRKR1q b - - 7 37",
+   "sans": [
+    "Bg3+",
+    "Bf2",
+    "Bxf2#"
+   ],
+   "explanation": "The key move is Bg3+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "37... Bg3+ 38. Bf2 Bxf2#",
+   "keyPiece": "bishop",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 1CVsr (CC0)",
+   "rating": 1411
+  },
+  {
+   "id": "lichess-3TdM7",
+   "fen": "r3k3/pp2nr1p/b3R1p1/4N1B1/4P3/2P5/P4PPP/6K1 w q - 1 22",
+   "sans": [
+    "Nxf7",
+    "Kxf7",
+    "Rxe7+"
+   ],
+   "explanation": "The key move is Nxf7. It captures the rook on f7. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "22. Nxf7 Kxf7 23. Rxe7+",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 3TdM7 (CC0)",
+   "rating": 1428
+  },
+  {
+   "id": "lichess-1kWbx",
+   "fen": "5rk1/1bpp2pp/1p2pq2/1Nb5/2P5/2B1P3/5PPP/3QKB1R b K - 6 21",
+   "sans": [
+    "Qxf2#"
+   ],
+   "explanation": "The key move is Qxf2#. It captures the pawn on f2, and delivers checkmate. The line ends in checkmate.",
+   "line": "21... Qxf2#",
+   "keyPiece": "queen",
+   "keyFrom": "f6",
+   "attribution": "Lichess puzzle 1kWbx (CC0)",
+   "rating": 1468
+  }
+ ],
+ "exposedKing": [
+  {
+   "id": "lichess-0IfJE",
+   "fen": "6k1/5p2/1b5Q/1p6/p5P1/2P4P/r7/4RK2 b - - 3 37",
+   "sans": [
+    "Rf2+",
+    "Kg1",
+    "Rf6+",
+    "Qe3",
+    "Bxe3+"
+   ],
+   "explanation": "The key move is Rf2+. It gives check, which limits your opponent's replies. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "37... Rf2+ 38. Kg1 Rf6+ 39. Qe3 Bxe3+",
+   "keyPiece": "rook",
+   "keyFrom": "a2",
+   "attribution": "Lichess puzzle 0IfJE (CC0)",
+   "rating": 1237
+  },
+  {
+   "id": "lichess-2FixY",
+   "fen": "6k1/5b2/R7/1p1pB1pp/3P1p2/P4BPP/1Pr2n2/6K1 w - - 0 38",
+   "sans": [
+    "Ra8+",
+    "Kh7",
+    "Rh8+",
+    "Kg6",
+    "Bxh5+"
+   ],
+   "explanation": "The key move is Ra8+. It gives check, which limits your opponent's replies. By the end of the line you have won a pawn.",
+   "line": "38. Ra8+ Kh7 39. Rh8+ Kg6 40. Bxh5+",
+   "keyPiece": "rook",
+   "keyFrom": "a6",
+   "attribution": "Lichess puzzle 2FixY (CC0)",
+   "rating": 1257
+  },
+  {
+   "id": "lichess-2DmjS",
+   "fen": "3kr3/1p4p1/r2pQp1p/4p3/Pq2P3/3R4/3R2PP/7K w - - 4 28",
+   "sans": [
+    "Rxd6+",
+    "Qxd6",
+    "Rxd6+",
+    "Rxd6",
+    "Qxd6+"
+   ],
+   "explanation": "The key move is Rxd6+. It captures the pawn on d6, and gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "28. Rxd6+ Qxd6 29. Rxd6+ Rxd6 30. Qxd6+",
+   "keyPiece": "rook",
+   "keyFrom": "d3",
+   "attribution": "Lichess puzzle 2DmjS (CC0)",
+   "rating": 1401
+  },
+  {
+   "id": "lichess-1Djgs",
+   "fen": "5k2/pp1r1B2/2q5/3R2Q1/1b5P/4PK2/PP4P1/5n2 w - - 7 45",
+   "sans": [
+    "Qg8+",
+    "Ke7",
+    "Qe8+",
+    "Kf6",
+    "Qxd7"
+   ],
+   "explanation": "The key move is Qg8+. It gives check, which limits your opponent's replies. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "45. Qg8+ Ke7 46. Qe8+ Kf6 47. Qxd7",
+   "keyPiece": "queen",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 1Djgs (CC0)",
+   "rating": 1634
+  },
+  {
+   "id": "lichess-2YfeG",
+   "fen": "r2k2nr/1p3ppp/p2B2b1/1B6/3N4/1P6/P5PP/5RK1 w - - 0 18",
+   "sans": [
+    "Ne6+",
+    "fxe6",
+    "Rf8+",
+    "Be8",
+    "Rxe8#"
+   ],
+   "explanation": "The key move is Ne6+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "18. Ne6+ fxe6 19. Rf8+ Be8 20. Rxe8#",
+   "keyPiece": "knight",
+   "keyFrom": "d4",
+   "attribution": "Lichess puzzle 2YfeG (CC0)",
+   "rating": 1664
+  },
+  {
+   "id": "lichess-4ioVn",
+   "fen": "r3k2r/p4ppp/2p5/3ppPP1/1q6/8/PPPB1Q1n/R2NK2R b KQkq - 0 16",
+   "sans": [
+    "Qe4+",
+    "Ne3",
+    "Qxh1+",
+    "Ke2",
+    "Qxa1"
+   ],
+   "explanation": "The key move is Qe4+. It gives check, which limits your opponent's replies, and attacks the king and the rook on h1 (undefended) at the same time. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "16... Qe4+ 17. Ne3 Qxh1+ 18. Ke2 Qxa1",
+   "keyPiece": "queen",
+   "keyFrom": "b4",
+   "attribution": "Lichess puzzle 4ioVn (CC0)",
+   "rating": 1685
+  }
+ ],
+ "arabianMate": [
+  {
+   "id": "lichess-3m0bJ",
+   "fen": "r1b1kb1r/pp1p1pp1/4p3/8/P2P2p1/BP3nP1/2P2P1P/RN1Q1R1K b kq - 2 14",
+   "sans": [
+    "Rxh2#"
+   ],
+   "explanation": "The key move is Rxh2#. It captures the pawn on h2, and delivers checkmate. The line ends in checkmate.",
+   "line": "14... Rxh2#",
+   "keyPiece": "rook",
+   "keyFrom": "h8",
+   "attribution": "Lichess puzzle 3m0bJ (CC0)",
+   "rating": 737
+  },
+  {
+   "id": "lichess-1ZVGo",
+   "fen": "r1b2r1k/pp2q2p/1b3Np1/4p3/8/P1PB3Q/1P3PP1/R3K2R w KQ - 4 23",
+   "sans": [
+    "Qxh7+",
+    "Qxh7",
+    "Rxh7#"
+   ],
+   "explanation": "The key move is Qxh7+. It captures the pawn on h7, and gives check, which limits your opponent's replies, and attacks the king and the queen on e7 (undefended) at the same time. The line ends in checkmate.",
+   "line": "23. Qxh7+ Qxh7 24. Rxh7#",
+   "keyPiece": "queen",
+   "keyFrom": "h3",
+   "attribution": "Lichess puzzle 1ZVGo (CC0)",
+   "rating": 1126
+  },
+  {
+   "id": "lichess-18Gb1",
+   "fen": "8/5kpR/1p2p1r1/5p2/8/1P2Qn2/P4PBP/3q1N1K b - - 23 40",
+   "sans": [
+    "Qxf1+",
+    "Bxf1",
+    "Rg1#"
+   ],
+   "explanation": "The key move is Qxf1+. It captures the knight on f1, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "40... Qxf1+ 41. Bxf1 Rg1#",
+   "keyPiece": "queen",
+   "keyFrom": "d1",
+   "attribution": "Lichess puzzle 18Gb1 (CC0)",
+   "rating": 1281
+  }
+ ],
+ "anastasiaMate": [
+  {
+   "id": "lichess-1I7Rc",
+   "fen": "5rk1/p4pp1/8/4pN2/2p1P3/2q4P/P2rQ1P1/5R1K w - - 6 29",
+   "sans": [
+    "Ne7+",
+    "Kh7",
+    "Qh5#"
+   ],
+   "explanation": "The key move is Ne7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "29. Ne7+ Kh7 30. Qh5#",
+   "keyPiece": "knight",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 1I7Rc (CC0)",
+   "rating": 1029
+  },
+  {
+   "id": "lichess-4Qrjc",
+   "fen": "r4rk1/1q1b1pp1/3p4/p2NbP1p/4PR2/1P6/P5PP/R2Q2K1 w - - 2 25",
+   "sans": [
+    "Ne7+",
+    "Kh7",
+    "Qxh5#"
+   ],
+   "explanation": "The key move is Ne7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "25. Ne7+ Kh7 26. Qxh5#",
+   "keyPiece": "knight",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 4Qrjc (CC0)",
+   "rating": 1097
+  },
+  {
+   "id": "lichess-1ZxmP",
+   "fen": "8/1p1k2N1/2p3Q1/3q4/4r3/8/PPPn4/K1R5 b - - 0 30",
+   "sans": [
+    "Qxa2+",
+    "Kxa2",
+    "Ra4#"
+   ],
+   "explanation": "The key move is Qxa2+. It captures the pawn on a2, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "30... Qxa2+ 31. Kxa2 Ra4#",
+   "keyPiece": "queen",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 1ZxmP (CC0)",
+   "rating": 1360
+  }
+ ],
+ "bodenMate": [
+  {
+   "id": "lichess-2WvMw",
+   "fen": "r3k3/p2p1p2/1pn4B/2b3p1/6b1/8/PP3PPP/R3KB1R b KQq - 0 17",
+   "sans": [
+    "Bb4#"
+   ],
+   "explanation": "The key move is Bb4#. It delivers checkmate. The line ends in checkmate.",
+   "line": "17... Bb4#",
+   "keyPiece": "bishop",
+   "keyFrom": "c5",
+   "attribution": "Lichess puzzle 2WvMw (CC0)",
+   "rating": 894
+  },
+  {
+   "id": "lichess-2yf89",
+   "fen": "2kr1r2/p2pn3/1p1B4/6pp/2B1P3/4n2N/PPP3PP/2KR4 w - - 1 22",
+   "sans": [
+    "Ba6#"
+   ],
+   "explanation": "The key move is Ba6#. It delivers checkmate. The line ends in checkmate.",
+   "line": "22. Ba6#",
+   "keyPiece": "bishop",
+   "keyFrom": "c4",
+   "attribution": "Lichess puzzle 2yf89 (CC0)",
+   "rating": 898
+  },
+  {
+   "id": "lichess-1Cdff",
+   "fen": "2kr1b1r/pp1nqp1p/2p1b3/2P5/3P1B2/3B1Q2/PP3KPP/R3R3 w - - 3 16",
+   "sans": [
+    "Qxc6+",
+    "bxc6",
+    "Ba6#"
+   ],
+   "explanation": "The key move is Qxc6+. It captures the pawn on c6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "16. Qxc6+ bxc6 17. Ba6#",
+   "keyPiece": "queen",
+   "keyFrom": "f3",
+   "attribution": "Lichess puzzle 1Cdff (CC0)",
+   "rating": 1178
+  }
+ ],
+ "hookMate": [
+  {
+   "id": "lichess-2jg7X",
+   "fen": "1r1r4/1pk3pp/pNp1np2/P3p3/1P2P3/8/2PR1PPP/3R2K1 w - - 7 22",
+   "sans": [
+    "Rd7+",
+    "Rxd7",
+    "Rxd7#"
+   ],
+   "explanation": "The key move is Rd7+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "22. Rd7+ Rxd7 23. Rxd7#",
+   "keyPiece": "rook",
+   "keyFrom": "d2",
+   "attribution": "Lichess puzzle 2jg7X (CC0)",
+   "rating": 1161
+  },
+  {
+   "id": "lichess-4zL0n",
+   "fen": "1r4k1/p4rB1/b1n1q3/2npP2Q/2p2P2/2P1P3/P2N3P/2KR2R1 b - - 0 26",
+   "sans": [
+    "Nd3+",
+    "Kc2",
+    "Rb2#"
+   ],
+   "explanation": "The key move is Nd3+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "26... Nd3+ 27. Kc2 Rb2#",
+   "keyPiece": "knight",
+   "keyFrom": "c5",
+   "attribution": "Lichess puzzle 4zL0n (CC0)",
+   "rating": 1275
+  },
+  {
+   "id": "lichess-41R5e",
+   "fen": "8/2R2p1p/5k2/8/1P3Np1/P3P1Pn/3r3P/7K b - - 2 30",
+   "sans": [
+    "Rd1+",
+    "Kg2",
+    "Rg1#"
+   ],
+   "explanation": "The key move is Rd1+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "30... Rd1+ 31. Kg2 Rg1#",
+   "keyPiece": "rook",
+   "keyFrom": "d2",
+   "attribution": "Lichess puzzle 41R5e (CC0)",
+   "rating": 1535
+  }
+ ],
+ "dovetailMate": [
+  {
+   "id": "lichess-0l16u",
+   "fen": "2kr3r/ppp1p1b1/8/1P2P2q/P1QP4/2P2RK1/3B2P1/4R3 b - - 0 27",
+   "sans": [
+    "Qh4#"
+   ],
+   "explanation": "The key move is Qh4#. It delivers checkmate. The line ends in checkmate.",
+   "line": "27... Qh4#",
+   "keyPiece": "queen",
+   "keyFrom": "h5",
+   "attribution": "Lichess puzzle 0l16u (CC0)",
+   "rating": 1275
+  },
+  {
+   "id": "lichess-27eFX",
+   "fen": "6Q1/3r4/5p2/p2qpk2/8/3r4/5PR1/5RK1 w - - 3 57",
+   "sans": [
+    "Qg4#"
+   ],
+   "explanation": "The key move is Qg4#. It delivers checkmate. The line ends in checkmate.",
+   "line": "57. Qg4#",
+   "keyPiece": "queen",
+   "keyFrom": "g8",
+   "attribution": "Lichess puzzle 27eFX (CC0)",
+   "rating": 1409
+  },
+  {
+   "id": "lichess-31RQT",
+   "fen": "5Q1b/1bk4N/p1q3pP/1p2pp2/5n1B/1BP5/PP3P2/6K1 w - - 10 44",
+   "sans": [
+    "Qd8#"
+   ],
+   "explanation": "The key move is Qd8#. It delivers checkmate. The line ends in checkmate.",
+   "line": "44. Qd8#",
+   "keyPiece": "queen",
+   "keyFrom": "f8",
+   "attribution": "Lichess puzzle 31RQT (CC0)",
+   "rating": 1483
+  }
+ ],
+ "doubleBishopMate": [
+  {
+   "id": "lichess-0eP9W",
+   "fen": "r1b1rk2/1p2bp1B/1q2p1p1/p2pn1B1/7P/P3P3/1PQN1P2/R3K1R1 w Q - 0 19",
+   "sans": [
+    "Bh6#"
+   ],
+   "explanation": "The key move is Bh6#. It delivers checkmate. The line ends in checkmate.",
+   "line": "19. Bh6#",
+   "keyPiece": "bishop",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 0eP9W (CC0)",
+   "rating": 884
+  },
+  {
+   "id": "lichess-3E873",
+   "fen": "4r2k/7p/pp4p1/2p5/2B1N3/3PnP2/PPPBK3/q7 w - - 0 36",
+   "sans": [
+    "Bc3+",
+    "Re5",
+    "Bxe5#"
+   ],
+   "explanation": "The key move is Bc3+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "36. Bc3+ Re5 37. Bxe5#",
+   "keyPiece": "bishop",
+   "keyFrom": "d2",
+   "attribution": "Lichess puzzle 3E873 (CC0)",
+   "rating": 946
+  },
+  {
+   "id": "lichess-4OsaU",
+   "fen": "r1bk1b1r/1p2pppp/p7/1Bp1n3/2P5/N7/Pn1BKPPP/1R4NR w - - 0 13",
+   "sans": [
+    "Ba5+",
+    "b6",
+    "Bxb6#"
+   ],
+   "explanation": "The key move is Ba5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "13. Ba5+ b6 14. Bxb6#",
+   "keyPiece": "bishop",
+   "keyFrom": "d2",
+   "attribution": "Lichess puzzle 4OsaU (CC0)",
+   "rating": 1011
+  }
+ ],
+ "opening": [
+  {
+   "id": "lichess-3rCLS",
+   "fen": "r2q1rk1/pb3pp1/5b1p/2p1n3/3pN3/6P1/PP1NPPBP/R2Q1RK1 w - - 2 16",
+   "sans": [
+    "Nxf6+",
+    "Qxf6",
+    "Bxb7"
+   ],
+   "explanation": "The key move is Nxf6+. It captures the bishop on f6, and gives check, which limits your opponent's replies. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "16. Nxf6+ Qxf6 17. Bxb7",
+   "keyPiece": "knight",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 3rCLS (CC0)",
+   "rating": 839
+  },
+  {
+   "id": "lichess-11bYt",
+   "fen": "r1q2rk1/pppn1pbp/3pbnp1/3Np3/2P1P3/3P2P1/PP2NPBP/R1BQ1RK1 w - - 3 10",
+   "sans": [
+    "Ne7+",
+    "Kh8",
+    "Nxc8"
+   ],
+   "explanation": "The key move is Ne7+. It gives check, which limits your opponent's replies, and attacks the queen on c8 and the king at the same time. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "10. Ne7+ Kh8 11. Nxc8",
+   "keyPiece": "knight",
+   "keyFrom": "d5",
+   "attribution": "Lichess puzzle 11bYt (CC0)",
+   "rating": 966
+  },
+  {
+   "id": "lichess-4h5J7",
+   "fen": "1r1qk1nr/1p3ppp/p2bp3/3p4/6b1/PQPP1N2/1P1N1PPP/R1B2RK1 w k - 1 12",
+   "sans": [
+    "Qa4+",
+    "Kf8",
+    "Qxg4"
+   ],
+   "explanation": "The key move is Qa4+. It gives check, which limits your opponent's replies, and attacks the king and the bishop on g4 (undefended) at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "12. Qa4+ Kf8 13. Qxg4",
+   "keyPiece": "queen",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 4h5J7 (CC0)",
+   "rating": 1090
+  },
+  {
+   "id": "lichess-1wKQN",
+   "fen": "r1b1k2r/pp3pn1/1qp1p2P/2b5/2n3PB/2N5/PPPQ3P/1K1R2NR w kq - 0 16",
+   "sans": [
+    "Qd8+",
+    "Qxd8",
+    "Rxd8#"
+   ],
+   "explanation": "The key move is Qd8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "16. Qd8+ Qxd8 17. Rxd8#",
+   "keyPiece": "queen",
+   "keyFrom": "d2",
+   "attribution": "Lichess puzzle 1wKQN (CC0)",
+   "rating": 1123
+  },
+  {
+   "id": "lichess-3moXk",
+   "fen": "r2qkb1r/pp1n1ppp/4p3/1B2Nb2/3P4/4Q3/PP3PPP/R1B1K2R b KQkq - 0 13",
+   "sans": [
+    "Qa5+",
+    "Bd2",
+    "Qxb5"
+   ],
+   "explanation": "The key move is Qa5+. It gives check, which limits your opponent's replies, and attacks the bishop on b5 (undefended) and the king at the same time. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "13... Qa5+ 14. Bd2 Qxb5",
+   "keyPiece": "queen",
+   "keyFrom": "d8",
+   "attribution": "Lichess puzzle 3moXk (CC0)",
+   "rating": 1162
+  },
+  {
+   "id": "lichess-1oXxw",
+   "fen": "r2q2nr/pp1nbkpb/2p1p2p/8/2BP2P1/2N4P/PPP1QP2/R1B1K2R w KQ - 0 12",
+   "sans": [
+    "Qxe6+",
+    "Kf8",
+    "Qf7#"
+   ],
+   "explanation": "The key move is Qxe6+. It captures the pawn on e6, and gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "12. Qxe6+ Kf8 13. Qf7#",
+   "keyPiece": "queen",
+   "keyFrom": "e2",
+   "attribution": "Lichess puzzle 1oXxw (CC0)",
+   "rating": 1168
+  },
+  {
+   "id": "lichess-34sNp",
+   "fen": "rn1qk2r/ppp3pp/3p4/3PpK2/2P2p2/2N2N1P/PP2P1P1/R1BQ1B1R b kq - 0 10",
+   "sans": [
+    "Qf6+",
+    "Ke4",
+    "Qg6#"
+   ],
+   "explanation": "The key move is Qf6+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "10... Qf6+ 11. Ke4 Qg6#",
+   "keyPiece": "queen",
+   "keyFrom": "d8",
+   "attribution": "Lichess puzzle 34sNp (CC0)",
+   "rating": 1237
+  },
+  {
+   "id": "lichess-49vxy",
+   "fen": "rnb2rk1/pp3ppp/2p2n2/8/2q1B2Q/2N1P3/PP1P3P/R1B1R1K1 w - - 1 17",
+   "sans": [
+    "Bxh7+",
+    "Nxh7",
+    "Qxc4"
+   ],
+   "explanation": "The key move is Bxh7+. It captures the pawn on h7, and gives check, which limits your opponent's replies. By the end of the line you have won about 7 points of material (a rook's worth or more).",
+   "line": "17. Bxh7+ Nxh7 18. Qxc4",
+   "keyPiece": "bishop",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 49vxy (CC0)",
+   "rating": 1263
+  },
+  {
+   "id": "lichess-0UxZa",
+   "fen": "r1bq1rk1/4bppp/p4n2/1ppNp1B1/4P3/8/PPP1BPPP/R2QR1K1 b - - 1 13",
+   "sans": [
+    "Nxd5",
+    "Bxe7",
+    "Nxe7"
+   ],
+   "explanation": "The key move is Nxd5. It captures the knight on d5. By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "13... Nxd5 14. Bxe7 Nxe7",
+   "keyPiece": "knight",
+   "keyFrom": "f6",
+   "attribution": "Lichess puzzle 0UxZa (CC0)",
+   "rating": 1397
+  },
+  {
+   "id": "lichess-3tQmB",
+   "fen": "r2qr1k1/1p1n1p1p/p3b1p1/3p1P2/3bp3/P3P1PP/1P1P2BK/R1BQ1R2 w - - 0 17",
+   "sans": [
+    "fxe6",
+    "Rxe6",
+    "exd4"
+   ],
+   "explanation": "The key move is fxe6. It captures the bishop on e6, and attacks the knight on d7. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "17. fxe6 Rxe6 18. exd4",
+   "keyPiece": "pawn",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 3tQmB (CC0)",
+   "rating": 1463
+  }
+ ],
+ "rookEndgame": [
+  {
+   "id": "lichess-2an30",
+   "fen": "8/5ppk/8/p4PPp/P1R1K2P/4P3/5r1r/6R1 b - - 3 40",
+   "sans": [
+    "Rxh4+",
+    "Kd3",
+    "Rxc4"
+   ],
+   "explanation": "The key move is Rxh4+. It captures the pawn on h4, and gives check, which limits your opponent's replies. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "40... Rxh4+ 41. Kd3 Rxc4",
+   "keyPiece": "rook",
+   "keyFrom": "h2",
+   "attribution": "Lichess puzzle 2an30 (CC0)",
+   "rating": 1079
+  },
+  {
+   "id": "lichess-22g0C",
+   "fen": "8/8/8/7P/8/1kp3P1/3r1P2/2R1K3 b - - 0 57",
+   "sans": [
+    "Kb2",
+    "Rxc3",
+    "Kxc3"
+   ],
+   "explanation": "The key move is Kb2. It attacks the rook on c1 (undefended). By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "57... Kb2 58. Rxc3 Kxc3",
+   "keyPiece": "king",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 22g0C (CC0)",
+   "rating": 1199
+  },
+  {
+   "id": "lichess-1QLK1",
+   "fen": "8/7p/1r6/3k4/5p1R/3K1P2/6P1/8 w - - 0 45",
+   "sans": [
+    "Rh5+",
+    "Kd6",
+    "Rh6+"
+   ],
+   "explanation": "The key move is Rh5+. It gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +6.2).",
+   "line": "45. Rh5+ Kd6 46. Rh6+",
+   "keyPiece": "rook",
+   "keyFrom": "h4",
+   "attribution": "Lichess puzzle 1QLK1 (CC0)",
+   "rating": 1230
+  },
+  {
+   "id": "lichess-0iIom",
+   "fen": "4k3/7R/3KP3/8/8/4r2p/8/8 w - - 6 53",
+   "sans": [
+    "Rh8#"
+   ],
+   "explanation": "The key move is Rh8#. It delivers checkmate. The line ends in checkmate.",
+   "line": "53. Rh8#",
+   "keyPiece": "rook",
+   "keyFrom": "h7",
+   "attribution": "Lichess puzzle 0iIom (CC0)",
+   "rating": 1265
+  },
+  {
+   "id": "lichess-4DMTZ",
+   "fen": "3r2k1/5pp1/7p/4R3/P4P2/3p3P/1Pr3P1/3R3K b - - 0 28",
+   "sans": [
+    "d2",
+    "Kh2",
+    "Rc1",
+    "Re8+",
+    "Rxe8"
+   ],
+   "explanation": "The key move is d2. By the end of the line you have won about 5 points of material (a rook's worth or more).",
+   "line": "28... d2 29. Kh2 Rc1 30. Re8+ Rxe8",
+   "keyPiece": "pawn",
+   "keyFrom": "d3",
+   "attribution": "Lichess puzzle 4DMTZ (CC0)",
+   "rating": 1278
+  },
+  {
+   "id": "lichess-4OKnD",
+   "fen": "3r4/5pp1/6p1/4k3/6PP/3RKP2/8/8 b - - 0 60",
+   "sans": [
+    "Rxd3+",
+    "Kxd3",
+    "Kf4",
+    "Ke2",
+    "Kg3"
+   ],
+   "explanation": "The key move is Rxd3+. It captures the rook on d3, and gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +5.4).",
+   "line": "60... Rxd3+ 61. Kxd3 Kf4 62. Ke2 Kg3",
+   "keyPiece": "rook",
+   "keyFrom": "d8",
+   "attribution": "Lichess puzzle 4OKnD (CC0)",
+   "rating": 1375
+  },
+  {
+   "id": "lichess-3z6Pc",
+   "fen": "4R3/R7/5rkp/8/6K1/3r4/P7/8 b - - 7 39",
+   "sans": [
+    "h5+",
+    "Kh4",
+    "Rf4#"
+   ],
+   "explanation": "The key move is h5+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "39... h5+ 40. Kh4 Rf4#",
+   "keyPiece": "pawn",
+   "keyFrom": "h6",
+   "attribution": "Lichess puzzle 3z6Pc (CC0)",
+   "rating": 1419
+  },
+  {
+   "id": "lichess-1PmM5",
+   "fen": "5k2/p3rp1p/R1p1r3/6p1/3KR1P1/1P3P2/P6P/8 b - - 4 30",
+   "sans": [
+    "c5+",
+    "Kxc5",
+    "Rxa6"
+   ],
+   "explanation": "The key move is c5+. It gives check, which limits your opponent's replies. By the end of the line you have won about 4 points of material (at least a minor piece).",
+   "line": "30... c5+ 31. Kxc5 Rxa6",
+   "keyPiece": "pawn",
+   "keyFrom": "c6",
+   "attribution": "Lichess puzzle 1PmM5 (CC0)",
+   "rating": 1607
+  },
+  {
+   "id": "lichess-0JrAs",
+   "fen": "8/2r2k1p/p2P4/6p1/6P1/1r5P/4pK2/2R5 w - - 0 42",
+   "sans": [
+    "dxc7",
+    "e1=Q+",
+    "Kxe1"
+   ],
+   "explanation": "The key move is dxc7. It captures the rook on c7. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "42. dxc7 e1=Q+ 43. Kxe1",
+   "keyPiece": "pawn",
+   "keyFrom": "d6",
+   "attribution": "Lichess puzzle 0JrAs (CC0)",
+   "rating": 1634
+  },
+  {
+   "id": "lichess-3OWXR",
+   "fen": "8/1R3p2/5p1p/6P1/7P/p4K2/rp3P2/4k3 w - - 0 40",
+   "sans": [
+    "gxh6",
+    "Ra1",
+    "h7",
+    "Rc1",
+    "h8=Q"
+   ],
+   "explanation": "The key move is gxh6. It captures the pawn on h6. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "40. gxh6 Ra1 41. h7 Rc1 42. h8=Q",
+   "keyPiece": "pawn",
+   "keyFrom": "g5",
+   "attribution": "Lichess puzzle 3OWXR (CC0)",
+   "rating": 1674
+  }
+ ],
+ "pawnEndgame": [
+  {
+   "id": "lichess-1o0eI",
+   "fen": "8/8/8/5PKp/4p3/8/5kP1/8 w - - 1 59",
+   "sans": [
+    "f6",
+    "e3",
+    "f7",
+    "e2",
+    "f8=Q+"
+   ],
+   "explanation": "The key move is f6. By the end of the line you have won about a queen's worth of material or more.",
+   "line": "59. f6 e3 60. f7 e2 61. f8=Q+",
+   "keyPiece": "pawn",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 1o0eI (CC0)",
+   "rating": 1126
+  },
+  {
+   "id": "lichess-3CAsr",
+   "fen": "8/8/1p1pk3/p5p1/P1K1P1P1/1P6/8/8 b - - 2 43",
+   "sans": [
+    "Ke5",
+    "Kb5",
+    "Kxe4",
+    "Kxb6",
+    "d5"
+   ],
+   "explanation": "The key move is Ke5. It attacks the pawn on e4 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +5.2).",
+   "line": "43... Ke5 44. Kb5 Kxe4 45. Kxb6 d5",
+   "keyPiece": "king",
+   "keyFrom": "e6",
+   "attribution": "Lichess puzzle 3CAsr (CC0)",
+   "rating": 1336
+  },
+  {
+   "id": "lichess-3FN1D",
+   "fen": "8/8/p2k4/5p2/1PK2Pp1/6P1/8/8 w - - 7 63",
+   "sans": [
+    "Kd4",
+    "Kc6",
+    "Ke5"
+   ],
+   "explanation": "The key move is Kd4. Material is level, but Stockfish rates the result as clearly better for you (about +6.3).",
+   "line": "63. Kd4 Kc6 64. Ke5",
+   "keyPiece": "king",
+   "keyFrom": "c4",
+   "attribution": "Lichess puzzle 3FN1D (CC0)",
+   "rating": 1404
+  },
+  {
+   "id": "lichess-0PBkh",
+   "fen": "8/5k2/5p2/5p1p/3PK2P/8/8/8 w - - 0 47",
+   "sans": [
+    "Kxf5",
+    "Ke7",
+    "Kg6",
+    "Ke6",
+    "Kxh5"
+   ],
+   "explanation": "The key move is Kxf5. It captures the pawn on f5, and attacks the pawn on f6. By the end of the line you have won two pawns' worth of material.",
+   "line": "47. Kxf5 Ke7 48. Kg6 Ke6 49. Kxh5",
+   "keyPiece": "king",
+   "keyFrom": "e4",
+   "attribution": "Lichess puzzle 0PBkh (CC0)",
+   "rating": 1421
+  },
+  {
+   "id": "lichess-3g9kJ",
+   "fen": "8/4kp1p/6pP/4P1P1/4K3/8/8/8 b - - 7 48",
+   "sans": [
+    "Ke6",
+    "Kf4",
+    "Kd5",
+    "Ke3",
+    "Kxe5"
+   ],
+   "explanation": "The key move is Ke6. It attacks the pawn on e5. By the end of the line you have won a pawn.",
+   "line": "48... Ke6 49. Kf4 Kd5 50. Ke3 Kxe5",
+   "keyPiece": "king",
+   "keyFrom": "e7",
+   "attribution": "Lichess puzzle 3g9kJ (CC0)",
+   "rating": 1466
+  },
+  {
+   "id": "lichess-0w1aL",
+   "fen": "8/2k2p2/2p1p1p1/1p2P1Pp/1PPK3P/8/8/8 w - - 0 43",
+   "sans": [
+    "cxb5",
+    "Kb6",
+    "bxc6",
+    "Kxc6",
+    "Kc4"
+   ],
+   "explanation": "The key move is cxb5. It captures the pawn on b5. By the end of the line you have won a pawn.",
+   "line": "43. cxb5 Kb6 44. bxc6 Kxc6 45. Kc4",
+   "keyPiece": "pawn",
+   "keyFrom": "c4",
+   "attribution": "Lichess puzzle 0w1aL (CC0)",
+   "rating": 1570
+  },
+  {
+   "id": "lichess-3isvT",
+   "fen": "8/3k4/1p3p1p/pP1K4/P4PP1/8/8/8 w - - 0 35",
+   "sans": [
+    "f5",
+    "Ke7",
+    "Kc6",
+    "h5",
+    "gxh5"
+   ],
+   "explanation": "The key move is f5. By the end of the line you have won a pawn.",
+   "line": "35. f5 Ke7 36. Kc6 h5 37. gxh5",
+   "keyPiece": "pawn",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 3isvT (CC0)",
+   "rating": 1608
+  },
+  {
+   "id": "lichess-3y8RL",
+   "fen": "8/6k1/6p1/2p4p/1pP1pP1P/6P1/1P4K1/8 b - f3 0 36",
+   "sans": [
+    "Kf6",
+    "Kf2",
+    "Kf5",
+    "b3",
+    "Kg4"
+   ],
+   "explanation": "The key move is Kf6. Material is level, but Stockfish rates the result as clearly better for you (about +6.0).",
+   "line": "36... Kf6 37. Kf2 Kf5 38. b3 Kg4",
+   "keyPiece": "king",
+   "keyFrom": "g7",
+   "attribution": "Lichess puzzle 3y8RL (CC0)",
+   "rating": 1614
+  },
+  {
+   "id": "lichess-0xKbw",
+   "fen": "8/p4p2/8/2p1k1pp/4P3/P2K2PP/1P6/8 b - - 1 43",
+   "sans": [
+    "c4+",
+    "Kxc4",
+    "Kxe4"
+   ],
+   "explanation": "The key move is c4+. It gives check, which limits your opponent's replies. Material is level, but Stockfish rates the result as clearly better for you (about +4.7).",
+   "line": "43... c4+ 44. Kxc4 Kxe4",
+   "keyPiece": "pawn",
+   "keyFrom": "c5",
+   "attribution": "Lichess puzzle 0xKbw (CC0)",
+   "rating": 1776
+  },
+  {
+   "id": "lichess-2OUrK",
+   "fen": "8/p4p2/1k4pp/1P5P/1K4P1/8/5P2/8 w - - 0 52",
+   "sans": [
+    "g5",
+    "hxg5",
+    "h6"
+   ],
+   "explanation": "The key move is g5. Material is level, but Stockfish rates the result as clearly better for you (about +9.3).",
+   "line": "52. g5 hxg5 53. h6",
+   "keyPiece": "pawn",
+   "keyFrom": "g4",
+   "attribution": "Lichess puzzle 2OUrK (CC0)",
+   "rating": 1796
+  }
+ ],
+ "bishopEndgame": [
+  {
+   "id": "lichess-4Wmz2",
+   "fen": "8/6K1/8/p7/P1p5/2k5/8/3B4 b - - 2 70",
+   "sans": [
+    "Kd2",
+    "Bf3",
+    "c3",
+    "Bh5",
+    "c2"
+   ],
+   "explanation": "The key move is Kd2. It attacks the bishop on d1 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +6.4).",
+   "line": "70... Kd2 71. Bf3 c3 72. Bh5 c2",
+   "keyPiece": "king",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 4Wmz2 (CC0)",
+   "rating": 1178
+  },
+  {
+   "id": "lichess-3VMPo",
+   "fen": "8/3bk3/3p1p1p/p1pP1BpP/PpP3P1/1P2PK2/8/8 w - - 5 43",
+   "sans": [
+    "Bxd7",
+    "Kxd7",
+    "Ke4",
+    "Ke8",
+    "Kf5"
+   ],
+   "explanation": "The key move is Bxd7. It captures the bishop on d7. Material is level, but Stockfish rates the result as clearly better for you (about +5.9).",
+   "line": "43. Bxd7 Kxd7 44. Ke4 Ke8 45. Kf5",
+   "keyPiece": "bishop",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 3VMPo (CC0)",
+   "rating": 1257
+  },
+  {
+   "id": "lichess-2am88",
+   "fen": "8/2k5/2b5/5p1p/pPP3pP/2b2PP1/P2BK1B1/8 b - - 4 46",
+   "sans": [
+    "gxf3+",
+    "Bxf3",
+    "Bxf3+",
+    "Ke3",
+    "Bxd2+"
+   ],
+   "explanation": "The key move is gxf3+. It captures the pawn on f3, and gives check, which limits your opponent's replies, and attacks the king and the bishop on g2 (undefended) at the same time. By the end of the line you have won about 6 points of material (a rook's worth or more).",
+   "line": "46... gxf3+ 47. Bxf3 Bxf3+ 48. Ke3 Bxd2+",
+   "keyPiece": "pawn",
+   "keyFrom": "g4",
+   "attribution": "Lichess puzzle 2am88 (CC0)",
+   "rating": 1583
+  },
+  {
+   "id": "lichess-19G6c",
+   "fen": "8/8/1b1k1p1p/1P1P1P2/PK4P1/8/8/8 w - - 3 56",
+   "sans": [
+    "a5",
+    "Bc5+",
+    "Kc4",
+    "Bf2",
+    "b6"
+   ],
+   "explanation": "The key move is a5. It attacks the bishop on b6 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +6.5).",
+   "line": "56. a5 Bc5+ 57. Kc4 Bf2 58. b6",
+   "keyPiece": "pawn",
+   "keyFrom": "a4",
+   "attribution": "Lichess puzzle 19G6c (CC0)",
+   "rating": 1593
+  },
+  {
+   "id": "lichess-2FHcQ",
+   "fen": "4B3/8/8/7p/2K2k2/1p6/5P2/8 b - - 0 51",
+   "sans": [
+    "b2",
+    "Bg6",
+    "h4",
+    "Kc3",
+    "h3"
+   ],
+   "explanation": "The key move is b2. Material is level, but Stockfish rates the result as clearly better for you (about +6.0).",
+   "line": "51... b2 52. Bg6 h4 53. Kc3 h3",
+   "keyPiece": "pawn",
+   "keyFrom": "b3",
+   "attribution": "Lichess puzzle 2FHcQ (CC0)",
+   "rating": 1613
+  }
+ ],
+ "knightEndgame": [
+  {
+   "id": "lichess-3G9pt",
+   "fen": "8/8/p7/1p2n3/1Pkp3P/P7/2NK4/8 b - - 0 46",
+   "sans": [
+    "Nf3+",
+    "Kc1",
+    "Nxh4"
+   ],
+   "explanation": "The key move is Nf3+. It gives check, which limits your opponent's replies. By the end of the line you have won a pawn.",
+   "line": "46... Nf3+ 47. Kc1 Nxh4",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 3G9pt (CC0)",
+   "rating": 1109
+  },
+  {
+   "id": "lichess-4Ts4U",
+   "fen": "8/8/7p/5n2/5P2/1pK4P/k7/3N4 b - - 2 54",
+   "sans": [
+    "Ne3",
+    "Nxe3",
+    "b2"
+   ],
+   "explanation": "The key move is Ne3. It attacks the knight on d1 (undefended). Material is level, but Stockfish rates the result as clearly better for you (about +5.6).",
+   "line": "54... Ne3 55. Nxe3 b2",
+   "keyPiece": "knight",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 4Ts4U (CC0)",
+   "rating": 1351
+  },
+  {
+   "id": "lichess-4AScv",
+   "fen": "8/p6N/1p1n1Pp1/8/3k2p1/8/P1K2PP1/8 w - - 1 34",
+   "sans": [
+    "Ng5",
+    "Ke5",
+    "f7",
+    "Nxf7",
+    "Nxf7+"
+   ],
+   "explanation": "The key move is Ng5. By the end of the line you have won two pawns' worth of material.",
+   "line": "34. Ng5 Ke5 35. f7 Nxf7 36. Nxf7+",
+   "keyPiece": "knight",
+   "keyFrom": "h7",
+   "attribution": "Lichess puzzle 4AScv (CC0)",
+   "rating": 1415
+  },
+  {
+   "id": "lichess-2yH0e",
+   "fen": "8/2n5/8/3pNp2/3P4/pP2P3/P1K5/4k3 b - - 10 51",
+   "sans": [
+    "Ke2",
+    "Nd3",
+    "Kxe3"
+   ],
+   "explanation": "The key move is Ke2. It attacks the pawn on e3 (undefended). By the end of the line you have won a pawn.",
+   "line": "51... Ke2 52. Nd3 Kxe3",
+   "keyPiece": "king",
+   "keyFrom": "e1",
+   "attribution": "Lichess puzzle 2yH0e (CC0)",
+   "rating": 1415
+  },
+  {
+   "id": "lichess-39fYq",
+   "fen": "8/3P4/5p2/2N1nP1p/7P/2p1K3/1k6/8 b - - 0 70",
+   "sans": [
+    "Nxd7",
+    "Na4+",
+    "Kb3",
+    "Nxc3",
+    "Kxc3"
+   ],
+   "explanation": "The key move is Nxd7. It captures the pawn on d7, and attacks the knight on c5 (undefended). By the end of the line you have won about 3 points of material (at least a minor piece).",
+   "line": "70... Nxd7 71. Na4+ Kb3 72. Nxc3 Kxc3",
+   "keyPiece": "knight",
+   "keyFrom": "e5",
+   "attribution": "Lichess puzzle 39fYq (CC0)",
+   "rating": 1567
+  }
+ ],
+ "queenEndgame": [
+  {
+   "id": "lichess-0RaDJ",
+   "fen": "2K5/2P2k2/3Q4/q7/8/8/8/8 b - - 0 70",
+   "sans": [
+    "Qa8+",
+    "Kd7",
+    "Qe8#"
+   ],
+   "explanation": "The key move is Qa8+. It gives check, which limits your opponent's replies. The line ends in checkmate.",
+   "line": "70... Qa8+ 71. Kd7 Qe8#",
+   "keyPiece": "queen",
+   "keyFrom": "a5",
+   "attribution": "Lichess puzzle 0RaDJ (CC0)",
+   "rating": 989
+  },
+  {
+   "id": "lichess-0v2i4",
+   "fen": "8/6pk/1pQ2q1p/p2P4/8/P7/KP6/8 w - - 6 42",
+   "sans": [
+    "Qxf6",
+    "gxf6",
+    "d6",
+    "Kg6",
+    "d7"
+   ],
+   "explanation": "The key move is Qxf6. It captures the queen on f6. Material is level, but Stockfish rates the result as clearly better for you (about +8.7).",
+   "line": "42. Qxf6 gxf6 43. d6 Kg6 44. d7",
+   "keyPiece": "queen",
+   "keyFrom": "c6",
+   "attribution": "Lichess puzzle 0v2i4 (CC0)",
+   "rating": 1320
+  },
+  {
+   "id": "lichess-1BVLm",
+   "fen": "8/5ppk/p7/4PqQp/7P/P7/6PK/8 b - - 3 34",
+   "sans": [
+    "Qxg5",
+    "hxg5",
+    "Kg6"
+   ],
+   "explanation": "The key move is Qxg5. It captures the queen on g5. Material is level, but Stockfish rates the result as clearly better for you (about +5.3).",
+   "line": "34... Qxg5 35. hxg5 Kg6",
+   "keyPiece": "queen",
+   "keyFrom": "f5",
+   "attribution": "Lichess puzzle 1BVLm (CC0)",
+   "rating": 1393
+  },
+  {
+   "id": "lichess-1jVfa",
+   "fen": "8/8/6kp/7q/5QpP/6K1/6P1/8 w - - 0 61",
+   "sans": [
+    "Qxg4+",
+    "Qxg4+",
+    "Kxg4"
+   ],
+   "explanation": "The key move is Qxg4+. It captures the pawn on g4, and gives check, which limits your opponent's replies. By the end of the line you have won a pawn.",
+   "line": "61. Qxg4+ Qxg4+ 62. Kxg4",
+   "keyPiece": "queen",
+   "keyFrom": "f4",
+   "attribution": "Lichess puzzle 1jVfa (CC0)",
+   "rating": 1528
+  },
+  {
+   "id": "lichess-0QSx8",
+   "fen": "8/8/8/1p2K3/1Qq5/P4k2/8/8 w - - 8 59",
+   "sans": [
+    "Qxc4",
+    "bxc4",
+    "Kd4",
+    "c3",
+    "Kxc3"
+   ],
+   "explanation": "The key move is Qxc4. It captures the queen on c4. By the end of the line you have won a pawn.",
+   "line": "59. Qxc4 bxc4 60. Kd4 c3 61. Kxc3",
+   "keyPiece": "queen",
+   "keyFrom": "b4",
+   "attribution": "Lichess puzzle 0QSx8 (CC0)",
+   "rating": 1587
+  }
+ ],
+ "zugzwang": [
+  {
+   "id": "lichess-2E3OA",
+   "fen": "8/2k5/p1p5/P7/1PK5/8/8/8 w - - 1 51",
+   "sans": [
+    "Kc5",
+    "Kb7",
+    "Kd6"
+   ],
+   "explanation": "The key move is Kc5. It attacks the pawn on c6. Material is level, but Stockfish rates the result as clearly better for you (about +9.6).",
+   "line": "51. Kc5 Kb7 52. Kd6",
+   "keyPiece": "king",
+   "keyFrom": "c4",
+   "attribution": "Lichess puzzle 2E3OA (CC0)",
+   "rating": 1270
+  },
+  {
+   "id": "lichess-2fQKr",
+   "fen": "8/8/5kp1/7p/5P1P/5K2/8/8 b - - 1 51",
+   "sans": [
+    "Kf5",
+    "Ke3",
+    "Kg4",
+    "f5",
+    "gxf5"
+   ],
+   "explanation": "The key move is Kf5. It attacks the pawn on f4. By the end of the line you have won a pawn.",
+   "line": "51... Kf5 52. Ke3 Kg4 53. f5 gxf5",
+   "keyPiece": "king",
+   "keyFrom": "f6",
+   "attribution": "Lichess puzzle 2fQKr (CC0)",
+   "rating": 1375
+  },
+  {
+   "id": "lichess-2RcOe",
+   "fen": "8/1p5p/p2k2pP/P4pP1/3K1P2/2P5/8/8 w - - 4 65",
+   "sans": [
+    "c4",
+    "Kc6",
+    "Ke5"
+   ],
+   "explanation": "The key move is c4. Material is level, but Stockfish rates the result as clearly better for you (about +5.8).",
+   "line": "65. c4 Kc6 66. Ke5",
+   "keyPiece": "pawn",
+   "keyFrom": "c3",
+   "attribution": "Lichess puzzle 2RcOe (CC0)",
+   "rating": 1401
+  },
+  {
+   "id": "lichess-0nyik",
+   "fen": "8/4k3/3p1p2/1p5p/1P1KP1b1/4P3/6P1/3B4 w - - 0 44",
+   "sans": [
+    "Bxg4",
+    "hxg4",
+    "Kd5",
+    "Kd7",
+    "g3"
+   ],
+   "explanation": "The key move is Bxg4. It captures the bishop on g4. Material is level, but Stockfish rates the result as clearly better for you (about +5.3).",
+   "line": "44. Bxg4 hxg4 45. Kd5 Kd7 46. g3",
+   "keyPiece": "bishop",
+   "keyFrom": "d1",
+   "attribution": "Lichess puzzle 0nyik (CC0)",
+   "rating": 1611
+  },
+  {
+   "id": "lichess-1wDKd",
+   "fen": "8/6p1/7p/5k2/5P1P/6K1/8/8 b - - 0 57",
+   "sans": [
+    "h5",
+    "Kf3",
+    "g6",
+    "Kg3",
+    "Ke4"
+   ],
+   "explanation": "The key move is h5. Material is level, but Stockfish rates the result as clearly better for you (about +9.8).",
+   "line": "57... h5 58. Kf3 g6 59. Kg3 Ke4",
+   "keyPiece": "pawn",
+   "keyFrom": "h6",
+   "attribution": "Lichess puzzle 1wDKd (CC0)",
+   "rating": 1666
+  },
+  {
+   "id": "lichess-3ZrAa",
+   "fen": "1B6/1r6/1P6/6p1/3Pk3/5p1P/5K2/8 w - - 2 50",
+   "sans": [
+    "Bc7",
+    "g4",
+    "hxg4",
+    "Kxd4",
+    "Kxf3"
+   ],
+   "explanation": "The key move is Bc7. By the end of the line you have won a pawn.",
+   "line": "50. Bc7 g4 51. hxg4 Kxd4 52. Kxf3",
+   "keyPiece": "bishop",
+   "keyFrom": "b8",
+   "attribution": "Lichess puzzle 3ZrAa (CC0)",
+   "rating": 1828
   }
  ]
 }

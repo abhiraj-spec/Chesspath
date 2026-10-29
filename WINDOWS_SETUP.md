@@ -47,6 +47,22 @@ Both use port 3000, so run only one at a time. To use a different port with `npm
 
 Your progress is saved in the browser you use (IndexedDB). It stays after you close the browser, but it is per browser and per address: `localhost:3000` and your published site keep separate progress. Use Settings → Export to move it.
 
+## Updating to a new version (your progress is kept)
+
+Your progress is stored in your browser for the address `localhost:3000`, not in the project folder. So you can replace the folder freely:
+
+1. Stop the app (`Ctrl + C` in the black window).
+2. Extract the new ZIP. Deleting or renaming the old folder first avoids confusion.
+3. In the new folder, open Command Prompt (address bar, type `cmd`, Enter) and run:
+   ```
+   npm install
+   npm run build
+   npm start
+   ```
+4. Open `localhost:3000` in the **same browser** as before. Your lessons, puzzles and games are still there.
+
+Keep using the same browser and port 3000: a different browser or a different port counts as a different site and starts empty. For extra safety, use **Settings → Export progress** now and then; the file can be restored on any device or browser.
+
 ## 5. Publish it to get a link for your phone
 
 The easiest way that needs no Git: **Netlify Drop**.

@@ -107,6 +107,25 @@ After the first build, the app was audited again against the original specificat
 - Its help text mentions ← → keys even on touch devices.
 - The "Missed opportunity" label has no dedicated e2e test.
 
+## Content expansion (third pass)
+
+- **Curriculum 40 → 60 lessons, 175 → 344 interactive exercises.** New lessons:
+  - Tactics: mate in one, trapped pieces, deflection and decoy, double check, line tactics (x-ray, clearance, interference), sacrifices, attacking the king, and six named mating patterns.
+  - Calculation: mate in two, longer mates, quiet moves.
+  - Openings: punishing opening mistakes.
+  - Endgames: pawn breakthroughs and outside passed pawns, Lucena and Philidor (played out against Stockfish), rook, minor-piece and queen endgames, promotion tactics, zugzwang.
+  - Practical: defending against threats.
+
+  Nine short existing lessons received 2–4 extra real-game exercises each, appended at the end so saved mid-lesson positions still resume correctly.
+- **Source and verification.** 241 new positions come from the Lichess puzzle database (CC0) via `scripts/build-lesson-pool.mjs`.
+  - Every solving move had to be Stockfish's best by at least 1.5 pawns, or the only mate.
+  - None of them are reused from the puzzle trainer, and the original 64 pool positions are unchanged.
+  - Hand-made theory positions (Lucena, Philidor, breakthrough, outside passed pawn) were evaluated at depth 24 before being written up.
+  - `npm run validate:content` (259 checks) passes for every play exercise and every play-it-out goal.
+- **Mistakes caught while writing.** Wrong-move feedback in the breakthrough exercise described pawn structures incorrectly, and one quiz option suggested trading pawns on the same file. Both were fixed before testing.
+- **Known gap.** Positional play (module D) is still 4 lessons and mostly multiple choice. It is now the thinnest module.
+- **Data safety.** The app now asks the browser to keep its data (`navigator.storage.persist()`) once a profile exists. Settings states whether that was granted and when the last backup was exported. Whether Safari or iPhone grants it was not tested.
+
 ## Beginner usability review
 
 Walked through as someone who has never played chess:

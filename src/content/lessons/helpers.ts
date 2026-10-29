@@ -61,3 +61,23 @@ export function fenAfter(moves: string, from: string = START): string {
   }
   return c.fen();
 }
+
+/**
+ * Several verified real-game exercises on one motif. The last `assess` of them are scored checks.
+ * Prompts are given per exercise so each one says what to look for.
+ */
+export function practice(
+  theme: string,
+  indices: number[],
+  opts: { idPrefix: string; prompt: string; hint: string; assess?: number },
+): PlayStep[] {
+  const assess = opts.assess ?? 2;
+  return indices.map((index, i) =>
+    fromPool(theme, index, {
+      id: `${opts.idPrefix}-${index + 1}`,
+      prompt: opts.prompt,
+      hint: opts.hint,
+      assessment: i >= indices.length - assess,
+    }),
+  );
+}

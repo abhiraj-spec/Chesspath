@@ -3,7 +3,8 @@
 import { useRef, useState } from "react";
 import { Download, FileUp, RotateCcw, Trash2 } from "lucide-react";
 import { useGames, useProfile } from "@/hooks/data";
-import { exportAll, importAll, resetAllData, saveProfile } from "@/lib/db/repo";
+import { exportAll, importAll, kvSet, resetAllData, saveProfile } from "@/lib/db/repo";
+import { DataSafety } from "./DataSafety";
 import { resetSettings, updateSettings, useSettings, type Settings } from "@/lib/settings";
 import { Card, CardHeader, Dialog, Kbd, PageHeader, Segmented, Select, Switch } from "@/components/ui/primitives";
 import { Button } from "@/components/ui/Button";
@@ -29,6 +30,7 @@ export function SettingsView() {
   const exportProgress = async () => {
     const data = await exportAll();
     downloadText(`chesspath-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify({ ...data, settings: s }, null, 2), "application/json");
+    await kvSet("lastBackupAt", Date.now()).catch(() => {});
   };
   const exportPgn = () => {
     if (!games?.length) {
@@ -156,6 +158,7 @@ export function SettingsView() {
 
       <Card className="p-5">
         <CardHeader title="Your data" description="Everything is stored only in this browser. Nothing is uploaded." />
+        <DataSafety />
         <div className="mt-4 flex flex-wrap gap-2">
           <Button variant="secondary" onClick={exportProgress} icon={<Download className="h-4 w-4" aria-hidden />}>
             Export progress (JSON)

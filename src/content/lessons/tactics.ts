@@ -1,6 +1,6 @@
 import { setup } from "@/lib/chess/setup";
 import type { Lesson } from "../types";
-import { fromPool } from "./helpers";
+import { fromPool, practice } from "./helpers";
 
 export const tactics: Lesson[] = [
   // ------------------------------------------------------------------ B1
@@ -86,6 +86,12 @@ export const tactics: Lesson[] = [
         hint: "Check every capture. Which one cannot be answered by a recapture?",
         assessment: true,
       }),
+      ...practice("hangingPiece", [2, 3], {
+        idPrefix: "hang-more",
+        prompt: "From a real game: something is left undefended. Win it.",
+        hint: "Check every enemy piece: is it defended? Is it attacked more times than defended?",
+        assess: 1,
+      }),
     ],
     recap: [
       "Values: pawn 1, knight 3, bishop 3, rook 5, queen 9.",
@@ -165,6 +171,12 @@ export const tactics: Lesson[] = [
         hint: "Which enemy pieces are loose? Can one move hit two of them?",
         assessment: true,
       }),
+      ...practice("fork", [2, 3, 4], {
+        idPrefix: "fork-more",
+        prompt: "From a real game: find the fork.",
+        hint: "Which move attacks two targets at once? Checks are the strongest forks.",
+        assess: 1,
+      }),
     ],
     recap: ["A fork attacks two targets with one move.", "Forks with check are strongest.", "Watch knight forks against your own king and queen."],
     followUp: { kind: "puzzles", ref: "fork", label: "Practise: fork puzzles" },
@@ -234,6 +246,12 @@ export const tactics: Lesson[] = [
         hint: "Which enemy piece cannot move without exposing something more valuable?",
         assessment: true,
       }),
+      ...practice("pin", [1, 2, 3], {
+        idPrefix: "pin-more",
+        prompt: "From a real game: use or create a pin.",
+        hint: "Look for an enemy piece standing in front of its king or queen on a line.",
+        assess: 1,
+      }),
     ],
     recap: ["A pin freezes a piece in front of a more valuable one.", "Against the king the pin is absolute: the piece cannot legally move.", "Attack a pinned piece again: it cannot run away."],
     followUp: { kind: "puzzles", ref: "pin", label: "Practise: pin puzzles" },
@@ -293,6 +311,12 @@ export const tactics: Lesson[] = [
         hint: "Line up a long-range piece against a valuable target with something else behind it.",
         assessment: true,
       }),
+      ...practice("skewer", [1, 2, 3], {
+        idPrefix: "skew-more",
+        prompt: "From a real game: find the skewer.",
+        hint: "Line up against the more valuable piece; what is standing behind it?",
+        assess: 1,
+      }),
     ],
     recap: ["A skewer attacks a valuable piece and wins the piece behind it.", "Checks make skewers forcing.", "Keep your king and big pieces off the same line."],
     followUp: { kind: "puzzles", ref: "skewer", label: "Practise: skewer puzzles" },
@@ -350,6 +374,12 @@ export const tactics: Lesson[] = [
         hint: "Uncover a check while the moving piece gives check too.",
         assessment: true,
       }),
+      ...practice("discoveredAttack", [1, 2, 3], {
+        idPrefix: "disc-more",
+        prompt: "From a real game: unleash a discovered attack.",
+        hint: "Which of your pieces is hiding a line behind another of your pieces?",
+        assess: 1,
+      }),
     ],
     recap: ["Moving a front piece can reveal an attack from behind.", "The moving piece is free to make its own threat.", "Double check can only be answered by a king move."],
     followUp: { kind: "puzzles", ref: "discovered-attack", label: "Practise: discovered attacks" },
@@ -399,6 +429,12 @@ export const tactics: Lesson[] = [
         hint: "A sacrifice can drag the king or queen onto a square where it gets attacked.",
         assessment: true,
       }),
+      ...practice("capturingDefender", [1, 2], {
+        idPrefix: "remdef-more",
+        prompt: "From a real game: remove the defender.",
+        hint: "Find the piece holding the position together, then capture or chase it.",
+        assess: 1,
+      }),
     ],
     recap: ["If a target is defended, target the defender.", "Overloaded pieces cannot do two jobs.", "Sacrifices that force a piece onto a bad square are called decoys."],
     followUp: { kind: "puzzles", ref: "deflection", label: "Practise: deflection puzzles" },
@@ -431,6 +467,12 @@ export const tactics: Lesson[] = [
         prompt: "From a real game: find the in-between move.",
         hint: "Which forcing move changes the situation before you recapture?",
         assessment: true,
+      }),
+      ...practice("intermezzo", [2, 3, 4, 5], {
+        idPrefix: "inter-more",
+        prompt: "From a real game: before the obvious move, is there a stronger in-between move?",
+        hint: "Look for checks and bigger threats before recapturing.",
+        assess: 1,
       }),
     ],
     recap: ["The expected move is not always the best one.", "Look for checks, captures and threats before every recapture."],
@@ -485,6 +527,12 @@ export const tactics: Lesson[] = [
         hint: "Which heavy piece can reach the back rank with check?",
         assessment: true,
       }),
+      ...practice("backRankMate", [2, 3, 4], {
+        idPrefix: "br-more",
+        prompt: "From a real game: exploit the back rank.",
+        hint: "Is the enemy king boxed in by its own pawns? Which heavy piece reaches the back rank?",
+        assess: 1,
+      }),
     ],
     recap: ["Pawns in front of a castled king can become a cage.", "Make luft (h3/g3) when the back rank is weak.", "Look for back-rank mates against your opponent."],
     followUp: { kind: "puzzles", ref: "back-rank", label: "Practise: back-rank puzzles" },
@@ -538,6 +586,12 @@ export const tactics: Lesson[] = [
         prompt: "From a real game: checkmate in two moves.",
         hint: "Start with a check that leaves few replies.",
         assessment: true,
+      }),
+      ...practice("smotheredMate", [1, 2], {
+        idPrefix: "smoth-more",
+        prompt: "From a real game: deliver a smothered mate (or the move that forces it).",
+        hint: "The king is surrounded by its own pieces. A knight check cannot be blocked.",
+        assess: 1,
       }),
     ],
     recap: ["Ladder mate: two heavy pieces take turns on adjacent ranks.", "Queen + king: the king supports the queen or covers escape squares.", "Smothered mate: a knight mates a king trapped by its own pieces."],

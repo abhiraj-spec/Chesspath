@@ -16,6 +16,7 @@
     "test:e2e": "playwright test",
     "validate:content": "vitest run --config vitest.content.config.mts",
     "build:puzzles": "node scripts/build-puzzles.mjs",
+    "build:lesson-pool": "node scripts/build-lesson-pool.mjs",
     "build:eco": "node scripts/build-eco-index.mjs"
   },
   "dependencies": {
