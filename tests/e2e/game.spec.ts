@@ -59,3 +59,21 @@ test("engine failure is reported, the game is preserved and recovery is offered"
   await expect(page.locator('[aria-label="Moves"] button[data-ply="1"]')).toHaveText("d4");
   await expect(page.getByRole("button", { name: "Restart engine and continue" })).toBeVisible();
 });
+
+test("resigning while the computer is thinking ends the game for good", async ({ page }) => {
+  await page.goto("/play/");
+  await page.getByRole("radio", { name: "Very easy" }).click();
+  await page.getByRole("button", { name: "Start game" }).click();
+  const board = page.getByTestId("game-board");
+  await expect(page.getByTestId("game-status")).toHaveText(/Your move/);
+  await playUci(page, board, "e2e4");
+  // Resign immediately, while the computer is still choosing its reply.
+  await page.getByRole("button", { name: "Resign" }).click();
+  await page.getByRole("dialog").getByRole("button", { name: "Resign" }).click();
+  await expect(page.getByTestId("game-over")).toBeVisible();
+  const fen = await boardFen(board);
+  // Give any pending computer move time to (wrongly) arrive.
+  await page.waitForTimeout(2500);
+  await expect(page.getByTestId("game-over")).toBeVisible();
+  expect(await boardFen(board)).toBe(fen);
+});

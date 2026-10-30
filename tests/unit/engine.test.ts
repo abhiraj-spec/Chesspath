@@ -177,6 +177,18 @@ describe("engine client (real Stockfish)", () => {
     const legal = new Chess(fen).moves({ verbose: true }).map((m) => m.from + m.to + (m.promotion ?? ""));
     for (const l of r.lines) expect(legal).toContain(l.pv[0]);
   });
+  it("a time cap stops a deep search early, and a shallow depth still finishes before the cap", async () => {
+    const fen = "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3";
+    let t = Date.now();
+    const capped = await client.analyse({ fen, depth: 60, movetimeMs: 400 });
+    const cappedMs = Date.now() - t;
+    expect(cappedMs).toBeLessThan(3000);
+    expect(capped.bestMove).toMatch(/^[a-h][1-8][a-h][1-8]/);
+    t = Date.now();
+    const shallow = await client.analyse({ fen, depth: 6, movetimeMs: 10000 });
+    expect(Date.now() - t).toBeLessThan(5000);
+    expect(shallow.depth).toBe(6);
+  });
   it("reports a Black mate as a negative mate score from White's point of view", async () => {
     const fen = "r5k1/5ppp/8/8/8/8/5PPP/6K1 b - - 0 1"; // Black mates with ...Ra1#
     const r = await client.analyse({ fen, depth: 8 });

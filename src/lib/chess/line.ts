@@ -62,6 +62,30 @@ export function buildLine(startFen: string, moves: Uci[]): { line: Line; error?:
   return { line: { startFen, plies } };
 }
 
+/**
+ * Same result as buildLine(startFen, moves), but reuses the plies of `prev` that match, so adding
+ * or taking back a move costs one move of work instead of replaying the whole game.
+ */
+export function extendLine(prev: Line | null, startFen: string, moves: Uci[]): Line {
+  if (!prev || prev.startFen !== startFen) return buildLine(startFen, moves).line;
+  let k = 0;
+  while (k < prev.plies.length && k < moves.length && prev.plies[k].uci === moves[k]) k++;
+  if (k === moves.length && k === prev.plies.length) return prev;
+  if (k === moves.length) return { startFen, plies: prev.plies.slice(0, k) };
+  const from = k === 0 ? startFen : prev.plies[k - 1].fenAfter;
+  const rest = buildLine(from, moves.slice(k)).line;
+  return { startFen, plies: [...prev.plies.slice(0, k), ...rest.plies] };
+}
+
+/**
+ * A tiny cache around extendLine for screens that grow a game one move at a time.
+ * Always returns the same line buildLine would; the cache only saves work.
+ */
+export function createLineCache(): (startFen: string, moves: Uci[]) => Line {
+  let last: Line | null = null;
+  return (startFen, moves) => (last = extendLine(last, startFen, moves));
+}
+
 export function fenAt(line: Line, ply: number): string {
   if (ply <= 0) return line.startFen;
   return line.plies[Math.min(ply, line.plies.length) - 1].fenAfter;

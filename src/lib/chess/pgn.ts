@@ -84,6 +84,43 @@ export interface PgnExportInput {
   result?: GameResult;
 }
 
+/**
+ * PGN for a line whose moves are already known (SAN stored in each ply), without replaying the
+ * game. Produces the same text as toPgn.
+ */
+export function pgnFromLine(line: Line, opts: { headers?: Record<string, string | undefined>; result?: GameResult } = {}): string {
+  const result = opts.result ?? "*";
+  const tags = pgnHeaders(line.startFen, opts.headers ?? {}, result);
+  const parts: string[] = [];
+  line.plies.forEach((p, i) => {
+    if (p.color === "w") parts.push(`${p.moveNumber}. ${p.san}`);
+    else parts.push(i === 0 ? `${p.moveNumber}. ... ${p.san}` : p.san);
+  });
+  const head = Object.entries(tags).map(([k, v]) => `[${k} "${v}"]`).join("\n");
+  // Matches chess.js: with no moves, the result follows the headers after a single newline.
+  if (parts.length === 0) return `${head}\n ${result}`;
+  parts.push(result);
+  return `${head}\n\n${parts.join(" ")}`;
+}
+
+function pgnHeaders(startFen: string, headers: Record<string, string | undefined>, result: GameResult): Record<string, string> {
+  const base: Record<string, string> = {
+    Event: headers.Event ?? "ChessPath game",
+    Site: headers.Site ?? "ChessPath",
+    Date: headers.Date ?? new Date().toISOString().slice(0, 10).replace(/-/g, "."),
+    Round: headers.Round ?? "-",
+    White: headers.White ?? "?",
+    Black: headers.Black ?? "?",
+    Result: result,
+  };
+  for (const [k, v] of Object.entries(headers)) if (v !== undefined && !(k in base)) base[k] = v;
+  if (startFen !== START_FEN) {
+    base.SetUp = "1";
+    base.FEN = startFen;
+  }
+  return base;
+}
+
 export function toPgn({ startFen, moves, headers = {}, result = "*" }: PgnExportInput): string {
   const chess = new Chess(startFen);
   const base: Record<string, string> = {

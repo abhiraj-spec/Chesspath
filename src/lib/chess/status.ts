@@ -1,4 +1,4 @@
-import { Chess, type Color, colorName, PIECE_VALUES, type PieceSymbol } from "./core";
+import { Chess, type Color, colorName, PIECE_VALUES, type PieceSymbol, positionKey } from "./core";
 import type { Line } from "./line";
 
 export type GameResult = "1-0" | "0-1" | "1/2-1/2" | "*";
@@ -25,26 +25,32 @@ export interface PositionStatus {
  * Status of the final position of a line. Threefold repetition needs the full history,
  * so we replay the line through one Chess instance.
  */
+/**
+ * Status after `uptoPly` plies. Works from the final position instead of replaying the game:
+ * repetitions are counted from the positions already stored in the line (same key as chess.js:
+ * placement, side to move, castling rights and a capturable en-passant square).
+ */
 export function lineStatus(line: Line, uptoPly = line.plies.length): PositionStatus {
-  const chess = new Chess(line.startFen);
-  for (let i = 0; i < uptoPly && i < line.plies.length; i++) {
-    const p = line.plies[i];
-    chess.move({ from: p.from, to: p.to, promotion: p.promotion });
-  }
-  return statusOf(chess);
+  const n = Math.min(uptoPly, line.plies.length);
+  const fen = n === 0 ? line.startFen : line.plies[n - 1].fenAfter;
+  const chess = new Chess(fen);
+  const key = positionKey(chess.fen());
+  let seen = positionKey(new Chess(line.startFen).fen()) === key ? 1 : 0;
+  for (let i = 0; i < n; i++) if (positionKey(line.plies[i].fenAfter) === key) seen++;
+  return statusOf(chess, seen >= 3);
 }
 
 export function fenStatus(fen: string): PositionStatus {
   return statusOf(new Chess(fen));
 }
 
-function statusOf(chess: Chess): PositionStatus {
+function statusOf(chess: Chess, threefold = chess.isThreefoldRepetition()): PositionStatus {
   const turn = chess.turn();
   const inCheck = chess.inCheck();
   if (chess.isCheckmate()) return { turn, inCheck, over: true, result: turn === "w" ? "0-1" : "1-0", reason: "checkmate" };
   if (chess.isStalemate()) return { turn, inCheck, over: true, result: "1/2-1/2", reason: "stalemate" };
   if (chess.isInsufficientMaterial()) return { turn, inCheck, over: true, result: "1/2-1/2", reason: "insufficient-material" };
-  if (chess.isThreefoldRepetition()) return { turn, inCheck, over: true, result: "1/2-1/2", reason: "threefold-repetition" };
+  if (threefold) return { turn, inCheck, over: true, result: "1/2-1/2", reason: "threefold-repetition" };
   if (chess.isDrawByFiftyMoves()) return { turn, inCheck, over: true, result: "1/2-1/2", reason: "fifty-move-rule" };
   return { turn, inCheck, over: false, result: "*" };
 }

@@ -14,10 +14,10 @@ import { useEngine } from "@/hooks/useEngine";
 import { useActivityTimer } from "@/hooks/useActivityTimer";
 import { LEVELS, chooseMove, levelConfig } from "@/lib/engine/strength";
 import { EngineError } from "@/lib/engine/client";
-import { buildLine, fenAt, type Line } from "@/lib/chess/line";
+import { buildLine, createLineCache, fenAt, type Line } from "@/lib/chess/line";
 import { CopyFenButton } from "@/components/board/CopyFenButton";
 import { describeResult, lineStatus, type GameResult, type TerminalReason } from "@/lib/chess/status";
-import { toPgn } from "@/lib/chess/pgn";
+import { pgnFromLine, toPgn } from "@/lib/chess/pgn";
 import { colorName, moveToUci, START_FEN } from "@/lib/chess/core";
 import { getGame, kvDelete, kvGet, kvSet, logEvent, saveGame } from "@/lib/db/repo";
 import type { ChessGameRecord } from "@/lib/db/types";
@@ -26,6 +26,10 @@ import { playMoveSound, playSound } from "@/lib/sound";
 import { downloadText, uid } from "@/lib/util";
 import { scoreToNumber } from "@/lib/engine/uci";
 import { MoveInput } from "@/components/board/MoveInput";
+// Shared by this screen: each new move costs one move of work instead of a full replay.
+const playLine = createLineCache();
+/** Longest the computer may think about one move. */
+const COMPUTER_MAX_THINK_MS = 3000;
 
 const ACTIVE_KEY = "play:active";
 
@@ -82,7 +86,7 @@ export function PlayView() {
 
   useEffect(() => () => engine.cancelAll(), [engine]);
 
-  const line: Line = useMemo(() => buildLine(START_FEN, game?.moves ?? []).line, [game?.moves]);
+  const line: Line = useMemo(() => playLine(START_FEN, game?.moves ?? []), [game?.moves]);
   const liveFen = fenAt(line, line.plies.length);
   const viewing = cursor < line.plies.length;
   const shownFen = fenAt(line, cursor);
@@ -90,7 +94,7 @@ export function PlayView() {
   const turn = liveFen.split(" ")[1] as "w" | "b";
 
   const persist = useCallback(async (g: GameState) => {
-    const { line: l } = buildLine(START_FEN, g.moves);
+    const l = playLine(START_FEN, g.moves);
     const cfg = levelConfig(g.level);
     const white = g.userColor === "w" ? "You" : `Stockfish (${cfg.name})`;
     const black = g.userColor === "b" ? "You" : `Stockfish (${cfg.name})`;
@@ -101,7 +105,7 @@ export function PlayView() {
       result: g.result,
       terminalReason: g.reason,
       status: g.status,
-      pgn: toPgn({ startFen: START_FEN, moves: l.plies.map((p) => p.uci), result: g.result, headers: { White: white, Black: black, Event: "ChessPath game vs computer", Termination: g.reason ? describeResult(g.result, g.reason) : undefined } }),
+      pgn: pgnFromLine(l, { result: g.result, headers: { White: white, Black: black, Event: "ChessPath game vs computer", Termination: g.reason ? describeResult(g.result, g.reason) : undefined } }),
       startingFen: START_FEN,
       moves: g.moves,
       createdAt: g.createdAt,
@@ -117,6 +121,9 @@ export function PlayView() {
   const finish = useCallback(
     async (g: GameState, result: GameResult, reason: TerminalReason) => {
       const done: GameState = { ...g, status: "finished", result, reason };
+      // Invalidate any computer move still pending (e.g. during its short "thinking" pause),
+      // so it cannot be played after a resignation or agreed draw and reopen the game.
+      gen.current++;
       setGame(done);
       engine.cancelAll();
       setThinking(false);
@@ -130,7 +137,7 @@ export function PlayView() {
 
   const applyMove = useCallback(
     async (g: GameState, uci: string): Promise<GameState | null> => {
-      const { line: l } = buildLine(START_FEN, g.moves);
+      const l = playLine(START_FEN, g.moves);
       const c = new Chess(fenAt(l, l.plies.length));
       let m;
       try {
@@ -140,7 +147,7 @@ export function PlayView() {
       }
       playMoveSound(m.san);
       const next: GameState = { ...g, moves: [...g.moves, moveToUci(m)] };
-      const st = lineStatus(buildLine(START_FEN, next.moves).line);
+      const st = lineStatus(playLine(START_FEN, next.moves));
       setGame(next);
       setCursor(next.moves.length);
       if (st.over) {
@@ -161,10 +168,11 @@ export function PlayView() {
       setEngineError(null);
       const started = Date.now();
       try {
-        const { line: l } = buildLine(START_FEN, g.moves);
+        const l = playLine(START_FEN, g.moves);
         const fen = fenAt(l, l.plies.length);
         const cfg = levelConfig(g.level);
-        const res = await engine.analyse({ fen, depth: cfg.depth, multipv: cfg.multipv });
+        // The time cap only matters on slow phones: elsewhere the depth is reached well before it.
+        const res = await engine.analyse({ fen, depth: cfg.depth, multipv: cfg.multipv, movetimeMs: COMPUTER_MAX_THINK_MS });
         if (myGen !== gen.current) return; // stale: position changed (undo, new game)
         const legal = new Chess(fen).moves({ verbose: true }).map((m) => moveToUci(m));
         const choice = chooseMove(res.lines, legal, cfg, fen.split(" ")[1] as "w" | "b");
@@ -218,7 +226,7 @@ export function PlayView() {
     gen.current++;
     engine.cancelAll();
     setThinking(false);
-    const { line: l } = buildLine(START_FEN, game.moves);
+    const l = playLine(START_FEN, game.moves);
     // Remove moves back to the user's previous turn.
     let n = game.moves.length;
     const lastColor = l.plies[n - 1].color;

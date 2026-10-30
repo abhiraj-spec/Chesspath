@@ -150,6 +150,19 @@ After the first build, the app was audited again against the original specificat
 - **Privacy page** (`/privacy/`) and a source-code link were added, as store listings require them and the GPL needs the source link.
 - **Test fix.** The reset e2e test navigated away before the delete transaction committed, and failed about 1 run in 3. It now waits for the confirmation and passed 8 of 8 repeated runs.
 
+## Game lag fix (sixth pass, reported by the user)
+
+- **Measured first** on an emulated Pixel 7 with the CPU slowed 4× (a typical mid-range phone). On the old build the board took **150–180 ms** to show the player's move, with main-thread freezes up to 223 ms.
+- **Cause.** Every move replayed the whole game with chess.js several times: building the move list (in three places), checking checkmate and draws, and writing the PGN record. The cost also grew with the length of the game.
+- **Fix.**
+  - The move list now grows one move at a time (`extendLine`).
+  - Checkmate and draw status is computed from the current position, with threefold repetition counted from positions already stored (`lineStatus`).
+  - The PGN is written from the stored SAN moves (`pgnFromLine`).
+  - Unit tests show each is identical to the full replay: about 14,000 positions in 100 random games including repetitions, takebacks and changed lines, and byte-identical PGN for 120 games.
+- **After.** The board shows your move in **72–78 ms** from move 10 to move 30, flat rather than growing. Mid-game freezes are 0–52 ms. Dragging a piece runs at about 60 fps (median frame 16.7 ms).
+- **Computer thinking time** is now capped at 3 s per move (`go depth N movetime 3000`). This only changes anything on slow phones. Thinking time on a real phone was not measured: CPU throttling in emulation probably does not slow the engine's worker thread.
+- **Bug found along the way.** Resigning, or ending the game by agreement, during the computer's short thinking pause could be undone when its pending move arrived, reopening the game. Ending a game now cancels pending computer moves. A new e2e test failed 3/3 before the fix and passes after it.
+
 ## Beginner usability review
 
 Walked through as someone who has never played chess:

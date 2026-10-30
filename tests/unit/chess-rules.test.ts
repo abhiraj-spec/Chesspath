@@ -259,3 +259,87 @@ describe("strict FEN validation", () => {
     expect(fenError("7k/5K2/8/8/8/8/8/Q7 b - - 0 1")).toBeNull();
   });
 });
+
+import { extendLine } from "@/lib/chess/line";
+import { pgnFromLine } from "@/lib/chess/pgn";
+
+describe("fast incremental helpers give the same results as a full replay", () => {
+  function randomGame(seed: number, plies: number, startFen?: string, shuffle = false): string[] {
+    const c = new Chess(startFen);
+    const out: string[] = [];
+    let s = seed;
+    const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    while (out.length < plies && !c.isGameOver()) {
+      let ms = c.moves({ verbose: true });
+      // "Shuffle" games move knights/kings back and forth to create repetitions.
+      if (shuffle) {
+        const quiet = ms.filter((m) => (m.piece === "n" || m.piece === "k") && !m.captured);
+        if (quiet.length) ms = quiet;
+      }
+      const m = ms[Math.floor(rnd() * ms.length)];
+      c.move(m);
+      out.push(m.from + m.to + (m.promotion ?? ""));
+    }
+    return out;
+  }
+  const starts = [START_FEN, "r3k2r/8/8/8/8/8/8/R3K2R b KQkq - 0 1", "8/2k5/8/8/3K4/8/4P3/8 w - - 0 1"];
+
+  it("lineStatus matches chess.js on every position of 100 random games, including repetitions", () => {
+    let repetitions = 0;
+    for (let g = 0; g < 100; g++) {
+      const start = starts[g % starts.length];
+      const moves = randomGame(g + 1, 140, start, g % 2 === 0);
+      const { line } = buildLine(start, moves);
+      const ref = new Chess(line.startFen);
+      for (let n = 0; n <= line.plies.length; n++) {
+        if (n > 0) ref.move({ from: line.plies[n - 1].from, to: line.plies[n - 1].to, promotion: line.plies[n - 1].promotion });
+        const a = lineStatus(line, n);
+        const b = { over: ref.isGameOver(), mate: ref.isCheckmate(), stale: ref.isStalemate(), three: ref.isThreefoldRepetition(), insufficient: ref.isInsufficientMaterial() };
+        expect(a.over, `game ${g} ply ${n}`).toBe(b.over);
+        if (b.mate) expect(a.reason).toBe("checkmate");
+        else if (b.stale) expect(a.reason).toBe("stalemate");
+        else if (b.insufficient) expect(a.reason).toBe("insufficient-material");
+        else if (b.three) {
+          expect(a.reason).toBe("threefold-repetition");
+          repetitions++;
+        }
+      }
+    }
+    expect(repetitions, "the test must actually exercise repetitions").toBeGreaterThan(5);
+    // A guaranteed threefold repetition (knights out and back twice), checked at every ply.
+    const rep = buildLine(START_FEN, ["g1f3", "g8f6", "f3g1", "f6g8", "g1f3", "g8f6", "f3g1", "f6g8"]).line;
+    const ref = new Chess();
+    rep.plies.forEach((p, i) => {
+      ref.move(p.san);
+      expect(lineStatus(rep, i + 1).reason === "threefold-repetition", `ply ${i + 1}`).toBe(ref.isThreefoldRepetition());
+    });
+    expect(lineStatus(rep).reason).toBe("threefold-repetition");
+  }, 180_000);
+
+  it("extendLine equals buildLine when adding, taking back or changing moves", () => {
+    for (let g = 0; g < 60; g++) {
+      const moves = randomGame(1000 + g, 80);
+      let line = extendLine(null, START_FEN, []);
+      for (let n = 1; n <= moves.length; n++) {
+        line = extendLine(line, START_FEN, moves.slice(0, n));
+        if (n % 9 === 0) line = extendLine(line, START_FEN, moves.slice(0, n - 2)); // takeback
+        if (n % 9 === 0) line = extendLine(line, START_FEN, moves.slice(0, n));
+      }
+      expect(line).toEqual(buildLine(START_FEN, moves).line);
+      const other = randomGame(5000 + g, 30);
+      expect(extendLine(line, START_FEN, other)).toEqual(buildLine(START_FEN, other).line);
+    }
+  });
+
+  it("pgnFromLine produces exactly the same PGN text as toPgn", () => {
+    for (let g = 0; g < 120; g++) {
+      const start = starts[g % starts.length];
+      const moves = randomGame(2000 + g, 20 + (g % 90), start);
+      const { line } = buildLine(start, moves);
+      const headers = { White: "You", Black: "Stockfish (Easy)", Event: "ChessPath game vs computer", Termination: g % 3 ? undefined : "White won by checkmate" };
+      const result = (["*", "1-0", "0-1", "1/2-1/2"] as const)[g % 4];
+      expect(pgnFromLine(line, { headers, result })).toBe(toPgn({ startFen: start, moves, headers, result }));
+    }
+    expect(pgnFromLine(buildLine(START_FEN, []).line, {})).toBe(toPgn({ startFen: START_FEN, moves: [] }));
+  });
+});

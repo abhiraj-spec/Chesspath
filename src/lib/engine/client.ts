@@ -222,7 +222,9 @@ export class EngineClient {
     }
     this.send(`position fen ${job.opts.fen}`);
     job.started = true;
-    const go = job.opts.movetimeMs ? `go movetime ${job.opts.movetimeMs}` : `go depth ${job.opts.depth ?? 12}`;
+    // With both a depth and a time limit, Stockfish stops at whichever comes first.
+    const { depth, movetimeMs } = job.opts;
+    const go = movetimeMs && depth ? `go depth ${depth} movetime ${movetimeMs}` : movetimeMs ? `go movetime ${movetimeMs}` : `go depth ${depth ?? 12}`;
     this.send(go);
     const budget = (job.opts.movetimeMs ?? 0) + (this.opts.searchGraceMs ?? 30000) + (job.opts.depth ?? 0) * 1500;
     job.timer = setTimeout(() => {
