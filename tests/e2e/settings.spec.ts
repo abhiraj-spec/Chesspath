@@ -41,6 +41,8 @@ test("data export and confirmed reset", async ({ page }) => {
   await expect(del).toBeDisabled();
   await page.getByLabel("Confirmation").fill("RESET");
   await del.click();
+  // Wait for the confirmation: leaving the page earlier would cancel the delete transaction.
+  await expect(page.getByText("All data deleted.")).toBeVisible();
   await page.goto("/learn/");
   await expect(page.getByRole("link", { name: /^The rook Straight/ })).not.toContainText("In progress");
 });

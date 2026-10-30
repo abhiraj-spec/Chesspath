@@ -6,6 +6,7 @@ import "./globals.css";
 import { AppShell } from "@/components/layout/AppShell";
 import { ToastProvider } from "@/components/ui/Toast";
 import { THEME_BOOTSTRAP } from "@/lib/settings";
+import { INSTALL_BOOTSTRAP } from "@/lib/install-bootstrap";
 import { ServiceWorkerRegistrar } from "@/components/layout/ServiceWorkerRegistrar";
 import { StorageGuard } from "@/components/layout/StorageGuard";
 
@@ -14,8 +15,10 @@ export const metadata: Metadata = {
   description:
     "Learn chess from zero: interactive lessons, tactics puzzles, games against Stockfish, opening practice and game analysis. Works offline, no account needed.",
   manifest: "/manifest.webmanifest",
-  icons: { icon: "/icon.svg", apple: "/icon-192.png" },
+  icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
   applicationName: "ChessPath",
+  // Installed on an iPhone/iPad Home Screen: open full screen, named "ChessPath".
+  appleWebApp: { capable: true, title: "ChessPath", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {
@@ -32,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
+        <script dangerouslySetInnerHTML={{ __html: INSTALL_BOOTSTRAP }} />
       </head>
       <body>
         <ToastProvider>

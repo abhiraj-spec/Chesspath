@@ -11,6 +11,7 @@ const SECTIONS = [
   { path: "/progress/", heading: "Your progress" },
   { path: "/settings/", heading: "Settings" },
   { path: "/glossary/", heading: "Glossary" },
+  { path: "/privacy/", heading: "Privacy policy" },
   { path: "/openings/italian/", heading: "Italian Game" },
   { path: "/learn/forks/", heading: "Forks" },
 ];

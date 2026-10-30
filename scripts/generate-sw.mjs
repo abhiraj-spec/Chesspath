@@ -24,7 +24,8 @@ const hash = createHash("sha256");
 const urls = [];
 for (const f of files.sort()) {
   const rel = "/" + relative(out, f).split(sep).join("/");
-  if (rel === "/sw.js" || rel.endsWith(".txt") || rel.endsWith(".map")) continue;
+  // Store-style screenshots are only used by the install dialog, so they are not cached for offline use.
+  if (rel === "/sw.js" || rel.endsWith(".txt") || rel.endsWith(".map") || rel.startsWith("/screenshots/")) continue;
   hash.update(rel);
   hash.update(readFileSync(f));
   // Pages are requested as /path/ (trailingSlash export), so cache the directory URL.

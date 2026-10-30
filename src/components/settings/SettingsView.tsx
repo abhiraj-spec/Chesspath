@@ -5,6 +5,7 @@ import { Download, FileUp, RotateCcw, Trash2 } from "lucide-react";
 import { useGames, useProfile } from "@/hooks/data";
 import { exportAll, importAll, kvSet, resetAllData, saveProfile } from "@/lib/db/repo";
 import { DataSafety } from "./DataSafety";
+import { InstallSection } from "@/components/layout/InstallApp";
 import { resetSettings, updateSettings, useSettings, type Settings } from "@/lib/settings";
 import { Card, CardHeader, Dialog, Kbd, PageHeader, Segmented, Select, Switch } from "@/components/ui/primitives";
 import { Button } from "@/components/ui/Button";
@@ -157,6 +158,11 @@ export function SettingsView() {
       </Card>
 
       <Card className="p-5">
+        <CardHeader title="Install the app" />
+        <InstallSection />
+      </Card>
+
+      <Card className="p-5">
         <CardHeader title="Your data" description="Everything is stored only in this browser. Nothing is uploaded." />
         <DataSafety />
         <div className="mt-4 flex flex-wrap gap-2">
@@ -211,7 +217,15 @@ export function SettingsView() {
           <li>Engine: {ENGINE_NAME}, running locally in your browser (GPL-3.0).</li>
           <li>Puzzles: Lichess puzzle database (CC0), re-verified with Stockfish. Opening names: Lichess chess-openings (CC0).</li>
           <li>Piece set: “cburnett” by Colin M.L. Burnett (GPLv2+). Fonts: Inter, Source Serif 4, JetBrains Mono (OFL).</li>
-          <li>Privacy: no account, no tracking, no analytics leave this device. Data schema version {SCHEMA_VERSION}.</li>
+          <li>
+            Privacy: no account, no tracking, no analytics leave this device (<a href="/privacy/" className="underline">privacy policy</a>). Data schema version {SCHEMA_VERSION}.
+          </li>
+          <li>
+            Free software (GPL-3.0). Source code:{" "}
+            <a href="https://github.com/abhiraj-spec/Chesspath" className="underline" rel="noopener noreferrer" target="_blank">
+              github.com/abhiraj-spec/Chesspath
+            </a>
+          </li>
           <li>ChessPath does not award official ratings; level labels are descriptive.</li>
         </ul>
       </Card>

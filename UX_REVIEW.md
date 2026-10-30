@@ -138,6 +138,18 @@ After the first build, the app was audited again against the original specificat
 - **New test.** A phone e2e test opens the longest lesson name, sets text to 130%, and checks ten pages. It **fails on the previous code** and passes now.
 - **Remaining.** In landscape, and at very large text sizes, the board on the puzzle and opening pages starts lower down, so part of it needs a short scroll. Nothing is cut off. This was not tested on a physical phone.
 
+## Installable app (fifth pass)
+
+- **Install support.** Maskable icon, with artwork checked to be inside the safe zone. iPhone home-screen icon and `appleWebApp` metadata. Manifest `id`, categories, shortcuts and install screenshots (not cached for offline use).
+- **Install UI.** An Install button (Chrome, Edge, Android) uses the browser's own dialog. On iPhone the app shows Add to Home Screen steps instead. Both appear on the dashboard, where they can be dismissed, and in Settings, which shows "installed" once installed.
+- **Checks run.**
+  - Chrome's own installability check (`Page.getInstallabilityErrors`) reports no errors on the production build.
+  - The manifest parses without errors.
+  - 3 e2e tests use a dispatched install event, because headless browsers never fire the real one.
+- **Not tested.** A real install on a physical phone.
+- **Privacy page** (`/privacy/`) and a source-code link were added, as store listings require them and the GPL needs the source link.
+- **Test fix.** The reset e2e test navigated away before the delete transaction committed, and failed about 1 run in 3. It now waits for the confirmation and passed 8 of 8 repeated runs.
+
 ## Beginner usability review
 
 Walked through as someone who has never played chess:

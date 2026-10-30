@@ -1,5 +1,6 @@
 "use client";
 
+import { InstallBanner } from "@/components/layout/InstallApp";
 import Link from "next/link";
 import { useMemo } from "react";
 import { ArrowRight, BookOpen, CheckCircle2, Circle, Clock, EyeOff, Flame, Lightbulb, LibraryBig, Microscope, Puzzle, Repeat, RotateCcw, Sparkles, Swords, Target } from "lucide-react";
@@ -148,6 +149,8 @@ export function Dashboard() {
           </ButtonLink>
         </div>
       </Card>
+
+      <InstallBanner />
 
       <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
         {/* Today's plan */}

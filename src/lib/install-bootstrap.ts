@@ -1,0 +1,2 @@
+/** Inlined in <head> (server layout): catches the install events before React starts. See install.ts. */
+export const INSTALL_BOOTSTRAP = `(function(){window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();window.__cpInstall=e;window.dispatchEvent(new Event("cp-install-change"))});window.addEventListener("appinstalled",function(){window.__cpInstall=null;window.__cpInstalled=true;window.dispatchEvent(new Event("cp-install-change"))})})();`;

@@ -56,6 +56,8 @@ npm start            # serves out/ on http://localhost:3000 (set PORT to change)
 
 New to all this on Windows? See [WINDOWS_SETUP.md](WINDOWS_SETUP.md).
 
+To let people install it as an app (from the website, the Microsoft Store or Google Play), see [STORE_PUBLISHING.md](STORE_PUBLISHING.md).
+
 ## Quality commands
 
 ```bash
