@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { expectNoHorizontalOverflow } from "./helpers";
+import { expectNoElementPastEdge, expectNoHorizontalOverflow } from "./helpers";
 
 const SECTIONS = [
   { path: "/", heading: /Learn chess, one clear step at a time/ },
@@ -105,4 +105,18 @@ test("on touch screens the page scrolls when swiping across empty board squares,
   // e4/e5 are empty at the start; e1 holds White's king (the user's piece).
   expect(await swipe(box.x + box.width * (4.5 / 8), box.y + box.height * 0.5)).toBeGreaterThan(0);
   expect(await swipe(box.x + box.width * (4.5 / 8), box.y + box.height * (7.5 / 8))).toBe(0);
+});
+
+test("phone screens fit with larger system text and long lesson names", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "phone-only check");
+  // The longest lesson title makes the "Continue: …" buttons as long as they get.
+  await page.goto("/learn/lucena-philidor/");
+  await page.getByRole("button", { name: "Start lesson" }).click();
+  for (const path of ["/", "/learn/", "/puzzles/", "/play/", "/openings/", "/openings/italian/", "/analysis/", "/progress/", "/settings/", "/onboarding/"]) {
+    await page.goto(path);
+    // Simulate a phone set to 130% text size.
+    await page.addStyleTag({ content: "html { font-size: 130% !important; }" });
+    await page.waitForTimeout(300);
+    await expectNoElementPastEdge(page);
+  }
 });

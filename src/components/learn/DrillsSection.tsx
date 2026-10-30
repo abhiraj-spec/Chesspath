@@ -17,7 +17,7 @@ export function DrillsSection() {
         </h2>
         <p className="t-small mt-0.5 max-w-2xl text-muted">Play key endgame positions out against the engine. A drill only counts when the goal is actually reached on the board.</p>
       </div>
-      <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {DRILLS.map((d) => {
           const wins = (attempts ?? []).filter((a) => a.kind === "drill" && a.refId === d.id && a.solved).length;
           return (

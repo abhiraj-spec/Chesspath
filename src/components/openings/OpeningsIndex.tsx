@@ -44,7 +44,7 @@ export function OpeningsIndex() {
           </p>
         </div>
       )}
-      <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {OPENINGS.map((o) => {
           const learned = o.variations.filter((v) => (progress?.get(`${o.id}:${v.id}`)?.successfulRecalls ?? 0) > 0).length;
           const c = new Chess();

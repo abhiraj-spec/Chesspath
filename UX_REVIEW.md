@@ -126,6 +126,18 @@ After the first build, the app was audited again against the original specificat
 - **Known gap.** Positional play (module D) is still 4 lessons and mostly multiple choice. It is now the thinnest module.
 - **Data safety.** The app now asks the browser to keep its data (`navigator.storage.persist()`) once a profile exists. Settings states whether that was granted and when the last backup was exported. Whether Safari or iPhone grants it was not tested.
 
+## Phone fit fix (fourth pass, reported by the user on a real phone)
+
+- **Cause.** Every button had `whitespace-nowrap` and a fixed height, so a long label never wrapped. One example is "Resume: Lucena and Philidor: the two rook endgames to know" on the curriculum page. The page then became wider than the screen, so the phone zoomed out or let the page slide sideways. Dropdowns, badges and 25 grids without a base column template could grow past the edge the same way, especially with larger system text.
+- **Fix.**
+  - Buttons wrap, and use a minimum height instead of a fixed height.
+  - Dropdowns, badges and grids can shrink.
+  - `html, body { overflow-x: clip }` is a safety net, so any future overflow can't make the whole page zoom out.
+- **Why earlier tests missed it.** They used default text size and lesson names that happened to fit.
+- **How it was checked.** Every main page was measured element by element at 320, 360, 375, 390, 412 and 430 px, with text at 130% and 150%, and in landscape. Nothing extends past the screen edge.
+- **New test.** A phone e2e test opens the longest lesson name, sets text to 130%, and checks ten pages. It **fails on the previous code** and passes now.
+- **Remaining.** In landscape, and at very large text sizes, the board on the puzzle and opening pages starts lower down, so part of it needs a short scroll. Nothing is cut off. This was not tested on a physical phone.
+
 ## Beginner usability review
 
 Walked through as someone who has never played chess:

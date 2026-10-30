@@ -8,7 +8,7 @@ import { cn } from "@/lib/util";
  */
 export function TrainerLayout({ board, panel, above, className }: { board: ReactNode; panel: ReactNode; above?: ReactNode; className?: string }) {
   return (
-    <div className={cn("grid gap-5 md:grid-cols-[minmax(0,1fr)_minmax(17rem,20rem)] md:items-start lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)]", className)}>
+    <div className={cn("grid grid-cols-1 gap-5 md:grid-cols-[minmax(0,1fr)_minmax(17rem,20rem)] md:items-start lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)]", className)}>
       <div className="min-w-0">
         {above}
         <div className="mx-auto w-full max-w-[min(100%,calc(100dvh-10rem))] md:max-w-[min(100%,calc(100dvh-8rem))] lg:max-w-[min(100%,calc(100dvh-7rem))]">{board}</div>

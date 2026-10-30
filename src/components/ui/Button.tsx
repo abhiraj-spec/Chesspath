@@ -9,7 +9,7 @@ export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger" | "subt
 export type ButtonSize = "sm" | "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-50 select-none whitespace-nowrap";
+  "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-50 select-none max-w-full text-center leading-tight";
 const variants: Record<ButtonVariant, string> = {
   primary: "bg-accent text-accent-contrast hover:bg-accent-hover active:translate-y-px shadow-[var(--shadow-card)]",
   secondary: "border border-border-strong bg-surface text-fg hover:bg-surface-2 active:bg-surface-3",
@@ -18,9 +18,10 @@ const variants: Record<ButtonVariant, string> = {
   danger: "bg-danger text-white hover:opacity-90 active:translate-y-px",
 };
 const sizes: Record<ButtonSize, string> = {
-  sm: "h-8 px-3 text-[0.8125rem]",
-  md: "h-10 px-4 text-[0.9rem]",
-  lg: "h-12 px-5 text-[0.975rem]",
+  // min-height (not a fixed height) so a long label can wrap onto a second line on narrow screens.
+  sm: "min-h-8 px-3 py-1 text-[0.8125rem]",
+  md: "min-h-10 px-4 py-1.5 text-[0.9rem]",
+  lg: "min-h-12 px-5 py-2 text-[0.975rem]",
 };
 
 export function buttonClass(variant: ButtonVariant = "primary", size: ButtonSize = "md", className?: string) {

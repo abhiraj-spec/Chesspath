@@ -136,6 +136,13 @@ html {
   text-size-adjust: 100%;
 }
 
+/* Safety net: if anything is ever wider than a phone screen, clip it instead of letting the
+   whole page zoom out or slide sideways. (clip, unlike hidden, keeps sticky headers working.) */
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   background: var(--bg);
   color: var(--text);

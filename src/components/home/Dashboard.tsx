@@ -82,7 +82,7 @@ export function Dashboard() {
             Personalise (1 min)
           </ButtonLink>
         </div>
-        <div className="mt-10 grid gap-3 sm:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
           {[
             { icon: BookOpen, title: `${ALL_LESSONS.length} interactive lessons`, text: "From how the pieces move to rook endgames." },
             { icon: Puzzle, title: "Adaptive puzzles", text: "Verified positions that adapt to your results." },
@@ -244,7 +244,7 @@ export function Dashboard() {
             </p>
           </Card>
         ) : (
-          <ul className="grid gap-3 md:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-3 md:grid-cols-3">
             {recs.map((r) => (
               <li key={r.id}>
                 <Link href={r.href} className="flex h-full flex-col rounded-[var(--radius-lg)] border border-border bg-surface p-4 shadow-[var(--shadow-card)] hover:border-accent/50">
@@ -290,7 +290,7 @@ function PlanRow({ block, onHide }: { block: PlanBlock; onHide: () => void }) {
           </ButtonLink>
         )}
         {!block.done && (
-          <button type="button" onClick={onHide} className="grid h-8 w-8 place-items-center rounded-[var(--radius-sm)] text-subtle hover:bg-surface-2 hover:text-fg" aria-label={`Skip “${block.title}” for today`} title="Skip for today">
+          <button type="button" onClick={onHide} className="grid grid-cols-1 h-8 w-8 place-items-center rounded-[var(--radius-sm)] text-subtle hover:bg-surface-2 hover:text-fg" aria-label={`Skip “${block.title}” for today`} title="Skip for today">
             <EyeOff className="h-4 w-4" aria-hidden />
           </button>
         )}

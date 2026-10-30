@@ -480,7 +480,7 @@ export function Chessboard({
           />
         )}
         {!position.ok && (
-          <div className="absolute inset-0 grid place-items-center bg-surface/90 p-4 text-center t-small text-danger">This position could not be displayed.</div>
+          <div className="absolute inset-0 grid grid-cols-1 place-items-center bg-surface/90 p-4 text-center t-small text-danger">This position could not be displayed.</div>
         )}
       </div>
       {promotion && <PromotionPicker color={promotion.color} onChoose={choosePromotion} />}
@@ -540,7 +540,7 @@ function PromotionPicker({ color, onChoose }: { color: Color; onChoose: (p: Piec
   const options: PieceSymbol[] = ["q", "r", "b", "n"];
   return (
     <div
-      className="absolute inset-0 z-30 grid place-items-center rounded-[var(--radius-md)] bg-black/45 p-3"
+      className="absolute inset-0 z-30 grid grid-cols-1 place-items-center rounded-[var(--radius-md)] bg-black/45 p-3"
       role="dialog"
       aria-modal="true"
       aria-label="Choose a piece for promotion"

@@ -121,7 +121,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </Link>
         <div className="flex items-center gap-1">
           {offline && <WifiOff className="h-4 w-4 text-muted" aria-label="Offline" />}
-          <Link href="/settings/" className="grid h-10 w-10 place-items-center rounded-[var(--radius-md)] text-muted hover:bg-surface-2" aria-label="Settings">
+          <Link href="/settings/" className="grid grid-cols-1 h-10 w-10 place-items-center rounded-[var(--radius-md)] text-muted hover:bg-surface-2" aria-label="Settings">
             <Settings className="h-5 w-5" aria-hidden />
           </Link>
         </div>

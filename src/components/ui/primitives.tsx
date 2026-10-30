@@ -40,7 +40,7 @@ const tones: Record<Tone, string> = {
 
 export function Badge({ tone = "neutral", children, className, icon }: { tone?: Tone; children: ReactNode; className?: string; icon?: ReactNode }) {
   return (
-    <span className={cn("inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-[0.75rem] font-medium leading-5", tones[tone], className)}>
+    <span className={cn("inline-flex max-w-full items-center gap-1 rounded-full border px-2 py-0.5 text-[0.75rem] font-medium leading-5", tones[tone], className)}>
       {icon}
       {children}
     </span>
@@ -120,7 +120,7 @@ export function PageSkeleton() {
     <div className="space-y-4" aria-busy="true" aria-label="Loading">
       <Skeleton className="h-8 w-56" />
       <Skeleton className="h-4 w-80 max-w-full" />
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Skeleton className="h-32" />
         <Skeleton className="h-32" />
       </div>
@@ -278,7 +278,7 @@ export function Select({ label, value, onChange, options, id, hideLabel }: { lab
   const autoId = useId();
   const sid = id ?? autoId;
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex min-w-0 max-w-full flex-col gap-1">
       <label htmlFor={sid} className={cn("t-small font-medium text-muted", hideLabel && "sr-only")}>
         {label}
       </label>
@@ -286,7 +286,7 @@ export function Select({ label, value, onChange, options, id, hideLabel }: { lab
         id={sid}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="h-10 rounded-[var(--radius-md)] border border-border-strong bg-surface px-3 text-[0.9rem] text-fg"
+        className="h-10 min-w-0 max-w-full rounded-[var(--radius-md)] border border-border-strong bg-surface px-3 text-[0.9rem] text-fg"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>

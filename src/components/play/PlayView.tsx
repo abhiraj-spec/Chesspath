@@ -307,7 +307,7 @@ export function PlayView() {
             ]}
           />
           <h2 className="t-card mt-6">Difficulty</h2>
-          <div className="mt-2 grid gap-2 sm:grid-cols-5" role="radiogroup" aria-label="Difficulty">
+          <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-5" role="radiogroup" aria-label="Difficulty">
             {LEVELS.map((l) => (
               <button
                 key={l.level}
@@ -406,7 +406,7 @@ export function PlayView() {
               <div className="animate-fade-in mt-3 rounded-[var(--radius-md)] border border-border bg-surface-2 p-4" data-testid="game-over">
                 <p className="t-section">{game.result === "1/2-1/2" ? "Draw" : youWon ? "You won!" : "Stockfish won"}</p>
                 <p className="t-small mt-1 text-muted">{describeResult(game.result, game.reason)}. The game is saved in your library.</p>
-                <div className="mt-3 grid gap-2">
+                <div className="mt-3 grid grid-cols-1 gap-2">
                   <ButtonLink href={`/analysis/?game=${game.id}`} icon={<Microscope className="h-4 w-4" aria-hidden />}>
                     Review this game
                   </ButtonLink>

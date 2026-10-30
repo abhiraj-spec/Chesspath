@@ -62,8 +62,8 @@ function Inner({ openingId }: { openingId: string }) {
             {opening.eco} · you play {opening.side === "w" ? "White" : "Black"} · {opening.level}
           </p>
         </div>
-        <div className="flex flex-wrap items-end gap-3">
-          <div className="w-64 max-w-full">
+        <div className="flex min-w-0 max-w-full flex-wrap items-end gap-3">
+          <div className="w-64 min-w-0 max-w-full">
             <Select label="Line" value={variation.id} onChange={changeVariation} options={opening.variations.map((v) => ({ value: v.id, label: v.name }))} />
           </div>
           <Segmented
@@ -82,7 +82,7 @@ function Inner({ openingId }: { openingId: string }) {
       ) : (
         <RecallMode key={variation.id} opening={opening} variation={variation} />
       )}
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
         <InfoCard title="Typical structure" items={[opening.structure]} />
         <InfoCard title="Plans" items={opening.plans} />
         <InfoCard title="Tactical motifs" items={opening.motifs} />
@@ -170,7 +170,7 @@ function StudyMode({ opening, variation, onRecall }: { opening: Opening; variati
               <p className="t-body text-muted">Step through the line. Each move comes with the idea behind it. The blue arrow shows the next move.</p>
             )}
           </div>
-          <div className="mt-3 flex items-center gap-2">
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             <Button variant="secondary" size="sm" onClick={() => setI((x) => Math.max(0, x - 1))} disabled={i === 0} icon={<ChevronLeft className="h-4 w-4" aria-hidden />}>
               Back
             </Button>

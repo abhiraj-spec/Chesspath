@@ -106,7 +106,7 @@ export function LibraryView() {
   return (
     <div>
       <PageHeader eyebrow="Analysis" title="Review games" description="Import a game or pick one you played here. Stockfish analyses it on your device and ChessPath explains the key moments in plain language." />
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
         <Card className="p-5">
           <h2 className="t-card">Import a game (PGN)</h2>
           <label htmlFor="pgn-input" className="t-small mt-1 block text-muted">

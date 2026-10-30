@@ -210,7 +210,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         <BackLink />
         <Card className="animate-fade-in p-6 sm:p-8">
           <div className="flex items-start gap-4">
-            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-success-soft">
+            <div className="grid grid-cols-1 h-12 w-12 shrink-0 place-items-center rounded-full bg-success-soft">
               <Trophy className="h-6 w-6 text-success" aria-hidden />
             </div>
             <div>

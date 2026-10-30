@@ -62,7 +62,7 @@ export function CurriculumView() {
                   {done}/{lessons.length} complete
                 </span>
               </div>
-              <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
                 {lessons.map((l) => (
                   <li key={l.id}>
                     <LessonCard id={l.id} title={l.title} summary={l.summary} minutes={l.estimatedMinutes} difficulty={l.difficulty} progress={progress?.get(l.id)} loading={loading} recommended={next?.id === l.id} />

@@ -85,7 +85,7 @@ export function ProgressView() {
         <Tile label="Review queue" value={`${due.length}`} sub={due.length ? "due now" : "nothing due"} />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card className="p-5">
           <CardHeader title="Training time, last 14 days" description="Minutes of active practice per day" />
           <div className="mt-4">
@@ -135,7 +135,7 @@ export function ProgressView() {
         </div>
       </Card>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card className="p-5">
           <CardHeader title="Weak spots" description="Detected from repeated exercise results and analysed games" />
           {weaknesses.length === 0 ? (
@@ -246,7 +246,7 @@ export function ProgressView() {
       {themeRows.length > 0 && (
         <Card className="p-5">
           <CardHeader title="Puzzle performance by theme" description="Recent score per tactical theme" />
-          <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+          <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
             {themeRows.map((s) => (
               <li key={s.skill}>
                 <div className="t-small mb-1 flex justify-between">
@@ -262,7 +262,7 @@ export function ProgressView() {
         </Card>
       )}
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <Card className="p-5">
           <CardHeader title="Games vs computer" />
           {results.total === 0 ? (

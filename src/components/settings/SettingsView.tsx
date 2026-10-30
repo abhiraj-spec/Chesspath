@@ -101,7 +101,7 @@ export function SettingsView() {
 
       <Card className="p-5">
         <CardHeader title="Training" />
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Select
             label="Daily practice target"
             value={String(profile?.dailyTargetMinutes ?? 15)}
@@ -187,7 +187,7 @@ export function SettingsView() {
 
       <Card className="p-5">
         <CardHeader title="Keyboard shortcuts" />
-        <dl className="t-small mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+        <dl className="t-small mt-3 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
           {[
             ["Tab to the board, then arrow keys", "Move the square cursor"],
             ["Enter / Space on the board", "Select a piece, then a destination"],

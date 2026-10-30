@@ -167,7 +167,7 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
         </p>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,26rem)] lg:items-start">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,26rem)] lg:items-start">
         <div className="min-w-0">
           <div className="mx-auto flex w-full max-w-[min(100%,calc(100dvh-10rem))] gap-2 lg:max-w-[min(100%,calc(100dvh-8rem))]">
             {settings.showEvalBar && complete !== undefined && (

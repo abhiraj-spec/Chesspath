@@ -97,7 +97,7 @@ export function Onboarding() {
     const lesson = getLesson(lessonId)!;
     return (
       <div className="mx-auto max-w-xl pt-6 sm:pt-10">
-        <div className="mb-4 grid h-12 w-12 place-items-center rounded-full bg-success-soft">
+        <div className="mb-4 grid grid-cols-1 h-12 w-12 place-items-center rounded-full bg-success-soft">
           <Check className="h-6 w-6 text-success" aria-hidden />
         </div>
         <h1 className="t-page">You&apos;re all set</h1>
@@ -245,7 +245,7 @@ function OptionList({ name, value, onChange, options, columns }: { name: string;
   return (
     <fieldset>
       <legend className="sr-only">{name}</legend>
-      <div className={cn("grid gap-2.5", columns && "sm:grid-cols-2")}>
+      <div className={cn("grid grid-cols-1 gap-2.5", columns && "sm:grid-cols-2")}>
         {options.map((o) => {
           const checked = value === o.value;
           return (
@@ -257,7 +257,7 @@ function OptionList({ name, value, onChange, options, columns }: { name: string;
               )}
             >
               <input type="radio" name={name} value={o.value} checked={checked} onChange={() => onChange(o.value)} className="sr-only" />
-              <span className={cn("mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border-2", checked ? "border-accent bg-accent" : "border-border-strong")} aria-hidden>
+              <span className={cn("mt-0.5 grid grid-cols-1 h-5 w-5 shrink-0 place-items-center rounded-full border-2", checked ? "border-accent bg-accent" : "border-border-strong")} aria-hidden>
                 {checked && <Check className="h-3 w-3 text-accent-contrast" strokeWidth={3} />}
               </span>
               <span>
