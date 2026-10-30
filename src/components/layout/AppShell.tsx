@@ -89,25 +89,25 @@ export function AppShell({ children }: { children: ReactNode }) {
       </a>
 
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-dvh w-60 shrink-0 flex-col border-r border-border bg-surface px-3 py-5 lg:flex" aria-label="Primary">
+      <aside className="sticky top-0 hidden h-dvh w-60 shrink-0 flex-col bg-brand px-3 py-5 lg:flex" aria-label="Primary">
         <Link href="/" className="mb-6 flex items-center gap-2.5 px-2" aria-label="ChessPath home">
-          <Logo />
+          <Logo onBrand />
         </Link>
         <nav aria-label="Main sections">
           <ul className="space-y-0.5">
             {NAV.map((item) => (
               <li key={item.href}>
-                <NavLink {...item} active={isActive(pathname, item.href)} />
+                <NavLink {...item} active={isActive(pathname, item.href)} onBrand />
               </li>
             ))}
           </ul>
         </nav>
-        <div className="mt-auto space-y-0.5 border-t border-border pt-3">
+        <div className="mt-auto space-y-0.5 border-t border-white/10 pt-3">
           {SECONDARY.map((item) => (
-            <NavLink key={item.href} {...item} active={isActive(pathname, item.href)} />
+            <NavLink key={item.href} {...item} active={isActive(pathname, item.href)} onBrand />
           ))}
           {offline && (
-            <p className="t-small mt-2 flex items-center gap-2 px-3 text-muted">
+            <p className="t-small mt-2 flex items-center gap-2 px-3 text-on-brand-muted">
               <WifiOff className="h-4 w-4" aria-hidden /> Offline: saved content still works
             </p>
           )}
@@ -115,13 +115,13 @@ export function AppShell({ children }: { children: ReactNode }) {
       </aside>
 
       {/* Mobile top bar */}
-      <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-border bg-surface/95 px-4 backdrop-blur lg:hidden">
+      <header className="sticky top-0 z-30 flex h-14 items-center justify-between bg-brand px-4 shadow-[var(--shadow-card)] lg:hidden">
         <Link href="/" aria-label="ChessPath home" className="flex items-center gap-2">
-          <Logo compact />
+          <Logo compact onBrand />
         </Link>
         <div className="flex items-center gap-1">
-          {offline && <WifiOff className="h-4 w-4 text-muted" aria-label="Offline" />}
-          <Link href="/settings/" className="grid grid-cols-1 h-10 w-10 place-items-center rounded-[var(--radius-md)] text-muted hover:bg-surface-2" aria-label="Settings">
+          {offline && <WifiOff className="h-4 w-4 text-on-brand-muted" aria-label="Offline" />}
+          <Link href="/settings/" className="grid grid-cols-1 h-10 w-10 place-items-center rounded-[var(--radius-md)] text-on-brand-muted hover:bg-white/10 hover:text-on-brand" aria-label="Settings">
             <Settings className="h-5 w-5" aria-hidden />
           </Link>
         </div>
@@ -142,8 +142,9 @@ export function AppShell({ children }: { children: ReactNode }) {
                 <Link
                   href={item.href}
                   aria-current={active ? "page" : undefined}
-                  className={cn("flex h-16 flex-col items-center justify-center gap-1 text-[0.7rem] font-medium", active ? "text-accent" : "text-muted")}
+                  className={cn("relative flex h-16 flex-col items-center justify-center gap-1 text-[0.7rem] font-medium", active ? "font-semibold text-accent" : "text-muted")}
                 >
+                  {active && <span className="absolute top-0 h-1 w-9 rounded-b-full bg-gold" aria-hidden />}
                   <Icon className="h-5 w-5" aria-hidden />
                   {item.label}
                 </Link>
@@ -173,17 +174,24 @@ export function AppShell({ children }: { children: ReactNode }) {
   );
 }
 
-function NavLink({ href, label, icon: Icon, active }: { href: string; label: string; icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>; active: boolean }) {
+function NavLink({ href, label, icon: Icon, active, onBrand }: { href: string; label: string; icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>; active: boolean; onBrand?: boolean }) {
   return (
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "flex items-center gap-3 rounded-[var(--radius-md)] px-3 py-2 text-[0.9rem] font-medium transition-colors",
-        active ? "bg-accent-soft text-accent-soft-fg" : "text-muted hover:bg-surface-2 hover:text-fg",
+        "relative flex items-center gap-3 rounded-[var(--radius-md)] px-3 py-2 text-[0.9rem] font-medium transition-colors",
+        onBrand
+          ? active
+            ? "bg-white/10 text-on-brand"
+            : "text-on-brand-muted hover:bg-white/5 hover:text-on-brand"
+          : active
+            ? "bg-accent-soft text-accent-soft-fg"
+            : "text-muted hover:bg-surface-2 hover:text-fg",
       )}
     >
-      <Icon className="h-[18px] w-[18px]" aria-hidden />
+      {onBrand && active && <span className="absolute inset-y-1.5 left-0 w-1 rounded-r-full bg-gold" aria-hidden />}
+      <Icon className={cn("h-[18px] w-[18px]", onBrand && active && "text-gold")} aria-hidden />
       {label}
     </Link>
   );

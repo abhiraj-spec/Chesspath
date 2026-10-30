@@ -33,7 +33,7 @@ export function EvalGraph({ evals, cursor, onSelect }: { evals: MoveEvaluation[]
           onSelect(Math.max(0, Math.min(n, ply)));
         }}
       >
-        <path d={area} fill="#f1efe9" />
+        <path d={area} fill="#eef1f6" />
         <line x1="0" x2={W} y1={H / 2} y2={H / 2} stroke="#7a7a7a" strokeDasharray="4 4" strokeWidth="1" vectorEffect="non-scaling-stroke" />
         <line x1={x(cursor)} x2={x(cursor)} y1="0" y2={H} stroke="var(--accent)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
         {marks.map((m) => (

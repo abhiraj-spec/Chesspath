@@ -69,7 +69,7 @@ export function SettingsView() {
           <div>
             <p className="t-small mb-1.5 font-medium text-muted">Board colours</p>
             <div className="flex flex-wrap items-center gap-4">
-              <Segmented label="Board colours" value={s.boardTheme} onChange={(v) => set({ boardTheme: v })} options={[{ value: "green", label: "Green" }, { value: "brown", label: "Wood" }, { value: "blue", label: "Blue" }]} />
+              <Segmented label="Board colours" value={s.boardTheme} onChange={(v) => set({ boardTheme: v, boardThemeChosen: true })} options={[{ value: "green", label: "Green" }, { value: "brown", label: "Wood" }, { value: "blue", label: "Blue" }]} />
               <div className="w-20" aria-hidden>
                 <MiniBoard fen="r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3" />
               </div>

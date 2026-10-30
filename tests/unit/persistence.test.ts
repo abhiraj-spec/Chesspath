@@ -79,3 +79,13 @@ describe("local persistence", () => {
     expect((await getProfile())?.displayName).toBe("Persist");
   });
 });
+
+import { sanitize } from "@/lib/settings";
+describe("settings: board colours across versions", () => {
+  it("moves an untouched old default (green) to the current default, but keeps real choices", () => {
+    expect(sanitize({ boardTheme: "green" }).boardTheme).toBe("blue");
+    expect(sanitize({ boardTheme: "green", boardThemeChosen: true }).boardTheme).toBe("green");
+    expect(sanitize({ boardTheme: "brown" }).boardTheme).toBe("brown");
+    expect(sanitize({}).boardTheme).toBe("blue");
+  });
+});

@@ -163,6 +163,16 @@ After the first build, the app was audited again against the original specificat
 - **Computer thinking time** is now capped at 3 s per move (`go depth N movetime 3000`). This only changes anything on slow phones. Thinking time on a real phone was not measured: CPU throttling in emulation probably does not slow the engine's worker thread.
 - **Bug found along the way.** Resigning, or ending the game by agreement, during the computer's short thinking pause could be undone when its pending move arrived, reopening the game. Ending a game now cancels pending computer moves. A new e2e test failed 3/3 before the fix and passes after it.
 
+## Visual refresh: navy and gold (seventh pass, requested by the user)
+
+- **Feedback.** The user found the app "plain or dull" and chose logo option E, a gold knight on navy.
+- **Colour system.** Navy and gold replace beige and green in both light and dark mode. 40 text and background pairs were checked numerically, and all meet WCAG AA (most well above it). Gold is never used for body text on light backgrounds.
+- **App bars.** The mobile header and desktop sidebar are navy, with a gold marker on the current section. The phone status-bar colour matches the header. The "Up next" card is navy with a gold button.
+- **Logo.** The new mark is used in the app, the browser tab and every icon. The maskable icon artwork is inside Android's safe zone (checked pixel by pixel). Chrome still reports no installability errors.
+- **Board.** The default board is now slate blue. Coordinate labels measure 4.6–7.7:1, and the light and dark squares are as distinct as on the old green board. Saved settings used to store the old default (green) even when nobody chose it, so an untouched green moves to the new default; colours the learner picked are kept (unit test).
+- **Phone action bar.** On phones and tablets, Next, Continue and similar buttons sit in a bar fixed above the bottom navigation. Measured at 390×664, 412×760 and 360×640: every next-step button is now visible without scrolling, where before it was below the fold in all 9 cases.
+- **Not done.** No physical-device check, and no user testing of the new look.
+
 ## Beginner usability review
 
 Walked through as someone who has never played chess:

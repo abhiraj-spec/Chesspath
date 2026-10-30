@@ -5,7 +5,7 @@ import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/util";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger" | "subtle";
+export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger" | "subtle" | "gold";
 export type ButtonSize = "sm" | "md" | "lg";
 
 const base =
@@ -16,6 +16,8 @@ const variants: Record<ButtonVariant, string> = {
   ghost: "text-fg hover:bg-surface-2 active:bg-surface-3",
   subtle: "bg-surface-2 text-fg hover:bg-surface-3",
   danger: "bg-danger text-white hover:opacity-90 active:translate-y-px",
+  // For use on navy surfaces (navy text on gold: 7.5:1).
+  gold: "bg-gold text-[#141c2b] hover:bg-gold-hover active:translate-y-px shadow-[var(--shadow-card)]",
 };
 const sizes: Record<ButtonSize, string> = {
   // min-height (not a fixed height) so a long label can wrap onto a second line on narrow screens.

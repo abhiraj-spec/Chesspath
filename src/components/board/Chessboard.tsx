@@ -396,7 +396,7 @@ export function Chessboard({
           )}
           {isHover && <div className="absolute inset-0" style={{ boxShadow: "inset 0 0 0 4px rgb(255 255 255 / 0.65)" }} />}
           {hl.includes("target") && (
-            <div className="pointer-events-none absolute inset-[18%] rounded-full" style={{ boxShadow: "0 0 0 3px var(--accent)", background: "rgb(29 106 77 / 0.12)" }} />
+            <div className="pointer-events-none absolute inset-[18%] rounded-full" style={{ boxShadow: "0 0 0 3px var(--accent)", background: "color-mix(in srgb, var(--accent) 12%, transparent)" }} />
           )}
           {coords && col === 0 && (
             <span

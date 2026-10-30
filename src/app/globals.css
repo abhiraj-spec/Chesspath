@@ -6,20 +6,29 @@
 /* ---------- Design tokens ---------- */
 :root {
   color-scheme: light;
-  --bg: #f6f4ef;
+  /* Navy and gold. Every text/background pair is >= 4.5:1 (WCAG AA), checked numerically. */
+  --bg: #f3f5f9;
   --surface: #ffffff;
-  --surface-2: #f0ede6;
-  --surface-3: #e8e4db;
-  --border: #e2ddd2;
-  --border-strong: #cfc8ba;
-  --text: #1d2420;
-  --text-muted: #59625c;
-  --text-subtle: #5f6762;
-  --accent: #1d6a4d;
-  --accent-hover: #175a41;
+  --surface-2: #eceff5;
+  --surface-3: #e1e6ee;
+  --border: #dde2ea;
+  --border-strong: #c2cad7;
+  --text: #141c2b;
+  --text-muted: #4b566a;
+  --text-subtle: #566175;
+  --accent: #1f3b66;
+  --accent-hover: #182f52;
   --accent-contrast: #ffffff;
-  --accent-soft: #e2efe8;
-  --accent-soft-text: #154d38;
+  --accent-soft: #e3eaf5;
+  --accent-soft-text: #1a3360;
+  --brand: #1b2a41;
+  --brand-2: #26406a;
+  --on-brand: #ffffff;
+  --on-brand-muted: #c3cbd9;
+  --gold: #e3b448;
+  --gold-hover: #d4a33a;
+  --gold-soft: #fbf1d6;
+  --gold-text: #7a5200;
   --success: #1c7a48;
   --success-soft: #e1f2e7;
   --warning: #9a5b00;
@@ -28,46 +37,54 @@
   --danger-soft: #fbe7e5;
   --info: #285e8e;
   --info-soft: #e3edf7;
-  --focus: #1d6a4d;
-  --shadow-sm: 0 1px 2px rgb(29 36 32 / 0.06);
-  --shadow-md: 0 2px 8px rgb(29 36 32 / 0.07), 0 1px 2px rgb(29 36 32 / 0.05);
-  --shadow-lg: 0 12px 32px rgb(29 36 32 / 0.14);
+  --focus: #2f5fa8;
+  --shadow-sm: 0 1px 2px rgb(20 28 43 / 0.06);
+  --shadow-md: 0 2px 8px rgb(20 28 43 / 0.08), 0 1px 2px rgb(20 28 43 / 0.05);
+  --shadow-lg: 0 12px 32px rgb(20 28 43 / 0.16);
 
-  /* Board */
-  --sq-light: #ebe5d6;
-  --sq-dark: #7f9b7a;
-  --sq-coord-light: #3f573c;
-  --sq-coord-dark: #16211a;
-  --sq-last: rgb(214 196 82 / 0.5);
-  --sq-selected: rgb(29 106 77 / 0.45);
+  /* Board (default: slate blue, matching the navy theme) */
+  --sq-light: #e4e9f0;
+  --sq-dark: #7e94b2;
+  --sq-coord-light: #34485f;
+  --sq-coord-dark: #0e1726;
+  --sq-last: rgb(227 180 72 / 0.5);
+  --sq-selected: rgb(31 59 102 / 0.4);
   --sq-hint: rgb(40 94 142 / 0.45);
   --sq-good: rgb(28 122 72 / 0.5);
   --sq-bad: rgb(180 35 24 / 0.45);
-  --sq-dot: rgb(20 30 25 / 0.28);
-  /* Chart marks (validated: lightness band, chroma floor, >=3:1 vs surface) */
-  --chart: #1a8a5c;
-  --chart-grid: #e7e3da;
-  --arrow: rgb(29 106 77 / 0.78);
-  --arrow-alt: rgb(40 94 142 / 0.75);
+  --sq-dot: rgb(14 23 38 / 0.28);
+  /* Chart marks (>= 3:1 against the surface) */
+  --chart: #2f63a8;
+  --chart-grid: #e3e7ee;
+  --arrow: rgb(31 59 102 / 0.78);
+  --arrow-alt: rgb(201 149 42 / 0.85);
   --arrow-bad: rgb(180 35 24 / 0.75);
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #111412;
-  --surface: #181c19;
-  --surface-2: #1f2420;
-  --surface-3: #282e29;
-  --border: #2b322d;
-  --border-strong: #3c453f;
-  --text: #e7ebe8;
-  --text-muted: #a8b1ab;
-  --text-subtle: #8c958f;
-  --accent: #4fb489;
-  --accent-hover: #63c39a;
-  --accent-contrast: #0b1a12;
-  --accent-soft: #1b3328;
-  --accent-soft-text: #9ad8bc;
+  --bg: #0c1220;
+  --surface: #131b2b;
+  --surface-2: #1a2436;
+  --surface-3: #233048;
+  --border: #243047;
+  --border-strong: #35435d;
+  --text: #e8edf5;
+  --text-muted: #a8b3c6;
+  --text-subtle: #8e9ab0;
+  --accent: #e3b448;
+  --accent-hover: #efc562;
+  --accent-contrast: #141c2b;
+  --accent-soft: #2c2a1d;
+  --accent-soft-text: #f0d58f;
+  --brand: #0f1829;
+  --brand-2: #1b2a41;
+  --on-brand: #ffffff;
+  --on-brand-muted: #b6c0d1;
+  --gold: #e3b448;
+  --gold-hover: #efc562;
+  --gold-soft: #2c2a1d;
+  --gold-text: #f0d58f;
   --success: #5cc48b;
   --success-soft: #17301f;
   --warning: #e7b14a;
@@ -76,20 +93,21 @@
   --danger-soft: #3a1b18;
   --info: #7fb2e5;
   --info-soft: #172838;
-  --focus: #63c39a;
+  --focus: #efc562;
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
   --shadow-md: 0 2px 10px rgb(0 0 0 / 0.35);
   --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.5);
 
-  --chart: #36a372;
-  --chart-grid: #2b322d;
-  --sq-light: #cfc9b9;
-  --sq-dark: #728e6e;
-  --sq-coord-light: #2f442c;
-  --sq-coord-dark: #101a0f;
-  --sq-last: rgb(214 196 82 / 0.45);
-  --sq-selected: rgb(79 180 137 / 0.55);
-  --sq-dot: rgb(10 16 12 / 0.35);
+  --chart: #5b8fd6;
+  --chart-grid: #243047;
+  --sq-light: #c9d1dd;
+  --sq-dark: #6a809e;
+  --sq-coord-light: #2a3b50;
+  --sq-coord-dark: #0a1220;
+  --sq-last: rgb(227 180 72 / 0.45);
+  --sq-selected: rgb(227 180 72 / 0.45);
+  --sq-dot: rgb(8 12 22 / 0.35);
+  --arrow: rgb(227 180 72 / 0.8);
 }
 
 @theme inline {
@@ -115,6 +133,14 @@
   --color-danger-soft: var(--danger-soft);
   --color-info: var(--info);
   --color-info-soft: var(--info-soft);
+  --color-brand: var(--brand);
+  --color-brand-2: var(--brand-2);
+  --color-on-brand: var(--on-brand);
+  --color-on-brand-muted: var(--on-brand-muted);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-fg: var(--gold-text);
 
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-serif: "Source Serif 4 Variable", ui-serif, Georgia, serif;
@@ -279,28 +305,28 @@ dialog::backdrop {
   background: rgb(10 14 12 / 0.45);
 }
 
-/* Board colour themes (setting: Board colours) */
+/* Board colour themes (setting: Board colours). The default ("blue") is defined in :root. */
+:root[data-board="green"] {
+  --sq-light: #ebe5d6;
+  --sq-dark: #7f9b7a;
+  --sq-coord-light: #3f573c;
+  --sq-coord-dark: #16211a;
+}
+:root[data-theme="dark"][data-board="green"] {
+  --sq-light: #cfc9b9;
+  --sq-dark: #728e6e;
+  --sq-coord-light: #2f442c;
+  --sq-coord-dark: #101a0f;
+}
 :root[data-board="brown"] {
   --sq-light: #f0d9b5;
   --sq-dark: #b58863;
   --sq-coord-light: #5c3d22;
   --sq-coord-dark: #2a1a0c;
 }
-:root[data-board="blue"] {
-  --sq-light: #dee3e6;
-  --sq-dark: #8ca2ad;
-  --sq-coord-light: #3e5560;
-  --sq-coord-dark: #14222a;
-}
 :root[data-theme="dark"][data-board="brown"] {
   --sq-light: #d4bf9c;
   --sq-dark: #a67e5b;
   --sq-coord-light: #4a3220;
   --sq-coord-dark: #20140a;
-}
-:root[data-theme="dark"][data-board="blue"] {
-  --sq-light: #c3cacd;
-  --sq-dark: #748b96;
-  --sq-coord-light: #33444c;
-  --sq-coord-dark: #0f1c22;
 }

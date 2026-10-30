@@ -18,15 +18,16 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
   applicationName: "ChessPath",
   // Installed on an iPhone/iPad Home Screen: open full screen, named "ChessPath".
-  appleWebApp: { capable: true, title: "ChessPath", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "ChessPath", statusBarStyle: "black" },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f4ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#111412" },
+    // Matches the navy app bar, so the phone's status bar blends into it.
+    { media: "(prefers-color-scheme: light)", color: "#1b2a41" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1829" },
   ],
 };
 

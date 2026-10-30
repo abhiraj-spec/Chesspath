@@ -137,18 +137,28 @@ export function Dashboard() {
       </header>
 
       {/* Primary action */}
-      <Card className="overflow-hidden">
-        <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <section aria-label="Up next" className="relative overflow-hidden rounded-[var(--radius-xl)] text-on-brand shadow-[var(--shadow-raised)]" style={{ background: "linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%)" }}>
+        {/* Decorative chessboard pattern fading in from the right. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 w-2/3"
+          style={{
+            background: "repeating-conic-gradient(rgb(255 255 255 / 0.07) 0 25%, transparent 0 50%) 0 0 / 32px 32px",
+            maskImage: "linear-gradient(to left, black, transparent)",
+            WebkitMaskImage: "linear-gradient(to left, black, transparent)",
+          }}
+        />
+        <div className="relative flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
           <div className="min-w-0">
-            <p className="t-label text-accent">Up next</p>
-            <p className="t-section mt-1">{primary.label}</p>
-            <p className="t-small mt-1 text-muted">{primary.detail}</p>
+            <p className="t-label text-gold">Up next</p>
+            <p className="t-section mt-1 text-on-brand">{primary.label}</p>
+            <p className="t-small mt-1 text-on-brand-muted">{primary.detail}</p>
           </div>
-          <ButtonLink href={primary.href} size="lg" className="shrink-0" icon={<ArrowRight className="h-5 w-5" aria-hidden />}>
+          <ButtonLink href={primary.href} size="lg" variant="gold" className="shrink-0" icon={<ArrowRight className="h-5 w-5" aria-hidden />}>
             {primary.cta ?? "Start"}
           </ButtonLink>
         </div>
-      </Card>
+      </section>
 
       <InstallBanner />
 

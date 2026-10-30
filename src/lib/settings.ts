@@ -23,6 +23,8 @@ export interface Settings {
   defaultDifficulty: 1 | 2 | 3 | 4 | 5;
   motion: MotionPref;
   boardTheme: BoardTheme;
+  /** True once the learner picks board colours themselves (an untouched default can change between versions). */
+  boardThemeChosen: boolean;
   showEvalBar: boolean;
 }
 
@@ -37,7 +39,8 @@ export const DEFAULT_SETTINGS: Settings = {
   moveTextInput: false,
   defaultDifficulty: 2,
   motion: "system",
-  boardTheme: "green",
+  boardTheme: "blue",
+  boardThemeChosen: false,
   showEvalBar: true,
 };
 
@@ -78,6 +81,9 @@ export function sanitize(input: Partial<Settings>): Settings {
     const key = k as keyof Settings;
     if (!allowed!.includes(out[key])) (out as unknown as Record<string, unknown>)[key] = DEFAULT_SETTINGS[key];
   }
+  // Before version 2 of the look, every saved settings object stored the old default board ("green")
+  // even if the learner never chose it. Unless they chose colours themselves, use the current default.
+  if (!out.boardThemeChosen && out.boardTheme === "green") out.boardTheme = DEFAULT_SETTINGS.boardTheme;
   return out;
 }
 
@@ -153,4 +159,4 @@ export function applyDocumentSettings(s: Settings) {
  */
 export const THEME_BOOTSTRAP = `(function(){try{var s=JSON.parse(localStorage.getItem(${JSON.stringify(
   SETTINGS_KEY,
-)})||"{}");var t=s.theme||"system";if(t==="system"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}var r=document.documentElement;r.dataset.theme=t;r.dataset.reducedMotion=String(s.motion==="reduce");r.dataset.board=s.boardTheme||"green";}catch(e){document.documentElement.dataset.theme="light"}})();`;
+)})||"{}");var t=s.theme||"system";if(t==="system"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}var r=document.documentElement;r.dataset.theme=t;r.dataset.reducedMotion=String(s.motion==="reduce");var b=s.boardTheme;if(!s.boardThemeChosen&&(!b||b==="green"))b="blue";r.dataset.board=b;}catch(e){document.documentElement.dataset.theme="light"}})();`;
