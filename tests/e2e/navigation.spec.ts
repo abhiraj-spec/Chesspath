@@ -121,3 +121,24 @@ test("phone screens fit with larger system text and long lesson names", async ({
     await expectNoElementPastEdge(page);
   }
 });
+
+test("next-step buttons are reachable without scrolling on a phone", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "phone-only check");
+  await page.setViewportSize({ width: 390, height: 664 }); // iPhone screen minus Safari's toolbars
+  const reachable = async (button: import("@playwright/test").Locator) => {
+    const b = (await button.boundingBox())!;
+    const navTop = await page.evaluate(() => {
+      const navs = [...document.querySelectorAll('nav[aria-label="Main sections"]')].map((n) => n.getBoundingClientRect()).filter((r) => r.height > 0 && r.top > innerHeight / 2);
+      return navs.length ? navs[0].top : innerHeight;
+    });
+    expect(b.y).toBeGreaterThanOrEqual(0);
+    expect(b.y + b.height).toBeLessThanOrEqual(navTop + 1);
+  };
+  await page.goto("/puzzles/");
+  await page.getByRole("button", { name: "Show solution" }).click();
+  await page.waitForTimeout(600); // smooth scroll to the explanation
+  await reachable(page.getByRole("button", { name: "Next puzzle" }));
+  await page.goto("/learn/board-coordinates/");
+  await page.getByRole("button", { name: "Start lesson" }).click();
+  await reachable(page.getByRole("button", { name: /^Continue$/ }));
+});

@@ -1,5 +1,6 @@
 "use client";
 
+import { ActionDock } from "@/components/ui/ActionDock";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Chess } from "chess.js";
@@ -414,7 +415,15 @@ export function PlayView() {
               <div className="animate-fade-in mt-3 rounded-[var(--radius-md)] border border-border bg-surface-2 p-4" data-testid="game-over">
                 <p className="t-section">{game.result === "1/2-1/2" ? "Draw" : youWon ? "You won!" : "Stockfish won"}</p>
                 <p className="t-small mt-1 text-muted">{describeResult(game.result, game.reason)}. The game is saved in your library.</p>
-                <div className="mt-3 grid grid-cols-1 gap-2">
+                <ActionDock dockOnly note={`${game.result === "1/2-1/2" ? "Draw" : youWon ? "You won!" : "Stockfish won"}: ${describeResult(game.result, game.reason)}.`}>
+                  <ButtonLink href={`/analysis/?game=${game.id}`} size="lg" icon={<Microscope className="h-4 w-4" aria-hidden />}>
+                    Review game
+                  </ButtonLink>
+                  <Button variant="secondary" size="lg" onClick={() => setGame(null)} icon={<RotateCcw className="h-4 w-4" aria-hidden />}>
+                    Play again
+                  </Button>
+                </ActionDock>
+                <div className="mt-3 grid grid-cols-1 gap-2 max-lg:hidden">
                   <ButtonLink href={`/analysis/?game=${game.id}`} icon={<Microscope className="h-4 w-4" aria-hidden />}>
                     Review this game
                   </ButtonLink>

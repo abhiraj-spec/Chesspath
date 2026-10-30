@@ -19,5 +19,6 @@ export function TrainerLayout({ board, panel, above, className }: { board: React
 }
 
 export function PanelCard({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={cn("rounded-[var(--radius-lg)] border border-border bg-surface p-4 shadow-[var(--shadow-card)] sm:p-5", className)}>{children}</div>;
+  // data-panel + scroll margin: on phones the panel is scrolled into view (below the sticky header) after solving.
+  return <div data-panel className={cn("scroll-mt-20 rounded-[var(--radius-lg)] border border-border bg-surface p-4 shadow-[var(--shadow-card)] sm:p-5", className)}>{children}</div>;
 }

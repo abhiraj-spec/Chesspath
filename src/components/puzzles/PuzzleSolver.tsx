@@ -1,5 +1,6 @@
 "use client";
 
+import { ActionDock, focusVisible } from "@/components/ui/ActionDock";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Chess, type Square } from "chess.js";
 import { CheckCircle2, Eye, ExternalLink, FlipVertical2, Lightbulb, RotateCcw, SkipForward, XCircle, ChevronRight, Info } from "lucide-react";
@@ -56,6 +57,10 @@ export function PuzzleSolver({
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const later = (fn: () => void, ms: number) => timers.current.push(setTimeout(fn, ms));
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const isDone = status === "solved" || status === "revealed";
+  useEffect(() => {
+    if (isDone) focusVisible("[data-next-puzzle]");
+  }, [isDone]);
 
   // Animate the opponent's setup move.
   useEffect(() => {
@@ -281,14 +286,14 @@ export function PuzzleSolver({
           </div>
           {!done && <p className="t-small mt-2 text-subtle">Skipping doesn&apos;t count as a miss; showing the solution adds the puzzle to your reviews.</p>}
           {done && (
-            <div className="mt-4 flex flex-wrap gap-2 max-lg:sticky max-lg:bottom-[calc(4.5rem+env(safe-area-inset-bottom))] max-lg:z-20 max-lg:-mx-2 max-lg:rounded-[var(--radius-md)] max-lg:bg-surface max-lg:p-2 max-lg:shadow-[var(--shadow-overlay)]">
-              <Button size="lg" className="flex-1" onClick={onNext} icon={<ChevronRight className="h-5 w-5" aria-hidden />} autoFocus>
+            <ActionDock note={status === "solved" ? (mistakes === 0 && hints === 0 ? "✓ Solved first time" : "✓ Solved") : "Solution shown: this puzzle comes back in your reviews."}>
+              <Button data-next-puzzle size="lg" className="flex-1" onClick={onNext} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
                 Next puzzle
               </Button>
               <Button variant="secondary" size="lg" onClick={restart} icon={<RotateCcw className="h-4 w-4" aria-hidden />}>
                 Replay
               </Button>
-            </div>
+            </ActionDock>
           )}
         </PanelCard>
       }

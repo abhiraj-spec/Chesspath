@@ -1,5 +1,6 @@
 "use client";
 
+import { ActionDock, focusVisible } from "@/components/ui/ActionDock";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Chess, type Square } from "chess.js";
 import { CheckCircle2, ChevronLeft, ChevronRight, Eye, Lightbulb, RotateCcw, XCircle, Info, FlipVertical2 } from "lucide-react";
@@ -49,21 +50,20 @@ export function StepPlayer(props: StepPlayerProps) {
 
 // ---------------------------------------------------------------------------------------------
 
-export function ContinueBar({ done, onContinue, label }: { done: boolean; onContinue?: () => void; label?: string }) {
-  const ref = useRef<HTMLButtonElement>(null);
+export function ContinueBar({ done, onContinue, label, note }: { done: boolean; onContinue?: () => void; label?: string; note?: ReactNode }) {
+  // Only bring the explanation into view when the learner has just solved the exercise,
+  // not for explanation steps that are "done" as soon as they open.
+  const [solvedHere] = useState(() => !done);
   useEffect(() => {
-    if (done) ref.current?.focus({ preventScroll: true });
+    if (done) focusVisible("[data-continue]");
   }, [done]);
   if (!done || !onContinue) return null;
   return (
-    <Button
-      ref={ref}
-      size="lg"
-      // Below lg the panel sits under the board, so keep Continue reachable above the bottom navigation.
-      className="mt-4 w-full max-lg:sticky max-lg:bottom-[calc(4.5rem+env(safe-area-inset-bottom))] max-lg:z-20 max-lg:shadow-[var(--shadow-overlay)]"
-      onClick={onContinue} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
-      {label ?? "Continue"}
-    </Button>
+    <ActionDock note={note} revealPanel={solvedHere}>
+      <Button data-continue size="lg" className="w-full" onClick={onContinue} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
+        {label ?? "Continue"}
+      </Button>
+    </ActionDock>
   );
 }
 
@@ -186,9 +186,11 @@ function ExplainPlayer({ step, onComplete, header, footer, onContinue, continueL
           </div>
         </div>
       )}
-      <Button size="lg" className="mt-5 w-full" onClick={finish} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
-        {continueLabel ?? "Continue"}
-      </Button>
+      <ActionDock revealPanel={false} className="mt-5">
+        <Button size="lg" className="w-full" onClick={finish} icon={<ChevronRight className="h-5 w-5" aria-hidden />}>
+          {continueLabel ?? "Continue"}
+        </Button>
+      </ActionDock>
       {footer}
     </PanelCard>
   );

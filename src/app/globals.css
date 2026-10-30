@@ -136,6 +136,13 @@ html {
   text-size-adjust: 100%;
 }
 
+/* While the fixed action bar is showing (phones and tablets), leave room for it at the end of the page. */
+@media (max-width: 1023px) {
+  body:has([data-action-dock]) #main {
+    padding-bottom: calc(11rem + env(safe-area-inset-bottom));
+  }
+}
+
 /* Safety net: if anything is ever wider than a phone screen, clip it instead of letting the
    whole page zoom out or slide sideways. (clip, unlike hidden, keeps sticky headers working.) */
 html,
