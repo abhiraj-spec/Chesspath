@@ -142,3 +142,20 @@ test("next-step buttons are reachable without scrolling on a phone", async ({ pa
   await page.getByRole("button", { name: "Start lesson" }).click();
   await reachable(page.getByRole("button", { name: /^Continue$/ }));
 });
+
+test("pages start cleanly even when the host injects a comment into <head> (Netlify's free plan does)", async ({ page }) => {
+  await page.route("**/*", async (route) => {
+    if (route.request().resourceType() !== "document") return route.continue();
+    const res = await route.fetch();
+    const html = (await res.text()).replace('<meta charSet="utf-8"/>', '<meta charSet="utf-8"/>\n<!-- This site is hosted on Netlify. -->\n');
+    await route.fulfill({ response: res, body: html });
+  });
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/privacy/");
+  await expect(page.getByRole("heading", { level: 1, name: "Privacy policy" })).toBeVisible();
+  await page.goto("/learn/");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await page.waitForTimeout(500);
+  expect(errors).toEqual([]);
+});

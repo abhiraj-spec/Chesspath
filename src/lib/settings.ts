@@ -157,6 +157,13 @@ export function applyDocumentSettings(s: Settings) {
  * Inline script run before first paint to avoid a flash of the wrong theme.
  * Kept tiny and dependency-free.
  */
-export const THEME_BOOTSTRAP = `(function(){try{var s=JSON.parse(localStorage.getItem(${JSON.stringify(
+/**
+ * Runs in <head> before the app starts.
+ * 1. Hosts such as Netlify's free plan insert an HTML comment (and line breaks) into <head>. React
+ *    treats those as a mismatch and logs a hydration error, then re-renders the whole page. The
+ *    app's own <head> never contains comments or whitespace-only text, so removing them is safe.
+ * 2. Applies the theme, motion and board settings before first paint.
+ */
+export const THEME_BOOTSTRAP = `(function(){try{var h=document.head;for(var n=h.firstChild;n;){var x=n.nextSibling;if(n.nodeType===8||(n.nodeType===3&&!n.textContent.trim()))h.removeChild(n);n=x}}catch(e){}})();(function(){try{var s=JSON.parse(localStorage.getItem(${JSON.stringify(
   SETTINGS_KEY,
 )})||"{}");var t=s.theme||"system";if(t==="system"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}var r=document.documentElement;r.dataset.theme=t;r.dataset.reducedMotion=String(s.motion==="reduce");var b=s.boardTheme;if(!s.boardThemeChosen&&(!b||b==="green"))b="blue";r.dataset.board=b;}catch(e){document.documentElement.dataset.theme="light"}})();`;
