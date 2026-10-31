@@ -52,7 +52,11 @@ npm start            # serves out/ on http://localhost:3000 (set PORT to change)
 
 `out/` can be hosted on any static host. The engine files need the `application/wasm` MIME type, which most hosts set automatically. No special headers are needed: the single-threaded engine does not require cross-origin isolation.
 
-**Host it at the root of a domain** (for example `https://your-site.netlify.app/`). Every asset path starts with `/` (scripts, `/engine/…`, `/sw.js`, the manifest), so serving it from a sub-folder such as a GitHub Pages *project* site (`username.github.io/chesspath/`) loads the page but not its scripts. `netlify.toml` configures Netlify; on Cloudflare Pages use build command `npm run build` and output directory `out`.
+**Host it at the root of a domain** (for example `https://your-site.netlify.app/`). Every asset path starts with `/` (scripts, `/engine/…`, `/sw.js`, the manifest), so serving it from a sub-folder such as a GitHub Pages *project* site (`username.github.io/chesspath/`) loads the page but not its scripts. `netlify.toml` configures Netlify; on Cloudflare Pages use build command `npm run build` and output directory `out` (the Node version comes from `.nvmrc`; `public/_headers` sets caching and the manifest type on both hosts).
+
+Note: Netlify's free plan adds a "Powered by Netlify" badge (bottom right) and an HTML comment to every page. The app copes with the comment (it is removed before React starts), but on phones the badge covers the right-hand tabs of the bottom navigation until the visitor closes it. Cloudflare Pages does not modify pages.
+
+To run the end-to-end suite against a deployed copy: `LIVE_URL=https://your-site.example npx playwright test --config playwright.live.config.ts`.
 
 New to all this on Windows? See [WINDOWS_SETUP.md](WINDOWS_SETUP.md).
 
