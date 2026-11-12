@@ -39,12 +39,13 @@ const DEPTHS = [
 
 type Tab = "summary" | "moments" | "engine";
 
-export function GameAnalysisView({ gameId }: { gameId: string }) {
+/** `initialPly`: open on the position before this ply (1-based), e.g. to show a specific mistake. */
+export function GameAnalysisView({ gameId, initialPly }: { gameId: string; initialPly?: number }) {
   const game = useGame(gameId);
   const analysis = useAnalysis(gameId);
   const settings = useSettings();
   const { engine, restart } = useEngine(false);
-  const [cursor, setCursor] = useState<number | null>(null);
+  const [cursor, setCursor] = useState<number | null>(initialPly ? initialPly - 1 : null);
   const [variation, setVariation] = useState<{ base: number; line: Line; cursor: number } | null>(null);
   const [orientation, setOrientation] = useState<"w" | "b" | null>(null);
   const [running, setRunning] = useState(false);
@@ -66,7 +67,7 @@ export function GameAnalysisView({ gameId }: { gameId: string }) {
 
   const line = useMemo(() => (game ? buildLine(game.startingFen, game.moves).line : null), [game]);
   const total = line?.plies.length ?? 0;
-  const mainCursor = cursor ?? total;
+  const mainCursor = Math.min(cursor ?? total, total);
   const userColor = game?.computer?.userColor ?? game?.userColor ?? null;
   const boardOrientation = orientation ?? userColor ?? "w";
 

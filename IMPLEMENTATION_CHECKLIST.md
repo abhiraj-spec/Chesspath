@@ -31,5 +31,6 @@ Statuses: **Not started** · **In progress** · **Verified** (implemented *and* 
 | Glossary | Verified | navigation e2e, glossary-term test |
 | PWA: manifest, icons, generated service worker, offline after first visit | Verified | offline e2e |
 | Accessibility: keyboard board, live announcements, focus, contrast, reduced motion | Verified (partially) | keyboard e2e and computed contrast. Not tested with real screen readers (see UX_REVIEW.md). |
+| My games: fetch Chess.com games by username, results, Stockfish check, study plan | Verified | 18 unit tests (`chesscom.test.ts`), `mygames.spec.ts` e2e with a simulated Chess.com, and a manual run against the real API (100 games fetched, 3 checked). |
 | Optional AI coach | Not started | Deliberately out of scope: the core product works without an LLM. |
 | Cloud sync / accounts | Not started | Out of scope (local-first); the repository layer is the integration point. |

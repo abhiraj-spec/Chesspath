@@ -112,6 +112,13 @@ export function LibraryView() {
           <label htmlFor="pgn-input" className="t-small mt-1 block text-muted">
             Paste PGN text. You can export it from most chess sites.
           </label>
+          <p className="t-small mt-1 text-muted">
+            Play on Chess.com?{" "}
+            <Link href="/my-games/" className="underline hover:text-fg">
+              Fetch your games by username
+            </Link>{" "}
+            instead.
+          </p>
           <textarea
             id="pgn-input"
             value={text}

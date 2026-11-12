@@ -46,7 +46,10 @@ export function PuzzleTrainer() {
 
   const weakSkills = useMemo(() => {
     if (!attempts || !analyses || !games) return [];
-    const colorOf = (id: string) => games.find((g) => g.id === id)?.computer?.userColor ?? null;
+    const colorOf = (id: string) => {
+      const g = games.find((x) => x.id === id);
+      return g?.computer?.userColor ?? g?.userColor ?? null;
+    };
     return findWeaknesses(computeSkillStats(attempts), analyses, colorOf).map((w) => w.skill);
   }, [attempts, analyses, games]);
 

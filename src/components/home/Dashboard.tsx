@@ -3,7 +3,7 @@
 import { InstallBanner } from "@/components/layout/InstallApp";
 import Link from "next/link";
 import { useMemo } from "react";
-import { ArrowRight, BookOpen, CheckCircle2, Circle, Clock, EyeOff, Flame, Lightbulb, LibraryBig, Microscope, Puzzle, Repeat, RotateCcw, Sparkles, Swords, Target } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2, Circle, Clock, EyeOff, Flame, Lightbulb, LibraryBig, Microscope, Puzzle, Repeat, RotateCcw, Sparkles, Swords, Target, UserSearch } from "lucide-react";
 import { useAnalyses, useAttempts, useGames, useKv, useLessonProgress, useProfile, useReviews, useSessions } from "@/hooks/data";
 import { buildDailyPlan, buildRecommendations, nextRecommendedLesson, type PlanBlock } from "@/lib/learning/plan";
 import { computeSkillStats, findWeaknesses } from "@/lib/learning/mastery";
@@ -54,7 +54,10 @@ export function Dashboard() {
   const derived = useMemo(() => {
     if (loading || !profile) return null;
     const stats = computeSkillStats(attempts!);
-    const colorOf = (id: string) => games!.find((g) => g.id === id)?.computer?.userColor ?? null;
+    const colorOf = (id: string) => {
+      const g = games!.find((x) => x.id === id);
+      return g?.computer?.userColor ?? g?.userColor ?? null;
+    };
     const weaknesses = findWeaknesses(stats, analyses!, colorOf);
     const openingDue = reviews!.filter((c) => c.kind === "opening" && isDue(c, now)).length;
     const plan = buildDailyPlan({ profile, progress: progress!, attempts: attempts!, reviews: reviews!, sessions: sessions!, weaknesses, openingDue, now });
@@ -216,6 +219,12 @@ export function Dashboard() {
               </ButtonLink>
             </Card>
           )}
+          <Card className="p-5">
+            <CardHeader title="Play on Chess.com?" description="Find out what your own games say you should study." />
+            <ButtonLink href="/my-games/" variant="secondary" size="sm" className="mt-3" icon={<UserSearch className="h-4 w-4" aria-hidden />}>
+              Learn from my games
+            </ButtonLink>
+          </Card>
         </div>
       </div>
 

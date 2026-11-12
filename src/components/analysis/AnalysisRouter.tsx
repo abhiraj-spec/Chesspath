@@ -9,7 +9,10 @@ export function AnalysisRouter() {
   const params = useSearchParams();
   const id = params.get("game");
   const fen = params.get("fen");
-  if (id) return <GameAnalysisView key={id} gameId={id} />;
+  if (id) {
+    const ply = Number(params.get("ply"));
+    return <GameAnalysisView key={id} gameId={id} initialPly={Number.isInteger(ply) && ply > 0 ? ply : undefined} />;
+  }
   if (fen !== null) return <PositionExplorer fen={fen.trim()} />;
   return <LibraryView />;
 }

@@ -12,6 +12,7 @@ const SECTIONS = [
   { path: "/settings/", heading: "Settings" },
   { path: "/glossary/", heading: "Glossary" },
   { path: "/privacy/", heading: "Privacy policy" },
+  { path: "/my-games/", heading: "Learn from your Chess.com games" },
   { path: "/openings/italian/", heading: "Italian Game" },
   { path: "/learn/forks/", heading: "Forks" },
 ];

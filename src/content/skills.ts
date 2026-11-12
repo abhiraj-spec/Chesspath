@@ -69,7 +69,7 @@ export const SKILLS: SkillInfo[] = [
   { id: "minor-piece-endgames", name: "Bishop and knight endgames", lesson: "minor-piece-endgames", group: "Endgames" },
   { id: "zugzwang", name: "Zugzwang", lesson: "zugzwang", group: "Endgames" },
   { id: "promotion", name: "Promoting pawns", lesson: "promotion-tactics", puzzleTheme: "promotion", group: "Endgames" },
-  { id: "endgame-technique", name: "Endgame technique", lesson: "opposition", puzzleTheme: "endgame-technique", group: "Endgames" },
+  { id: "endgame-technique", name: "Endgame technique", lesson: "opposition", group: "Endgames" },
 ];
 
 const byId = new Map(SKILLS.map((s) => [s.id, s]));

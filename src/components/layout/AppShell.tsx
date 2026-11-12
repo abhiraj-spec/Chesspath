@@ -9,7 +9,7 @@ import {
   Home,
   LibraryBig,
   Menu,
-  Microscope,
+  Microscope, UserSearch,
   Puzzle,
   Settings,
   Swords,
@@ -28,6 +28,7 @@ export const NAV = [
   { href: "/play/", label: "Play", icon: Swords },
   { href: "/openings/", label: "Openings", icon: LibraryBig },
   { href: "/analysis/", label: "Analysis", icon: Microscope },
+  { href: "/my-games/", label: "My games", icon: UserSearch },
   { href: "/progress/", label: "Progress", icon: BarChart3 },
 ] as const;
 

@@ -20,7 +20,13 @@ export default function PrivacyPage() {
         <section>
           <h2 className="t-card">What is sent over the internet</h2>
           <p className="t-small mt-1 text-muted">
-            Nothing about you or your play. The app does not use analytics, advertising, tracking or cookies. The chess engine (Stockfish) runs on your device. The only network traffic is downloading the app itself from the website that hosts it; like any website, that host may keep standard technical logs (such as IP addresses) for security and operation. Links such as &quot;View on Lichess&quot; open another website only when you tap them.
+            Nothing about you or your play, with the one exception described below. The app does not use analytics, advertising, tracking or cookies. The chess engine (Stockfish) runs on your device. The only network traffic is downloading the app itself from the website that hosts it; like any website, that host may keep standard technical logs (such as IP addresses) for security and operation. Links such as &quot;View on Lichess&quot; open another website only when you tap them.
+          </p>
+        </section>
+        <section>
+          <h2 className="t-card">The one exception: fetching your Chess.com games</h2>
+          <p className="t-small mt-1 text-muted">
+            If you choose to use <Link href="/my-games/" className="underline">My games</Link>, your browser sends the username you type to Chess.com&apos;s public API to download that player&apos;s public games. This happens only when you press the button. Chess.com sees the request the same way it sees any visit to its website (including your IP address) and its own privacy policy applies. No password is asked for or needed, ChessPath has no server that could see the request, and the downloaded games are stored and analysed on this device only. You can remove them at any time on that page.
           </p>
         </section>
         <section>
@@ -43,7 +49,7 @@ export default function PrivacyPage() {
             .
           </p>
         </section>
-        <p className="t-small text-subtle">Last updated: 30 October 2026.</p>
+        <p className="t-small text-subtle">Last updated: 12 November 2026.</p>
       </Card>
     </div>
   );
