@@ -160,3 +160,40 @@ test("pages start cleanly even when the host injects a comment into <head> (Netl
   await page.waitForTimeout(500);
   expect(errors).toEqual([]);
 });
+
+test("a host badge in the bottom corner never covers the phone navigation or the Next button", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 780 });
+  // The same kind of element Netlify's free plan adds: a fixed frame in the bottom-right corner, above everything.
+  const addBadge = () =>
+    page.evaluate(() => {
+      const f = document.createElement("iframe");
+      f.id = "nl-badge-frame";
+      f.style.cssText = "position:fixed;right:0;bottom:0;width:201px;height:64px;border:0;z-index:2147483645;background:#123";
+      document.body.appendChild(f);
+    });
+  await page.goto("/learn/");
+  await addBadge();
+  const nav = page.getByRole("navigation", { name: "Main sections" }).last();
+  const badgeTop = async () => (await page.locator("#nl-badge-frame").boundingBox())!.y;
+  for (const name of ["Play", "More"]) {
+    const el = name === "More" ? nav.getByRole("button", { name }) : nav.getByRole("link", { name });
+    await expect.poll(async () => { const b = (await el.boundingBox())!; return b.y + b.height; }).toBeLessThanOrEqual(await badgeTop());
+  }
+  // The tabs are really tappable (a normal click fails if another element is on top).
+  await nav.getByRole("button", { name: "More" }).click();
+  await page.getByRole("dialog", { name: "More sections" }).getByRole("link", { name: "Settings" }).click();
+  await expect(page).toHaveURL(/settings/);
+  await nav.getByRole("link", { name: "Play" }).click();
+  await expect(page).toHaveURL(/play/);
+  // Next-step button in a lesson.
+  await page.goto("/learn/board-coordinates/");
+  await addBadge();
+  await page.getByRole("button", { name: "Start lesson" }).click();
+  const next = page.locator("[data-action-dock]").getByRole("button", { name: /^Continue$/ });
+  await expect(next).toBeVisible();
+  await expect.poll(async () => { const b = (await next.boundingBox())!; return b.y + b.height; }).toBeLessThanOrEqual(await badgeTop());
+  await next.click(); // tappable: nothing is on top of it
+  // When the visitor closes the badge, the bars drop back down.
+  await page.evaluate(() => document.getElementById("nl-badge-frame")!.remove());
+  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue("--host-inset").trim())).toBe("0px");
+});

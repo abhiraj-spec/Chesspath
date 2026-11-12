@@ -128,12 +128,12 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main id="main" className="min-w-0 flex-1 pb-24 lg:pb-10">
+      <main id="main" className="min-w-0 flex-1 pb-[calc(6rem+var(--host-inset,0px))] lg:pb-10">
         <div className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8 lg:py-8">{children}</div>
       </main>
 
       {/* Mobile bottom navigation */}
-      <nav aria-label="Main sections" className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden">
+      <nav aria-label="Main sections" className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 pb-[calc(env(safe-area-inset-bottom)+var(--host-inset,0px))] backdrop-blur lg:hidden">
         <ul className="grid grid-cols-5">
           {NAV.filter((n) => MOBILE_PRIMARY.includes(n.href)).map((item) => {
             const active = isActive(pathname, item.href);
@@ -208,7 +208,7 @@ function MoreSheet({ pathname, onClose }: { pathname: string; onClose: () => voi
   return (
     <div className="fixed inset-0 z-40 lg:hidden" role="dialog" aria-modal="true" aria-label="More sections">
       <button type="button" className="absolute inset-0 bg-black/40" aria-label="Close menu" onClick={onClose} />
-      <div className="animate-fade-in absolute inset-x-0 bottom-0 rounded-t-[var(--radius-xl)] border-t border-border bg-surface p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] shadow-[var(--shadow-overlay)]">
+      <div className="animate-fade-in absolute inset-x-0 bottom-0 rounded-t-[var(--radius-xl)] border-t border-border bg-surface p-4 pb-[calc(1rem+env(safe-area-inset-bottom)+var(--host-inset,0px))] shadow-[var(--shadow-overlay)]">
         <div className="mb-2 flex items-center justify-between">
           <p className="t-card">More</p>
           <button type="button" onClick={onClose} className="rounded p-2 text-muted hover:bg-surface-2" aria-label="Close menu" autoFocus>

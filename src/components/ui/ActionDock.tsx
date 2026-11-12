@@ -36,7 +36,7 @@ export function ActionDock({ children, note, revealPanel = true, className, dock
       {isClient &&
         createPortal(
           <div
-            className="animate-fade-in fixed inset-x-0 bottom-[calc(4rem+env(safe-area-inset-bottom))] z-30 border-t border-border bg-surface/95 px-4 pb-3 pt-2.5 shadow-[var(--shadow-overlay)] backdrop-blur lg:hidden"
+            className="animate-fade-in fixed inset-x-0 bottom-[calc(4rem+env(safe-area-inset-bottom)+var(--host-inset,0px))] z-30 border-t border-border bg-surface/95 px-4 pb-3 pt-2.5 shadow-[var(--shadow-overlay)] backdrop-blur lg:hidden"
             data-testid="action-dock"
             data-action-dock
           >

@@ -9,6 +9,7 @@ import { THEME_BOOTSTRAP } from "@/lib/settings";
 import { INSTALL_BOOTSTRAP } from "@/lib/install-bootstrap";
 import { ServiceWorkerRegistrar } from "@/components/layout/ServiceWorkerRegistrar";
 import { StorageGuard } from "@/components/layout/StorageGuard";
+import { HostBadgeInset } from "@/components/layout/HostBadgeInset";
 
 export const metadata: Metadata = {
   title: { default: "ChessPath: learn chess step by step", template: "%s · ChessPath" },
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </ToastProvider>
         <ServiceWorkerRegistrar />
         <StorageGuard />
+        <HostBadgeInset />
       </body>
     </html>
   );
