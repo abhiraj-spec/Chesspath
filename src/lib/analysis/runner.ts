@@ -6,6 +6,11 @@ import { classifyMove, DEFAULT_THRESHOLDS, sideAccuracy, terminalEval, type Posi
 import { buildReport } from "./report";
 import { identifyOpening, loadOpeningIndex } from "./openingIndex";
 
+function secondOf(lines: { score: PositionEval["score"]; pv: string[] }[]): PositionEval["second"] {
+  const l = lines[1];
+  return l && l.pv[0] ? { score: l.score, move: l.pv[0] } : null;
+}
+
 /** Mistakes and blunders are only reported after confirmation at this depth (or deeper). */
 export const VERIFY_MIN_DEPTH = 18;
 
@@ -30,7 +35,12 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
   const fens = [line.startFen, ...line.plies.map((p) => p.fenAfter)];
   const thresholds = o.thresholds ?? DEFAULT_THRESHOLDS;
   const reuse = o.existing && o.existing.analysisSettings.depth === o.depth ? (o.existing.positionEvals ?? []) : [];
-  const evals: PositionEval[] = reuse.filter((e, i) => e.fen === fens[i]).map((e) => ({ ...e }));
+  // Positions saved before the second-best line was recorded are searched again.
+  const evals: PositionEval[] = [];
+  for (const [i, e] of reuse.entries()) {
+    if (e.fen !== fens[i] || (e.second === undefined && e.depth > 0)) break;
+    evals.push({ ...e });
+  }
   const index = await loadOpeningIndex().catch(() => null);
   const opening = index ? identifyOpening(index, fens.slice(1)) : undefined;
 
@@ -50,6 +60,7 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
           after: evals[i + 1],
           isBook: Boolean(opening && i + 1 <= opening.bookPlies),
           thresholds,
+          prev: i > 0 ? { to: line.plies[i - 1].to, captured: Boolean(line.plies[i - 1].captured) } : undefined,
         }),
       );
     }
@@ -77,10 +88,11 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
     const term = terminalEval(fen);
     if (term) evals.push(term);
     else {
-      const r = await o.engine.analyse({ fen, depth: o.depth, multipv: 1 });
+      // Two lines: the second shows whether the best move was the only good one ("Great").
+      const r = await o.engine.analyse({ fen, depth: o.depth, multipv: 2 });
       if (o.isCancelled()) break;
       const best = r.lines[0];
-      evals.push({ fen, score: best?.score ?? { cp: 0 }, bestMove: r.bestMove, pv: best?.pv ?? [], depth: r.depth });
+      evals.push({ fen, score: best?.score ?? { cp: 0 }, bestMove: r.bestMove, pv: best?.pv ?? [], depth: r.depth, second: secondOf(r.lines) });
     }
     // Not "complete" until the verification pass below has run.
     const partial = assemble(false);
@@ -89,12 +101,12 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
     if (evals.length === fens.length || evals.length % 4 === 0) await o.save(partial);
   }
   // Verification pass: shallow searches can misjudge sharp tactics (e.g. sacrifices that mate
-  // a few moves later). Before labelling any move a mistake or blunder, re-check both of its
-  // positions at a greater depth and reclassify.
+  // a few moves later). Before labelling any move a mistake or blunder, or Great or Brilliant,
+  // re-check both of its positions at a greater depth and reclassify.
   if (evals.length === fens.length && !o.isCancelled()) {
     const verifyDepth = Math.max(o.depth + 4, VERIFY_MIN_DEPTH);
     for (let round = 0; round < 2 && !o.isCancelled(); round++) {
-      const flagged = assemble(true).moveEvaluations.filter((m) => m.classification === "mistake" || m.classification === "blunder");
+      const flagged = assemble(true).moveEvaluations.filter((m) => m.classification === "mistake" || m.classification === "blunder" || m.classification === "great" || m.classification === "brilliant");
       const toCheck = new Set<number>();
       for (const m of flagged) {
         if (evals[m.ply - 1].depth && evals[m.ply - 1].depth < verifyDepth) toCheck.add(m.ply - 1);
@@ -105,9 +117,9 @@ export async function runAnalysis(o: RunOptions): Promise<GameAnalysis> {
         if (o.isCancelled()) break;
         // Fresh hash table so earlier shallow searches cannot bias the verification.
         o.engine.newGame();
-        const r = await o.engine.analyse({ fen: fens[i], depth: verifyDepth, multipv: 1 });
+        const r = await o.engine.analyse({ fen: fens[i], depth: verifyDepth, multipv: 2 });
         if (o.isCancelled()) break;
-        evals[i] = { fen: fens[i], score: r.lines[0]?.score ?? evals[i].score, bestMove: r.bestMove, pv: r.lines[0]?.pv ?? [], depth: r.depth };
+        evals[i] = { fen: fens[i], score: r.lines[0]?.score ?? evals[i].score, bestMove: r.bestMove, pv: r.lines[0]?.pv ?? [], depth: r.depth, second: secondOf(r.lines) };
       }
     }
   }

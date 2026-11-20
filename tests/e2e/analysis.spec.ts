@@ -16,7 +16,16 @@ test("import a PGN, analyse it with Stockfish and review key moments", async ({ 
   await page.getByRole("button", { name: "Start analysis" }).click();
   await expect(page.getByRole("radio", { name: /Key moments/ })).toBeVisible({ timeout: 180_000 });
   // Verification pass: Morphy's winning 15.Bxd7+ must not be labelled a mistake; 15...Nxd7 allows mate.
-  await expect(page.getByRole("button", { name: "Bxd7+", exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: /^Bxd7\+(, (Brilliant|Great|Best|Excellent|Good))?$/ })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Qb8+, Brilliant" })).toBeVisible();
+  // Reviewing a move: its type, what it did and the better move.
+  await page.getByRole("button", { name: "Nxd7, Blunder" }).click();
+  await expect(page.getByTestId("coach")).toContainText("15...Nxd7 is a blunder");
+  await expect(page.getByTestId("coach")).toContainText("Best was");
+  await page.getByTestId("coach").getByRole("button", { name: "Show the best line" }).click();
+  await expect(page.getByText("Exploring a variation")).toBeVisible();
+  await page.getByRole("button", { name: "Return to game" }).first().click();
+  await expect(page.getByTestId("class-counts")).toContainText("Brilliant");
   await expect(page.getByRole("button", { name: "Nxd7, Blunder" })).toBeVisible();
   await expect(page.getByText(/approx. accuracy/).first()).toBeVisible();
   await expect(page.getByText(/C41 Philidor Defense/).first()).toBeVisible();

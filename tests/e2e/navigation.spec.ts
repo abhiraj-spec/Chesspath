@@ -197,3 +197,31 @@ test("a host badge in the bottom corner never covers the phone navigation or the
   await page.evaluate(() => document.getElementById("nl-badge-frame")!.remove());
   await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue("--host-inset").trim())).toBe("0px");
 });
+
+test("game review on a phone: board and the Next/Back bar fit on screen together", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "phone-only check");
+  test.setTimeout(240_000);
+  await page.setViewportSize({ width: 390, height: 664 });
+  await page.goto("/analysis/");
+  await page.getByRole("button", { name: "Use an example game" }).click();
+  await page.getByLabel("Which side did you play?").selectOption("b");
+  await page.getByRole("button", { name: "Import", exact: true }).click();
+  await page.getByLabel("Depth").selectOption("10");
+  await page.getByRole("button", { name: "Start analysis" }).click();
+  await expect(page.getByRole("radio", { name: /Key moments/ })).toBeVisible({ timeout: 200_000 });
+  await page.evaluate(() => window.scrollTo(0, 0));
+  const dock = page.getByTestId("action-dock");
+  await dock.getByRole("button", { name: "First position" }).click();
+  for (let i = 0; i < 30; i++) await dock.getByRole("button", { name: "Next", exact: true }).click();
+  await expect(page.getByTestId("dock-verdict")).toContainText("Nxd7 · Blunder · Best: Qxd7");
+  const board = (await page.getByTestId("analysis-board").boundingBox())!;
+  const bar = (await dock.boundingBox())!;
+  expect(board.y).toBeGreaterThanOrEqual(0);
+  expect(board.y + board.height).toBeLessThanOrEqual(bar.y);
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  // The best line plays out on the board as a variation.
+  await dock.getByRole("button", { name: "Show the best line" }).click();
+  await expect(page.getByText("Exploring a line. The saved game is unchanged.")).toBeVisible();
+  await dock.getByRole("button", { name: "Return to game" }).click();
+  await expect(page.getByTestId("dock-verdict")).toBeVisible();
+});

@@ -4,9 +4,30 @@ import { nodeStockfishWorker } from "./node-worker";
 import { runAnalysis } from "@/lib/analysis/runner";
 import { classifyMove, materialSwing, moveAccuracy, winPct, MATE_CP } from "@/lib/analysis/classify";
 import { explainMoment } from "@/lib/analysis/report";
-import type { ChessGameRecord, GameAnalysis } from "@/lib/db/types";
+import type { ChessGameRecord, GameAnalysis, MoveEvaluation } from "@/lib/db/types";
 import { START_FEN } from "@/lib/chess/core";
 import { parsePgn } from "@/lib/chess/pgn";
+
+describe("move types", () => {
+  const fen = "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3";
+  const base = { ply: 5, san: "Bb5", uci: "f1b5", color: "w" as const, fenBefore: fen, fenAfter: fen, isBook: false };
+  const pe = (cp: number, bestMove: string | null = "f1b5", second?: { score: { cp: number }; move: string } | null) => ({ fen, score: { cp }, bestMove, pv: bestMove ? [bestMove] : [], depth: 12, second });
+  it("rates good moves on a scale and spots the only good move", () => {
+    // Played the engine's move, and the second choice would have been far worse: Great.
+    expect(classifyMove({ ...base, before: pe(40, "f1b5", { score: { cp: -250 }, move: "f1c4" }), after: pe(40) }).classification).toBe("great");
+    // Second choice almost as good: just Best.
+    const best = classifyMove({ ...base, before: pe(40, "f1b5", { score: { cp: 30 }, move: "f1c4" }), after: pe(40) });
+    expect(best.classification).toBe("best");
+    expect(best.secondSan).toBe("Bc4");
+    // Not the engine's move: Excellent, then Good, by how much was lost.
+    expect(classifyMove({ ...base, before: pe(40, "f1c4"), after: pe(20) }).classification).toBe("excellent");
+    expect(classifyMove({ ...base, before: pe(40, "f1c4"), after: pe(-5) }).classification).toBe("good");
+    // Already winning by a mile: no Great for keeping the win.
+    expect(classifyMove({ ...base, before: pe(2000, "f1b5", { score: { cp: 300 }, move: "f1c4" }), after: pe(2000) }).classification).toBe("best");
+    // A recapture is never Great.
+    expect(classifyMove({ ...base, prev: { to: "b5", captured: true }, before: pe(40, "f1b5", { score: { cp: -250 }, move: "f1c4" }), after: pe(40) }).classification).toBe("best");
+  });
+});
 
 describe("classification", () => {
   it("uses win-probability drops with mate awareness", () => {
@@ -99,10 +120,39 @@ describe("verification pass", () => {
     const a = await runAnalysis({ game, engine, depth: 10, save: async () => {}, isCancelled: () => false });
     const bxd7 = a.moveEvaluations.find((m) => m.ply === 29)!;
     expect(bxd7.san).toBe("Bxd7+");
-    expect(["best", "good"]).toContain(bxd7.classification);
+    expect(["brilliant", "great", "best", "excellent", "good"]).toContain(bxd7.classification);
+    // 16.Qb8+ gives up the queen to force mate: the only winning move, so Brilliant.
+    const qb8 = a.moveEvaluations.find((m) => m.ply === 31)!;
+    expect(qb8.san).toBe("Qb8+");
+    expect(qb8.classification).toBe("brilliant");
+    expect(qb8.sacrificed).toBe(9);
+    // The mate itself is just the best move, and the forced recapture is not "great".
+    expect(a.moveEvaluations.find((m) => m.ply === 33)!.classification).toBe("best");
+    expect(a.moveEvaluations.find((m) => m.ply === 32)!.classification).toBe("best");
     const nxd7 = a.moveEvaluations.find((m) => m.ply === 30)!;
     expect(nxd7.classification).toBe("blunder");
     expect(nxd7.tags).toContain("allowed-mate");
     expect(a.opening?.name).toMatch(/Philidor/);
   }, 120000);
+});
+
+describe("move review text", () => {
+  it("explains each move type and names the better move", async () => {
+    const { reviewMove, evalInWords, classCounts } = await import("@/lib/analysis/report");
+    const e = (o: Partial<MoveEvaluation>): MoveEvaluation => ({ ply: 24, san: "Nxd4", uci: "c6d4", color: "b", fenBefore: "r1bqkb1r/pppp1ppp/2n2n2/4p3/3PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 0 12", before: { cp: 20 }, after: { cp: 350 }, bestMove: "e5d4", bestSan: "exd4", bestLine: ["exd4", "Nxd4"], replyLine: ["Nxd4", "exd4"], depth: 18, cpLoss: 330, winDrop: 31, classification: "blunder", tags: ["hung-material"], ...o });
+    const blunder = reviewMove(e({}));
+    expect(blunder.headline).toBe("12...Nxd4 is a blunder");
+    expect(blunder.better).toEqual({ san: "exd4", line: ["exd4", "Nxd4"] });
+    expect(blunder.details.join(" ")).toContain("It loses material: the reply Nxd4 exd4 wins it.");
+    expect(blunder.details.join(" ")).toContain("Black's winning chances dropped by 31 percentage points.");
+    expect(blunder.details.at(-1)).toBe("White is winning (+3.5).");
+    const great = reviewMove(e({ classification: "great", san: "exd4", bestSan: "exd4", secondSan: "Nxd4", secondDrop: 31.2, winDrop: 0, after: { cp: 20 }, tags: [] }));
+    expect(great.headline).toBe("12...exd4 is a great move");
+    expect(great.better).toBeUndefined();
+    expect(great.details[0]).toContain("Stockfish's next choice, Nxd4, would have cost 31 points");
+    expect(reviewMove(e({ classification: "inaccuracy", winDrop: 6, tags: [] })).headline).toBe("12...Nxd4 is an inaccuracy");
+    expect(evalInWords({ mate: -3 })).toBe("Black has a forced mate in 3");
+    expect(evalInWords({ cp: 30 })).toBe("The position is about equal (+0.3)");
+    expect(classCounts([e({}), e({ classification: "best" }), e({ color: "w", classification: "best" })], "b")).toMatchObject({ blunder: 1, best: 1, great: 0 });
+  });
 });

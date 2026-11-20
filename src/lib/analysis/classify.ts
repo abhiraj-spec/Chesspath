@@ -26,6 +26,11 @@ export interface PositionEval {
   bestMove: string | null;
   pv: string[];
   depth: number;
+  /**
+   * Stockfish's second-best move and its score (White POV). undefined: only one line was
+   * searched (older analyses); null: there is no second legal move.
+   */
+  second?: { score: EngineScore; move: string } | null;
 }
 
 /** Evaluation of a finished position without asking the engine. */
@@ -105,7 +110,23 @@ export interface ClassifyInput {
   after: PositionEval;
   isBook: boolean;
   thresholds?: Thresholds;
+  /** The move played just before this one (to recognise simple recaptures). */
+  prev?: { to: string; captured: boolean };
 }
+
+/**
+ * Rules for the positive labels (all computed from the engine's numbers; nothing is guessed):
+ *  - Great: the move played is the engine's best, and its second choice would have cost at
+ *    least GREAT_GAP percentage points of winning chances: the only good move. Not given for
+ *    recaptures, for positions with fewer than 3 legal moves, or when the mover was already
+ *    completely winning (any reasonable move wins).
+ *  - Brilliant: a Best or Great move that gives up at least 2 pawns' worth of material, after
+ *    complete exchanges along the engine's line, while keeping the position at least balanced.
+ *    In an already won position it must also be the only move that keeps the win.
+ *  - Best: the engine's choice, or a move that loses less than 1 point of winning chances.
+ *  - Excellent: loses less than 2.5 points. Good: less than the inaccuracy threshold.
+ */
+export const GREAT_GAP = 10;
 
 export function classifyMove(input: ClassifyInput): MoveEvaluation {
   const { color, before, after, thresholds = DEFAULT_THRESHOLDS } = input;
@@ -123,14 +144,37 @@ export function classifyMove(input: ClassifyInput): MoveEvaluation {
   else if (winDrop >= thresholds.blunder) classification = "blunder";
   else if (winDrop >= thresholds.mistake) classification = "mistake";
   else if (winDrop >= thresholds.inaccuracy) classification = "inaccuracy";
+  else if (winDrop < 2.5) classification = "excellent";
   else classification = "good";
+
+  // Second choice: how much worse it was than the best move.
+  let secondSan: string | undefined;
+  let secondDrop: number | undefined;
+  if (before.second) {
+    secondSan = uciLineToSan(input.fenBefore, [before.second.move], 1)[0];
+    secondDrop = Math.round(Math.max(0, winPct(before.score, color) - winPct(before.second.score, color)) * 10) / 10;
+  }
+  // Material given up by the move, after complete exchanges along the engine's reply line.
+  let sacrificed: number | undefined;
+  if (classification === "best" && !input.isBook) {
+    const swing = materialSwing(input.fenBefore, [input.uci, ...after.pv], color, 4);
+    if (swing <= -2) sacrificed = -swing;
+  }
+  if (classification === "best") {
+    const legal = new Chess(input.fenBefore).moves().length;
+    const recapture = Boolean(input.prev?.captured && input.prev.to === input.uci.slice(2, 4));
+    const alreadyWon = wBefore >= 97;
+    if (playedBest && secondDrop !== undefined && secondDrop >= GREAT_GAP && legal >= 3 && !recapture && !alreadyWon) classification = "great";
+    const onlyMove = secondDrop !== undefined && secondDrop >= GREAT_GAP;
+    if (sacrificed !== undefined && wAfter >= 50 && (!alreadyWon || onlyMove) && !recapture) classification = "brilliant";
+  }
   // Mate awareness: walking into a forced mate is always a blunder (even if the position was
   // already lost on points), and failing to play a forced mate is at least an inaccuracy.
   if (!input.isBook) {
     const allowsMate = mateAfter !== null && mateAfter < 0 && !(mateBefore !== null && mateBefore < 0);
     const missesMate = mateBefore !== null && mateBefore > 0 && !(mateAfter !== null && mateAfter >= 0);
     if (allowsMate) classification = "blunder";
-    else if (missesMate && (classification === "best" || classification === "good")) classification = "inaccuracy";
+    else if (missesMate && (classification === "best" || classification === "great" || classification === "brilliant" || classification === "excellent" || classification === "good")) classification = "inaccuracy";
   }
 
   const tags: MistakeTag[] = [];
@@ -170,6 +214,8 @@ export function classifyMove(input: ClassifyInput): MoveEvaluation {
     winDrop: Math.round(winDrop * 10) / 10,
     classification,
     tags,
+    ...(secondSan !== undefined ? { secondSan, secondDrop } : {}),
+    ...(sacrificed !== undefined && (classification === "brilliant") ? { sacrificed } : {}),
   };
 }
 

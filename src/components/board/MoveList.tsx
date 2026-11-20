@@ -10,14 +10,38 @@ import type { MoveClass } from "@/lib/db/types";
 import { PIECE_SVG } from "./pieces";
 import { capturedPieces, materialBalance } from "@/lib/chess/status";
 
-export const CLASS_STYLE: Record<MoveClass, { label: string; symbol: string; className: string }> = {
-  best: { label: "Best", symbol: "", className: "" },
-  good: { label: "Good", symbol: "", className: "" },
-  book: { label: "Book", symbol: "", className: "text-muted" },
-  inaccuracy: { label: "Inaccuracy", symbol: "?!", className: "text-warning" },
-  mistake: { label: "Mistake", symbol: "?", className: "text-[#c2410c] dark:text-[#fb923c]" },
-  blunder: { label: "Blunder", symbol: "??", className: "text-danger" },
+/**
+ * How each move type is shown. `symbol` is the standard annotation shown in move lists;
+ * `glyph` and `bg` are for the round badge (white text on `bg`, contrast-checked).
+ */
+export const CLASS_STYLE: Record<MoveClass, { label: string; symbol: string; className: string; glyph: string; bg: string }> = {
+  brilliant: { label: "Brilliant", symbol: "!!", className: "text-[#0f7a76] dark:text-[#3fd0c9]", glyph: "!!", bg: "#0f7a76" },
+  great: { label: "Great", symbol: "!", className: "text-[#2f629a] dark:text-[#8ab8ea]", glyph: "!", bg: "#2f629a" },
+  best: { label: "Best", symbol: "", className: "", glyph: "★", bg: "#3f7a1c" },
+  excellent: { label: "Excellent", symbol: "", className: "", glyph: "✓", bg: "#527a30" },
+  good: { label: "Good", symbol: "", className: "", glyph: "✓", bg: "#5f6e52" },
+  book: { label: "Book", symbol: "", className: "text-muted", glyph: "📖", bg: "#7d5f3c" },
+  inaccuracy: { label: "Inaccuracy", symbol: "?!", className: "text-warning", glyph: "?!", bg: "#9a6a00" },
+  mistake: { label: "Mistake", symbol: "?", className: "text-[#c2410c] dark:text-[#fb923c]", glyph: "?", bg: "#b4470f" },
+  blunder: { label: "Blunder", symbol: "??", className: "text-danger", glyph: "??", bg: "#b42318" },
 };
+
+/** Order used for counts tables, best first. */
+export const CLASS_ORDER: MoveClass[] = ["brilliant", "great", "best", "excellent", "good", "book", "inaccuracy", "mistake", "blunder"];
+
+/** Round badge with the move type's glyph. Always pair it with the label in text. */
+export function ClassIcon({ cls, size = 20, className }: { cls: MoveClass; size?: number; className?: string }) {
+  const st = CLASS_STYLE[cls];
+  return (
+    <span
+      aria-hidden
+      className={cn("inline-grid shrink-0 place-items-center rounded-full font-bold leading-none text-white", className)}
+      style={{ background: st.bg, width: size, height: size, fontSize: cls === "book" ? size * 0.55 : st.glyph.length > 1 ? size * 0.5 : size * 0.62 }}
+    >
+      {st.glyph}
+    </span>
+  );
+}
 
 /**
  * Move list with keyboard-friendly navigation. `cursor` is the number of plies shown on the board.
@@ -29,6 +53,7 @@ export function MoveList({
   classes,
   className,
   emptyText = "No moves yet.",
+  navClassName,
 }: {
   line: Line;
   cursor: number;
@@ -36,6 +61,8 @@ export function MoveList({
   classes?: Map<number, MoveClass>;
   className?: string;
   emptyText?: string;
+  /** Extra classes for the navigation buttons (e.g. to hide them where another copy is shown). */
+  navClassName?: string;
 }) {
   const rows = moveRows(line);
   const listRef = useRef<HTMLDivElement>(null);
@@ -58,11 +85,14 @@ export function MoveList({
         data-ply={m.ply}
         onClick={() => onSelect(m.ply)}
         aria-current={cursor === m.ply ? "step" : undefined}
-        aria-label={`${m.san}${style && style.symbol ? `, ${style.label}` : ""}`}
+        aria-label={`${m.san}${style && cls && cls !== "book" ? `, ${style.label}` : ""}`}
         className={cn("t-notation w-full rounded-[var(--radius-sm)] px-2 py-1 text-left hover:bg-surface-3", cursor === m.ply && "bg-accent-soft font-semibold text-accent-soft-fg", style?.className)}
       >
-        {m.san}
-        {style?.symbol && <span className="ml-0.5 font-bold">{style.symbol}</span>}
+        <span className="inline-flex items-center gap-1">
+          {cls && cls !== "book" && cls !== "good" && cls !== "excellent" && cls !== "best" && <ClassIcon cls={cls} size={15} />}
+          {m.san}
+          {style?.symbol && <span className="font-bold">{style.symbol}</span>}
+        </span>
       </button>
     );
   };
@@ -82,7 +112,7 @@ export function MoveList({
           ))
         )}
       </div>
-      <div className="mt-2 flex items-center justify-center gap-1" role="toolbar" aria-label="Move navigation">
+      <div className={cn("mt-2 flex items-center justify-center gap-1", navClassName)} role="toolbar" aria-label="Move navigation">
         <IconButton label="First position" size="sm" onClick={() => onSelect(0)} disabled={cursor === 0}>
           <ChevronFirst className="h-4 w-4" aria-hidden />
         </IconButton>

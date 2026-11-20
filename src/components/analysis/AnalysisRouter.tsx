@@ -11,7 +11,7 @@ export function AnalysisRouter() {
   const fen = params.get("fen");
   if (id) {
     const ply = Number(params.get("ply"));
-    return <GameAnalysisView key={id} gameId={id} initialPly={Number.isInteger(ply) && ply > 0 ? ply : undefined} />;
+    return <GameAnalysisView key={id} gameId={id} initialPly={Number.isInteger(ply) && ply > 0 ? ply : undefined} autoStart={params.get("review") === "1"} />;
   }
   if (fen !== null) return <PositionExplorer fen={fen.trim()} />;
   return <LibraryView />;

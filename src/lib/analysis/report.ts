@@ -136,3 +136,95 @@ export function buildReport(input: ReportInput): Pick<GameAnalysis, "summary" | 
     plan,
   };
 }
+
+// ---------------------------------------------------------------------------------------------
+// Per-move coaching text for the review screen. Built only from the engine's numbers and lines.
+
+const side = (c: "w" | "b") => (c === "w" ? "White" : "Black");
+
+/** The evaluation in words, e.g. "White is winning (+3.4)". */
+export function evalInWords(score: MoveEvaluation["after"]): string {
+  if (score.mate !== undefined) {
+    if (score.mate === 0) return "The game is over";
+    return `${score.mate > 0 ? "White" : "Black"} has a forced mate in ${Math.abs(score.mate)}`;
+  }
+  const cp = score.cp ?? 0;
+  if (Math.abs(cp) >= 10000) return cp > 0 ? "White has won" : "Black has won";
+  const who = cp > 0 ? "White" : "Black";
+  const v = `${cp >= 0 ? "+" : "−"}${(Math.abs(cp) / 100).toFixed(1)}`;
+  const a = Math.abs(cp);
+  if (a < 50) return `The position is about equal (${v})`;
+  if (a < 150) return `${who} is slightly better (${v})`;
+  if (a < 300) return `${who} is clearly better (${v})`;
+  return `${who} is winning (${v})`;
+}
+
+export interface MoveReview {
+  /** e.g. "12...Nxd4 is a blunder" */
+  headline: string;
+  /** Sentences explaining the verdict. */
+  details: string[];
+  /** The better move, when there was one worth showing. */
+  better?: { san: string; line: string[] };
+}
+
+export function reviewMove(e: MoveEvaluation): MoveReview {
+  const n = moveNumberOf(e);
+  const played = `${n}${e.color === "w" ? "." : "..."}${e.san}`;
+  const details: string[] = [];
+  const showBetter = e.bestSan && e.bestSan !== e.san && e.classification !== "book" && e.classification !== "best" && e.classification !== "great" && e.classification !== "brilliant";
+  const better = showBetter ? { san: e.bestSan, line: e.bestLine } : undefined;
+  const article = (w: string) => (/^[aeiou]/i.test(w) ? "an" : "a");
+  let headline: string;
+  switch (e.classification) {
+    case "book":
+      headline = `${played} is a book move`;
+      details.push("A known opening move: it is in the opening database (Lichess chess-openings).");
+      break;
+    case "brilliant":
+      headline = `${played} is brilliant`;
+      details.push(`A sacrifice that works: you give up about ${e.sacrificed ?? 2} points of material${e.replyLine.length ? ` (the engine expects ${e.replyLine.slice(0, 3).join(" ")})` : ""}, and it is still the best move.`);
+      break;
+    case "great":
+      headline = `${played} is a great move`;
+      details.push(`The only good move here. ${e.secondSan ? `Stockfish's next choice, ${e.secondSan}, would have cost ${Math.round(e.secondDrop ?? 0)} points of winning chances.` : "Every other move was clearly worse."}`);
+      break;
+    case "best":
+      headline = `${played} is the best move`;
+      details.push(e.bestSan === e.san ? "This is Stockfish's first choice." : `As good as Stockfish's first choice, ${e.bestSan}.`);
+      break;
+    case "excellent":
+      headline = `${played} is excellent`;
+      details.push(`Very close to the best move. Stockfish slightly preferred ${e.bestSan}.`);
+      break;
+    case "good":
+      headline = `${played} is a good move`;
+      details.push(`A reasonable move, but ${e.bestSan} was a little stronger.`);
+      break;
+    default: {
+      const label = CLASS_LABEL[e.classification];
+      headline = `${played} is ${article(label)} ${label.toLowerCase()}`;
+      if (e.tags.includes("allowed-mate")) details.push(`It allows a forced checkmate${e.replyLine.length ? `, starting with ${e.replyLine[0]}` : ""}.`);
+      else if (e.tags.includes("hung-material")) details.push(`It loses material: the reply ${e.replyLine.slice(0, 3).join(" ")} wins it.`);
+      else if (e.replyLine.length) details.push(`The strongest reply is ${e.replyLine[0]}.`);
+      if (e.tags.includes("missed-mate")) details.push(`You missed a forced mate with ${e.bestSan}.`);
+      else if (e.tags.includes("missed-win")) details.push(`${e.bestSan} would have won material.`);
+      else if (e.tags.includes("missed-tactic")) details.push(`${e.bestSan} was a stronger forcing move.`);
+      const lesson = e.tags.map((t) => LESSON_TEXT[t]).find(Boolean);
+      if (lesson) details.push(`Tip: ${lesson}`);
+    }
+  }
+  const drop = Math.round(e.winDrop);
+  if (drop >= 1 && e.classification !== "book") details.push(`${side(e.color)}'s winning chances dropped by ${drop} percentage points.`);
+  details.push(`${evalInWords(e.after)}.`);
+  return { headline, details, better };
+}
+
+const CLASS_LABEL: Record<string, string> = { inaccuracy: "Inaccuracy", mistake: "Mistake", blunder: "Blunder" };
+
+/** Counts of each move type for one side. */
+export function classCounts(evals: MoveEvaluation[], color: "w" | "b"): Record<MoveEvaluation["classification"], number> {
+  const out = { brilliant: 0, great: 0, best: 0, excellent: 0, good: 0, book: 0, inaccuracy: 0, mistake: 0, blunder: 0 };
+  for (const e of evals) if (e.color === color) out[e.classification]++;
+  return out;
+}

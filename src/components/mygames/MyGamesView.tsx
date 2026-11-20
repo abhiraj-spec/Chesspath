@@ -132,7 +132,7 @@ export function MyGamesView() {
 
   const open = async (g: CcGame, ply?: number) => {
     await ensureRecord(g);
-    router.push(`/analysis/?game=${encodeURIComponent(recordId(g))}${ply ? `&ply=${ply}` : ""}`);
+    router.push(`/analysis/?game=${encodeURIComponent(recordId(g))}&review=1${ply ? `&ply=${ply}` : ""}`);
   };
 
   const pending = (imp?.games ?? []).filter((g) => g.plies >= MIN_SCAN_PLIES && !analysedIds.has(g.id));

@@ -24,6 +24,10 @@ export function toGameRecord(g: CcGame): ChessGameRecord {
   const headers: Record<string, string> = { Event: "Chess.com game", Site: "Chess.com", Date: date, White: white, Black: black };
   if (g.url) headers.Link = g.url;
   if (g.timeControl) headers.TimeControl = g.timeControl;
+  const wElo = g.userColor === "w" ? g.userRating : g.oppRating;
+  const bElo = g.userColor === "w" ? g.oppRating : g.userRating;
+  if (wElo) headers.WhiteElo = String(wElo);
+  if (bElo) headers.BlackElo = String(bElo);
   return {
     id: recordId(g),
     whitePlayer: white,

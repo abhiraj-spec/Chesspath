@@ -150,9 +150,15 @@ export interface MoveEvaluation {
   classification: MoveClass;
   tags: MistakeTag[];
   explanation?: string;
+  /** Stockfish's second choice in the position before the move (when the analysis searched two lines). */
+  secondSan?: string;
+  /** How much the mover's winning chances would have dropped with the second choice instead of the best (0-100). */
+  secondDrop?: number;
+  /** Material the mover gave up, after complete exchanges along the engine line (pawn units, positive = sacrificed). */
+  sacrificed?: number;
 }
 
-export type MoveClass = "best" | "good" | "inaccuracy" | "mistake" | "blunder" | "book";
+export type MoveClass = "brilliant" | "great" | "best" | "excellent" | "good" | "inaccuracy" | "mistake" | "blunder" | "book";
 export type MistakeTag = "hung-material" | "missed-mate" | "missed-win" | "allowed-mate" | "missed-tactic" | "opening" | "endgame";
 
 export interface GameAnalysis {
@@ -167,7 +173,7 @@ export interface GameAnalysis {
   accuracy?: { w: number; b: number };
   complete: boolean;
   /** Raw per-position engine results (White POV), kept so interrupted analysis can resume. */
-  positionEvals?: { fen: string; score: EngineScore; bestMove: string | null; pv: string[]; depth: number }[];
+  positionEvals?: { fen: string; score: EngineScore; bestMove: string | null; pv: string[]; depth: number; second?: { score: EngineScore; move: string } | null }[];
   createdAt: number;
 }
 
