@@ -49,7 +49,8 @@ export function GameAnalysisView({ gameId, initialPly, autoStart }: { gameId: st
   const analysis = useAnalysis(gameId);
   const settings = useSettings();
   const { engine, restart } = useEngine(false);
-  const [cursor, setCursor] = useState<number | null>(initialPly ? initialPly - 1 : null);
+  // Reviews start from the first move (or the requested move), so "Next" steps through the game.
+  const [cursor, setCursor] = useState<number | null>(initialPly ? initialPly - 1 : 0);
   const [variation, setVariation] = useState<{ base: number; line: Line; cursor: number } | null>(null);
   const [orientation, setOrientation] = useState<"w" | "b" | null>(null);
   const [running, setRunning] = useState(false);

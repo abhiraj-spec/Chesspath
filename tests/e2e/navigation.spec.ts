@@ -211,7 +211,8 @@ test("game review on a phone: board and the Next/Back bar fit on screen together
   await expect(page.getByRole("radio", { name: /Key moments/ })).toBeVisible({ timeout: 200_000 });
   await page.evaluate(() => window.scrollTo(0, 0));
   const dock = page.getByTestId("action-dock");
-  await dock.getByRole("button", { name: "First position" }).click();
+  // A review opens at the start, ready to step forward.
+  await expect(dock.getByRole("button", { name: "First position" })).toBeDisabled();
   for (let i = 0; i < 30; i++) await dock.getByRole("button", { name: "Next", exact: true }).click();
   await expect(page.getByTestId("dock-verdict")).toContainText("Nxd7 · Blunder · Best: Qxd7");
   const board = (await page.getByTestId("analysis-board").boundingBox())!;
