@@ -1,0 +1,13 @@
+// Cloudflare Workers settings: ChessPath is a static site (Next.js static export in out/).
+// "npx wrangler deploy" builds the site first (build.command), then uploads out/.
+// "name" must match the name of the Worker in the Cloudflare dashboard.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "chesspath",
+  "compatibility_date": "2026-11-01",
+  "build": { "command": "npm run build" },
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

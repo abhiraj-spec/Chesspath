@@ -130,6 +130,10 @@ Add a variation to `src/content/openings/library.ts` with a note for every move 
 - Piece set: "cburnett" by Colin M.L. Burnett, GPLv2+ (via lichess-org/lila).
 - Fonts: Inter, Source Serif 4, JetBrains Mono (SIL OFL). chess.js: BSD-2-Clause. Dexie: Apache-2.0. lucide: ISC.
 
+## Hosting on Cloudflare Workers
+
+`wrangler.jsonc` makes the site deploy as a static-assets Worker: `npx wrangler deploy` runs `npm run build` and uploads `out/`. Without that file, Cloudflare auto-detects Next.js and tries the OpenNext server adapter, which fails for this static export. The `name` in `wrangler.jsonc` must match the Worker's name in the Cloudflare dashboard.
+
 ## Known limitations
 
 - **Engine strength and depth.** The lite Stockfish build is weaker than full Stockfish, and analysis defaults to depth 13 with mistakes re-checked at depth 18. Very deep tactics can still be misjudged; the app says so in the analysis view.
