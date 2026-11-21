@@ -3,7 +3,7 @@
 // "name" must match the name of the Worker in the Cloudflare dashboard.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "chesspath",
+  "name": "chesspath-learn",
   "compatibility_date": "2026-11-01",
   "build": { "command": "npm run build" },
   "assets": {
